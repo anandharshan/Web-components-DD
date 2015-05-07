@@ -1,0 +1,19 @@
+<!--System Alerts component code -->
+
+<div ng-controller="systemCtrl">
+    <a ng-click="toggleAlert()" class="vmf-btn vmf-primary ">First Alert</a>
+    <a ng-click="toggleAlert2()" class="vmf-btn vmf-primary ">Second Alert</a> 
+    <a ng-click="toggleAlert3()" class="vmf-btn vmf-primary ">Third Alert</a>
+    <div ng-if='flag.modalShown'>
+        <div vmf-sys-one sysalert="{{sysalert}}" show='flag.modalShown' dialog-Header="Amit" sys-Message="{{sysMessage}}">Anything extra with links. <a href="javascript: void(0);">Login</a>
+        </div>
+    </div>
+</div>
+<div ng-controller="systemalertCtrl">
+    <a ng-click="selectNeutral()" class="vmf-btn vmf-primary ">Neutral Alert</a>
+    <a ng-click="selectPositive()" class="vmf-btn vmf-primary ">Positive Alert</a>
+    <a ng-click="selectWarning()" class="vmf-btn vmf-primary ">Warning Alert</a>
+    <a ng-click="selectCritical()" class="vmf-btn vmf-primary ">Critical Alert</a>
+    <div information-message info-message="{{infomessage}}" is-info-message='isInfoMessage' info-type='{{warningtype}}'>
+    </div>
+</div>

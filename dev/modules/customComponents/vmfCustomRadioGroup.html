@@ -1,0 +1,17 @@
+<div id="{{id}}">
+	<div class="row">
+		<div class="vm-radio-group-title labelHeader {{titleClass}}" ng-if="optionsList.title"><span class="mandatory" ng-if="optionsList.required">*</span>{{optionsList.title}}</div>
+		<div class="{{listClass}}">
+			<div ng-repeat="item in optionsList.items">
+				<label for="{{optionsList.name + '-' + $index}}" class="custom-radio {{getClasses(item)}}" ng-switch on="item.tooltip">
+					<span class="radio-icon customRadioBox {{isDisabled(item)}}">
+					<input type="radio" id="{{optionsList.name + '-' + $index}}" name="{{optionsList.name}}" value="{{item.value}}" ng-disabled="item.disabled"  ng-checked="item.checked" />
+					</span>					  
+					  <b ng-switch-default vmf-tooltip="" tooltip-options="item.tooltip">{{item.text}}</b>
+					  <b ng-switch-when=false>{{item.text}}</b>
+				</label>
+			</div>
+			<span ng-if="required" class="requiredLabel">{{optionsList.msg}}</span>
+		</div>
+	</div>
+</div>

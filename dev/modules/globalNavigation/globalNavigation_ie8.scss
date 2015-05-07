@@ -1,0 +1,151 @@
+  .navDiv   {
+        background:$vmf-globalnav-desktopbg;
+    }    
+    .menu-link-primary {
+         display:none;   
+    }  
+    .mainMenulist {
+        display:block !important;
+        background:transparent;
+        float: right;
+        width:auto;
+    }  
+    .mainlistItem {
+        float: right;
+        padding-top: 35px;
+        padding-right: 0px;
+        padding-left: 15px;
+        > li {
+            width: auto;
+            float: none;
+            a {			
+                text-indent: 38px;
+                border-top: 1px solid $btn-default-border;
+                font-size: 18px;
+                font-weight: 200;
+                color: $gray-dark;
+                background: $vmf-bgColor;               
+            }
+            &:hover {
+                background-color: $vmf-primary-blue;   
+            }
+            &:nth-child(2n+1) { 
+                float: none;                
+            }
+            .globalItem {                
+                &:before {
+                    background:none;
+                }
+            }
+        }
+        .level-1 {
+            float: left;
+            a {
+                font-size: 20px;
+                color: $vmf-bgColor;
+                height: auto;
+                padding: 9px 22px 8px;
+                border: none;
+                text-indent: 0;
+                background: transparent;
+                font-family:$font-stackLight; 
+            }
+             .viewMore {
+                clear: both;
+                color: $primary-teal;
+                display: inline-block;
+                float: left;
+                font-size: 16px;
+                width: auto;
+                font-family:$font-stack;
+                line-height: 16px;
+                margin-top: 25px;
+                padding: 0;
+                &:hover {
+                    background-color:transparent;
+                    color:$vmf-primary-blue;
+                }
+            }
+            &:hover {
+                .mainMenu {
+                  display: block;   
+                }
+            }
+        }
+    }   
+    .vware-logo {
+        margin-bottom: 40px;
+        margin-top: 30px;
+        padding: 0px;
+    }
+    #consulting {
+        .mainMenu {
+            right:auto;
+        }
+    }
+    .mainMenu {
+        display:none;
+        position: absolute;
+        background: $vmf-gradientColor2;
+        border-top: 4px solid $vmf-primary-blue;
+        padding-bottom: 17px;
+        padding-right: 30px;
+        padding-left: 30px;
+        right: 0;
+        top: auto;
+        width: auto;
+        min-height:100px;
+        max-width: 1000px;
+        h3 {
+            margin-bottom:4px;
+            .subHeading {
+                color: $primary-teal;
+                margin:0;
+                padding:0 22px 0 0;
+                background: url("/images/arrow-heading-link.png") no-repeat right center transparent;
+                &:hover {
+                    color:$vmf-primary-blue;
+                    background-color: transparent;
+                }
+            }
+        }
+
+    }
+    .menuContent {
+        .col {
+            float: left;
+            margin-right: 30px;
+            width: 195px;
+            max-width: 230px;
+            h5 {
+                text-indent: 0;
+            }
+            li {
+                margin-bottom: 4px;          
+            }
+            h4 {
+                font-size: 15px;
+                padding-bottom: 10px;
+                text-indent: 0;
+                margin-bottom: 7px;
+                margin-top: 10px;
+            }
+            a {
+                color: $primary-teal; 
+                font-size: 14px;
+                padding:0;
+                font-family:$font-stackLight; 
+                &:hover {
+                    background-color:transparent;
+                    color: $vmf-primary-blue;
+                }
+            }
+        }
+    }
+.sub-listMenu {
+    a {
+       margin-left:10px;
+    }
+}
+    
+    

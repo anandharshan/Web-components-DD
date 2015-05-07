@@ -1,0 +1,26 @@
+<!--ToolTip component code -->
+
+<div ng-controller="toolTipController" class="row">
+    <div class="col-md-12 vmf-tooltip-holder">
+        <a vmf-tooltip tooltip-options="{'position':'top','text':'Tooltip on Anchor tag','skin':'light'}">Anchor Tag</a>
+    </div>
+    <div class="col-md-12 vmf-tooltip-holder">
+        <p vmf-tooltip tooltip-options="{'text':'Tooltip on part of string'}" target-ele="partOfString">VMWARE custom <span class="partOfString">tooltip</span> component</p>
+    </div>
+    <div class="col-md-12 vmf-tooltip-holder">
+        <p vmf-tooltip tooltip-options="{'position':'top', 'close':'true','text':'click to visit <a href=\'http://www.google.com\' target=\'_blank\'>GOOGLE</a>','showOn':'click','hideOn':'click'}" target-ele="partOfString">VMWARE tooltip <span class="partOfString">Click</span> actions</p>
+    </div>
+    <div class="col-md-12 vmf-tooltip-holder">
+        <div vmf-button btn-text='Primary' btn-type='primary' class="vmf-tooltip" vmf-tooltip tooltip-options="{'position':'right','text':'Regenerate button will generate a new code and disable the current code','offsetX':5}"></div>
+    </div>
+    <div class="col-md-12 vmf-tooltip-holder">
+        <div vmf-select-list dtitle="Total Revenue" model="revenue2" list="revenuesObj" mandatory="true"></div>
+        <span class="toolTip-icon vmf-tooltip" vmf-tooltip tooltip-options="{'position':'left','text':'<h5>Total Revenue</h5> Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed'}">
+    </span>
+    </div>
+    <div class="col-md-12 vmf-tooltip-holder clearFloat">
+        <div vmf-checkbox-group vmf-tooltip tooltip-options="{'position':'bottom','text':'Sample tooltip text fsdfsdbgf sbgka sjdbgfasjd gfsdibgjasdf gsdfkbgfasdf gasdfbgadf gvadfn gvsdfh','skin':'light'}" class="vmf-checkbox-group" ctitle="checkBoxTitle" options="checkBoxOptions" name="checkBoxName" model="checkBoxModel" target-ele="tempClassCheck">
+        </div>
+    </div>
+
+</div>

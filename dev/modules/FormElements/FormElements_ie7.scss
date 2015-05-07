@@ -1,0 +1,35 @@
+.vmf-formTemplate {
+    .selectWidth {
+        position: relative;
+        z-index: 1000;
+        margin-bottom: 30px;
+        .vmf-dropdown {
+            width: 140px
+        }
+        > div {
+            width: auto;
+        }
+        .vmf_drop-down_text {
+            .labelHeader.formLabel {
+                width: 200px;
+            }
+            .vmf-dropdown-content {
+                width: 180px;
+            }
+        }
+    }
+    &.registrationForm {
+        &.vmf-formElements {
+            .requiredFeild {
+                padding-left: 26.34%;
+            }
+        }
+    }
+    &.vmf-formElements {
+        .radioContainer {
+            padding-left: 0px;
+        }
+    }
+}
+
+

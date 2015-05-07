@@ -1,0 +1,33 @@
+<!--Radio Buttons component code -->
+
+<div ng-controller="radioCtrl" class="radio-controls">
+    <h5>
+        Type 1
+    </h5>    
+    <vmf-radio-group type="1" rtitle="radioTitle" options="radioOptions" name="radioName" model="radioModel" custom-class="customclass" mandatory="true">
+    </vmf-radio-group>
+    <vmf-radio-group type="1" options="radioOptions2" name="radioName2" model="radioModel2">
+    </vmf-radio-group>
+
+    <h5>
+        Type 2
+    </h5>    
+    <div class="formSection clearfix">
+        <div class="labelHeader col-md-2">
+            <span class="mandatory">* </span>
+            Role
+        </div>
+        <div class="col-md-8 radioContainer">
+            <fieldset>
+                <vmf-radio-group type="2" model="radioModel3" r-label="radioOptions3[0].text" r-disabled="radioOptions3[0].disabled" r-checked="radioOptions3[0].checked" r-value="radioOptions3[0].value" name="radioName3">
+                </vmf-radio-group>
+                <vmf-radio-group type="2" model="radioModel3" r-label="radioOptions3[1].text" r-disabled="radioOptions3[1].disabled" r-checked="radioOptions3[1].checked" r-value="radioOptions3[1].value" name="radioName3">
+                </vmf-radio-group>
+                <vmf-radio-group type="2" model="radioModel3" r-label="radioOptions3[2].text" r-disabled="radioOptions3[2].disabled" r-checked="radioOptions3[2].checked" r-value="radioOptions3[2].value" name="radioName3">
+                </vmf-radio-group>
+            </fieldset>
+        </div>
+    </div>
+
+
+</div>

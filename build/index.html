@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="vmfModule">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>VMware UI Components Library</title>
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="location" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+     <script type="text/javascript" src="../../dev/assets/libs/modernizer.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css/main_part_2.css" />
+    <link rel="stylesheet" type="text/css" href="css/main_part_3.css" /> -->
+    <!-- Internet Explorer AngularJS element creation -->
+    <!--[if lte IE 8]>
+    <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+        document.createElement('vmf-radio-group');
+        document.createElement('vmf-radio');
+        document.createElement('vmf-checkbox-group');
+        document.createElement('vmf-select-list');
+        document.createElement('vmf-tabs');
+        document.createElement('vmf-pane');
+        document.createElement('vmf-tabsone');
+        document.createElement('vmf-paneone');
+        document.createElement('vmf-tabstwo');
+        document.createElement('vmf-panetwo');
+        document.createElement('vmf-text-input');
+        document.createElement('vmf-autocomplete-input');
+        document.createElement('vmf-tooltip');
+        document.createElement('modal-popup');
+        document.createElement('vmf-header-inline-editing');
+        document.createElement('vmf-form-template');
+        document.createElement('vmf-accordion-container');
+        document.createElement('vmf-product-alerts');
+        document.createElement('vmf-carousel');
+        document.createElement('vmf-hero-carousel');
+        document.createElement('vmf-pagination');
+        document.createElement('vmf-modaless-popup');
+        document.createElement('vmf-content-rating');
+        document.createElement('vmf-backlink');
+        document.createElement('vmf-bigfooter');
+        document.createElement('menu');
+        document.createElement('vmf-custom-radio-group');
+        document.createElement('vmf-custom-check-box-group');
+		document.createElement('ng-bind');
+        document.createElement('vmf-calendar');
+        document.createElement('vmf-combo-box');
+        document.createElement('vmf-wpb');
+        document.createElement('vmf-wpb-task');
+        document.createElement('vmf-ad-unit');
+		document.createElement('vmf-carousel');
+        document.createElement('vmf-utility-nav');
+        document.createElement('vmf-file-upload');
+        document.createElement('vmf-slider-control');
+        document.createElement('vmf-calendar-single');
+        document.createElement('vmf-first-run-experience');
+        document.createElement('vmf-pwdStrength');
+        document.createElement('vmf-split-container');
+        document.createElement('vmf-split-pane-component');
+        document.createElement('vmf-split-pane-divider');
+        document.createElement('vmf-productcarousel');
+        document.createElement('vmf-table');
+        document.createElement('vmfTableAutoComplete');
+        document.createElement('vmfTableFilterButton');
+        document.createElement('vmfTableFilterButtonLocation');
+        document.createElement('vmfTableFilter');
+        document.createElement('vmf-coach-marks');
+        document.createElement('vmf-file-browse');
+        
+    </script>
+
+<![endif]-->
+    <!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="css/ie8.css" />
+<![endif]-->
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="css/ie7.css" />
+<![endif]-->
+
+</head>
+
+<body class="ng-cloak">
+    <!-- Outer Wrapper - Start -->
+    <div id="wrapper" class="clearfix" ng-controller="mainCtrl">
+        <div class="vmf-header">
+            <a class="logo" href="#">
+                <img src="/images/vmware-logo.png" /><span>Component Library</span>
+            </a>
+        </div>
+        <!--<div class="global-navigation"></div> -->
+       
+        <div class="main-container ">   
+            <div class="container-fluid">         
+            <div class="row">
+               <h1 class="pre-title">Component - <span>{{activelink}}</span></h1>
+                <div class="leftNav col-md-2 col-xs-12">
+
+                    <h2>Form Elements</h2>
+
+                    <ul class="component-list">
+                        <li><a ui-sref="Radio" ng-class='{activeStateLink:activelink=="Radio Buttons"}' class='activeHover'>Radio Buttons</a>
+                        </li>
+                        <li><a ui-sref="ComboBox" ng-class='{activeStateLink:activelink=="Combo Box"}' class='activeHover'>Combo Box</a>
+                        </li>
+                        <li><a ui-sref="Checkbox" ng-class='{activeStateLink:activelink=="Checkbox"}' class='activeHover'>Checkbox</a>
+                        </li>
+                        <li><a ui-sref="TextInputBox" ng-class='{activeStateLink:activelink=="Text Input Box"}' class='activeHover'> Text Input Box</a>
+                        </li>
+                        <li><a ui-sref="Dropdown" ng-class='{activeStateLink:activelink=="Drop Down List"}' class='activeHover'> Drop Down List </a>
+                        </li>
+                        <li><a ui-sref="FormValidations" ng-class='{activeStateLink:activelink=="Form Validations"}' class='activeHover'> Form Validations</a>
+                         </li>
+                          
+                        <li><a ui-sref="formElements" ng-class='{activeStateLink:activelink=="Form Elements & Structure"}' class='activeHover'> Form Elements & Structure </a>
+                         </li>
+
+                    </ul>
+
+                    <h2>Navigation</h2>
+
+                    <ul class="component-list">
+                        <li><a ui-sref="Backlink" ng-class='{activeStateLink:activelink=="Backlink"}' class='activeHover'> Backlink</a>
+                        </li>
+                        <li><a ui-sref="Bigfooter" ng-class='{activeStateLink:activelink=="Bigfooter"}' class='activeHover'> Big Footer</a>
+                         </li>
+                        <li><a ui-sref="TabNavigation" ng-class='{activeStateLink:activelink=="Tab Navigation"}' class='activeHover'> Tab Navigation</a>
+                        </li>
+                        <li><a ui-sref="Breadcrumbs" ng-class='{activeStateLink:activelink=="Breadcrumbs"}' class='activeHover'> Breadcrumb</a>
+                        </li>
+                        <li><a ui-sref="FolderTree" ng-class='{activeStateLink:activelink=="Folder Tree"}' class='activeHover'> Folder Tree</a>
+                        </li> 
+                          <li><a ui-sref="GlobalNavigation" ng-class='{activeStateLink:activelink=="GlobalNavigation"}' class='activeHover'> Global Navigation</a>
+                        </li>
+                         <li><a ui-sref="utility" ng-class='{activeStateLink:activelink=="Utility Navigation"}' class='activeHover'> Utility Navigation</a></li>
+                         <li><a ui-sref="socialMedia" ng-class='{activeStateLink:activelink=="Social Media"}' class='activeHover'> Social Media</a></li>
+
+
+
+                    </ul>
+                    <h2>Data Display</h2>
+                    <ul class="component-list">
+                         <li><a ui-sref="AdUnits" ng-class='{activeStateLink:activelink=="Ad Units"}' class='activeHover'>Ad Units</a></li>
+                        <li><a ui-sref="Carousels" ng-class='{activeStateLink:activelink=="Carousels"}' class='activeHover'>Carousels</a>
+                        </li>
+                       <li><a ui-sref="CoachMarks" ng-class='{activeStateLink:activelink=="Coach Marks"}' class='activeHover'>Coach Marks</a>
+                        </li>
+                        <li><a ui-sref="FormTemplates" ng-class='{activeStateLink:activelink=="Form Templates"}' class='activeHover'>Form Templates</a>
+                        </li>
+                        <li><a ui-sref="HomepageHeroCarousel" ng-class='{activeStateLink:activelink=="Home page Hero Carousel"}' class='activeHover'>Home page Hero Carousel</a>
+                        </li>
+                        <li><a ui-sref="EmptyState" ng-class='{activeStateLink:activelink=="Empty State"}' class='activeHover'> Empty State</a>
+                        </li>
+                        <li><a ui-sref="ContentRating" ng-class='{activeStateLink:activelink=="ContentRating"}' class='activeHover'>Content Rating Widget</a>
+                        </li>
+                        <li><a ui-sref="ModalOverlay" ng-class='{activeStateLink:activelink=="Modal Overlay"}' class='activeHover'>Modal Overlay</a>
+                        </li>
+                        <li><a ui-sref="ModalessOverlay" ng-class='{activeStateLink:activelink=="Modaless Overlay"}' class='activeHover'> Modaless Overlay</a>
+                        </li>
+                        
+                        <li><a ui-sref="ToolTip" ng-class='{activeStateLink:activelink=="Tool Tip"}' class='activeHover'> Tool Tip</a>
+                        </li>
+                        <li><a ui-sref="FirstRunExperience" ng-class='{activeStateLink:activelink=="First Run Experience"}' class='activeHover'> First Run Experience</a>
+                        </li>
+                        <li><a ui-sref="productCarousels" ng-class='{activeStateLink:activelink=="Product Carousels"}' class='activeHover'>Product Carousels</a></li>
+
+
+
+                    </ul>
+                    <h2>Alert Notification</h2>
+
+                    <ul class="component-list">
+                        <li><a ui-sref="ProductAlerts" ng-class='{activeStateLink:activelink=="Product Alerts"}' class='activeHover'>Product Alerts</a>
+                        </li>
+                        <li><a ui-sref="SystemAlerts" ng-class='{activeStateLink:activelink=="System Alerts"}' class='activeHover'>System Alerts</a>
+                        </li>
+
+
+                    </ul>
+                    <h2>Workflows</h2>
+
+                    <ul class="component-list">
+                        <li><a ui-sref="FileUpload" ng-class='{activeStateLink:activelink=="File Upload"}' class='activeHover'>File Upload</a>
+                        </li>
+                        <li><a ui-sref="login" ng-class='{activeStateLink:activelink=="login"}' class='activeHover'>Login</a>
+                        </li>
+                        <li><a ui-sref="UiShell" ng-class='{activeStateLink:activelink=="UiShell"}' class='activeHover'>UI Shell</a>
+                        </li>
+                        <li><a ui-sref="PasswordStrength" ng-class='{activeStateLink:activelink=="Password Strength"}' class='activeHover'>Password Strength</a> 
+                        </li>
+                        <li><a href="UiTemplate.html" target="_blank">UI Template</a>
+                        </li>
+                        <li><a ui-sref="wizard" ng-class='{activeStateLink:activelink=="Wizard Progress Bar"}' class='activeHover'>Wizard Progress Bar</a>
+                        </li>
+						<li><a ui-sref="formRegistration" ng-class='{activeStateLink:activelink=="Form Registration"}' class='activeHover'> Form Registration</a>
+                         </li>
+
+
+                    </ul>
+                    <h2>Controls</h2>
+
+                    <ul class="component-list">
+                        <li><a ui-sref="Calendar" ng-class='{activeStateLink:activelink=="Calendar Date Picker"}' class='activeHover'>Calendar Date Picker</a>
+                        </li>
+                        <li><a ui-sref="ActionBar" ng-class='{activeStateLink:activelink=="Action Bar"}' class='activeHover'>Action Bar</a>
+                        </li>
+                        <li><a ui-sref="ActionButton" ng-class='{activeStateLink:activelink=="Action/Command Button"}' class='activeHover'> Action/Command Button</a>
+                        </li>
+
+                        <li><a ui-sref="AutoComplete" ng-class='{activeStateLink:activelink=="Auto Complete"}' class='activeHover'>Auto Complete</a>
+                        </li>
+                        <li><a ui-sref="HeaderInlineEditing" ng-class='{activeStateLink:activelink=="Header Inline Editing"}' class='activeHover'>Header Inline Editing</a>
+                        </li>
+                        <li><a ui-sref="SliderControl" ng-class='{activeStateLink:activelink=="Slider Control"}' class='activeHover'>Slider Control</a>
+                        </li>
+                         <li><a ui-sref="SplitContainer" ng-class='{activeStateLink:activelink=="SplitContainer"}' class='activeHover'> Split Container</a>
+                         </li>
+                          
+                    </ul>
+                    <!-- <h2>Search</h2>
+
+            <ul class="component-list">
+                <li><a ui-sref="Breadcrumbs" ng-class='{activeStateLink:activelink=="Breadcrumbs"}' class='activeHover'>Breadcrumbs</a>
+                </li>
+                <li><a ui-sref="Search" ng-class='{activeStateLink:activelink=="Search"}' class='activeHover'>Search</a>
+                </li>
+
+
+
+            </ul> -->
+
+
+                    <h2>Table</h2>
+
+                    <ul class="component-list">
+                        <li><a ui-sref="Accordion" ng-class='{activeStateLink:activelink=="Accordion Containers"}' class='activeHover'>Accordion Containers</a>
+                        </li>
+                         <li><a ui-sref="TableBasic" ng-class='{activeStateLink:activelink=="Table Basic"}' class='activeHover'>Table Basic</a>
+                        </li>
+                        <li><a ui-sref="TableComparison" ng-class='{activeStateLink:activelink=="Table Comparison"}' class='activeHover'>Table Comparison</a>
+                        </li>
+                         <li><a ui-sref="TableDragDrop" ng-class='{activeStateLink:activelink=="Table Drag and Drop"}' class='activeHover'>Table Drag and Drop</a>
+                        </li>
+                        <li><a ui-sref="TableFilter" ng-class='{activeStateLink:activelink=="Table Filter"}' class='activeHover'>Table Filter</a>
+                        </li>
+                         <li><a ui-sref="TableInlineEdit" ng-class='{activeStateLink:activelink=="Table Inline Edit"}' class='activeHover'>Table Inline Edit</a>
+                        </li>
+                        <li><a ui-sref="TableStatic" ng-class='{activeStateLink:activelink=="Table Static"}' class='activeHover'>Table Static</a>
+                        </li>
+                        <li><a ui-sref="TableQuickView" ng-class='{activeStateLink:activelink=="Table QuickView"}' class='activeHover'>Table QuickView</a>
+                        </li>
+                          <li><a ui-sref="TableBulkActions" ng-class='{activeStateLink:activelink=="Table Bulk Actions"}' class='activeHover'>Table Bulk Actions</a>
+                        </li>
+
+                    </ul>
+
+                    <h2>Search</h2>
+
+                    <ul class="component-list">
+                        
+                        <li><a ui-sref="Pagination2" ng-class='{activeStateLink:activelink=="Pagination2"}' class='activeHover'>Pagination</a>
+                        </li>
+                        <li><a ui-sref="Search" ng-class='{activeStateLink:activelink=="Search"}' class='activeHover'>Search</a>
+                        </li>
+                        
+                    </ul>
+
+                     <h2>Other Teams</h2>
+
+                    <ul class="component-list">
+                        
+                         <li><a ui-sref="customComponents" ng-class='{activeStateLink:activelink=="customComponents"}' class='activeHover'> Custom Components</a>
+                         </li>
+                        
+                        <!-- <li><a ui-sref="Pagination" ng-class='{activeStateLink:activelink=="Pagination"}' class='activeHover'>Pagination</a>
+                        </li> -->
+                        
+                        
+                        
+                    </ul>
+
+
+                </div>
+
+                <div class="rightNav col-md-10 col-xs-12">
+                    <div ui-view></div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="/js/vmfLibComponents.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+</body>
+</html>

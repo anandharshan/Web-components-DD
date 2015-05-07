@@ -1,0 +1,44 @@
+Syntax:
+<menu nav-menu="navMenu" show-details="showDetails" ng-show="showDetails"></menu>
+Configuration
+nav-menu  Variable [Array]       
+Mandatory: yes
+DefaultValue:<empty>
+Usage: [{
+            "title": "Consulting",
+            "href": "#",
+            "id": "consulting",
+            "menu": [{
+                    column1: {
+                        submenu: [{
+                            "title": "Consulting Services",
+                            items: [{
+                                "title": "Accelerate Advisory Services",
+                                "href": "#"
+                            }, {
+                                "title": "Technology Consulting",
+                                "href": "#"
+                            }, {
+                                "title": "Technical Account Manager Services",
+                                "href": "#"
+                            }, {
+                                "title": "Service Portfolio",
+                                "href": "#"
+                            }, {
+                                "title": "Purchase Training & Consulting Credits",
+                                "href": "#"
+                            }]
+
+                        }]
+                    }
+                }
+
+            ]
+        }]
+The nav-menu array contains all the relevant information regarding the titles,  items in main menu  and its,sub menus.
+
+show-details Variable [Boolean]       
+Mandatory: yes
+DefaultValue: True
+Usage: show-details="showDetails" 
+The variable contains a default value set to true which represents a navigation button for tablet and mobile views and false value represents global navigation of desktop view.

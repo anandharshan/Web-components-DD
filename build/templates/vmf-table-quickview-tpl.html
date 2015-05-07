@@ -1,0 +1,88 @@
+<div class="vmf-quick-view-cell-wrapper">
+<div class="vmf-quick-view-cell">
+    <span toggle="tooltip" showToolTip = "{{column.showToolTip}}"  title-alt="{{item.desc}}">{{item[column.field]}}</span>
+    <span ng-if='item.enableQuickView[column.field]' class="vmf-quick-view-icon"></span>
+</div>
+<div ng-if='item.enableQuickView[column.field]' class="quick-view-popup hide">    
+    <div class="tablepanel">
+        <!-- <span class="ico icon "></span> -->
+        <span class="arrow"></span>
+        <div class="panel">
+            <div class="widgets">
+                <div class="title">
+                    <span class="pull-left">{{item.quickViewTitle}}</span>
+                    <span class="pull-right icon-close vmf-quick-close-icon"></span>
+                </div>
+                <div class="section">
+                    <div class="stats-details">
+                        <table class="quick-view-stats">
+                            <thead>
+                                <tr>
+                                    <th class="stat-head">Renewal Rate</th>
+                                    <th class="stat-head">Total projected revenue</th>
+                                    <th class="stat-head">Total Orders</th>
+                                    <th class="stat-head">Last Year Revenue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>85%</td>
+                                    <td>$568,332</td>
+                                    <td>56332</td>
+                                    <td>$452,192</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="slider container_90">
+                        <div class="container_auto adjust-bottom">
+                            <span class="slide_title">
+                                <span class="pull-left slide-title-left">March 2013 Sales Goal</span>
+                                <span class="pull-right usd">USD $2,35,000</span>
+                            </span>
+                            <span class="slide_bar container_auto">
+                                <span class="bar_wrapper container_auto">
+                                    <span class="pull-left blue_slide" style="width:30%"></span>
+                                    <span class="pull-left green_slide" style="width:20%"></span>
+                                </span>
+                                <span class="bar_marker container_auto">
+                                    <span class="pull-left  placing_marker" style="width:30%">
+                                        <span class="pull-right "></span>
+                                    </span>
+                                    <span class="pull-left  placing_marker" style="width:20%">
+                                        <span class="pull-right "></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                        <div class="container_auto adjust-bottom">
+                            <span class="slide_title">
+                                <span class="pull-left slide-title-left">Renewal Revenue Requirement</span>
+                                <span class="pull-right usd">USD $1,000,000</span>
+                            </span>
+                            <span class="slide_bar container_auto">
+                                <span class="bar_wrapper container_auto">
+                                    <span class="pull-left blue_slide" style="width:30%"></span>
+                                    <span class="pull-left green_slide" style="width:20%"></span>
+                                </span>
+                                <span class="bar_marker container_auto">
+                                    <span class="pull-left  placing_marker" style="width:30%">
+                                        <span class="pull-right "></span>
+                                    </span>
+                                    <span class="pull-left  placing_marker" style="width:20%">
+                                        <span class="pull-right "></span>
+                                    </span>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_title">
+                    <a class="pull-left button blue_button">Contact Agent</a>
+                    <a class="pull-right button gray_button" type="button gray_button">Order History</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

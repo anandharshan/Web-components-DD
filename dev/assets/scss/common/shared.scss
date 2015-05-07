@@ -1,0 +1,41 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+p {
+    text-align: left;
+}
+label {
+     font-weight: normal;
+}
+ul, ol {
+    margin: 0px;
+}
+a {
+    &:link,&:visited , &:hover,&:active {
+        text-decoration: none;
+    }
+}
+* { 
+    -moz-box-sizing: border-box;
+}
+.clearFloat {
+     clear:both;   
+}
+
+
+
+/*fix for all elements which has spacing
+@media (max-width: $screen-desktop) { 
+    body {
+        .labelHeader, .formLabel {
+             padding-left:15px;   
+        }
+        .leftNav {
+             padding-left:15px;      
+        }
+    }
+}*/
+
+
+
+

@@ -1,0 +1,99 @@
+<!--Form Template-->
+<div ng-controller="formValidationController" class="vmf-formValidator">
+    <div information-message info-message="{{infomessage}}" is-info-message='isInfoMessage' info-type='{{warningtype}}'></div>
+    <form name='vmfCustomFormTemplate' submit-callback="formSubmitFunction()" novalidate>
+        <div class="form-group clearfix clearAll">
+            <vmf-text-input type="normal" name="fname" model="user.firstName" hint="Enter First Name" title="First Name" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"alphabets"},{"name" : "maxLength", "value" : "20"}]'></vmf-text-input>
+        </div>
+         <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="lname" model="user.lastName" hint="Enter Last Name" title="Last Name" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"alphabets"},{"name" : "maxLength", "value" : "20"}]'></vmf-text-input>
+        </div>
+        <div class="form-group clearfix selectInfo selectInfoStatic">
+            <div vmf-select-list name="revenueVal" dtitle="Total Revenue" model="user.revenue" select-col-mod="col-md-3" title-col-mod="col-md-3" list="revenuesObj" title="Selection" mandatory="true" custom-class="customclass" validation='[{"name":"selectOne"},{"name":"required"}]'>
+            </div>
+            <span class="toolTip-icon vmf-tooltip" vmf-tooltip tooltip-options="{'position':'right','text':'<h5>Total Revenue</h5> Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed'}"></span>
+        </div>
+
+        <div class="form-group clearfix formRadioGroup">
+            <vmf-radio-group type="1" rtitle="radioTitle" options="radioOptions" name="radioName" title-col-mod="col-md-3" model="user.radioModel" custom-class="customclass" mandatory="true" validation='[{"name":"radio"},{"name":"required"}]'>
+            </vmf-radio-group>
+        </div>
+      
+
+
+        <div class="form-group clearfix clearAll">
+            <vmf-text-input type="normal" name="email" model="user.email" hint="joe.smith@corp.com" title="Email Address" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"email"}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="password" option-id="password" name="password" class="formInputClass vmf-text-input" hint="Enter Password" title="Enter Password" model="user.password" mandatory="true" custom-class="customclass" validation='[{"name":"pswd"},{"name":"required"},{"name" : "minLength" , "value" : "6"}, {"name" : "maxLength", "value" : "20"}, {"name" : "validationonealphabet"}, {"name" : "validationonenumber"}, {"name" : "validationoneuppercaseletter"}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="password" option-id="conformPassword" name="conformPassword" class="formInputClass vmf-text-input" hint="Confirm Password" title="Confirm Password" id="validate_password" model="user.confirm_password" mandatory="true" custom-class="customclass" validation='[{"name":"required"},{"name" : "confirmpassword","confirm_with" : "password"},{"name" : "minLength" , "value" : "6"}, {"name" : "maxLength", "value" : "20"}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="companyName" model="user.company" hint="Enter Company Name" title="Company Name" custom-class="customclass" mandatory="true" class="formInputClass vmf-text-input" validation='[{"name":"maxLength","value":"50","message":"Maximum 50 characters only allowed"},{"name":"required"}]'></vmf-text-input>
+        </div>
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="phone" model="user.phone" hint="Phone Number" title="Phone Number" custom-class="customclass" mandatory="true" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name" : "maxLength", "value" : "15"},{"name":"phonenumber"}]'></vmf-text-input>
+        </div>
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="dunsNumber" model="user.duns" hint="DUNS Number" title="DUNS Number" custom-class="customclass" mandatory="true" class="formInputClass vmf-text-input" validation='[{"name":"digits","message":"Only digits allowed"},{"name":"required"},{"name":"maxLength","value":"10","message":"Maximum 10 digits only allowed"}]'></vmf-text-input>
+        </div>
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="Enter Zip Code" name="zipCode" model="user.postalCode" title="Zip/Postal Code" mandatory="true" custom-class="customclass" class="formInputClass form_zip_code vmf-text-input" validation='[{"name":"digits","message":"Only digits allowed"},{"name":"required"},{"name":"maxLength","value":"6","message":"Maximum 6 digits only allowed"},{"name":"zipcode"}]'></vmf-text-input>
+
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="xxx.xxx.xxx.xxx" name="ipAddress" model="user.ipAddress" title="IP Address" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"ipaddress"}]'></vmf-text-input>
+
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="Reference URL" name="referenceURL" model="user.url" title="Hyperlink" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"url"}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="Number (6 - 20)" name="numberLimit" model="user.limits" title="Number Limits" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"digits"},{"name":"minvalue","value":"6","message":"Minimum Value is 6"},{"name":"maxvalue","value":"20","message":"Maximum value is 20"}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="Credit Card" name="creditCard" model="user.creditCard" title="Credit Card" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"digits"},{"name":"creditcard"},{"name":"maxLength","value":"16","message":"Maximum 16 digits only allowed"}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="10 to 40 only" name="rangeLength" model="user.rangeLength" title="Range Length" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"numbers"},{"name":"rangelength","value":[10,40]}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="Type Validation" name="typeValidation" model="user.equalTo" title="Type the same" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"equalTo","value":"Validation","message":"Please type Validation in the field"}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="Alphanumeric Value" name="alphaNumeric" model="user.alphanumeric" title="Alpha Numeric" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"alphanumeric"},{"name":"validationonenumber"},{"name":"validationonealphabet"},{"name":"validationnospecialchars"}, {"name" : "maxLength", "value" : "20"}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="Atleast one upper case letter" name="upperCase" model="user.oneUpperCaseLetter" title="Atleast one upper case letter" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"validationoneuppercaseletter"}]'></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="Atleast one lower case letter" name="lowerCase" model="user.oneLowerCaseLetter" title="Atleast one lower case letter" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"validationonelowercaseletter"}]'></vmf-text-input>
+        </div>
+
+      
+        <div class="form-group vmf-confirmation vmf-footerMandatory clearfix">
+            <!-- <div vmf-checkbox-group mandatory="true" validation='[{"name":"required"}]' class="vmf-checkbox-group vmf-termsCheck" options="checkBoxOptions1" type="2" name="checkBoxName1" model="user.checkBoxModel" custom-class="customclass"></div>
+            <div vmf-checkbox-group class="vmf-checkbox-group vmf-termsCheck" options="checkBoxOptions2" type="2" name="checkBoxName2" model="user.checkBoxModel2" custom-class="customclass"></div> -->
+            <div vmf-checkbox-group class="vmf-checkbox-group aftrCheckValdtn" validation='[{"name":"required"}]' append="true" type="1" model="user.checkBoxModel" name="checkBoxName1" c-label="checkBoxOptions[0].text" c-disabled="checkBoxOptions[0].disabled"></div>
+        <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="user.checkBoxModel2" name="checkBoxName2" c-label="checkBoxOptions[1].text" c-disabled="checkBoxOptions[1].disabled"></div>
+        
+        <div class="form-group clearfix">
+            <input type="submit" value="Submit" id="formSubmit" class="vmf-btn vmf-primary">
+            <input type="reset" value="Reset" id="formReset" class="vmf-btn vmf-primary">
+        </div>
+    </form>
+</div>

@@ -1,0 +1,98 @@
+  .vmf-formTemplate {
+      color: $vmf-gray-darker;
+      #vmf-formTextarea {
+          width: 94%;
+      }
+      .requiredFeild {
+          padding-left: 26.5%;
+      }
+      .form-group {
+          width: 100%;
+          .vmf_drop-down_text {
+              height: 30px;
+              width: 61%;
+              .formLabel.col-md-2 {
+                  width: 40.5%;
+              }
+              .vmf-dropdown.col-md-4 {
+                  width: 50%;
+              }
+          }
+          .yearDropDown  {
+              .vmf_drop-down_text {
+                  height: auto;
+                  width: 100%;
+                  .vmf-dropdown {
+                      width:100%;
+                  }
+              }
+          }
+      }
+      .formTemplateSelect {
+          margin-bottom: 30px;
+          .col-md-2 {
+              width: 25%;
+          }
+      }
+      .form_zip_code {
+          input {
+              width: 153px;
+          }
+      }
+      .business_phone {
+          vmf-text-input {
+              display: inline-block;
+          }
+          .businessText {
+              width: 20%;
+              padding-right: 19px;
+              input {
+                  width: 153px;
+              }
+          }
+          .businessExt {
+              float: left;
+              width: auto;
+          }
+          .businessExtTxt {
+              padding-right: 0;
+              width: 2%;
+              input {
+                  width: 100%;
+              }
+          }
+          .col-md-1 {
+              width: 6.6%;
+              padding: 0px 10px 0px 9px;
+          }
+      }
+      .vmf-checkbox-group {
+          .formSection {
+              .labelHeader {
+                  padding-right: 0px;
+              }
+          }
+      }
+      .positionTip {
+          float: left;
+          width: 100%;
+      }
+      .vmf-formFooterButons {
+          text-align: right;
+      }
+  }
+  .help-text {
+      position: absolute;
+      top: 35px;
+      left: 16px;
+  }
+  .formTemplateSelect {
+      &.positionTip {
+          .toolTip-icon {
+              margin-top: 6px;
+          }
+          > div {
+              width: auto;
+          }
+      }
+  }

@@ -1,0 +1,29 @@
+<div class="cell-editor ">
+                                <input ng-model-onenter ng-if = '(column.editable) && (!column.advancedEditOption)' class="editField hide" type="text" ng-model=row[column.field]>
+                                <div ng-if = '(column.editable) && (column.advancedEditOption)' class="advancedEdit editInputs editField hide absolute">
+                <div class="editable-inputs">
+                                <p>
+                                <label>Currency </label>
+                                 <select class="editInputs" ng-model="row['unit']">
+                                    <option ng-repeat="item in [row['unit']]" value="{{item}}">USD</option>
+                                </select> 
+                                </p>
+                                <p>
+                                <label>Customer Cost</label>
+                                <input class="editInputs editInputsText" ng-model-oncustom-event type="text" ng-model=row[column.field] />
+                                </p>
+                                <p>
+                                <label>Start Date</label>
+                                <input class="editInputs editInputsText" table-datepicker   ng-model="startdate" type="text" />
+                                </p>
+                                <p>
+                                <label>End Date</label>
+                                <input class="editInputs editInputsText" table-datepicker  ng-model="enddate" type="text" />
+                                </p>
+                </div>
+                                    <div class="button-section clearfix">
+                                        <input type="button" ng-click="advanceEditCancel($event);" class="advance-edit-cancel editInputs pull-left" value="Cancel" />
+                                        <input type="button" ng-click="advanceEditSave($event);" class="advance-edit-save editInputs pull-right" value="Save" />
+                                    </div>
+                                </div>
+                            </div>

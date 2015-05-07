@@ -1,0 +1,70 @@
+Component - Form Validations
+
+CREATION
+<form  name='vmfCustomFormTemplate'   submit-callback="formSubmitFunction()"  novalidate>
+</form>
+All form group div elements will be wrapped inside form tag with optional submit callback function.
+<div class="form-group clearfix clearAll">
+</div>
+All form input elements will be placed inside form-group div element
+Example input element integration
+<form name='vmfCustomFormTemplate' submit-callback="formSubmitFunction()" novalidate>
+<div class="form-group clearfix clearAll">
+<vmf-text-input  type="normal" name="fname" model="user.firstName" hint="Enter First Name" title="First Name" mandatory="true" custom-class="customclass" 
+class="formInputClass vmf-text-input"
+ validation='[{"name":"required"},{"name":"alphabets"},{"name" : "maxLength", "value" : "20"}]' >
+</vmf-text-input>
+<div class="form-group clearfix">
+            <input type="submit" value="Submit" id="formSubmit" class="vmf-btn vmf-primary">
+            <input type="reset" value="Reset" id="formReset" class="vmf-btn vmf-primary">
+</div>
+ </div>
+</form>
+VALIDATIONS
+Validation will be done based on options configured using validation directive
+EX: validation='[{"name":"required"},{"name":"alphabets"},{"name" : "maxLength", "value" : "20"}]'
+Validations can be done for
+1.	Required
+2.	Alphabets
+3.	Digits
+4.	Numbers
+5.	Alphanumeric
+6.	Email
+7.	url
+8.	minvalue
+9.	maxvalue
+10.	minLength
+11.	maxLength
+12.	equalTo
+13.	agreement
+14.	selectOne
+15.	radio
+16.	ipaddress
+17.	confirmpassword
+18.	validationonlyalphabets
+19.	validationoneuppercaseletter
+20.	validationonelowercaseletter
+21.	validationonenumber
+22.	validationonealphabet
+23.	validationnospecialchars
+24.	creditcard
+ 
+25.	phonenumber
+26.	rangelength
+27.	validationdatebeforeToday
+28.	validationdatebefore
+29.	validationdateafter
+30.	confirmationFields
+
+METHODS:
+_clearValidations()
+This function will clear all the fields text and their error messages if any exists.
+_validate()
+This function will validate all form elements integrated inside form template
+formSubmitFunction()
+This function will be called up on successful submission of form.
+
+GLOBAL ERROR MESSAGE : 
+<div information-message info-message="{{infomessage}}" is-info-message='isInfoMessage' info-type='{{warningtype}}'></div>
+This will be displayed above the form  if any of the form element is invalid. 
+

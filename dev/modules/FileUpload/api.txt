@@ -1,0 +1,59 @@
+File Upload API Documentation 
+
+Syntax:
+
+<div vmf-file-upload options="options" heading="{{title}}" min-speed="{{minSpeed}}"></div>
+
+Configuration
+
+heading String
+
+Mandatory: Yes
+
+Default Value: <empty>
+
+Usage: heading=”Upload attachments”
+
+The title to be shown in the file upload window.
+
+min-speed String
+
+Mandatory: No
+
+Default Value: 100(in KB/s)
+
+Usage: min-speed=”256”
+
+A string representing the speed(in KB/s) below which the slow internet connection speed message needs 
+
+to be shown.
+
+options. ftpUrl String
+
+Mandatory: Yes
+
+Default Value: <empty>
+
+Usage: ftpUrl:”http://www.google.com”
+
+A string representing the url of the FTP server for file upload if file size exceeds 5GB
+
+options. fileUploadScriptUrl String
+
+Mandatory: Yes
+
+Default Value: <empty>
+
+Usage: fileUploadScriptUrl:”api/uploadFile”
+
+A string representing the url of the file upload service.
+
+options. removeFileUrl String
+
+Mandatory: Yes
+
+Default Value: <empty>
+
+Usage: removeFileUrl:”api/ deleteFile”
+
+A string representing the url of the delete file service.

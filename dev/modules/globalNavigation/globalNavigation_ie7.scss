@@ -1,0 +1,182 @@
+  .navDiv   {
+        height:95px;
+        background:$vmf-globalnav-desktopbg;
+    }
+    .menu-link-primary {
+         display:none;   
+    }
+    .mainMenulist {
+        display:block !important;
+        background:transparent;
+        float: left;
+        width:auto;
+    }
+    .mainlistItem {
+        float: right;
+        padding-top: 35px;
+        padding-right: 0px;
+        padding-left: 15px;
+        > li {
+            width: auto;
+            float: none;
+            a {			
+                text-indent: 38px;
+                border-top: 1px solid $btn-default-border;
+                font-size: 18px;
+                font-weight: 200;
+                color: $gray-dark;
+                background: $vmf-bgColor;              
+            }
+
+           &:hover {
+                background-color: $vmf-primary-blue;   
+            }
+            &:nth-child(2n+1) { 
+                float: none;                
+            }
+            .globalItem {
+                
+                &:before {
+                    background:none;
+                }
+            }
+        }
+        .level-1 {
+             float: left;
+            a {
+                font-size: 20px;
+                color: $vmf-bgColor;
+                height: auto;
+                padding: 9px 22px 8px;
+                border: none;
+                text-indent: 0;
+                background: transparent;
+                font-family:$font-stackLight; 
+
+            }
+             .viewMore {
+                clear: both;
+                color: $primary-teal;
+                display: inline-block;
+                float: left;
+                font-size: 16px;
+                width: auto;
+                font-family:$font-stack;
+                line-height: 16px;
+                margin-top: 25px;
+                padding: 0;
+                &:hover {
+                background-color:transparent;
+                color:$vmf-primary-blue;
+                }
+            }
+            &:hover {
+                .mainMenu {
+                    display: block;   
+                }
+            }
+
+        }
+    }
+    #consulting {
+        position: relative;        
+        .mainMenu {
+            right:-16px;
+            left:0;
+            top:45px;
+        }
+    }
+    .mainMenu {
+        display:none;
+        position: absolute;
+        background: $vmf-gradientColor2;
+        border-top: 4px solid $vmf-primary-blue;
+        padding-bottom: 18px;
+        padding-right: 30px;
+        padding-left: 30px;
+        right: 0px;
+        top: 80px;
+        width: auto;        
+        max-width: 1000px;
+        h3 {
+            float:left;
+            .subHeading {
+                color: $primary-teal;
+                margin:0;
+                padding:0 22px 0 0;
+                background: url("/images/arrow-heading-link.png") no-repeat right center transparent;
+                &:hover {
+                    color:$vmf-primary-blue;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .menuContent {
+        clear:both;
+        width:100%;
+        .col {
+            float: left;
+            margin-right: 30px;
+            width: 195px;
+            max-width: 230px;            
+            h5 {
+                text-indent: 0;
+            }
+            li {
+                margin-bottom: 3px;            
+            }
+            h4 {               
+                font-size: 15px;
+                padding-bottom: 10px;
+                text-indent: 0;
+                margin-bottom: 7px;
+                margin-top: 12px;
+            }
+            a {
+                color: $primary-teal;
+                font-size: 14px;
+                padding:0;
+                font-family:$font-stack; 
+                &:hover {
+                    background-color:transparent;
+                     color: $vmf-primary-blue;
+                }
+            }
+        }
+    }
+.vware-logo {
+    margin-bottom: 40px;
+    margin-top: 30px;
+    padding: 0px;
+}    
+ #consulting {
+    .mainMenu {
+        right:auto;
+    }
+}
+#company,#partners,#downloads {	
+    .mainMenu {
+        width:500px;		
+    }
+}
+#consulting {	
+	.mainMenu {
+		width:200px;		
+	}
+}
+#downloads,#support {	
+	.mainMenu {
+		width:700px;		
+	}
+}
+#products {
+	.mainMenu {
+		width:900px;		
+	}
+}
+.sub-listMenu {
+    a {
+       margin-left:10px;
+    }
+}

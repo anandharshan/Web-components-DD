@@ -1,0 +1,27 @@
+<div>
+    <div class="row vmf-table-wrapper-container">
+        <div class="col-md-12 table-wrapper" >
+            <table class="table vmf-table table-striped table-bordered {{classes}}">
+                <tbody ng-repeat="item in data">                      
+                    <tr ng-if="item.isParent" class="group-header">
+                        <td ng-repeat="column in columns">
+                            <span class="bold" ng-if="(!$index)">{{item.type}}</span>
+                            <span class="bold" ng-if="($index)">{{column.title}}</span>
+                       </td>
+                    </tr> 
+                    <tr ng-if="!item.isParent" ng-class="{'row-even': $even, 'row-odd': $odd}"
+                        class="vm-rows"> 
+                       <td vmf-table-cell
+                            cell-renderers="cellRenderers"
+                            selected-rows="selectedRows"
+                            item="item"
+                            field="{{column.field}}"
+                            ng-repeat="column in columns"
+                            class="{{column.tdClass}}">
+                        </td>
+                     </tr>  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

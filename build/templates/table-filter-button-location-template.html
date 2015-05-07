@@ -1,0 +1,67 @@
+<!-- End of location dropdown -->
+
+<div class="btn-group dropdown table-filter-location">
+<button type="button" class="btn btn-default dropdown-toggle custom" data-toggle="dropdown"  ng-disabled="disabled" ng-class="{'error': !valid()}">
+  <span class="title">{{title}}</span> <span class="caret"></span>
+</button>
+
+ 
+<div class="dropdown-menu location-filter" ng-click="eventStop($event)">
+
+  <div class="row " role="presentation">
+    <div class="region"> 
+    <label class="title">Region</label> 
+        <div class="chkbox-wrapper"> 
+          <label class="checkbox" ng-repeat="regionItem in filterRegionData"> 
+            <!--<input type="checkbox" value="{{regionItem.name}}" ng-model="regionItem.selected" ng-change="onChangeRegion(regionItem)"></input> 
+            {{regionItem.name}}-->
+
+            <div vmf-checkbox-group class="vmf-checkbox-group"  model="regionItem.selected" type="1" c-label="regionItem.name" click-callback="onChangeRegion(regionItem)"></div>
+          </label>
+       </div>
+   </div>
+  <div class="country">     
+      <label class="data title" for="countryInput">Country</label>
+      <input type="text" class="textbox" id="countryInput" data="filterCountryData" on-select="onCountrySelect(item)" vmf-table-auto-complete placeholder="Select Country">
+      <ul class="dropdown-selected-options the-icons">     
+       <li ng-repeat="item in selectedCountryData"> 
+          <i class="custom-icon-delete" ng-click="deleteCountry(item, $index)">x</i>
+          {{item.name}}
+        </li>
+    </ul>
+   
+  </div>
+  <div class="state">
+       
+        <label class="data title" for="stateInput">State</label>
+        <input type="text" class="textbox" id="stateInput" data="filterStatesData" on-select="onStatesSelect(item)" vmf-table-auto-complete placeholder="select states">
+        <ul class="dropdown-selected-options the-icons">     
+         <li ng-repeat="item in selectedStatesData"> 
+            <i class="custom-icon-delete" ng-click="deleteState(item, $index)">x</i>
+            {{item.name}}
+          </li>
+      </ul>
+
+     
+</div>
+    </div>
+ 
+  
+
+  <div role="presentation" class="dropdown-actions">
+      <button class="btn btn-link btn-xs pull-left" ng-click="clearAll($event)" type="button" >Clear All</button>
+      <button class="btn btn-link btn-xs pull-right" ng-click="applyFilter($event)" type="button">Apply</button>      
+  </div>
+</div>
+
+</div>
+<div>
+  <ul class="dropdown-selected-options the-icons">     
+     <li ng-repeat="item in selectedItems"> 
+        <i class="custom-icon-delete" ng-click="deleteItem(item, $index)">x</i>
+        {{item.name}}
+      </li>
+  </ul>
+</div>
+
+      <!-- End of location dropdown -->

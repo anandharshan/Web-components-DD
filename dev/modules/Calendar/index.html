@@ -1,0 +1,11 @@
+<!-- Calendar component -->
+
+<div ng-controller="calendarCtrl" >
+	
+	<label class="contractText" for="coverageDates"><span class="mandatory">*</span>Contract Coverage</label>
+    <div vmf-calendar  class="vmf-calendar-drop"  historic="historic" startyear="startyear" endyear="endyear">
+    </div><br><br><br>
+    <label class="contractText" for="coverageDates"><span class="mandatory">*</span>Contract Coverage</label>
+    <div vmf-calendar-single sdate="{{startdate}}" edate="{{enddate}}" class="vmf-calendar-drop" >
+    </div>
+</div>

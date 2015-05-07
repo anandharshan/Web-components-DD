@@ -1,0 +1,38 @@
+<div class="vmfpaging pagination"  ng-if="patternone">
+  <ul class="pagination2_grid">
+    <li ng-class="prevPageDisabled()" class="disabled">
+      <a href="javascript:void(0)" ng-click="prevPage($event)" class="page_prev_lnk pagination1PrevArrow">
+        PREV
+      </a>
+    </li>
+    <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" class="page_lnks"  ng-click="setPage(n,$event)">
+      <a href="javascript:void(0)">
+        {{n+1}}
+      </a>
+    </li>
+    <li ng-class="nextPageDisabled()">
+      <a href="javascript:void(0)" ng-click="nextPage($event)" class="page_next_lnk pagination1NextArrow">
+        NEXT
+      </a>
+    </li>
+  </ul>
+</div>
+<div  ng-if="patterntwo" >
+  <div  class="pagination_pagination">
+ 
+    <span class="pagination_previous_1 pagination2PrevArrow disabled" ng-class="prevPageDisabled()" ng-click="prevPage($event)"> 
+    </span>
+    <span class="pagination_pattern_two">
+      Page 
+      <input type="text" numbers-only="numbers-only" class="pagination_page_box" ng-model="tablepaginationconfig.currentPageBox" ng-keydown="setTextbox($event)">
+      of {{pageCount()+1}}
+    </span>
+    <span class="pagination_next_1 pagination2NextArrow" ng-class="nextPageDisabled()" ng-click="nextPage($event)"> 
+      </span>
+ <div class="pagination_pattern_two_drop">
+   <div  vmf-select-list model="tablepaginationconfig.itemsPerPage" list="selectPerPage" pre-select-ind="0">
+   </div>
+ </div>
+  </div>
+  
+</div>

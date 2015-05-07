@@ -1,0 +1,58 @@
+<div>
+    <button class="vmf-btn vmf-primary" ng-click="modalShown=true">{{htitle}}</button>
+    <div class="modalLoad" aria-hidden="true" tabindex="-1" role="dialog" ng-show="modalShown" id="{{id}}">
+    <div class="modal fade">
+        <!--Dialog Content Starts-->
+        <div class="modaless-dialog {{size}} dragThis">
+            <div class="modal-content">
+		<!--Dialog Header Starts-->
+                <div class="modaless-head">
+                	<div class="modaless_icons max_icon-grp">
+						<a href="javascript:void(0)" class="mdl_Min mdl_Max" data-dismiss="modal" aria-hidden="true" ng-click="modalessMin($event)"></a>
+						<a href="javascript:void(0)" class="max_Close mdl_Close" data-dismiss="modal" aria-hidden="true" ng-click="backBtn()"></a>
+                    </div>
+                    <h4 class="modaless-title" id="myModalLabel"> {{htitle}} </h4>
+                	<!-- <div class="up_icon-grp">
+						<a href="javascript:void(0)" class="up_Max" data-dismiss="modal" aria-hidden="true" ng-click="modalUpMax($event)"></a>
+						<a href="javascript:void(0)" class="up_Close" data-dismiss="modal" aria-hidden="true" ng-click="hideModal()"></a>
+                    </div>
+                    
+					<div class="modaless_up_head">
+						<span class="modaless_up-err"></span>
+						<span class="modal_up-title">1 Upload Failed</span>
+						<a href="javascript:void(0)" class="modal_up-try">Retry</a>
+					</div> -->
+                </div>
+
+		<!--Dialog Body Starts-->
+                <div class="modaless-body">
+					<!--<a href="javascript:void(0)" class="up_Max" data-dismiss="modal" aria-hidden="true" ng-click="modalUpToggle($event)">Upload Progress</a>-->
+                    <div ng-transclude></div>
+                </div>
+				<div class="modaless_up_body">
+					<div class="up_pro_bar"></div>
+					<div class="up_pro_txt">
+						<span>Uploading 3 Files</span>
+						<span>75% Completed</span>
+						<span>5 mins left</span>
+					</div>
+				</div>
+
+		<!--Dialog Footer Starts-->
+                <div class="modaless-footer">
+					 <button type="button" class="vmf-btn vmf-secondary vmf-back-btn" data-dismiss="modal" ng-click="backBtn()" ng-show="back">Cancel</button>
+ 
+						 <div class="rightButton">
+							<button type="button" class="vmf-btn vmf-secondary" ng-click="hideModal()"> Done </button>
+
+							<button type="button" class="vmf-btn vmf-primary" data-dismiss="modal" ng-click="primaryBtn()">{{btitle}}</button>
+						</div> 
+                </div>
+            </div> <!--Content Ends-->
+        </div><!--Dialog Ends-->
+    </div>
+</div>
+
+</div>
+
+

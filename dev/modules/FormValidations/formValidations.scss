@@ -1,0 +1,126 @@
+
+.vmf-formValidator {
+    .has-error {
+        border: 1px solid $vmf-requiredField;
+    }
+    .error-label {
+        color: $vmf-requiredField;
+    }
+    .error-msg {
+        font-size: 14px;
+        margin-left: 2px;
+        margin-top: 3px;
+        padding-left: 20px;
+        background-position: 0 0;
+        position: absolute;
+        top: 100%;    
+        left: 15px;
+    }
+    .form-error-msg {
+        height: 90px;
+        width: 100%;
+        border-radius: 5px;
+        color: $vmf-gray-vdarker;
+        font-size: 16px;
+        font-family: $font-stackSemiBold;
+        background-color: $vmf-errMsg-bacgrd;
+        margin-bottom: 10px;
+        padding-top: 29px;
+        padding-left: 56px;
+        background: url("../images/alerts_icon.png") no-repeat 18px 25px;
+        border: 1px solid $vmf-requiredField;
+    }
+    .form-group {
+        &.vmf-confirmation {
+            margin-top: 25px;
+            .error-msg {
+                margin-left: 17px;
+                margin-top: 3px;
+            }
+            .aftrCheckValdtn {
+                .custom-checkbox {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+    .warning {
+        border: 1px solid $vmf-requiredField;
+        background-color: $vmf-errMsg-bacgrd;
+        height: 90px;
+        .feedback_close {
+            display: none;
+        }
+        .feedback_icon {
+            margin: 30px 15px 31px 20px;
+            background: url(/images/icon_form_validation_32x32.png);
+            width: 32px;
+            height: 32px;
+        }
+        .feedback_txt {
+            margin: 36px 15px;
+            font-size: 16px;
+        }
+    }
+    .radioContainer {
+        padding-left: 15px;
+    }
+    #formSubmit {
+        margin-left: 10px;
+    }
+   
+}
+.selectInfo {
+    >div {
+        width: 80%;
+    }
+    .toolTip-icon {
+        margin-top: 45px;
+    }
+}
+.form-group {
+    &.formRadioGroup {
+        margin-bottom: 0;
+        .formSection {
+            padding-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+}
+.vmf-footerMandatory {    
+    .custom-checkbox {
+        padding-left: 30px;
+        .mandatory {
+            position: absolute;
+            left:20px;
+        }   
+    }
+    .ftrCheckValdtn{}
+//    .custom-checkbox:last-child{
+//        margin-top: 25px;
+//    }
+}
+@media (min-width: $screen-tablet) {}
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-desktop) {
+    .selectInfo {
+        >div {
+            width: auto;
+        }
+        .toolTip-icon {
+            margin-top: 7px;
+        }
+    }
+    .vmf-formValidator{ 
+        .form-group {
+            &.vmf-confirmation {
+                margin-top: 5px;
+            }
+        }
+        .error-msg {
+            margin-top: 5px;
+        }
+        
+    }
+}

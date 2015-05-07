@@ -1,0 +1,221 @@
+.pwd-wizardBar {
+  .vmf-progress-bar{
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    padding:20px 0;
+  }
+
+}
+.vmf-pwd-wrapper{
+.pwdMainHead
+{
+    padding:0;
+    margin:2.5rem 0;
+    width:100%;
+    float:left;
+    .pwdHeading {
+        font-size:1.25rem;
+        font-family:$font-stackLight;
+        line-height:1.25rem;
+        color:$vmf-primary-blue; 
+        padding:0;    
+        width:80%;
+        float:left;
+    }
+    .helpText {
+        padding-left:1.25rem;
+        line-height:1.25rem;
+        font-family:$font-stack;
+        font-size:0.875rem;
+        color:$vmf-gray-darker;
+        background:url("/images/help_Icon.png") no-repeat scroll left center transparent;
+        float:right;
+    }
+}
+.passwordForm {
+  
+  position:relative;
+  .passwordRow {
+    margin-bottom:9px;
+  }
+    .formLabel {
+          padding: 5px 0px 8px 0px;
+    }
+.emailRow {
+  margin-bottom:12px;
+    .vmf-text-input{
+        padding-left:0;
+    }
+}
+.error-msg {
+  margin-top:5px;
+  font-size: 14px;
+  line-height:14px;
+  margin-bottom: 3px;
+  color:#e00000 !important;
+}
+
+}
+ .reqText {
+      color:$secondary-brick;
+      font-size:14px;
+      display:block;
+     line-height: 14px;
+  }
+
+  .strengthContainer {           
+            margin-top: 0.4375rem;
+            vertical-align:top;
+            .strSubHead {
+              display:block;
+              line-height:1rem;
+            }
+               .strengthDis {
+                    line-height: 0;
+                    margin:0.6875rem 0 0.625rem 0;
+                    max-width:20.625rem;
+                   li {
+                    height:0.3125rem;
+                    width: 24.5%;
+                    background-color:$vmf-gray-light;
+                     border-right: 1px solid #FFFFFF;
+                    display:inline-block;
+                  }
+               }
+               .strengthDesc {
+                font-size:1rem;
+                color:$vmf-bigFtr-anchrTitle;
+               }
+            }
+
+.completeSubHead {
+    display:block;
+    padding-left:3.75rem;
+    font-size:2.5rem;
+    line-height:2.8125rem;
+    color:$vmf-pwdSuccessHead;
+    font-family:$font-stackLight;
+    clear:both;
+    background:url("/images/completeStatus.png") no-repeat scroll left center transparent;
+    margin:2.5rem 0 2.375rem;
+}
+
+.vmfWpbTask {
+.statusText {
+    clear:both;
+    font-size:1rem;
+    line-height:1rem;
+    color:$vmf-gray-darker;
+    font-family:$font-stack;
+    margin-bottom:1.5625rem;
+    margin-top:2.5rem;
+}
+.contVMWare {
+    margin-left:0;
+    cursor: pointer;
+}
+}
+
+
+
+
+  .resetContinue {
+     margin-left: 26.4%;
+     margin-top:0;
+     cursor:pointer;
+     display: block;
+  }  
+.emailHead {
+    font-size:1rem;
+    color:$vmf-bigFtr-anchrTitle;
+    line-height:1rem; 
+    font-family:$font-stack;
+    margin-bottom: 0;
+    margin-top: 1.75rem;
+}
+.emailLabel{
+    padding-left:0;
+    font-family:$font-stackSemiBold;
+    
+}
+}
+.passwordMatchBlock {  
+    .strengthContainer {
+      display:none;
+    }
+}
+ .passwordMatch {
+    position:relative;
+ }
+body {
+   .formRow  {
+     .error-msg.vmf-password-matched {
+        position: absolute;
+        left:100%;
+        top: -27px;
+        background:none;
+        color:#6FB442 !important;
+        padding-left:9px;
+        .vmf-password-tick {
+          display: inline-block;
+          background: url(/images/bg_alert_spite.png) no-repeat 0px -370px;
+          width: 15px;
+          height: 11px;
+        }
+    }
+  }
+}
+
+
+/*tablet Styles*/
+@media (min-width: $screen-desktop) { 
+    
+    .vmf-pwd-wrapper {
+.passwordForm {
+.emailRow {
+  /*  margin-bottom:7px;*/
+    .vmf-text-input{
+        padding-left:15px;
+    }
+}
+}
+.emailLabel{
+    padding-left:50px;
+}
+.reqText {
+  margin:30px 0 13px 26.5%;
+ }
+.emailTopFix
+{
+     margin-top:22px;
+}
+
+.strengthContainer{
+  margin-top:0;
+  position: absolute;
+  right: 0;
+  top: 23px;
+    padding-left:24px;
+    
+}
+  
+.pwdMainHead {
+    .pwdHeading {
+        font-size:2.5rem;
+        line-height:2.5rem;
+    }
+    .helpText {
+        line-height:2.5rem;
+    }
+  }
+}  
+body {
+   .formRow  {
+     .error-msg.vmf-password-matched {
+        position: relative;
+       display:inline-block;
+        
+    }
+  }
+}  
+}

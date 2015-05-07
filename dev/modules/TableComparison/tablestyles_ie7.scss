@@ -1,0 +1,227 @@
+TABLE.vmf-table-basic {
+  border-collapse: collapse;
+}
+table.vmf-table .tooltip-inner {
+    white-space:normal !important;
+}
+
+.vmf-table-wrapper-container {
+  .top-links {
+      position: relative;
+      z-index: 2;
+  }
+  .vmf-bulk-action-add-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  .vmf-table-wrapper {
+    position: relative;
+    z-index: 0;
+  }  
+}
+
+table.vmf-table thead th.snocol{
+  width:10px !important;
+  max-width:10px;
+}
+
+
+.static_nogrouping table tr td{
+  border-bottom:1px solid $vmf-staticRowBorder !important;
+  padding-bottom:18px;
+  .vmf-text-input 
+  {
+    input{
+      width:40px;
+    }
+  }
+  .vmf-dropdown {
+    width: 65%;
+  }
+}
+
+table.vmf-table {
+  thead {
+    tr {
+      th.header {
+        .icon-sort {
+          top: 25px;
+        }
+      }
+    }
+  }
+}
+
+
+.vmf-quick-view-cell-wrapper { 
+  .vmf-quick-view-icon {
+    line-height: 0px;
+    z-index: 1;
+    line-height: 0.5;
+  }
+  .quick-view-popup {
+    position: absolute;
+    z-index: 10000000;
+    top: -70px;
+    right: -460px;
+    .arrow {
+      top: 52px;
+      left: -12px;
+    }
+    .panel {
+      .widgets {
+        .vmf-quick-close-icon {
+          margin-right: 25px;     
+        }
+        .section {
+          width: 420px;
+          table.quick-view-stats {
+            thead {
+              tr {
+                th.stat-head {
+                      background-color: #F0F2C8 !important;
+                }
+              }
+            }
+          }
+        }
+      }    
+    }
+  }
+  .quick-view-popup-left {
+    right: 50px;
+    .arrow {
+      left: 443px;
+    }
+  }
+}
+
+
+.btn-group .dropdown-toggle.custom,.btn-group.open .dropdown-toggle.custom{
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.dropdowns-container .each-dropdown .dropdown-toggle .title{float:none; padding:4px 0;}
+.dropdowns-container .each-dropdown .dropdown-toggle .caret{margin-top:2px; float:none;}
+.location-filter.dropdown-menu .row .country{ width:145px !important; margin-left:0; margin-right:30px;}
+.location-filter.dropdown-menu .row .state{margin:0; width:145px !important;}
+.checkbox INPUT[type='checkbox']{margin-left:0px !important;}
+
+
+.vmf-bulk-action-add-wrapper {
+  position: relative;
+  z-index: 1;
+  .vmf-bulk-actions-wrap {
+    padding-left: 0px;
+    padding-right: 0px;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EBEBEB', endColorstr='#FFFFFF',GradientType=0, enabled=false);
+    ul {
+      margin-left: 10px;
+      margin-right: 10px;
+      li {
+        .sub-actions {
+          margin-left: -1px;
+          padding: 4px 0px 6px;
+          .sub-action {
+            margin-left: 16px;
+            margin-right: 10px;
+          }
+        }
+      }
+      LI.more-actions 
+      {
+        padding-right: 9px;
+        SPAN.icon-sort
+        {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.tablebulk {
+  table.vmf-table {
+    .vmf-search-header {
+      margin-left: -9px;
+      .custom-checkbox {
+        margin-top: 13px !important;
+        margin-left: -5px !important;
+      }
+      .vmf-search-head-title {
+        position: relative;
+        margin-top: 6px;
+        padding-right: 30px;
+        .icon-sort {
+          position: absolute;
+          top: 15px;
+          right: -14px;
+        }
+      }
+      .vmf-search-head-input {
+        min-width: 50px;
+        background-color: #FFFFFF;
+        padding-right: 40px;
+        margin-left: 20px;
+        width: 40%;
+        input {
+          width: 100%;
+          background: none;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          height: 40px;
+          padding-top: 0px !important;
+          padding-bottom: 0px !important;
+          .custom-checkbox {
+            margin-top: 2px;
+            margin-bottom: 5px;
+            margin-left: -15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.vmf-table-bulk-wrapper {
+  .jspContainer {
+    top: -2px;
+  }
+  .vmf-table-bulk-cell-wrapper {
+    span {
+      float: left;
+      width: 70%;
+    }
+  }
+}
+.vmf-search-header {
+  margin-left: 0px;
+}
+
+.dropdown-menu .vmf-calendar-drop{left:28px !important;}
+.dropdowns-container .each-dropdown .calContainer{margin-left:0px;}
+.dropdowns-container .each-dropdown .dropdown{padding-left:0;}
+.dropdown-menu .warningfield{height:22px;}
+.dropdown-menu .warningfield img{position:relative;top:-19px; left:50px;}
+.dropdown-menu .warningfield .custom-checkbox span{margin-right:32px;}
+.dropdown-menu.location-filter .row input.textbox{line-height:24px; height:25px;}
+.table-filter .dropdown-menu LI.dropdown-actions{padding-left:0;}
+
+.drop_down_holder{margin-top:25px;}
+span.Print:hover, span.Export:hover, span.Manage:hover{
+  padding:7px 12px !important;
+}
+.advancedEdit .calContainer {width:120px !important;}
+.table-filter .vmf-calContainer {width:250px !important;}
+.table-filter .vmf-calContainer .vmf-calInput{width:230px !important;}
+.basic_nogrouping_table TABLE TH.checkboxcol.header .custom-checkbox{margin-left: 31px; margin-top:10px; }
+
+ .editable-inputs .inline-edit-currency-unit .vmf-dropdown.col-md-4 {
+  width:92px
+} 

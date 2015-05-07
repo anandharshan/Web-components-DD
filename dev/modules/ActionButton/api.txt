@@ -1,0 +1,55 @@
+Action Buttons
+Syntax:
+Type 1 :
+<div vmf-button btn-text=’string’ btn-type='string' click-callback='clickCallback()'></div>
+
+
+
+Type 2 :
+<div vmf-button btn-text=’string’ btn-type='string'>
+<ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+</div>
+
+
+Configuration
+
+Type 1 :
+btn-text  Variable [String]
+Mandatory: Yes
+
+Usage: btn-text = "Primary"
+Determines the starting range of calendar
+
+btn-type  Variable [String]
+Mandatory: Yes
+
+Usage: btn-type ="vmf-primary"
+Options : ‘vmf-primary’, ‘vmf-secondary’, ‘vmf-disabled’
+Determines the type of button
+
+
+click-callback  function
+Mandatory: Yes
+
+Usage: click-callback ="someFunction();"
+Callback function for click event on button
+
+
+
+Type 2 :
+
+Add list items with click events for dropdown buttons and action comp
+
+
+
+

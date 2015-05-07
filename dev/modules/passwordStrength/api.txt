@@ -1,0 +1,8 @@
+Syntax:
+<ul id="strength" check-strength="pw" class="strengthDis"></ul>
+Configuration
+check-strength  variable [string]
+Mandatory: yes
+DefaultValue:<empty>
+Usage: check-strength="pw"
+This is password input feild which accepts password entered by the user.

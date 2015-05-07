@@ -1,0 +1,74 @@
+TOOLTIP API DOCUMENTATION
+INSTALLATION :
+Download Tipped and upload the files from the package to your server. Include tipped.js and tipped.css below jQuery.
+CREATION :
+<a   vmf-tooltip   tooltip-options="{'position':'top','text':'Tooltip on Anchor tag','skin':'light'}">Anchor Tag</a>
+STEP 1: integrate  “vmf-tooltip” directive to create tooltip for the target element.
+STEP 2: Optionally provide “tooltip-options” to customize tooltip, otherwise it will be created with default options
+Note : tooltip directive can be integrated with any HTML element.
+Options :
+Options can be provided as an object by using “tooltip-options” attribute. 
+skin:
+		Sets a skin for the tooltip. If any options have been defined for this skin they will be used as the starting options for the tooltip. All other given options will extend those.
+Possible values: 'dark' and 'light'.
+skin: 'light'
+inline:
+	 Sets the id of an element to pull into the tooltip.
+	inline: 'pull-into-tooltip'
+position: 
+Sets the position of the tooltip in relation to its target.
+ values:'topleft', 'top', 'topright', 'righttop', 'right', 'rightbottom', 'bottomleft','bottom', 
+'bottomright', 'lefttop', 'left' and 'leftbottom'.
+	position: 'topleft'
+radius: 
+	Disables the border-radius defined in CSS when set to false, enabled by default.
+	radius: false
+hideDelay: 
+	A delay in miliseconds before the tooltip hides.
+	hideDelay: 25
+size: 
+	Adjusts the tooltip to one of the following sizes: 'x-small', 'small', 'medium' or 'large'.
+	size: 'x-small'
+hideOthers: 
+	Hides all visible tooltips before showing the tooltip when set to true.
+	hideOthers: true
+hideOn: 
+	An event that triggers the tooltip to hide.
+	hideOn: 'click
+showOn: 
+	An event that triggers the tooltip to show.
+	showOn: 'click'
+	Set this option to false to disable showing the tooltip through events.
+	showOn: false
+maxWidth: 
+	Sets the maximum width of the tooltip content.
+	maxWidth: 200
+close: 
+Shows a close button when set to true, combined with the hideon option it can be used to create a tooltip that only closes itself with this button:
+	close: true
+offset:
+ Can be used to set x and/or y offset of the tooltip.
+offset: { x: 10, y: 5 }
+target-ele
+Used to provide tooltip for only part of string or a word in a statement.
+target-ele:"partOfString"
+EX: 
+ <p vmf-tooltip  tooltip-options="{'text':'Tooltip on part of string'}" 
+target-ele="partOfString" >VMWARE custom <span class="partOfString">tooltip</span> component</p>
+here in the statement “VMWARE custom tooltip component” tooltip will be created to tooltip word.
+METHODS
+Tipped.hideTooltip (element)
+Hides the tooltip of the given element
+Tipped.showTooltip (element)
+Shows the tooltip of the given element
+Tipped.removeTooltip(element) 
+Removes the tooltip of the given element
+Tipped.enableTooltip (element)
+Enables tooltip of the given element
+Tipped.disableTooltip (element)
+Disables tooltip of the given element
+Tipped.updatePosition (element,value)
+Updates the tooltip content of the given element with the given value.
+Ex: Tipped.updatePosition ( angular.element(“#buttonEle”) , ”new text” );
+
+

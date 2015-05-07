@@ -1,0 +1,160 @@
+.vmf-accordion-table1 {
+		.vmf-accordion-table-header {
+		tr {
+			td{
+				padding:15px 10px;
+				font-size:14px;
+				line-height:11px;
+				&.col1{
+				padding:15px;
+				width:10px;
+				}
+				&.col2{
+				width:625px;
+				}
+				&.col3{
+				width:145px;
+				}
+				&.col4{
+				width:185px;
+				}
+			}
+		}
+	}
+	.vmf-accordion-table-body {
+		tr {
+			td{
+			padding: 14px 10px;
+			border-top:1px solid #ccc;
+			&:first-child {width:10px;}
+			}
+		   	&.vmf-accordion-header{
+				td {
+					
+					&:first-child {
+						padding:10px 15px;	
+					}
+					
+					font-size:16px;
+				}
+			}	
+		}
+		&.vmf-accordion-row{
+			td {
+				padding: 14px 15px;
+				font-size:14px;
+			}
+		}
+	}
+}
+
+/* Accordion2 styles*/
+.vmf-accordion-table2 {
+    margin:15px 0px;
+	.vmf-accordion-table2-header {
+    	tr {
+			@include linearGradient(top,#d9d8d8,#ededed) ;
+			td{
+				padding:15px 10px;
+				font-size:14px;
+				color:#333333;
+				line-height:10px;
+				&:first-child {
+					width:10px;
+					padding:15px;
+				}
+				&:last-child {
+					border-right:0px;
+				}
+				&.col2{
+		    	width:195px;
+		    	}
+		    	&.col3{
+		    	width:auto;
+		    	}
+		    	&.col4{
+		    	width:auto;
+		    	}
+		    	&.col5{
+		    	width:auto;
+		    	}
+			}
+			
+		}
+	}
+	.vmf-accordion-table2-body {
+   		tr {
+		    
+		    td {
+		    	border-top:1px solid #ccc;
+		    	span.vmf-arrow {
+					display:inline-block;
+				}
+				padding:15px 10px;
+				font-size:16px;
+				color:#666666;
+				&:first-child {
+					width:10px;
+					padding:15px;
+				}
+				&.vmf-acc-header-last-child {
+					padding:10px 30px 10px 10px;
+				}
+				.vmf-accordion-btn {
+					margin:0px;
+				}
+				.vmf-accordion-sub-table {
+					.vmf-accordion-sub-table-header {
+						tr{
+							td{
+								border-top:0px;
+								padding:15px 0;
+								font-size:16px;
+								&.col1{
+								width:195px;
+								}
+								&.col2{
+								width:345px;
+								}
+								&.col3{
+								width:120px;
+								}
+								&.col4{
+								width:130px;
+								}
+								&.col5{
+								width:135px;
+								}
+							}
+						}
+					}
+					.vmf-accordion-sub-table-body {
+						tr {
+
+							td{ 
+								padding:15px 0;
+								font-family:$font-stack;
+								font-size:14px;
+								vertical-align:top;
+								p{
+								font-size:14px;
+								}
+								&:first-child{
+								width:auto;
+								}
+							}
+						}
+
+					}
+				}
+			}
+			&.vmf-active-row {
+				td{
+					span.vmf-arrow {
+						display:inline-block;
+					}
+				}
+			}
+        }
+    }
+}

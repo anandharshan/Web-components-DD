@@ -1,0 +1,117 @@
+/* moved to shared scss files some issues with this folder*/
+
+/*!
+ * UI Progres Bar Customization starts
+ * Component: Step-By-Step-Progress Bar
+ */
+
+.step_by_step_progress_bar {
+    width: 100%;
+    float: left;
+    &.num_steps_4{ 
+        ol {
+            li {
+                width: 100%;
+                float: left;
+            }
+        }
+    }
+    .vmf-progress-bar {
+    width: 100%;
+    border-top: 3px solid $vmf-widgetprogressActive;
+    border-bottom: 3px solid $vmf-widgetprogressActive;
+    float: left;
+    padding: 17px 0px 17px 0px;
+        ol {
+            margin: 0px;
+            list-style-type: none;
+            .vmf-progress-section {
+                 span.vmf-progress-title {
+                    font-family: $font-stack;
+                    font-size: 16px;
+                    color: $vmf-widgetprogressInActive;
+                    padding-top: 5px;
+                    float: left;
+                }       
+                span.number {
+                    margin-right: 6px;
+                    width: 30px;
+                    height: 30px;
+                    float: left;
+                }
+                span.vmf-progress-number-2 {
+                    background: url("/images/bg_alert_spite.png") no-repeat 0 -904px;
+                }
+                span.vmf-progress-number-3 {
+                    background: url("/images/bg_alert_spite.png") no-repeat 0 -955px;
+                }
+                span.vmf-progress-number-4 {
+                    background: url("/images/bg_alert_spite.png") no-repeat 0 -1112px;
+                }
+                &.active {
+                    span.vmf-progress-title {
+                        font-family: $font-stackSemiBold;
+                        color: $vmf-widgetprogressActive;
+                    } 
+                    span.vmf-progress-number-1 {
+                        background: url("/images/bg_alert_spite.png") no-repeat 0 -825px;
+                    }
+                    span.vmf-progress-number-2 {
+                        background: url("/images/bg_alert_spite.png") no-repeat 0 -877px;
+                    }
+                    span.vmf-progress-number-3 {
+                        background: url("/images/bg_alert_spite.png") no-repeat 0 -929px;
+                    }
+                    span.vmf-progress-number-4 {
+                        background: url("/images/bg_alert_spite.png") no-repeat 0 -1086px;
+                    }
+                }
+                &.visited {
+                    span.vmf-progress-title {
+                        color: $vmf-modalHeaderColor;
+                    }
+                    span.vmf-progress-number-1 {
+                        background: url("/images/bg_alert_spite.png") no-repeat 0 -625px;
+                    }
+                    span.vmf-progress-number-2 {
+                        background: url("/images/bg_alert_spite.png") no-repeat 0 -650px;
+                    }
+                    span.vmf-progress-number-3 {
+                        background: url("/images/bg_alert_spite.png") no-repeat 0 -677px;
+                    }
+                }
+                
+            }
+        }
+          
+    }
+}
+
+.vmfWpbTask .vmf-checkbox-group .formSection {
+    padding-top:10px;
+}
+
+
+
+
+
+
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-tablet) {
+    .step_by_step_progress_bar{
+     &.num_steps_4{
+        ol {
+            li {
+                width: 25%;
+                float: left;
+                }
+        }
+    }
+    }
+    .vmf-progress-section {
+        span.vmf-progress-title {
+             width:70%;
+        }
+    }
+}

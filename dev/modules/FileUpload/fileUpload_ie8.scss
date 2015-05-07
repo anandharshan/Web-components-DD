@@ -1,0 +1,40 @@
+.vmf-file-upload{
+#file-dropper{
+    display:none;
+   }
+   .file-uploader{
+      display:none;
+   }
+   
+   .ie-file-upload{
+      display:block;
+    }
+      .upload-min{
+        top:44px;
+        .upload-min-wrapper{
+          left:94px
+        }
+      }
+    
+.FormFileUploader{
+    position:absolute;
+    filter: alpha(opacity=0);
+    bottom:29px;
+    right:40px;
+    width:89px;
+    .file-uploader-sec{
+      width:89px;
+      cursor:pointer;
+      float:right;
+      height:30px;
+    }
+  }
+.stat-report{
+  .file-name{
+    max-width:320px !important;
+    top:4px;
+    
+  }
+}
+
+}

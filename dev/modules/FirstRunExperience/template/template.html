@@ -1,0 +1,60 @@
+<div>
+    <div class="modalLoad" tabindex="-1" role="dialog"  ng-keyup="escapeFRE($event);" ng-show="freShown" id="id">
+	<div class="modal-backdrop fade in"></div>
+    <div class="modal fade">
+        <div class="fre-dialog size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="javascript:void(0)" class="closeIcon" ng-click="hideFRE()">
+                        Close
+                    </a>
+                    <h4 class="modal-title" id="myModalLabel">
+                        {{title}}
+                    </h4>
+                </div>
+
+                <div class="modal-body vmf-fre-gradient-blue row">
+                    <div class="contentCol2" ng-if="pageNo===1">
+                        <img class="fre-content" ng-src="{{content}}"></img>
+                    </div>
+                    <div class="contentCol2 paddedContentColumns marginLeft35" ng-if="pageNo>1 && textVal===''">
+                        <img class="fre-content" ng-src="{{content}}"></img>
+                    </div>
+                    <div class="contentCol1 paddedContentColumns marginLeft35" ng-if="pageNo>1 && textVal!=''">
+                        <img class="fre-content" ng-src="{{content}}"></img>
+                    </div>
+                    <!--  To fix IE7 issue, ng-if used instead of ng-show all over the page -->
+                    
+                    <div class="contentText paddedContentColumns"  ng-if="pageNo>1 && textVal!=''">
+                        <p class="contentHeader">{{contentheader}}</p>
+                        <p class="content" ng-bind-html='textVal'></p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                       <input type='checkbox' ng-model="showAgain" id="chkShowAgain" ng-change='toggleShowAgain(showAgain)'><label for="chkShowAgain">Don't show me again</label>
+                        <div class="pageInfo"><span>Viewing {{pageNo}}</span><span> of {{pagesLength}}</span></div>
+                        <div class="rightButtonSet">
+
+                            <button type="button" ng-if="pageNo<pagesLength && pageNo>1" ng-disabled='pageNo==1' class="vmf-btn " ng-class="{'vmf-secondary':pageNo>1}"  data-ng-click="onBackward()">Previous
+                            </button> 
+
+                            <button type="button" ng-if="pageNo===1" ng-disabled="true" class="vmf-btn vmf-primary vmfdisabled"> Previous
+                            </button> 
+
+                           <!--  <div vmf-button ng-if="pageNo===1"  btn-text='Previous' btn-disabled='true' btn-size='' btn-type='vmf-secondary'></div> -->
+
+                            <button type="button" ng-if="pageNo<pagesLength" class="vmf-btn vmf-primary vmf-marginTop10" data-ng-click="onForward()">Next
+                            </button>
+                            
+                            <button type="button" ng-if="pageNo==pagesLength" class="vmf-btn vmf-primary vmf-primary-close" data-ng-click="hideFRE()">Close
+                            </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+

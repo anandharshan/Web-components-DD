@@ -1,0 +1,20 @@
+<!--Split Container component code -->
+<div ng-controller="splitContainerCtrl">
+	<div class="pretty-split-pane-frame">
+		<vmf-split-container>
+
+			<vmf-split-pane-component panewidth="30%" minwidth="30%" maxwidth="50%">
+				<div class="pretty-split-pane-component-inner"> 
+					<div vmf-folder-tree data-tree="panes[0]" data-root-name="rootName[0]" data-folder-tree-index="0" data-folder-click-call-back="createNewTree($event,this)" data-multiple-select="on" ></div>
+				</div>
+			</vmf-split-pane-component>
+
+			<vmf-split-pane-divider panewidth="10px" clicks="0" close="right"></vmf-split-pane-divider>
+
+
+			<vmf-split-pane-component>
+			</vmf-split-pane-component>
+
+		</vmf-split-container>
+	</div>
+</div>

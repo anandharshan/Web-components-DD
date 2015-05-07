@@ -1,0 +1,111 @@
+Syntax:
+<div ng-controller="tableCtrl"><h1>Table Filter</h1><div vmf-table-filter title="Table" filter-data="filterData" [auto-complete-data="autoCompleteData"] [name="TableFilter"] on-item-selected="onItemSelected(event,target, itemSelected, allSelectedItems)"></div></div> 
+Configuration
+
+vmf-table-filter Object
+It is a custom directive which renders the table filter, given below are the attributes used by the directive.
+
+ng-controller Object
+Mandatory: Yes
+Default Value: <empty>
+Usage:  JS: app.controller (tableCtrl, ['$scope', function ($scope) {...}])
+              HTML: ng-controller=" tableCtrl "
+
+A function which consists of the scope data, logical methods applicable for table filter.
+
+filter-data Array
+Mandatory: Yes
+Default Value: <empty>
+Usage:  Controller: 
+$scope.filterData = [ {
+	tableFilterTitle :  "Filter Title",
+              name: "Filter Name",
+type: "default" OR "location",
+              mandatoryDate:BooleanValue,
+              data:[ {
+ label : 'Option Label',
+ selected :  BooleanValue,
+isDateField : BooleanValue,
+isWarning:BooleanValue,
+isAlert: BooleanValue},...]
+  },...]
+	HTML: filter-data="filterData"
+
+An array of objects which represent the filter types and its options. The elaborate definitions are given below
+
+tableFilterTitle String
+Mandatory: Yes
+	Default Value: <empty>
+	Usage:  tableFilterTitle: 'Filter Title',
+A string variable which will be set as the title of the each filter type.
+
+name String
+Mandatory: Yes
+	Default Value: <empty>
+	Usage: name: " level01-filter "
+A string variable representing a name/key for the filter type.
+
+type String
+Mandatory: Yes
+	Default Value: "default"
+	Usage: type:"default" OR "location"
+A string variable representing the type of the filter, based on the value the filter templates will be rendered.
+
+mandatoryData Boolean
+Mandatory: No
+	Default Value: <empty>
+	Usage: mandatoryDate:  true
+A Boolean variable when set to true will set the date picker if there are any date fields in the filter options.
+
+data Array
+Mandatory: Yes
+Default Value: <empty>	
+Usage:  data: :[ {
+		label : 'Option Label',
+selected :  BooleanValue,
+isDateField : BooleanValue,
+isWarning:BooleanValue,
+isAlert: BooleanValue
+}, ...]
+
+An array of objects which represent the filter options of the respective filter types. The elaborate definitions are given below
+label String
+Mandatory: Yes
+	Default Value: <empty>
+	Usage:  label: 'Option name',
+A string variable which will be set as the label for the option.
+selected Boolean
+Mandatory: No
+	Default Value: <empty>
+	Usage:  selected: true
+A Boolean variable used to select the option. The value will be true if the options is selected else false.
+isDateField Boolean
+Mandatory: No
+	Default Value: <empty>
+	Usage:  isDateField: true,
+A Boolean variable representing, whether the option type is date field or not.
+isWarning Boolean
+Mandatory: No
+	Default Value: <empty>
+	Usage:  isWarning: true,
+A Boolean variable used to show the warning symbol for the option or not.
+isAlert Boolean
+Mandatory: No
+	Default Value: <empty>
+	Usage:  isAlert: true,
+A Boolean variable used to show an alert symbol for the option or not.
+
+
+auto-complete-data Object
+Mandatory: No
+Default Value: <empty>
+Usage: autoCompleteData = {"data": [...]}
+
+An object literal which consists of data of type array, the data list will be loaded on searching for any values in the auto complete box.
+ 
+on-item-selected Function
+Mandatory:Yes
+Default Value: <empty>
+Usage: on-item-selected="onItemSelected(event , target, itemSelected, allSelectedItems)"
+
+A callback function which will be called on change(select/deselect) of any filter options. When apply button is clicked, the same function will be called with all the selected options mapped with the parameter 'allSelectedItems'.

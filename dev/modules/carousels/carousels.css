@@ -1,0 +1,190 @@
+@font-face {
+  font-family: 'proximanovaReg';
+  src: url("../dev/assets/fonts/proximanova-regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../dev/assets/fonts/proximanova-regular.eot?#iefix") format("embedded-opentype"), url("../dev/assets/fonts/proximanova-regular.woff") format("woff"), url("../dev/assets/fonts/proximanova-regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+
+@font-face {
+  font-family: 'proximanovaLight';
+  src: url("../dev/assets/fonts/proximanova-light.eot");
+  /* IE9 Compat Modes */
+  src: url("../dev/assets/fonts/proximanova-light.eot?#iefix") format("embedded-opentype"), url("../dev/assets/fonts/proximanova-light.woff") format("woff"), url("../dev/assets/fonts/proximanova-light.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+
+@font-face {
+  font-family: 'proximanovaSemiBold';
+  src: url("../dev/assets/fonts/proximanova-semibold.eot");
+  /* IE9 Compat Modes */
+  src: url("../dev/assets/fonts/proximanova-semibold.eot?#iefix") format("embedded-opentype"), url("../dev/assets/fonts/proximanova-semibold.woff") format("woff"), url("../dev/assets/fonts/proximanova-semibold.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+
+
+.carousels_carousalMain {
+  width: 1145px;
+  border: 1px solid #cccccc;
+  height: 298px;
+  padding-top: 17px;
+  padding-bottom: 50px;
+  background-repeat: repeat;
+  background-image: url("../dev/assets/img/carousel/carousel_gradient_vmware.png");
+  overflow: hidden;
+}
+
+.carousels_topic {
+  font-family: 'proximanovaSemiBold';
+  color: #333333;
+  font-size: 22px;
+  margin-left: 45px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.carousels_carousalWrap {
+  width: 1138px;
+  float: left;
+  /* overflow:hidden; */
+}
+
+/* .carousalLeft{
+float: left;
+margin-top: 70px;
+margin-right: 15px;
+width: 30px;
+cursor: pointer;
+height: 45px;
+background: rgba(55, 46, 46, 0.7);
+} */
+
+.carousels_carouselControl {
+  width: 30px;
+  height: 45px;
+  cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+  opacity: 1.0;
+  filter: alpha(opacity = 100);
+}
+
+.carousels_carousalLeft {
+  float: left;
+  margin-top: 75px;
+}
+
+.carousels_disabled {
+  opacity: 0.3;
+  filter: alpha(opacity = 30);
+}
+
+.carousels_enabled {
+  opacity: 0.7;
+  filter: alpha(opacity = 70);
+  &:hover {
+    text-decoration: none;
+    opacity: 2.0;
+    filter: alpha(opacity = 200);
+  }
+}
+
+.carousels_carousalRight {
+  float: right;
+  margin-top: -115px;
+}
+
+.carousels_slides {
+  padding: 0px;
+  margin: 0px;
+  li {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+    img {
+      width: 260px;
+    }
+  }
+}
+
+.carousels_carousel {
+  width: 1060px;
+  margin-left: 45px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousels_listcontainer {
+  width: 20000%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousels_carouselMessageContainer {
+  position: absolute;
+  top: 145px;
+  font-family: 'proximanovaSemiBold';
+  color: #FFFFFF;
+  font-size: 16px;
+  height: 40px;
+  width: 260px;
+  background: rgba(54, 25, 25, 0.2);
+}
+
+.carousels_carouselImages {
+  margin-right: 5px;
+}
+
+.carousels_carouselMessage {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+.carousels_carouselContent {
+  float: left;
+}
+
+.carousels_imageHolder {
+  position: relative;
+}
+
+/*.caption {
+  position: absolute;
+  height: 40px;
+  width: 240px;
+  left: 0px;
+  top: 145px;
+  color: #FFFFFF;
+  background: rgba(54, 25, 25, 0.2);
+  padding-left: 20px;
+  line-height: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: 'proximanovaSemiBold'; }*/
+
+.carousels_caption {
+  position: absolute;
+  height: 30px;
+  width: 240px;
+  left: 0px;
+  top: 135px;
+  color: #FFFFFF;
+  background: rgba(54, 25, 25, 0.2);
+  padding-left: 20px;
+  line-height: 12px;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: 'proximanovaSemiBold';
+  padding-top: 9px;
+  padding-bottom: 10px;
+}
+.carousels_container{
+  width:1055px;
+  overflow-x:auto; 
+}

@@ -1,0 +1,24 @@
+     <!-- Table Static-->
+
+  <vmf-table is-groupable="yes" is-static="yes" grouping-attr="type" class="static_grouping vmf_table_cls"
+        ng-controller="GroupTableCtrl"
+        data="data"
+        columns="columns"
+        cell-renderers="cellRenderers">
+  </vmf-table>
+  <vmf-table is-groupable="no" is-static="yes" class="static_nogrouping_calltoaction vmf_table_cls"
+        ng-controller="CallToActionCtrl"
+        data="data"
+        columns="columns"
+        cell-renderers="cellRenderers">
+  </vmf-table>
+
+  <vmf-table is-groupable="no" is-static="yes" class="static_nogrouping"
+        ng-controller="ProductTableCtrl"
+        data="data"
+        columns="columns"
+        cell-renderers="cellRenderers">
+  </vmf-table> 
+
+     
+    

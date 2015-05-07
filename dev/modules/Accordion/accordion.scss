@@ -1,0 +1,229 @@
+.vmf-accordion-table1 {
+  margin:15px 0px; // Not required this has to be a part of the Tab component
+	width:100%;
+	border:1px solid #ccc;
+	.vmf-accordion-table-header {
+		tr {
+			background:#006990;
+			td{
+				padding:0.937rem 0.625rem;
+				font-family:$font-stackSemiBold;
+				font-size:0.875rem;
+				color:#fff;
+				line-height:11px; // What is the line height - Default line height and specification for height of row does not match
+				&.col1 {
+				width:40px;  // Widths do not follow any logic or responsive convenetions. Please specify
+				}
+				&.col2 {
+				width:645px; // Widths do not follow any logic or responsive convenetions. Please specify
+				}
+				&.col3 {
+				width:165px; // Widths do not follow any logic or responsive convenetions. Please specify
+				}
+			}
+		}
+	}
+	.vmf-accordion-table-body {
+		tr {
+		    border-top:1px solid #ccc;
+			&.vmf-accordion-header{
+				td {
+					background:#f1f6f9;
+					span.vmf-arrow {
+					width:15px; // Change to rem
+					height:15px; // Change to rem
+					display:inline-block;
+					background:url("../images/bg_alert_spite.png") no-repeat 0 -609px;
+				}
+				&:first-child {
+				padding:0.625rem 0.937rem;	
+					}
+				padding: 0.875rem 0.625rem;
+				font-family:$font-stackSemiBold;
+				font-size:1rem;
+				color:#666666;
+				line-height:9px; // What is the line height - Default line height and specification for height of row does not match
+				}
+			&.vmf-active-row {
+				td{
+					background:#ffffff;
+					span.vmf-arrow {
+						width:15px;
+						height:15px;
+						display:inline-block;
+						background:url("../images/bg_alert_spite.png") no-repeat 0 -557px;
+					}
+					&:first-child {
+						padding:0.625rem 1.25rem 0.625rem 0.625rem;
+					}
+					color:#0095d3;
+				}
+			}
+			}
+			&.vmf-accordion-row{
+				td {
+				background:#ffffff;
+				padding: 0.875rem 0.625rem;
+				font-family:$font-stack;
+				font-size:0.875rem;
+				color:#666666;
+				line-height:9px; // What is the line height - Default line height and specification for height of row does not match
+				a {
+					color:#006990;
+					font-family:$font-stack;
+					&:hover{
+						color:#0095d3;
+					}
+
+					}
+				}
+			}
+		}
+	}
+
+}
+
+/* Accordion2 styles*/
+.vmf-accordion-table2 {
+    margin:15px 0px;
+	width:100%;	
+	max-width:1050px;
+	border:1px solid #ccc;
+	border-top:0px;
+	.vmf-accordion-table2-header {
+    	tr {
+			@include linearGradient(top,#d9d8d8,#ededed) ;
+			td{
+				padding:0.937rem;
+				font-family:$font-stackSemiBold;
+				font-size:0.875rem;
+				color:#333333;
+				line-height:10px;
+				border-right:1px solid #fff;
+				&:first-child {
+					padding:0.937rem 0.625rem;
+					width:40px;
+					border-right:0px;
+				}
+				&:last-child {
+					border-right:0px;
+				}
+				&.col2{
+		    	width:215px;
+		    	}
+		    	&.col3{
+		    	width:240px;
+		    	}
+		    	&.col4{
+		    	width:180px;
+		    	}
+		    	
+			}
+			
+		}
+	}
+	.vmf-accordion-table2-body {
+	   		tr {
+		    border-top:1px solid #ccc;
+		    td {
+		    	background:#f1f6f9;
+				span.vmf-arrow {
+					width:15px; // Change to rem
+					height:15px; // Change to rem
+					display:inline-block;
+					background:url("../images/bg_alert_spite.png") no-repeat 0 -609px;
+				}
+				padding:0.937rem;
+				font-family:$font-stack;
+				font-size:1rem;
+				color:#666666;
+				line-height:10px;
+				&:first-child {
+					padding:0.937rem 0.625rem 0.937rem 0.937rem;
+				}
+				&.vmf-acc-header-last-child {
+					padding:0.625rem 1.875rem 0.625rem 0.937rem;
+				}
+				.vmf-accordion-btn {
+					margin:0px;
+				}
+				.vmf-accordion-sub-table {
+					margin-bottom:10px;
+					width:100%;
+					.vmf-accordion-sub-table-header {
+						tr{
+							border-bottom:1px solid #ccc;
+							border-top:0px;
+							td{
+								padding:0.937rem 10px 0.937rem 0px;
+								font-family:$font-stackSemiBold;
+								font-size:1rem;
+								color:#333333;
+								&.col1{
+								padding-right:0px;
+								width:195px;
+								}
+								&.col2{
+								width:345px;
+								}
+								&.col3{
+								width:120px;
+								}
+								&.col4{
+								width:130px;
+								}
+								&.col5{
+								width:135px;
+								}
+							}
+						}
+					}
+					.vmf-accordion-sub-table-body {
+						tr {
+
+							td{
+								padding:0.937rem 10px 0.937rem 0;
+								line-height:normal;
+								font-family:$font-stack;
+								font-size:0.875rem;
+								color:#666666;
+								vertical-align:top;
+								p{
+								font-size:0.875rem;
+								line-height:20px;
+								}
+								&:first-child {
+								padding-right:0px;
+								}
+								span{
+									font-family:$font-stackSemiBold;
+                                    color:#333;
+								}
+
+							}
+						}
+
+					}
+				}
+			}
+			&.vmf-active-row {
+			
+				td{
+					span.vmf-arrow {
+						width:15px;
+						height:15px;
+						display:inline-block;
+						background:url("../images/bg_alert_spite.png") no-repeat 0 -557px;
+					}
+					background:#ffffff;
+					color:#0095d3;
+				}
+			}
+		}
+		tr.vmf-accordion-row2 {
+			td{
+				background:#fff;
+			}
+		}
+	}
+}

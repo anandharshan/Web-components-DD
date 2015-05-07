@@ -1,0 +1,54 @@
+.vmf-formValidator {
+    .radioContainer {
+        fieldset {
+            margin-left: 15px;
+        }
+    }
+    .form-group {
+        .labelHeader {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    .radioContainer {
+        padding-left: 0px;
+    }
+    .vmf-dropdown {
+        z-index: 10000;
+        &.col-md-4 {
+            width: 30.07%;
+        }
+    }
+}
+.selectInfo {
+    .vmf_drop-down_text {
+        width: 520px;
+        .labelHeader {
+            float: left;
+            width: 200px;
+            margin-right: 64px;
+        }
+        .vmf-dropdown-content {
+            width: 200px;
+        }
+        .error-msg {
+            width: 200px;
+        }
+    }
+}
+.selectInfo {
+    >div {
+        width: auto;
+    }
+    .toolTip-icon {
+        margin-top: 7px;
+    }
+}
+.form-group {
+    &.formRadioGroup {
+        .formSection {
+            display: block;
+            overflow: hidden;
+        }
+    }
+}

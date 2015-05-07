@@ -1,0 +1,106 @@
+<!--Slider Controller component code -->
+
+<div ng-controller="sliderControlCtrl" class="sliderCtrl clearfix">
+    
+    <div class="col-xs-8">
+        <h3 class="compute ">
+            Compute
+            <span class="toolTip-icon vmf-tooltip" vmf-tooltip tooltip-options="{'position':'right','text':'Compute'}"></span> 
+        </h3>
+    </div>
+    <div class="col-xs-4 ">
+        <a href="#" class="rst" ng-click="sliderReset()">Reset</a>
+    </div>
+
+    <div class="lockedSlider">
+        
+        <div class="col-md-10 col-xs-12">
+            <div class="row subHeaderheight">
+                <label class="col-md-12">Additional vCPU</label>
+                <div class="col-md-8 col-xs-8 rangeSliderspace">
+                    <div vmf-slider-control min="cpu.min" max="cpu.max" pin-handle="min" tooltip-data="{{cpu.value}} GHz - &#36;{{cpu.value * 10 + ram.value * 20}}" model-max="cpu.value"></div>
+                    <a href="#" class="sliderLock"><span>Slider Lock</span></a>
+                </div>
+
+                <div class="col-md-4 col-xs-4 sliderInput">
+                    <div class="vmf-text-input">
+                        <input type="text" ng-model="cpu.value"  title="slider input" custom-class="customclass" class="formInputClass" />                
+                        <span class="inputUnit">GHz</span>
+                    </div>              
+                </div>
+            </div>
+
+            <div class="row vmf-secondSubHeader">
+                <label class="col-md-12">Additional vRAM</label>
+                <div class="col-md-8 col-xs-8 rangeSliderspace">
+                    <div vmf-slider-control min="ram.min" max="ram.max" tooltip-data="{{ram.value}} GB - &#36;{{cpu.value * 10 + ram.value * 20}}" pin-handle="min" model-max="ram.value"></div>
+                </div>
+
+                <div class="col-md-4 col-xs-4 sliderInput">
+                    <div class="vmf-text-input">
+                         <input type="text"  ng-model="ram.value"  title="slider input" custom-class="customclass" class="formInputClass" />            
+                        <span class="inputUnit">GB</span>
+                    </div>              
+                </div>
+            </div>        
+
+
+        </div>
+        <div class="col-md-2 col-xs-12 dollarVal dollarValTop">
+            &#36; {{cpu.value * 10 + ram.value * 20}}
+        </div>
+        
+    </div> 
+
+  <div class="col-md-8 vmf-storageDiv"> 
+<h3 class="compute clearfix">Storage 
+<span class="toolTip-icon vmf-tooltip" vmf-tooltip tooltip-options="{'position':'right','text':'Storage'}"></span></h3>
+    </div>
+      <div class="unlockedSlider">
+    <div class="col-md-10">
+         <div class="row subHeaderheight">
+            <label class="col-md-12">Additional Standard Storage    
+             </label>
+                <div class="col-md-8 col-xs-8 rangeSliderspace">
+                    <div vmf-slider-control min="standardStorage.min" tooltip-data="{{standardStorage.value}} TB - &#36;{{standardStorage.value * 25}}" max="standardStorage.max" pin-handle="min" model-max="standardStorage.value"></div>
+                   
+                </div>
+
+                  <div class="col-md-4 col-xs-4 sliderInput">
+                      <div class="vmf-text-input">
+                             <input type="text" ng-model="standardStorage.value"  title="slider input" custom-class="customclass" class="formInputClass" />
+                
+                <span class="inputUnit">TB</span>
+               </div>  
+            </div>
+            </div>
+    </div>
+    <div class="col-md-2 col-xs-12 dollarVal dollar">
+        &#36; {{standardStorage.value * 25}}
+    </div>
+</div>
+<div class="unlocked ">
+    <div class="col-md-10">
+        <div class="row vmf-thirdsubHeader">
+            <div class="col-md-12">
+                <label>Additional SSD-Accelerated Storage</label>
+            </div>
+           <div class="col-md-8 col-xs-8 rangeSliderspace">
+                <div vmf-slider-control tooltip-data="{{accStorage.value}} TB - &#36;{{accStorage.value * 50}}" min="accStorage.min" max="accStorage.max" pin-handle="min" model-max="accStorage.value"></div>
+            </div>
+                   <div class="col-md-4 col-xs-4 sliderInput">
+                       <div class="vmf-text-input">
+                             <input type="text" ng-model="accStorage.value"  title="slider input" custom-class="customclass" class="formInputClass" />
+                
+                <span class="inputUnit">TB</span>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+     <div class="col-md-2 col-xs-12 dollarVal dollar1">
+        &#36; {{accStorage.value * 50}}
+    </div>
+</div>
+  
+</div>

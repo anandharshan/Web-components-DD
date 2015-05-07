@@ -1,0 +1,105 @@
+<vmf-modaless-popup htitle="{{heading}}" btitle="Add File" vmf-draggable="true" drag-element="modal-content" buttonTitle="Modal Large" back="back" data-id="vmf-modal1" class="vmfModalChange vmf-file-upload" primaryButtonName="Add File">
+
+	<div class="file-upload-wrapper">
+		<div class='upload-min' ng-show="minimizedView" ng-if="modernBrowser">
+			<div class="failed-uploads" ng-class="{'hiddenDiv':failedUpload.length==0}">
+				<span class="failed-msg upload-failed">{{failedUpload.length}} Upload failed</span>
+				<a ng-href="#" class="retry-anchor" ng-click="retryFailedCases()">Retry</a>
+			</div>
+			<div class="upload-min-wrapper" ng-if="progressAll<100">
+				<span class="upload-min-wrapper-span"> <span class="file-count"> Uploading {{activeUpload}} files </span> <span class="progress-all"> {{progressAll}}% completed </span> <span class="time-left" ng-if="progressAll < 100"> {{calculateTotalTimeRemaining(attrib)}}</span> </span>
+				<div class="prog-status" ng-style="{width:progressAll+'%'}"></div>
+			</div>
+			<div class="file-upload-success" ng-if="showCompleteMsg">
+				All files uploaded successfully
+			</div>
+		</div>
+		<div class='upload-min' ng-show="minimizedView" ng-if="!modernBrowser">
+			<div class="failed-uploads" class="hiddenDiv">
+			</div>
+			<div class="col-xs-12 upload-min-wrapper" ng-if="progressAll < 100">
+				<span class="upload-min-wrapper-span"><span class="file-count"> Uploading {{oldIEUploadFileCount}} files </span> </span>
+			</div>
+			<div class="col-xs-12 file-upload-success" ng-if="showCompleteMsg">
+				All files uploaded successfully
+			</div>
+		</div>
+		<div class="file-upload-content container" id="FileUploadContent">
+
+			<div class="row clearfix no-margin" ng-if="!fileUploading">
+				<div class="col-xs-12 header-sec">
+					You can choose to upload more than one file at a time.You may upload as many files as you like but make sure each file size does not exceed 5GB.
+				</div>
+			</div>
+			<div class="row clearfix no-margin" ng-if="fileUploading">
+				<div class="col-xs-12">
+					<div class="row" ng-if="modernBrowser">
+						<div class="col-xs-12 all-upload-status">
+							<div class="col-xs-4 file-count" ng-if="activeUpload>0 && progressAll < 100">
+								Uploading {{activeUpload}} files
+							</div>
+							<div class="col-xs-4" ng-if="activeUpload>0 && progressAll < 100">
+								<span ng-bind="progressAll"></span>% completed
+							</div>
+							<div class="col-xs-4 time-left" ng-if="activeUpload>0 && progressAll < 100">
+								{{calculateTotalTimeRemaining(attrib)}}
+							</div>
+							<div class="col-xs-12 file-upload-success" ng-if="showCompleteMsg">
+								All files uploaded successfully
+							</div>
+							<!--<div class="col-xs-12 file-upload-success" ng-if="IeFlagResult">
+							All files uploaded successfully
+							</div>-->
+						</div>
+
+					</div>
+					<div class="row" ng-if="!modernBrowser">
+						<div class="col-xs-12 all-upload-status">
+							<div class="col-xs-12 text-center" ng-if="progressAll < 100">
+								Uploading {{oldIEUploadFileCount}} files
+							</div>
+							<div class="col-xs-12 file-upload-success" ng-if="showCompleteMsg">
+								All files uploaded successfully
+							</div>
+						</div>
+
+					</div>
+					<div class="row progress-wrapper-row">
+						<div class="progress-wrapper" ng-repeat="file in filesList track by $index">
+							<div class="stat-report" ng-if="file.visible">
+								<span class="progress-msg col-xs-12"> <span ng-if="!modernBrowser && file.uploadInProgress">Uploading </span><span ng-bind="file.fileName" class="file-name" ng-class="{'file-over-limit':file.overSizeLimit,'file-not-uploading':!file.uploadInProgress,'file-failed':file.uploadFailed}"></span> <span ng-if="!modernBrowser && file.uploadInProgress" class="loading-img"></span><span class="upload-status-span" ng-if="modernBrowser&&(file.uploadInProgress || file.uploadFailed)"> - {{file.current}} of {{file.total}} uploaded </span> <span ng-if="modernBrowser&&file.success"> - {{file.total}} uploaded </span> <span class="cross pull-right" ng-if="file.abort" ng-click="abortAjax($index)"> </span> <span class="float-right" ng-if="modernBrowser&&file.uploadInProgress"> {{attrib[$index].formattedTime}}</span> <span class="success-msg" ng-if="file.success"> Success!</span> <span ng-if="file.overSizeLimit" class="float-right"> <span class="upload-failed">File size over 5GB limit</span> <a class="ftp-link" ng-href="{{options.ftpUrl}}" target="_blank">Try FTP server</a> </span> <span ng-if="file.uploadFailed" class="float-right"> <span class="upload-failed">Upload failed!</span> <a class="retry" ng-click="retryAjax($index)">Retry</a> </span> <span ng-if="file.uploadCancelled" class="float-right"> <span class="upload-failed">Upload cancelled!</span> <a class="retry" ng-click="retryAjax($index)">Retry</a> </span></span>
+								<div class="{{getClass(file)}}" ng-style="{width:file.percent+'%'}"></div>
+							</div>
+							<img class="remove-file" src="images/cross.png" ng-if="file.visible && file.success" ng-click="removeFile($index)">
+						</div>
+						<div class="slow-net" ng-if="isSlowNet && activeUpload>0 && modernBrowser">
+							<span class="slow-net-msg">This may take a while as you appear to be on a slow internet connection.</span>
+						</div>
+						<img src="images/icon_form_validate.png" class="hidden"/>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="row clearfix no-margin">
+			<div class="col-xs-12 file-dropper" id="file-dropper" ng-show="modernBrowser">
+				<div class="label-file-dropper">
+					<span>Alternatively, you may drag and drop files onto this box</span>
+				</div>
+			</div>
+		</div>
+		<div ng-if='flag.modalShown'>
+			<div vmf-sys-one sysalert="third" show='flag.modalShown' dialog-Header="Warning" sys-Message="{{warningMsg}}"></div>
+		</div>
+	</div>
+	<form class="for-file-reset">
+		<input type="file" name="myfile[]" multiple class="file-uploader pull-right" id="fileUploader" ng-show="modernBrowser">
+	</form>
+	<div class="ie-file-upload" ng-show="!modernBrowser">
+		<form method="post" enctype="multipart/form-data" action="{{openUrl}}" class="FormFileUploader" id="FormFileUploader">
+			<input type="file" name="myfile[]" id="fileUploaderSec" multiple class="file-uploader-sec pull-right">
+		</form>
+	</div>
+</vmf-modaless-popup>
+

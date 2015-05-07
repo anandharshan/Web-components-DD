@@ -1,0 +1,100 @@
+.sliderCtrl {    
+    display: block;
+    overflow: hidden;
+     padding-top: 37px;
+    .col-xs-8 {
+        width:63%;
+      }
+    .col-xs-4 {
+       width:31%;   
+     } 
+}
+.sliderInput {
+    padding:0;
+    margin-left:20px;
+    .vmf-text-input {
+        width:83px;
+        float:none;
+        margin-top: 12px;
+        input {
+         padding-right: 0;
+        }
+    }  
+    .inputUnit{
+      font-size: 14px;
+      right: 9px;
+    }
+}
+.dollarValTop{
+    margin-top: 5%;
+    padding-top: 55px;
+}
+.dollar {
+    margin-top: 57px;
+}
+.dollar1 {
+    margin-top: 52px;
+}
+//.col-xs-8,.col-xs-4 ,.col-md-8,.col-md-10, .col-xs-12,.col-md-2 {padding:0px;}
+.lockedSlider, .unlockedSlider,.unlocked  {
+    .col-md-10 {
+        width:81%;
+    } 
+    .col-md-2 {
+         width:12.5%;
+    }
+}
+.sliderLock {
+    top:27px;
+    right:-30px;
+}
+.compute {  
+    font-size: 22px;
+    .toolTip-icon {
+       top:-5px;
+    }
+}
+.rangeSliderspace {
+    padding-top: 20px;
+    outline: none;
+}
+.vmf-secondSubHeader,
+.vmf-thirdsubHeader {
+    padding-top: 1px;
+}
+.vmf-storageDiv {
+    margin-top: 34px;
+}
+.vmf-secondSubHeader,
+.subHeaderheight,
+.vmf-thirdsubHeader 
+ {
+ label{
+    font-size: 14px;
+    }
+}
+.rst {
+    font-size: 18px;
+    padding-top: 1px;
+    padding-right:4px;
+}
+.dollarVal{
+    font-size: 20px;
+    padding-right: 15px;
+}
+.ngrs-range-slider {
+    .ngrs-runner {
+        border:1px solid #cccccc;
+        height: 15px;
+        .ngrs-handle-max{
+            height: 33px;
+        }
+    }
+}
+.ngrs-range-slider {
+       .ngrs-runner {
+          .ngrs-join { 
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bbacd', endColorstr='#7ab9cd',GradientType=0 );
+        }
+    }
+}

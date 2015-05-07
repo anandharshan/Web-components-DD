@@ -1,0 +1,31 @@
+<!--Text Input Box component code -->
+
+<div ng-controller="textInputCtrl" class="inputbox-group">
+
+        <div class="form-group clearfix clearAll">
+            <div vmf-text-input type="normal" class="vmf-text-input" name="userForm" model="user.firstName" title="First Name" mandatory="true" custom-class="customclass" short-description="Description">
+            </div>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" class="vmf-text-input" name="userForm" model="user.lastName" title="Last Name">
+            </vmf-text-input>
+        </div>
+
+
+        <div class="form-group clearfix">
+            <label class="col-md-3 formLabel vmf_clear_left">Normal Search box</label>
+            <div class="col-md-4">
+                <vmf-text-input type="search" class="vmf-text-input" name="userForm" model="user.search" hint="Search All Downloads" clear-text-length="0" search-callback="user.searchCallback()">
+                </vmf-text-input>
+            </div>
+        </div>
+
+        <div class="form-group clearfix">
+            <label class="col-md-3 formLabel vmf_clear_left">Predictive Search box</label>
+            <div class="col-md-4">
+                <vmf-text-input type="psearch" class="vmf-text-input" name="userForm" model="user.psearch" search-model="data.list" hint="Search All Downloads" clear-text-length="3" psearch-callback="user.psearchCallback">
+                </vmf-text-input>
+            </div>
+        </div>
+</div>

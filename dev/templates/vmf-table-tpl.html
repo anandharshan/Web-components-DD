@@ -1,0 +1,84 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right" ng-if="showSearch">
+                <div class="form-group">
+                    <input type="text" name="search" ng-model="search" class="form-control" placeholder="Search">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row vmf-table-wrapper-container">
+        <div class="col-md-12 table-wrapper">
+            <div class="col-md-5 table_title_tag">
+                <h4>{{options.tableTitle}}</h4>
+            </div>
+            <div class="col-md-4" ng-if="options.showManageColumn" vmf-manage-columns> </div>
+            <div class="vmf-table-wrapper clearfix">
+                <table vmf-col-resizable-and-dragtable columns="columns" class="vmf-table vmf-table-basic resizable">
+                    <thead>
+                        <tr>
+                            <th vmf-table-header-renderer
+                                style="width:{{column.width}}px"                            
+                                ng-repeat="column in columns"                              
+                                column="column" 
+                                field="{{column.field}}"  
+                                columns="columns"                  
+                                class="header {{column.thClass}} unselectable ui-resizable"      
+                                vmf-table-sort-class="column.sorted"
+                                sort-enabled="column.sort"            
+                                ng-click="sortBy(column, $event);"
+                                ng-if="column.visible === undefined || column.visible"
+                                ng-class="{
+                                'drag-accept':column.draggable === undefined || column.draggable,
+                                'dragtable-handle':column.draggable === undefined || column.draggable,
+                                'no-col-resize': column.notResizable,
+                                'col-resize': column.colResize === undefined || column.colResize
+                                }"
+                                unselectable="on">
+                            </th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody vmf-sortable>                              
+                        <tr ng-repeat="row in currentPageData"
+                            data-id="{{row.id}}"
+                            data-uid="{{row.$$hashKey}}"
+                            data-index="{{$index}}"
+                            vmf-select-row="row" 
+                            vmf-select-mode="multiple" 
+                            ng-class="{'row-even': $even, 'row-odd': $odd}"
+                            class="vmf-rows">
+                            <td vmf-table-cell vmf-inline-editor
+                                ng-attr-data-editable="{{ column.editable ? 'yes' : 'no' }}"
+                                cell-renderers="cellRenderers"
+                                selected-rows="selectedRows"
+                                item="row"
+                                tr-index="$parent.$index"
+                                field="{{column.field}}"   
+                                column="column"       
+                                class="vmf-table-td {{column.tdClass}}"                  
+                                ng-if="column.visible === undefined || column.visible"                            
+                                ng-repeat="column in columns">
+                            </td>
+                        </tr>
+                    </tbody>              
+                </table>
+            </div>
+              <div ng-if="totalRecords">
+              Total Records : {{totalRecords}}
+              </div>
+              <div ng-if="tablePagination">
+               <div vmf-table-pagination dataset="dataset()" current-page="tablepaginationconfig.currentPage" items-per-page="tablepaginationconfig.itemsPerPage" data="data" pagination-pattern="tablePaginationPattern"></div> 
+              </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+

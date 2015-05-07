@@ -1,0 +1,2 @@
+<div vmf-select-list dtitle="Total Revenue" model="revenue2" list="revenuesObj" mandatory="true" custom-class="customclass">
+        </div>

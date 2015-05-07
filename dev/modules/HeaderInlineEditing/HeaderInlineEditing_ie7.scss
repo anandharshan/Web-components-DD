@@ -1,0 +1,20 @@
+.vmf-header-inline-text {
+	max-width:620px;
+	padding:5px 10px;
+	font-size:24px;
+    input {
+        padding:5px 30px 5px 5px;
+        font-size:16px;
+        line-height:16px;
+    }
+    .vmf-header-saving {
+        position: absolute;
+        top: 13px;
+        right:-20px;
+    }
+	.vmf-header-tick {
+		margin-left:10px;
+		position: relative;
+		top:-10px;
+	}
+}

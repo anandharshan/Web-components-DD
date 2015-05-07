@@ -1,0 +1,67 @@
+<!-- Password Strength  -->
+<div ng-controller="pwdStrengthCtrl">
+
+    <div class="vmf-pwd-wrapper">
+        <div class="pwdMainHead">
+            <span class="pwdHeading">{{heading}}</span>
+            <span class="helpText">Help</span>
+        </div>
+        <div class="pwd-wizardBar">
+            <vmf-wpb>
+                <vmf-wpb-task title="ENTER EMAIL ADDRESS" class="clearfix passwordForm">
+                    <form name='vmfCustomFormTemplate' submit-callback="forward()" novalidate>
+                        <p class="emailHead">Enter your email address</p>
+                        <span class="reqText emailTopFix">* Required Fields</span>
+                        <div class="form-group clearfix emailRow">
+                            <label for="email" class="col-md-3  emailLabel"><span class="mandatory">*</span> Email Address</label>
+                            
+                            <div class="vmf-text-input col-md-4 ">
+                                <input type="text" id="userName" ng-model="email" title="Email Address" title="Email Address" mandatory="true" custom-class="customclass" class="formInputClass" validation='[{"name":"email"}]' />
+                            </div>
+                        </div>
+                        <div class="actionButtons clearfix">
+                            <button type="submit" class="vmf-btn vmf-primary resetContinue">Continue</button>
+                        </div>
+                    </form>
+                </vmf-wpb-task>
+                <vmf-wpb-task title="RESET PASSWORD">
+                    <form name='vmfCustomFormTemplate' novalidate class="passwordForm" submit-callback="serviceCall()" novalidate>
+                        <span class="reqText">* Required Fields</span>
+
+                        <div class="form-group clearfix passwordRow">
+                            <vmf-text-input type="password" option-id="password" name="password" class="formInputClass vmf-text-input" hint="Enter Password" title="New password" model="pw" mandatory="true" custom-class="customclass" validation='[{"name":"required"},{"name" : "minLength" , "value" : "6"}, {"name" : "maxLength", "value" : "20"}, {"name" : "validationonealphabet"}, {"name" : "validationonenumber"}, {"name" : "validationoneuppercaseletter"},{"name":"pswd"}]' id="pw"></vmf-text-input>
+                        </div>
+                        <div class="strengthContainer col-sm-5">
+                            <span class="strSubHead" id="strSubHead">Password strength</span>
+                            <ul id="strength" check-strength="pw" class="strengthDis"></ul>
+                            <p class="strengthDesc">Make sure your password contains 6-20 character. Combine numbers, symbols and upper cases to increase strength</p>
+                        </div>
+                        <!-- </form>
+                    <form name='vmfCustomFormTemplate' novalidate class="passwordForm" submit-callback="serviceCall()" novalidate> -->
+
+                        <div class="form-group clearfix passwordRow">
+                            <vmf-text-input type="password" option-id="conformPassword" name="conformPassword" class="formInputClass vmf-text-input" hint="Confirm Password" title="Verify new password" model="user.confirm_password" mandatory="true" custom-class="customclass" validation='[{"name":"required"},{"name" : "confirmpassword","confirm_with" : "password" , "message" : "Password doesnt match"}]'></vmf-text-input>
+                        </div>
+                        <button type="submit" class="vmf-btn vmf-primary resetContinue">Reset</button>
+                    </form>
+
+
+                </vmf-wpb-task>
+                <vmf-wpb-task title="COMPLETE">
+                    <p class="statusText">You have succesfully reset your password.</p>
+                    <!-- <span class="completeSubHead col-md-12">Account Activated</span>
+        <p class="statusText">You have succesfully activated My VMware account. If you are not automatically redirected within 15 seconds, click "Continue to My VMware" to proceed.</p> -->
+                    <a class="vmf-btn vmf-primary contVMWare" href="http://vmware.com"> Continue to My VMware</a> 
+                </vmf-wpb-task>
+            </vmf-wpb>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+

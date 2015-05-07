@@ -1,0 +1,23 @@
+Syntax:
+<vmf-wpb>
+        <vmf-wpb-task title="StringText">
+<htmlContent>
+              <a class="vmf-btn vmf-primary" ng-click="forward()"> Continue </a>
+        </vmf-wpb-task>
+        <vmf-wpb-task title="StringText">
+<htmlContent>
+<a class="vmf-btn vmf-primary" ng-click="forward()"> Continue </a>
+              <a class="vmf-btn vmf-secondary" ng-click="back()"> Back </a>
+        </vmf-wpb-task>
+        <vmf-wpb-task title="StringText">
+<htmlContent>
+        </vmf-wpb-task>
+</vmf-wpb>
+
+Configuration
+
+title String Literal
+Mandatory:  Yes
+Default Value: <empty>
+Usage: title=”Enter Acount Info”
+The title for current page in wizard progress bar.

@@ -1,0 +1,122 @@
+input [type ="psearch"]::ms-clear,
+input [type ="psearch"]::ms-reveal{
+    display: none;
+    height: 0px;
+    width: 0px;
+    visiblity: hidden;
+}
+
+.vmf-autocomplete-input .searchArea input[type="text"]:focus,
+.vmf-autocomplete-input .searchArea input[type="password"]:focus,
+.vmf-autocomplete-input textarea:focus {
+    border:1px solid $vmf-SecondaryborderColor;
+    color:$gray-darker;
+    outline:none;
+}
+.vmf-autoComplete {
+    margin: 10px 0px;
+    display: inline-block;
+    width:100%;
+    position:relative;
+    input {
+        &.vmf-autocomplete-text-area {
+            padding: 0.9375rem 0.9375rem .6250rem;
+            border-radius: 5px 0px 0px 5px;
+            border: 1px solid $vmf-SecondaryborderColor;
+            line-height: 16px;
+            float: left;
+            width:86%;
+            height: auto;
+            font-size:1rem;
+            color:#333;
+            font-family:$font-stack;
+            @include boxShadowNone();
+             &:focus {
+                 border: 1px solid $vmf-SecondaryborderColor;
+             }
+        }
+        &.vmf-autoComplete-searchBtn {            
+            padding: 0px 0.9375rem;
+            background: #0095D3 url(/images/Search-icon.png) no-repeat center;
+            border-radius: 0px 5px 5px 0px;
+            border: 1px solid $vmf-primary-blue;
+            height: 43px;
+            float: left;
+            width:40px;
+            position:static;
+        }
+        &.placeholdersjs {
+            color:#999\0;
+        }        
+    }
+}
+.vmf-autocomplete-input .searchArea {    
+    position:relative;
+    .vmf-autoComplete ul.searchWrap {
+        position: absolute;
+        top: 48px;
+        border: 1px solid $vmf-gray-light;
+        width: 100%;
+        z-index: 9999;
+        padding:0.5rem 0 0.8125rem 0;
+        @include boxShadowValues(0, 1px, 4px, 0px, $vmf-boxShadow);
+        li {
+            background:$vmf-bgColor;
+            a{
+                display:block;
+                line-height:14px;
+                font-family:$font-stack;
+                padding:8px 10px;
+                &:hover{
+                    background:$vmf-listBgColor;
+                }
+            }
+        }
+    }
+    input[type="text"] { 
+      padding-right:10px;
+    }
+}
+.row {
+    .formLabelLineHeight {
+        line-height: 16px;
+        padding:10px 15px;
+    }
+}
+
+.vmf-autocomplete-input input::-webkit-input-placeholder {
+    color: $vmf-placeholderColor;
+}
+.vmf-autocomplete-input input::-moz-placeholder {
+    color: $vmf-placeholderColor;
+}
+.vmf-autocomplete-input input:-moz-placeholder {   /* Older versions of Firefox */
+    color: $vmf-placeholderColor;
+}
+ .vmf-autocomplete-input input:-ms-input-placeholder { 
+    color: $vmf-placeholderColor;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-tablet) { 
+  .vmf-autoComplete {
+        width: 427px;
+        input {
+            &.vmf-autocomplete-text-area {
+                width: 380px;                
+            }
+            &.vmf-autoComplete-searchBtn {
+                width: 47px;
+            }
+        }
+    }  
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-desktop) { 
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-desktop) { 
+
+}

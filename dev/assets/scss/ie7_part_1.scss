@@ -1,0 +1,39 @@
+/* VMware Globals */
+@import "common/_vars.scss";
+@import "common/_mixins.scss";
+@import "common/_type.scss";
+/* VMware Globals ends */
+
+@import "pageStyles/page_ie7";
+@import "../../modules/socialMedia/socialMedia_ie7.scss";
+@import "../../modules/radioButtons/radio_ie7.scss";
+
+@import "../../modules/checkbox/checkbox_ie7.scss";
+
+@import "../../modules/tabNavigation/tabNavigation_ie7.scss";
+@import "../../modules/dropdown/dropdown_ie7.scss";
+@import "../../modules/ActionButton/actionButtons_ie7.scss";
+@import "../../modules/textinputbox/textbox_ie7.scss";
+@import "../../modules/Breadcrumbs/breadcrumb_ie7.scss";
+@import "../../modules/Tooltip/tooltip_ie7.scss";
+@import "../../modules/ActionBar/actionbar_ie7.scss";
+@import "../../modules/FormTemplates/formTemplates_ie7.scss";
+
+@import "../../modules/emptyState/emptyState_ie7.scss";
+@import "../../modules/HeaderInlineEditing/HeaderInlineEditing_ie7.scss";
+@import "../../modules/autocomplete/autocomplete_ie7.scss";
+@import "../../modules/emptyState/emptyState_ie7.scss";
+@import "../../modules/modal/modal_ie7.scss";
+@import "../../modules/Accordion/accordion_ie7.scss";
+@import "../../modules/ComboBox/combobox_ie7.scss";
+@import "../../modules/SliderControl/SliderControl_ie7.scss";
+@import "../../modules/FirstRunExperience/firstRunExperience_ie7.scss";
+
+@import "../../modules/UiShell/UiShell_ie7.scss"; 
+@import "../../modules/contentRatingWidget/contentRatingWidget_ie7.scss";
+@import "../../modules/globalNavigation/globalNavigation_ie7.scss";
+
+@import "../../modules/Modaless/modaless_ie7.scss";
+
+@import "../../modules/backlinks/ie/backlink_ie7.scss";
+@import "../../modules/FormValidations/formValidations_ie7.scss";

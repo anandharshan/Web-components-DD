@@ -1,0 +1,68 @@
+						AutoComplete
+Syntax:
+Type 1 :
+<div vmf-autocomplete-input  class="vmf-autocomplete-input vmf-autocomplete-search" type="psearch" [name="userForm"]  model="model for predictive search" search-model=”full model for search" hint="placeholder text" clear-text-length="3" psearch-callback="function()"></div>
+
+
+Type 2 : To be used as normal form field
+<div vmf-autocomplete-input  class="vmf-autocomplete-input vmf-autocomplete-search" type="psearch" [name="userForm"]  theme=”normal” model="model for predictive search" search-model=”full model for search" hint="placeholder text" clear-text-length="3" psearch-callback="function()"></div>
+
+
+Configuration
+
+Type 1 :
+type  Variable [String]
+Mandatory: Yes
+Options: “psearch”
+
+Usage: type="psearch"
+Keyword used to have predictive search working on the component
+
+
+
+
+name Variable[String]
+Mandatory: No
+
+Usage: name="userForm"
+Name attribute for normal form field
+
+model Variable[String]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: model=”user.firstName”
+The model for input box.
+
+search-model Variable[String]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: search-model="data.list"
+The model on which search is being applied.
+
+ psearch-callback function
+Mandatory: No
+Default Value: <empty>
+Usage: psearch-callback=”someFunction()”
+Callback to support what should happen after the search is done.
+
+hint Variable[String]
+Mandatory:  Yes
+
+Usage: hint:  Placeholder Text
+The placeholder text
+
+Type 2
+
+
+theme Variable[String]
+Mandatory:  Yes
+Default Value: “normal”
+Usage: theme = “normal”
+To be used as normal form field.
+
+
+
+
+
+
+

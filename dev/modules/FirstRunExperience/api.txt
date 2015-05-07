@@ -1,0 +1,43 @@
+First Run Experience API Documentation
+
+Usage
+
+<div vmf-first-run-experience images="images" ng-show="freShown" fre-shown="freShown"> </div>
+
+It is used to create a modal dialogue which is run on the application startup. 
+
+Configuration
+
+images Object Array
+
+Mandatory: Yes
+
+Default Value: null
+
+Usage: images=”object Array name”
+
+The object array contains properties for setting up image and text for each page. Length of the array 
+
+represents the number of pages to be displayed.
+
+The following are the properties that need to be set on the object.
+
+url:- path to the image available in the images folder.
+
+title: - title of the page that needs to be displayed.
+
+textVal:- should contain the html text to be displayed on the right side of the image. 
+
+The text is expected to contain html tags for proper display of the text.
+
+contentheader:-  this will be the header text of the text to be displayed along with the image. 
+
+freShown Boolean
+
+Mandatory: No
+
+Default Value: null
+
+Usage: freShown=”true”
+
+The Boolean value controls the display of first run experience and can be false by default.

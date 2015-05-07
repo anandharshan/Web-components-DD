@@ -1,0 +1,23 @@
+.pagination_pagination{
+    .pagination_pattern_two {
+        float:left;
+        vertical-align:middle;
+        display: inline-block; 
+        padding: 0px 0px 0px 0px;
+        font-size: 14px;
+        .pagination_page_box {
+            width: 31px;
+            height: 26px;
+            padding: 6px 0px;
+            margin: 0px 5px 0px 5px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+        } 
+    }
+}
+.vmf-dropdown .vmf-dropdown-content{
+    font-size: 14px;
+     .current-selection{
+         font-size: 14px;
+            }
+}

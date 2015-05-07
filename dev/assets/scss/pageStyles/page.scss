@@ -1,0 +1,266 @@
+ * {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+* {
+    @include box-sizing(border-box);
+}
+body {
+    font-family: $font-stack;
+    background: $bgColor url(../images/bkgrd-gradient.png) repeat-x top left;
+    font-size: 62.5%;
+}
+.codealign{
+    
+    margin-top: 20px;
+    display: block;
+    float: left;
+    width: 100%;
+
+
+}
+ul,
+li {
+    list-style: none;
+}
+#wrapper {
+    margin: 20px 10px;
+    min-height: 400px;
+   
+}
+
+.main-container {
+    background: $bgWhite;
+    height:100%;
+    padding:20px 10px;
+    h1{
+        font-size:2.3rem;
+        line-height: 32px;
+        color:#333333;
+        font-family:$font-stack;
+        span {
+            font-family:$font-stackLight;
+        }
+
+    }
+}
+.vmf-header { 
+    padding:5px 0px;
+    .logo {
+      display:inline-block;
+    }
+}
+.logo {
+     img {
+         float: left;
+     }
+     span {
+        font-size: 1.3rem;
+        float: left;
+        line-height: 1.1rem;   
+        color:#1f9cda;
+        font-family:$font-stackSemiBold;
+        display:inline-block;
+        margin-left:5px;
+     }
+    &:hover {
+         color:#006699;   
+    }
+    
+}
+.leftNav {
+     
+    ul {
+         margin-bottom:20px; 
+         margin-right: 10px;
+         margin-right:10px;
+    }
+    h2{
+        Padding-left:5px;
+        margin-top:0;
+    }
+}
+
+h1 {
+    font-family: $font-stackLight;
+    color: $headerColor;
+    margin: 0 0 20px 0;
+    padding:0 0 10px 10px;
+    font-size: 2rem;
+    border-bottom: 1px solid #CCC;
+    
+}
+h1 span {
+    
+    font-size: 2rem;
+    
+}
+h2 {
+    font-family: $font-stackSemiBold;
+    color: $headerColor;
+    font-size: 16px; 
+}
+
+a {
+    color: #006699;
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0 0.312rem;
+}
+ul.component-list a {
+    display:block;
+}
+label {
+    display: block;
+    margin: 0;
+    color: $labelColor;
+}
+.labelHeader,.formLabel {
+    margin-top:0px;
+    font-family: $font-stackSemiBold;
+    font-size:16px;
+    color: $labelColor;
+    padding-left: 0;
+}
+.formLabel {    
+    padding:3px 0 10px;
+    padding:5px 0 10px \9;
+}
+
+
+.clearfix {
+    display: block;
+    clear:both;
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+fieldset {
+     border: 0 none;   
+}
+
+.mandatory {    
+    color:$mandatory;
+}
+
+.activeHover:hover,.activeHover:focus,.activeStateLink{
+    background-color: #0095D3;
+    color:#fff;
+    outline:none;
+
+}
+img{border:0px;}
+.tab-pane pre.prettyprint {
+  overflow:scroll;  
+ }
+ .layoutCommon {
+    float: left;
+    @include box-sizing(border-box);
+}
+.twoCol {
+    .col {
+        width: 50%;
+        @extend .layoutCommon;
+    }
+    .maxWidth240 {
+        max-width: 240px;
+    }
+}
+.formSection {
+    margin-bottom: 80px;
+    display: block;
+    padding-top: 10px;
+}
+.marginTop30 {
+    margin-top: 30px;
+}
+.icon, .caret {
+    background-image: url("../images/icon-sprite.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+}
+
+.icon.caution{ background-position: -5px -62px;}
+.icon.failure{ background-position: -5px 0;}
+
+.caret{
+    width: 0.6rem;
+    height: 0.5rem;
+    float: right;
+    margin: 0.25rem 0 0.25rem 0.6rem;
+    z-index: 999;
+}
+.caret-right{background-position: -30px -229px;}
+
+.close {
+    background: url("../images/icon-sprite.png") -23px -198px transparent no-repeat;
+}
+
+.feedback .close{top: 0.6rem;}
+.feedback .icon{
+    width: 2.2rem;
+    height: 1.8rem;
+}
+.feedback .exclamation{background-position: -20px -164px;}
+.feedback .success{background-position: -20px -126px;}
+.feedback .caution{background-position: -18px -246px;}
+.feedback .failure{background-position: -18px -281px;}
+.innercode{
+    margin-top: -30px;
+}
+
+.requiredLabel {    
+    color:$vmf-requiredField;
+    display:block;
+    clear:both;
+    background: url("../images/icon_form_error_16x16.png") no-repeat top left;
+    padding-left:20px;
+    line-height:20px;
+}
+.leftNav,.rightNav   {
+     padding:0;   
+}
+a {
+    outline: none;
+    &:focus,&:active {
+        outline: none;
+    }
+}
+
+
+/*small devices (tablets, 768px and up) */
+@media (min-width: $screen-desktop) { 
+    
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-desktop) { 
+     .rightNav  {    
+        padding-right:0;   
+    }
+    
+    .formLabel {    
+        padding:3px 0 20px;
+        padding:5px 0 17px \9;
+    }
+    
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-desktop) { 
+
+}
+
+
+
+

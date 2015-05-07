@@ -1,0 +1,86 @@
+.vmf-action {
+    display: block;
+    overflow: hidden;     
+    ul {
+        li {         
+              border-top:1px solid $vmf-borderColor;
+            a {
+                display: block;
+                text-align: center; 
+                position: relative;
+                padding: 1.1875rem 0;
+                .labelText {
+                    display: block; 
+                    padding-top: 0.9375rem;
+                    font-family:$font-stackSemiBold;
+                    font-size:18px;
+                    color:$vmf-primary-blue;
+                    line-height: 17px;
+                } 
+                img {
+                    height:32px;
+                    width:32px;
+                    margin-top: 0.625rem;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .vmf-notification  { 
+                font-family:$font-stackSemiBold;               
+                position: absolute;
+                right: 15px;
+                top: 15px;
+                font-size:14px;
+                color: $vmf-bgColor;
+                background:$vmf-notificationBg;
+                padding:2px 7px 0;
+                span {
+                    font-size:.875rem;
+                }
+            }
+            &:hover {
+                background: $vmf-hoverColor;
+                text-decoration: none;
+           }          
+       }       
+    }
+}
+
+.bordRt {
+    display: block;
+    padding: 0 1.875rem;
+}
+
+/*End of Mobile*/
+
+/* Tablet*/
+@media (min-width: $screen-tablet) { 
+
+    .vmf-action {
+        border:1px solid $vmf-borderColor;
+        ul {
+            float:left;
+            li {
+                float:left;           
+                width:20%;
+                border-top:none;
+                &:first-child {
+                    .bordRt {
+                        border-left:0 none;  
+                    }             
+                }
+            }
+        }
+    }
+
+    .bordRt {
+        border-left: 1px solid $vmf-borderColor;
+        height:100px;
+    }
+
+}
+/*End of tablet*/
+@media (min-width: $screen-desktop) {     
+
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="vmfModule">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>VM Ware</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="location" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="assets/styles/bootstrap.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/styles/jquery.jscrollpane.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/page.css" />
+
+    
+    <!-- Internet Explorer AngularJS element creation -->
+    <!--[if lte IE 8]>
+    <script>
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+        document.createElement('vmf-radio-group');
+        document.createElement('vmf-radio');
+        document.createElement('vmf-checkbox-group');
+        document.createElement('vmf-select-list');
+        document.createElement('vmf-tabs');
+        document.createElement('vmf-pane');
+        document.createElement('vmf-tabsone');
+        document.createElement('vmf-paneone');
+        document.createElement('vmf-tabstwo');
+        document.createElement('vmf-panetwo');
+        document.createElement('vmf-text-input');
+        document.createElement('vmf-autocomplete-input');
+        document.createElement('vmf-form-template');
+        document.createElement('vmf-tooltip');
+        
+    </script>
+   
+<![endif]-->
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="assets/styles/IEstyles.css" />
+<![endif]-->
+
+
+
+
+
+</head>
+
+<body >
+    <!-- Outer Wrapper - Start -->
+    <div id="wrapper"  class="clearfix" ng-controller="mainCtrl">
+        <!-- <div class="header"><a class="logo" href="#"><img src="/images/vmware-logo.png"/><span>Component Library</span></a></div> -->
+        <!--<div class="global-navigation"></div> -->
+
+        <div class="main-container">
+        <!-- <h1 class="pre-title">Components - <span>{{activelink}}</span></h1> -->
+        <div class="row">
+        <div class="leftNav col-md-2 col-xs-12">
+        </div>
+        <div class="rightNav col-md-9 col-xs-12" >
+            <div ui-view>

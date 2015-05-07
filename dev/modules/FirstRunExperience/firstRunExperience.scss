@@ -1,0 +1,240 @@
+.modal-open {
+    overflow: hidden;
+    .modal {
+        display: block;
+        overflow: auto;
+    } 
+} 
+
+
+.modal-backdrop {
+  position: fixed;
+  bottom: 0;
+  z-index: 1030;
+}
+
+
+/* Start */
+.fre-dialog{
+    position: relative;
+    z-index: 1111;
+    padding: none;
+    color:#333333;  
+    margin-right: auto;
+    margin-left: auto;
+    input[type="checkbox"] {
+        height:18px;
+        width:18px;
+        float:left;
+        margin-top:6px;
+        +label {
+            text-align:left;
+            font: {
+                family: ProximanovaReg;
+                size: 14px;
+            };
+            position:relative;
+            line-height:30px;
+            color: #333333;
+            padding-left:10px;
+            float:left;
+        }
+    }
+    .modal-header {
+      min-height: 16.428571429px;
+      padding: 0px;
+      height:90px;
+      font-family: $font-stackSemiBold;
+      border-bottom: 1px solid #d6d6d6;
+        .closeIcon{
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            right: 0px;
+            background: url(/images/system-alerts.png) no-repeat 0px -192px;
+            padding: 0px;
+            margin-right: 20px;
+            margin-top:20px;
+            cursor: pointer;
+            display: block;
+            line-height: normal;
+            text-decoration: none;
+            text-indent: -9999px;            
+        }
+        .modal-title{
+            margin: 0;
+            font: 24px ProximanovaSemibold;
+            color: #333333;
+            padding:38px 0px 0px 40px;
+        }
+    }
+    .modal-content {
+        margin:10px;   
+    }
+    .modal-body{
+        height: auto;
+        overflow:auto;
+        padding:0;
+        text-align:center;
+        .fre-content{
+            padding:10px;
+            width:100%;
+        }
+        .contentHeader{
+            font: 21px ProximanovaSemibold;
+            color:#C2CD23;
+        }
+        .content{
+            font: 16px ProximanovaReg;
+            line-height:1.5em;
+            .paddedText10
+            {
+                padding-left:10px;
+            }
+        }
+        .paddedText20{
+            padding-left:20px;
+        }
+        .contentCol1{
+            width:423px;
+            float:left;
+            margin-right:0;
+        }
+        .contentCol2{
+            text-align:center;
+        }
+        .contentText{
+            padding:10px;
+            margin-left:auto;
+            float:left;
+            width:auto;
+        }
+    }
+
+    .modal-body.row{
+            margin-left:0;
+            margin-right:0;
+            .paddedContentColumns{
+                padding-top:30px;
+                padding-bottom:35px;
+            }
+            .paddedLeft35{
+                padding-left:35px;
+            }
+            .marginLeft35{
+                margin-left:35px;
+            }
+            .paddedRight0{
+                padding-right:0;
+            }
+    }
+    
+    
+    .modal-footer .vmf-back-btn{
+        float:left;        
+    }
+
+    .modal-footer{
+        
+        padding: 25px 10px 30px 10px;
+        background: $btn-default-bg-gradient-start;
+        border-top: none;
+        border-radius: 0px 0px 6px 6px;
+        .vmf-btn{
+            margin: 0px;
+            width:100%;
+            font: {
+                family: ProximanovaSemibold;
+                size: 14px;
+            };
+        }
+        
+        .pageInfo{
+            float:left;
+            margin-left:150px;
+            width:94px;
+            color:#333333;
+            padding-top:4px;
+            font: {
+                family: ProximanovaSemibold;
+                size: 14px;
+            };
+            span{
+                font-size: 14px;
+            }
+        }
+        .vmf-marginTop10{
+            margin-top:10px;
+        }
+
+    }
+
+}
+
+.vmf-fre-gradient-blue{
+        color:#ffffff;
+        background: #003244; /* Old browsers */
+        background: -moz-linear-gradient(top, #003244 0%, #006990 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#003244), color-stop(100%,#006990)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #003244 0%,#006990 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #003244 0%,#006990 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #003244 0%,#006990 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #003244 0%,#006990 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003244', endColorstr='#006990',GradientType=0 ); /* IE6-8 */
+
+}
+
+@media screen and (min-width: 768px) {
+    .fre-dialog {
+        width: 770px; 
+        margin:7.5% auto;
+    	.modal-content {
+    	     margin:0px;
+    	}
+        .modal-footer{
+            height:90px;
+            text-align:left;
+            padding: 25px 10px 30px 35px;
+            .rightButtonSet{
+
+            }
+            .vmf-btn{
+                margin: 0px;
+                padding-left:25px;
+                display:inline-block;
+                float:none;
+                height:30px;
+            }
+            .vmf-btn.vmf-primary{
+                margin-left:20px;
+                width:80px;
+            }
+            .vmf-btn.vmf-primary.vmfdisabled{
+                width:96px;
+                margin-left: 90px;
+            }
+            .vmf-btn.vmf-primary.vmf-primary-close{
+                clear:right;
+                margin-left:210px;
+            }
+            .vmf-btn.vmf-secondary{
+                width:96px;
+                margin-left: 90px;
+            } 
+
+        }
+        .modal-body{
+            height: 513px;
+            .fre-content{
+                padding:0;
+                width:auto;
+            }
+            .contentText{
+                width:272px;
+                padding-left:0;
+                margin-left:20px;
+                float:left;
+            }
+        }
+    }
+}

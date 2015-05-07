@@ -1,0 +1,198 @@
+.vmf-contentRating {
+    display: inline-block;
+    margin-bottom: 9px;
+    width: 100%;
+    .RateHeader {
+        color: $vmf-bigFtr-anchrTitle;
+        width: 100%;
+        float: left;
+        margin-bottom: 0.25rem;
+    }
+}
+.ratingContainer {
+    background-color: $vmf-contentRating-bg;
+    padding: 0.3125rem 0.625rem 12px;
+    float: left;
+    fieldset {
+        display: inline-block;
+        float: left;
+    }
+    .radingPlus {
+        float: left;
+        width: 18px;
+        text-align: center;
+    }
+    .radingMinus {
+        float: left;
+        width: 18px;
+        text-align: left;
+    }
+    .ratingContent {
+        float: left;
+        div {
+            display: block;
+            font-size: 0.9375rem;
+            color: $vmf-gray-dark;
+            float: left;
+            margin-right: 0.25rem;
+            width: 18px;
+            span {
+                width: 18px;
+                padding-left: 3px;
+            }
+        }
+        .ratingRadio {
+            display: block;
+            height: 15px;
+            position: relative;
+            top: 2px;
+            width: 15px;
+            cursor: pointer;
+            margin-bottom: 0;
+            margin-top: 1px;
+            input[type="radio"] {
+                height: 15px;
+                left: 0;
+                margin: 0;
+                outline: medium none;
+                position: absolute;
+                width: 15px;
+                cursor: pointer;
+            }
+        }
+        .selected {
+            background-position: -76px 0;
+        }
+    }
+}
+.rating_Container {
+    .improvement_comment {
+        border: 2px solid $vmf-staticRowBorder;
+        box-shadow: 1px 4px 9px -8px inset;
+        box-sizing: border-box;
+        width: 65%;
+        height: 30px;
+        padding: 0 0.5rem;
+        cursor: pointer;
+        &:focus {
+            border: 2px solid $vmf-primary-blue;
+        }
+    }
+}
+.improvementSubmit {
+    font-family: $font-stackSemiBold;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.9375rem;
+    margin-left: 28px;
+    margin-right: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.midAlign {
+    position: relative;
+    font-size: 0.9375rem;
+    line-height: 15px;
+}
+.contentRatingWidget {
+    border-top: 2px solid $vmf-gray-light;
+    border-bottom: 1px solid $vmf-gray-light;
+    padding: 1rem 0.625rem 0.4375rem;
+    float: left;
+    width: 100%;
+}
+.improve_label {
+    color: $vmf-gray-dark;
+    display: block;
+}
+.rating_Container {
+    float: left;
+    width: 100%;
+}
+/* Tablet*/
+
+@media (min-width: $screen-tablet) {
+    .rating_Container {
+        width: 55%;
+        display: inline-block;
+        .vmf-contentRating {
+            margin-bottom: 9px;
+            .RateHeader {
+                width: 25%;
+                margin-bottom: 0;
+                display: inline-block;
+                margin-top: 1.125rem;
+            }
+        }
+        &:first-child {
+            margin-right: 0%;
+            width: 45%;
+        }
+        .improve_label {
+            display: inline-block;
+            width: 39%;
+            text-align: right;
+            margin: 1.375rem 0 0;
+        }
+        .midAlign {
+            position: relative;
+            font-size: 0.9375rem;
+            float: left;
+        }
+        .improvement_comment {
+            margin-left: 2%;
+            width: 35%;
+            margin-top: 0.875rem;
+        }
+        .improvementSubmit {
+            margin-left: 1.875rem;
+            margin-right: 0;
+            margin-top: 0.875rem;
+        }
+    }
+}
+@media (min-width: $screen-desktop) {
+    .rating_Container {
+        width: 56%;
+        .vmf-contentRating {
+            .RateHeader {
+                width: 34%;
+                text-align: right;
+                padding-right: 4%;
+            }
+        }
+        &:first-child {
+            width: 44%;
+        }
+    }
+    .improve_label {
+        width: 35%;
+    }
+    .improvement_comment {
+        width: 40%;
+    }
+    .improvementSubmit {
+        margin-top: 0.8125rem;
+        margin-left: 1.875rem;
+    }
+}
+@media (min-width: $screen-lg-desktop) {
+    .rating_Container {
+        width: 60%;
+        &:first-child {
+            width: 40%;
+        }
+        .improvement_comment {
+            width: 52%;
+        }
+        .vmf-contentRating {
+            .RateHeader {
+                width: 39%;
+            }
+        }
+        .improve_label {
+            width: 25%;
+        }
+    }
+}
+@media (min-width: $screen-vlg-desktop) {}

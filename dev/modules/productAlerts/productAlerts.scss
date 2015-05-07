@@ -1,0 +1,178 @@
+.productAlert_disNone {
+  display: none;
+}
+
+.productAlert_product-parent {
+    width: auto;
+    padding:28px 40px 15px;
+    background-color: #F1F1F1;
+}
+
+.productAlert_product-title {
+    font-size: 22px;
+    line-height: 22px;
+    font-family: 'proximanovaSemiBold';
+    color: #333333;
+    padding-bottom:5px;
+}
+
+.productAlert_product-accordian {
+  margin-top: 13px;
+  line-height: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #cccccc;
+  &.lastChild {
+    border-bottom: 0;
+  }  
+ &.activeAcc {
+     .productAlert_product-heading  {
+          background-image: url("/images/down_alert_arrow.png");
+          color: #0095d3;
+          background-position: 0px 4px;         
+    }
+ }
+  
+}
+
+.productAlert_product-heading {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: 'proximanovaSemiBold';
+    color: #666666;
+    cursor: pointer;
+    background: url("/images/right_alert_arrow.png") no-repeat 0px 4px;
+    padding-top:0;
+    outline: none;
+    &:focus,&:active {
+        color: #666666;
+        outline: none;
+    }
+}    
+
+.productAlert_last {
+  border: none;
+}
+
+.productAlert_product-arrow {
+  height: 10px;
+  width: 10px;
+  float: left;
+}
+
+
+.productAlert_product-heading {
+    margin-bottom: 0;   
+    &:hover {
+        color: #0095d3;
+    }
+}
+
+.productAlert_product-content, .productAlert_product-contentExpanded {
+  margin-top: 5px;
+  font-size: 16px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.productAlert_product-message {
+  font-family: 'proximanovaReg';
+  color: #666666;
+}
+
+.productAlert_product-link {
+  font-family: 'proximanovaReg';
+  color: #006990;
+}
+
+.productAlert_product-view {
+  font-family: 'proximanovaSemiBold';
+  color: #666666;
+}
+
+.productAlert_product-close {
+  float: right;
+  cursor: pointer;
+  position: relative;
+  top:-5px;
+}
+
+.productAlert_product-bar { 
+  height: 47px;
+  border: 1px solid #d0d0d0;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, top, bottom, color-stop(0, #FFFFFF), color-stop(1, #ECECEC));
+  background: -o-linear-gradient(bottom, #FFFFFF 0%, #ECECEC 100%);
+  background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #ECECEC 100%);
+  background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #ECECEC 100%);
+  background: -ms-linear-gradient(bottom, #FFFFFF 0%, #ECECEC 100%);
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #ECECEC 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFFFFF', endColorstr='#ECECEC');
+  /*For IE7-8-9*/
+  margin-bottom: 10px;
+}
+
+.productAlert_product-alertImage {
+  background-image: url("/images/alertCountBg-hover.png");
+  height: 25px;
+  width: 33px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-right: 20px;
+  font-family: 'proximanovaSemiBold';
+  color: #ffffff;
+  font-size: 16px;
+  &:hover {
+    cursor: pointer;
+    background-image: url("/images/alertCountBg.png");
+  }
+}
+
+.productAlert_product-alertCount {
+  margin-top: 2px;
+  margin-left: 15px;
+  float: left;
+}
+
+@-moz-document url-prefix() {
+  .product-alertCount {
+    margin-top: 3px;
+  }
+}
+
+
+.productAlert_product-container {
+  float: right;
+  width: 119px;
+  border-left: 1px solid #d0d0d0;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.productAlert_product-alerts {
+    margin-left: 15px;
+    font-family: 'proximanovaSemiBold';
+    color: #333333;
+    font-size: 16px;
+    float: left;
+    margin-top: 14px;
+    margin-right: 0;
+    line-height: 16px;
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-tablet) { 
+    
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-desktop) { 
+     .productAlert_product-parent,.productAlert_product-bar {
+        max-width:850px;
+     }
+     .productAlert_product-accordian {
+       max-width: 770px;
+    }
+}

@@ -1,0 +1,30 @@
+.registrationForm {
+    .passwordFormField {
+        .strengthContainer {
+            width: 38%;
+        }
+    }
+    .formRegistrationSection {
+        margin-left: 100px;
+    }
+    .passwordFormField {
+        .strengthContainer {
+            top: 0;
+            margin-top: -3px;
+        }
+    }
+}
+.registrationFormBox {
+    .modal-dialog {
+        max-width: 1120px;
+        margin: 10px auto;
+    }
+}
+.formResetSection {
+    max-width: 500px;
+    .form-group {
+        .col-md-4 {
+            width: 75%;
+        }
+    }
+}

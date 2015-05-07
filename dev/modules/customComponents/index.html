@@ -1,0 +1,23 @@
+<div data-ng-controller="customComponentsController" class="radio-controls">
+    <vmf-custom-radio-group options="radioButtonGroup1" id="rd1" ng-model="formData.value1"></vmf-custom-radio-group>
+    
+    <div class="row">
+
+        <div  class="col-md-2">sddfg <span vmf-tooltip tooltip-options="{'position':'top','text':'Tooltip on Anchor tag','skin':'light'}" >dfdfdf </span></div>
+
+        <div class="col-md-8"><vmf-custom-radio-group options="radioButtonGroup2" id="rd2" ng-model="formData.value2"></vmf-custom-radio-group></div>
+    </div>
+    <vmf-custom-radio-group options="radioButtonGroup3" id="rd3" ng-model="formData.value3"></vmf-custom-radio-group>
+    <span ng-bind="formData.value1"></span>
+    <vmf-custom-check-box-group options="checkBoxGroup1" id="chk1" ng-model="formData.value4"></vmf-custom-check-box-group>
+    {{formData.value4}}
+    <vmf-custom-check-box-group options="checkBoxGroup2" id="chk2" ng-model="formData.value5"></vmf-custom-check-box-group>
+    {{formData.value5}}
+
+    <input type="button" class="vmf-btn vmf-primary" ng-click="check()" value="Check"/>
+
+   <!--  <div class="pull-left">
+	    <div vmf-button btn-text='Submit' btn-type='vmf-primary'></div>
+	    <div vmf-button btn-text='Reset' btn-type='vmf-secondary'></div>
+    </div> -->
+</div>

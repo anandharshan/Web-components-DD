@@ -1,0 +1,70 @@
+.pagination{
+    .pagination2_grid{
+        font: normal 16px/14px $font-stackSemiBold;
+        height: 25px;
+        li{
+            float: left;
+            display: inline;
+            a{
+                padding-top: 0px;
+            }
+        }
+        .page_prev_lnk, .page_next_lnk{
+            height: auto;
+            padding: 0px 5px 0px 16px;            
+            line-height: 25px;
+            vertical-align: middle;
+        }
+        .page_next_lnk{
+             padding: 0px 16px 0px 5px;   
+        }
+        .pagination1PrevArrow{}
+        li.page_lnks{
+            a{
+                height: auto;
+                line-height: 25px;
+                vertical-align: middle;
+                padding-top: 0px;
+            }
+        }
+
+    }
+}
+.pagination_pagination{
+    .pagination_pattern_two {
+        float:left;
+        vertical-align:middle;
+        display: inline-block; 
+        padding: 0px 0px 0px 0px;
+        font-size: 14px;
+        .pagination_page_box {
+            width: 29px;
+            height: 18px;
+            padding: 3px 0px;
+            margin: 0px 5px 0px 5px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+             
+        } 
+    }
+    .pagination_pattern_two_drop{ 
+        .vmf-dropdown .vmf-dropdown-content{
+            width: 93px;
+            height: 15px;
+            padding: 3px 10px 5px 10px;
+            background-position-x: 93px;
+            background-position-y: 9px;  
+            font-size:14px; 
+            &:hover{
+                background-position-x: 93px;
+                background-position-y: 9px;   
+            }
+            .active{
+                margin-top: -3px;
+            }
+         }
+         .current-selection{
+              font-size: 14px;
+                    }
+    }
+}

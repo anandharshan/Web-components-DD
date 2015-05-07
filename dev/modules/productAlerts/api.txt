@@ -1,0 +1,18 @@
+Syntax:	
+<vmf-product-alerts options="config"></vmf-product-alerts>
+Configuration
+
+options :  Object
+Mandatory: Yes
+Default Value: <empty>
+Usage: option = {
+title: "Alert message", 
+data: [{ 
+"name": "Product Name",
+"description": "description for product Name"
+}, {
+"name": "vcenter server 5.1",
+"description": "vmware and EMC have identified two issues with powerpath/VE 5.7"
+}]
+}
+An object which will hold value of title and data of the product alerts. In which the key 'title' contains the text for the alert message and key 'data' is an object in an array of objects contains key-value pairs. Where Key 'name' represents the display text of the products and key 'description' represents the value for description of the respective product.

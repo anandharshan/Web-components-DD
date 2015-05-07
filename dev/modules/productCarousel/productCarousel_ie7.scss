@@ -1,0 +1,54 @@
+.vmware-product-carosuel-wrapper-container {
+  .product-carosuel-pagination{
+    margin-bottom:25px;
+  }
+  .product-carosuel-outer-container{
+    padding-bottom: 26px !important;
+    padding-top: 21px;
+  }
+
+.product-carosuel-imgContainer{
+      width: 100px !important;
+      height: 100px !important;
+}
+
+ .product-carosuel-img-caption {
+
+   line-height: 1.04 !important;
+   
+    p {
+      &.product-carosuel-productname {
+        margin-top: 13px;
+       
+      }
+    }
+    span{
+       padding-top: 1px!important;
+    }
+  }
+}
+
+
+
+.vmware-product-carosuel-wrapper-container {
+  display: inline-block;
+}
+
+.vmware-proudct-carosuel-wrapper-container .product-carosuel-img {
+  position: static;
+}
+
+
+.vmware-product-carosuel-title {
+ margin: 32px 0 0 44px !important;
+  line-height: 1.03 !important;
+}
+
+.vmware-product-carosuel-wrapper-container {
+  .product-carosuel-img-caption {
+    position: static;
+  }
+  .vmware-product-carosuel-inner-wrapper-container {
+    display: inline;
+  }
+}

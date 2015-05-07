@@ -1,0 +1,370 @@
+
+/*Mobile stylings here*/
+
+.mainlistItem {
+    > li {
+        a {
+            padding-left: 30px;
+            font-size: 1.125rem;
+            font-weight: 200;
+            color: $gray-dark;
+            background: $vmf-bgColor;
+            background: -moz-linear-gradient(top, $vmf-bgColor 0%, $vmf-gradientColor1 6%, $vmf-gradientColor2 93%, $vmf-gradientColor3 99%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $vmf-bgColor), color-stop(6%, $vmf-gradientColor1), color-stop(93%, $vmf-gradientColor2), color-stop(99%, $vmf-gradientColor3));
+            background: -webkit-linear-gradient(top, $vmf-bgColor 0%, $vmf-gradientColor1 6%, $vmf-gradientColor2 93%, $vmf-gradientColor3 99%);
+            background: -o-linear-gradient(top, $vmf-bgColor 0%, $vmf-gradientColor1 6%, $vmf-gradientColor2 93%, $vmf-gradientColor3 99%);
+            background: -ms-linear-gradient(top, $vmf-bgColor 0%, $vmf-gradientColor1 6%, $vmf-gradientColor2 93%, $vmf-gradientColor3 99%);
+            background: linear-gradient(to bottom, $vmf-bgColor 0%, $vmf-gradientColor1 6%, $vmf-gradientColor2 93%, $vmf-gradientColor3 99%);
+            width: 100%;
+        }
+        .globalItem {
+            padding-top:10px;
+            padding-bottom:10px;
+            outline:none;
+        }
+         .viewMore {
+            clear: both;
+            color: $primary-teal;
+            display: inline-block;
+            float: left;
+            font-size: 1rem;
+            width: auto;
+            font-family:$font-stack;
+            line-height: 16px;
+            margin-top: 25px;
+            padding: 0;
+            background:none;
+            margin-bottom:20px;
+            &:hover {
+                background-color:transparent;
+                color:$vmf-primary-blue;
+            }
+      }
+    }
+    .sub-listMenu {
+        a {            
+             padding-left: 40px   
+        }
+        
+    }
+}
+.menu-link-primary {
+    display: block;
+    height: 36px;
+    width: 36px;
+    text-indent: -9999px;
+    float:right;
+    margin:15px 10px;
+    background: transparent url(/images/button-menu.png) no-repeat center top;
+    outline:none !important;
+    &:hover,&:active,&.is-active {
+        color: $vmf-primary-blue;
+        text-decoration: none !important;   
+        background-image: url(/images/button-menu-active.png);
+    }
+}
+
+.globalItem {
+    position:relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        display: block;
+        width: 8px;
+        height: 13px;
+        background: transparent url(/images/arrow-menu.png) no-repeat;
+    }    
+}
+
+.mainMenu {
+    display:none;
+    z-index: 99999;
+    a {
+        color:$primary-teal;   
+    }
+    h3 {
+        margin:20px 0 5px 0;
+        .subHeading {
+            font-size: 1.25rem;
+            color: $primary-teal;
+            font-family:$font-stackLight; 
+            margin: 30px 0 20px 30px;
+            background: url("/images/arrow-heading-link.png") no-repeat right center transparent;
+            padding: 0 22px 0 0;
+            display: inline;
+            border-top:0;
+            &:hover {
+                color:$vmf-primary-blue;
+                background-color: transparent;
+            }
+        }
+    }
+}
+.is_active {
+    .globalItem {
+        background:$vmf-primary-blue;
+        color:$vmf-bgColor;        
+        &:before {
+            background: url("/images/arrow-menu-active.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+            height: 8px;
+            left: 16px;
+            top: 18px;
+            width: 13px;            
+        }
+    }
+    .mainMenu {
+        display: block;   
+    }        
+}
+.navDiv {
+    background:$vmf-globalnav-bg;
+    float:left;
+    width:100%;
+    a {
+        outline:none;
+    }
+}
+
+.vware-logo {
+    background: url("/images/logo-b.png") no-repeat 0 0 ;
+    float: left;
+    height: 27px;
+    margin: 20px 0 20px 13px;
+    text-indent: -9999px;
+    width: 172px;
+}
+.mainMenulist  {
+    background:$vmf-bgColor;
+    float:left;
+    width:100%;
+}
+.menuContent {
+    .col {
+        float: left;
+        width: 100%;
+		li {
+		    margin-bottom:5px;
+		}
+        h5  {
+            text-indent: 30px;
+        }
+        h4 {
+			border-bottom: 1px solid $vmf-gray-light;
+			color: $vmf-gray-darker;
+			font-size: 0.9375rem;
+			line-height: 1.33em;
+			padding-bottom: 7px;
+			text-indent: 0;
+			margin-bottom: 7px;
+			text-indent: 30px;
+            margin-top: 13px;
+            padding-left:0;
+        }
+        a {
+        	color: $primary-teal;
+        	font-size: 0.875rem;
+        	font-family:$font-stack; 
+        	background:none;
+        	height:auto;
+            width:auto;
+        	&:hover {
+        		background-color:transparent;
+                color: $vmf-primary-blue;
+        	}
+        }
+    }
+}
+
+
+
+/* Tablet Styles here*/
+@media (min-width: $screen-tablet) { 
+    .mainlistItem {
+        > li {
+            width: 50%;
+            display: inline-block;
+            float:left;
+            .globalItem {
+                border-left: 1px solid $vmf-gray-light;
+            }
+            &:nth-child(odd) {
+                clear: both;
+                float: right;
+            }
+        }   
+    }
+    .menuContent {
+        .col {
+            width: 94%;
+            margin-right: 20px;
+        }
+    }
+}
+/*Desktop styles here*/
+@media (min-width: $screen-desktop) { 
+
+    .vware-logo {
+        margin-top:30px;
+        margin-bottom:40px;
+    }
+    .navDiv   {
+        background:$vmf-globalnav-desktopbg;
+    }
+    
+    .menu-link-primary {
+         display:none;   
+    }
+  
+    .mainMenulist {
+        display:block !important;
+        background:transparent;
+        float: right;
+        width:auto;
+    }
+  .mainlistItem {
+        float: right;
+        padding-top: 35px;
+        padding-right: 0;
+        padding-left: 0;
+        > li {
+            width: auto;
+            float: none;
+            a {			
+                text-indent: 38px;
+                border-top: 1px solid $btn-default-border;
+                font-size: 1.125rem;
+                font-weight: 200;
+                color: $gray-dark;
+                background: $vmf-bgColor;               
+            }
+
+           &:hover {
+                background-color: $vmf-primary-blue;   
+            }
+            &:nth-child(2n+1) { 
+                float: none;                
+            }
+            .globalItem {
+                padding-top:10px;
+                padding-bottom:10px;                
+                &:before {
+                    background:none;
+                }
+            }
+
+        }
+        .level-1 {
+            float: none;
+            a {
+                font-size: 1.25rem;
+                color: $vmf-bgColor;
+                height: auto;
+                padding: 8px 18px;
+                border: none;
+                text-indent: 0;
+                background: transparent;
+                font-family:$font-stackLight; 
+            }
+            .viewMore {
+                clear: both;
+                color: $primary-teal;
+                display: inline-block;
+                float: left;
+                font-size: 1rem;
+                width: auto;
+                font-family:$font-stack;
+                line-height: 16px;
+                margin-top: 25px;
+                padding: 0;
+                margin-bottom:0;
+                &:hover {
+                background-color:transparent;
+                color:$vmf-primary-blue;
+                }
+            }
+            &:hover {
+                .mainMenu {
+                  display: block;   
+                }
+            }
+
+        }
+    }  
+    #consulting {
+        .mainMenu {
+            right:auto;
+        }
+    }
+    .mainMenu {
+        display:none;
+        @include boxShadowValues(0,8px,8px,2px,rgba(0, 0, 0, 0.5));
+        position: absolute;
+        background: $vmf-gradientColor2;
+        border-top: 5px solid $vmf-primary-blue;
+        padding-bottom: 17px;
+        padding-right: 30px;
+        padding-left: 30px;
+        right: 0;
+        top: auto;
+        width: auto;
+        min-height:100px;
+        max-width: 1000px;
+        h3 {
+            margin-bottom:4px;
+            .subHeading {
+                outline:none;
+                color: $primary-teal;
+                margin-left: 0;
+                padding:0 22px 0 0;
+                background: url("/images/arrow-heading-link.png") no-repeat right center transparent;
+                &:hover {
+                    color:$vmf-primary-blue;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .menuContent {
+        float: left;
+        .col {
+            float: left;
+            margin-right: 30px;
+            width: 200px;
+            max-width: 230px;
+            li {
+                margin-bottom: 15px;
+                line-height:14px;               
+            }
+            h4 {               
+                padding-bottom: 10px;
+                text-indent: 0;
+                margin-bottom: 7px;
+                line-height:15px;
+                padding-left:0;
+            }
+            h5 {
+                text-indent: 0;
+            }
+            a {
+                color: $primary-teal;
+                font-size: 0.875rem;
+                line-height: 14px;
+                padding:0;
+                font-family:$font-stack; 
+                &:hover {
+                    background-color:transparent;
+                    color:$vmf-primary-blue;
+                }
+            }
+        }
+    }  
+    .sub-listMenu {
+        a {
+           margin-left:10px;
+        }
+    }
+}
+
+ 

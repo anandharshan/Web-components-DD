@@ -1,0 +1,33 @@
+.vmware-product-carosuel-wrapper-container {
+
+.vmware-product-carosuel-title {
+  margin: 32px 0 0 44px !important;
+  line-height: 1.03 !important;
+}
+
+.product-carosuel-pagination{
+	
+	margin-bottom:20px;
+}
+
+.product-carosuel-outer-container{
+	
+	padding-bottom: 21px;
+  padding-top: 21px !important;
+}
+
+  .product-carosuel-img-caption {
+
+   line-height: 1.08 !important;
+   
+    p {
+      
+      &.product-carosuel-productname {
+        margin-top: 12px;
+       
+      }
+    
+    }
+  }
+
+}

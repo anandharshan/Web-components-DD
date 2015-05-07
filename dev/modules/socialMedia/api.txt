@@ -1,0 +1,19 @@
+Syntax:
+<vmf-social-media config="config" position="positionClass"> </vmf-social-media>
+Configuration
+position Variable [Primitive]
+Mandatory: No
+Default Value: <empty>
+Usage: position="positionClassName"
+The variable will hold a class name of maximum of two properties namely Left and Top position. The user can configure the position of the social media through these two properties.
+Config  Array of Object
+Mandatory: Yes
+Default Value: <empty>
+Usage:  config = [{  imageSource : "img/media_facebook.png",
+	      imageURL :  "https://facebook.com/vmware"
+},{
+     imageSource : "img/ media-twitter.png",
+     imageURL :  "https://twitter.com/vmware"	
+}]
+
+A simple array of objects which will contain source image and respective hyper link of the social network to be include. An object in an array of objects contains key-value pair, where  Key 'imageSource' represents the image source  and key  'imageURL'  represents the hyperlink to visited.

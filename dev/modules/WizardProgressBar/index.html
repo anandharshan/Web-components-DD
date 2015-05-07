@@ -1,0 +1,30 @@
+<!-- wizard progress bar -->
+
+<div ng-controller="wizardProgressBarCtrl">
+    <vmf-wpb>
+        <vmf-wpb-task title="CREATE ACCOUNT">
+            <vmf-radio-group type="1" rtitle="radioTitle" options="radioOptions" name="radioName" model="radioModel">
+            </vmf-radio-group>
+            <a class="vmf-btn vmf-primary" ng-click="forward()"> Continue </a>
+        </vmf-wpb-task>
+
+        <vmf-wpb-task title="ENTER ACCOUNT INFO">
+            <div vmf-checkbox-group class="vmf-checkbox-group" ctitle="checkBoxTitle" type="2" options="checkBoxOptions" name="checkBoxName" model="checkBoxModel">
+            </div>
+            
+            <a class="vmf-btn vmf-primary" ng-click="forward()"> Continue </a>
+            <a class="vmf-btn vmf-secondary" ng-click="back()"> Back </a>
+        </vmf-wpb-task>
+        
+        <vmf-wpb-task title="ENTER BILLING INFO">
+            <vmf-radio-group type="1" rtitle="radioTitle" options="radioOptions" name="radioName" model="radioModel">
+            </vmf-radio-group>
+            
+            <a class="vmf-btn vmf-primary" ng-click="forward()"> Continue </a>
+            <a class="vmf-btn vmf-secondary" ng-click="back()"> Back </a>
+        </vmf-wpb-task>
+        
+        <vmf-wpb-task title="COMPLETE">
+        </vmf-wpb-task>
+    </vmf-wpb>
+</div>

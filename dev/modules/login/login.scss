@@ -1,0 +1,144 @@
+.login {
+    input {
+        &.has-error {        
+            border: 1px solid $secondary-red;
+        }
+    }
+    .modal-dialog {
+        .modal-body {        
+            min-height:100px;
+            padding:20px 30px 15px;
+        }
+    }
+    .modal-header {
+        .modal-title {
+              line-height: 20px;
+              padding: 33px 15px 31px 29px;
+              color:$vmf-modalHeaderColor;
+        }
+        .closeIcon {
+            margin:10px;
+            &:focus,&:active {
+                 outline: none;   
+            }
+        }
+    }
+    .vmf-text-input {
+        margin-bottom:20px
+    }
+    .register {
+        font-family:$font-stackSemiBold;
+        color:$primary-teal;
+        float:left;
+        margin-right:0px;
+        line-height: 15px;
+        margin-left: 10px;
+        padding: 0;
+    }
+    .forgotpwd {
+        font-family:$font-stackSemiBold;
+        color:$primary-teal;
+        margin-left:0;
+        line-height: 15px;
+        padding: 0;
+    }
+    .custom-checkbox {
+        float:left;
+        font-size:.875rem;
+        margin-top:7px;
+        span {
+            margin-right:5px;
+        }
+    }
+    .modal-footer {
+        padding: 20px 30px 25px 30px;
+    }
+    .vmfloginChange {
+        margin-left: 0;
+        padding: 15px 50px;
+        outline:none;
+    }
+    .requiredLabel {
+        margin-top:5px;  
+        line-height: 16px;
+        
+    }
+    
+    .error-msg {
+        input {
+            border: 1px solid $secondary-red;
+        }  
+        .requiredLabel {
+             display:block;
+        }   
+    }
+    .loginLinks {        
+        display:block;
+        overflow: hidden;
+        li:first-child {
+             float: left;
+             padding-right: 10px;
+            border-right:1px solid $primary-teal;
+            
+        }
+    }
+}
+.loginInline {    
+    .login {
+        display: block;
+        position: relative;
+        opacity: 1;
+        z-index:1030;
+        .closeIcon {
+            display:none;
+        }
+        .modal-dialog {
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            -webkit-transition: none;
+            transition: none;
+        }
+        .modal-dialog {
+            margin:0;
+        }
+        .modal-content {
+            box-shadow:none;
+            margin:0;
+        }
+    }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-tablet) { 
+    .login {
+        .register {
+            margin-right:15px;
+            margin-left: 23px;
+        }
+        .forgotpwd {        
+            margin-left:15px;
+            line-height: 15px;
+        }
+        .loginLinks {        
+            li:first-child {            
+                 padding-right: 26px;
+
+            }
+        }
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-desktop) { 
+    .login {
+        .modal-dialog {
+            max-width:330px;
+        }
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-desktop) { 
+
+}

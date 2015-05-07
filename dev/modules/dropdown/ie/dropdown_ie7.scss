@@ -1,0 +1,46 @@
+.vmf-dropdown-content{
+	*width:auto;
+	*background:url(../images/arrow.png) no-repeat 95% 15px #f1f1f1;
+}
+.vmf-dropdown-content li{
+	padding/*\**/:0px 15px\9; 
+}
+
+.vmf-dropdown.col-md-4{
+	*position:static;
+}
+
+.vmf-dropdown.col-md-4 ul{ 
+	*top:auto;  
+	*left:auto;
+	*right:auto;
+	*width:312px;
+	*margin:10px 0px 0px -16px;
+}
+
+div.vmf-dropdown-content{
+	*position:static; 
+}
+div.vmf-dropdown-content span.current-selection{
+ 	*display:block; display:block\9; 
+	*position:relative; position:relative\9;
+	*width:100%; width:100%\9;
+	*cursor:pointer;cursor:pointer\9;
+}
+
+.vmf.col-md-4{
+ 	float:left;
+}
+ 
+.vmf_drop-down_text{
+	*width:100%; width:100%\9;
+	*float:left; float:left\9;
+ }
+.vmf_drop-down_text>p{
+	*float:left; 
+	float:left\9;
+ }
+
+.labelHeader.formLabel {
+  font-weight:normal;
+}

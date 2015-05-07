@@ -1,0 +1,16 @@
+Syntax:
+<a class="vmf-btn vmf-primary vmfloginChangeModal" href="javascript:void(0);" ng-click="show()">Login</a>
+or
+  <div class="loginInline" ng-include="'/dev/modules/login/template/login.html'"></div>
+ Configuration
+ng-click  function 
+Mandatory: Yes
+DefaultValue: :<empty>  
+Usage:   ng-click="show()"
+when ng-click function is invoked a modal popup with the login html is displayed.
+Configuration
+ng-include  attribute  [string] 
+Mandatory: Yes
+DefaultValue: :<empty>  
+Usage:   ng-include="/dev/modules/login/template/login.html"
+when ng-include attribute is used to display the in line login form. 

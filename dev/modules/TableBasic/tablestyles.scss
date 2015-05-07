@@ -1,0 +1,918 @@
+		/* Common Styles for all tables --Starts here*/
+			@font-face {
+			    font-family: "myfirstFont";
+			    src: url(fonts/proximanova-regular.woff);
+			}
+
+			@font-face {
+			    font-family: "mysecondFont";
+			    src: url(fonts/proximanova-semibold.woff);
+			}
+			*{
+			padding:0px;
+			margin:0px;
+			}
+
+			.basic_nogrouping,.static_nogrouping_calltoaction,.static_grouping,.static_nogrouping {
+			width:96%;
+			margin:10px auto;
+			}
+			body{margin:0 auto;}
+			.basic_nogrouping .row, .static_nogrouping_calltoaction .row,.static_grouping .row,.static_nogrouping .row ,.basic_nogrouping_table .row{ margin:0;}
+			.basic_nogrouping table, .static_nogrouping_calltoaction table,.static_grouping table,.static_nogrouping table,.basic_nogrouping_table{ width:100%; margin:0px auto;}
+			.right_align
+			 { 
+				float: right;
+				padding-right: 20px;
+			 }
+			.innrtbl{
+				width: 100%;
+			}
+			table.innrtbl td.innrtblcol1{
+				/*padding: 20px 0 0 20px;*/
+				width:20%;
+			}
+			table.innrtbl td.innrtblcol2{
+				/*padding: 20px 0 9px 30px;*/
+			}
+			table.innrtbl td.innrtblcol3{
+				padding: 20px 0 9px 30px;
+				padding-bottom: 35px;
+			}
+			table td{
+				font-size: 16px;
+				font-family: "myfirstFont";
+				margin:0 auto;
+			}
+
+			.sizeLabel{
+			width: 70px;
+			display: inline-block;
+			text-align: center;
+			}
+
+			.hidden-class{
+				display: none !important;
+				background-color:red;
+			}
+
+			.hide{
+				display: none !important;
+			}
+
+			.truncate {  
+			  white-space: nowrap;
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+			}
+			.editField.valid{
+				padding-left:30px !important; 
+				background: url('../images/valid.png') no-repeat left 0;
+			}
+
+		/* Common Styles for all tables --- Ends here */
+
+
+		/* Namespace: basic_nogrouping Styles starts here for all screens(RWD) */
+			.basic_nogrouping input[type="text"]
+			{
+				padding: 0px;
+				margin:0px;
+			}
+			.basic_nogrouping table
+			{
+			outline: 1px solid #e6e6e6 ;
+			color:#333333;	
+			}
+
+
+			.basic_nogrouping th, .basic_nogrouping td
+			 {
+			 font-family:myfirstFont !important;
+			 border:none;
+			 }
+
+			 .basic_nogrouping table th
+			 {
+				background: #eeeeee;
+				background: -webkit-linear-gradient(#eeeeee, #dadada); /* For Safari 5.1 to 6.0 */
+				background: -o-linear-gradient(#eeeeee, #dadada); /* For Opera 11.1 to 12.0 */
+				background: -moz-linear-gradient(#eeeeee, #dadada); /* For Firefox 3.6 to 15 */
+				background: linear-gradient(#eeeeee, #dadada); /* Standard syntax */
+				
+				
+				border-right:1px solid #ffffff;
+				color:#333333;
+				font-size:14px;
+				padding:10px 15px !important;
+			 }
+			  .basic_nogrouping th:first-child
+			 {
+				background: #dedede;
+				background: -webkit-linear-gradient(#dedede, #c3c3c3); /* For Safari 5.1 to 6.0 */
+				background: -o-linear-gradient(#dedede, #c3c3c3); /* For Opera 11.1 to 12.0 */
+				background: -moz-linear-gradient(#dedede, #c3c3c3); /* For Firefox 3.6 to 15 */
+				background: linear-gradient(#dedede, #c3c3c3); /* Standard syntax */
+			}
+			.basic_nogrouping th:last-child 
+			 {
+			 border:none;
+			 }
+			 .basic_nogrouping tr td
+			 { 
+				 padding:10px 15px !important; 
+				 border-right:1px solid #f1f1f1 ;
+				 border-bottom:1px solid #f1f1f1 ; 
+				 font-size:16px;
+			 }
+			  
+			 .basic_nogrouping tr td:first-child
+			 {     
+				color:#006990;	
+			}
+
+			.basic_nogrouping .table-striped  tbody > tr.row-even > td
+			 { 
+				background-color:#ffffff  !important;
+			}
+			.basic_nogrouping .table-striped  tbody > tr.row-odd > td
+			 { 
+				background-color:#f1f1f1  !important;
+			}
+			.basic_nogrouping td:first-child .content:hover { 
+			    color: #009fd3;
+			}
+		/* Namespace: basic_nogrouping --- Styles starts here for all screens(RWD) */
+							
+		/*Namespace:static_nogrouping_calltoaction -- Styles starts here for all screens(RWD) */
+
+			.static_nogrouping_calltoaction { overflow-x:scroll; width:96%;}
+			.static_nogrouping_calltoaction .vmf-table .header{
+				background-color: #006990;
+				color: #fff;
+				margin: 0 auto;
+				padding-top: 10px;
+				font-family: ProximaNova-Reg, Arial, sans-serif;
+				font-size: 16px;
+				text-align: center !important;
+			}
+
+			.static_nogrouping_calltoaction .vmf-rows h6{
+				color:#006990;
+				font-size: 16px;
+				margin: 0px;
+				font-family: "myfirstFont";
+				cursor:pointer;
+			}
+
+			.static_nogrouping_calltoaction .vmf-rows h6:hover{
+				color:#0095D3;
+			}
+
+			.static_nogrouping_calltoaction .vmf-rows div{
+				color:#666;
+				font-size: 16px;
+				font-family: "myfirstFont";
+			}
+
+			.static_nogrouping_calltoaction .table-striped tbody > tr:nth-child(odd) > td{
+				background-color: #f1f6f9;
+				padding-top: 15px;
+				font-family: "myfirstFont";
+
+			}
+
+			.static_nogrouping_calltoaction .table-striped tbody > tr:nth-child(even) > td{
+				background-color: #f1f6f9;
+				padding-top: 15px;
+				font-family: "myfirstFont";
+
+			}
+
+			.static_nogrouping_calltoaction .table .vmf-rows > td{
+				font-family: "myfirstFont";
+				padding: 15px;
+			}
+
+			.static_nogrouping_calltoaction button{
+				font-size: 14px;
+				font-weight: normal;
+				background-color: #008DCB;
+				border: none;
+				font-family: "mysecondFont";
+				color: #fff;
+				line-height: 20px;
+				height: 40px;
+				width:150px;
+				margin:5px auto;
+			}
+
+			.static_nogrouping_calltoaction button:hover{
+				background-color: #006990;
+			}
+
+			.static_nogrouping_calltoaction p{
+				margin-bottom: 0px;text-align: center;
+			}
+			.static_nogrouping_calltoaction .innrtbl{
+				width: 100%;
+				border:none;
+				padding-left: 20px !important;
+				/*margin-bottom: 25px;*/
+			}
+
+			.static_nogrouping_calltoaction td:last-child div{
+				margin-top: 8px;
+			}
+
+			.static_nogrouping_calltoaction .innrtbl td{
+				border-bottom:1px #eee solid !important;;
+				padding: 20px 0 0 20px !important;;
+			}
+
+			.static_nogrouping_calltoaction .license{
+				padding-top: 25px;
+			}
+
+			.static_nogrouping_calltoaction table tr td:first-child + td + td{
+				padding:0px !important;
+				margin:0px;
+			}
+			.static_nogrouping_calltoaction .license{
+				padding: 30px 0 0px 20px;
+			}
+			
+			/*Namespace:static_nogrouping_calltoaction -- Styles Ends here for all screens(RWD) */
+
+            /*Namespace:static_nogrouping -- Styles starts here for all screens(RWD) */
+
+			.static_nogrouping table,.static_nogrouping table td,.static_nogrouping table th{
+				border:none !important	
+			}
+			.static_nogrouping table tbody tr
+			{
+				border-bottom:1px solid #cccccc;
+				border-left:1px solid #cccccc;
+				border-right:1px solid #cccccc;
+			}
+			.static_nogrouping table{
+			border-collapse: collapse !important;
+			}
+
+			.static_nogrouping table th{
+				font-family: "mysecondFont";
+				font-size: 16px;
+				color:#333333;
+				padding:10px;
+				height:20px;
+			}
+
+			.static_nogrouping table thead {
+			    -moz-box-shadow:    3px 3px 5px 6px #EEE;
+			  	background-color: #eeeeee;
+			 	-webkit-box-shadow: 0 8px 6px -6px #eee !important;
+				-moz-box-shadow: 0 8px 6px -6px #eee;
+			     box-shadow: 0 8px 6px -6px #eee;
+			}
+			.static_nogrouping table tr td{padding-right:30px !important;}
+			.static_nogrouping table tr td h6{
+				padding:10px 0 5px 10px !important;
+				font-family: "mysecondFont";
+				font-size: 16px;
+			}
+			.static_nogrouping table tr td p{
+				padding:0px 0 15px 20px !important;
+				font-family: "myfirstFont";
+				font-size: 16px;
+				color:#333333;
+
+			}
+			.static_nogrouping table tr td input,.static_nogrouping table tr td select{
+			   margin-top:55px;
+			}
+			.static_nogrouping table tr td input{
+				width:60px;
+
+			}
+			.static_nogrouping table tr td select{
+				width:auto;
+			}
+			.static_nogrouping table tr td input,.static_nogrouping table tr td select,.static_nogrouping table tr td:last-child{padding-left:5px !important;}
+			.static_nogrouping table tr td:last-child{padding-top:70px !important;}
+		   
+            /*Namespace:static_nogrouping -- Styles Ends here for all screens(RWD) */			
+			
+			/*Namespace:static_grouping -- Styles starts here for all screens(RWD) */
+
+			.static_grouping table{
+				width: 720px;
+				margin: 0px auto;
+			}
+
+			.static_grouping .row table tbody td:first-child{
+				width: 435px;
+				vertical-align: middle;
+				padding:3px;
+				padding-left: 15px !important;
+				border:0px;
+			}
+            .static_grouping .row table tbody:first-child  td:first-child{
+                  border-right:1px solid white !important;
+            }
+
+			.static_grouping .row table tbody td:last-child{
+				width: 107px;
+				vertical-align: middle;
+/*				padding:3px;*/
+				padding-left: 15px !important;
+				padding-right: 15px !important;
+				border:0px;
+			}
+
+			.static_grouping .group-header td{
+				background-color:#188abd ! important; 
+/*				border:1px #188BAD solid; */
+				color: #fff;
+				font-size: 14px;
+				font-family: Arial;
+			}
+.static_grouping > .group-header tr td:first-child{border-right:1px solid #fff ! important; }
+
+			.static_grouping .truncate{
+				font-size: 12px;
+				font-family: Arial;
+				color: #006990;
+				cursor: pointer;
+				padding-bottom: 4px;
+			}
+
+			.static_grouping .truncate:hover{
+				color: #0095D3;
+			}
+
+			.static_grouping .sizeLabel{
+				font-size: 14px;
+				font-family:"myfirstFont";
+				color: #666;
+				padding-left: 10px;
+				width: 55px;
+				padding-right: 15px;
+			}
+
+			.static_grouping .table-striped tbody tr.row-even td{
+			  background-color: #eff3f7;
+			}
+
+
+
+    	.static_nogrouping_calltoaction   .innrtbl{
+                margin-top: 30px;
+                border:none;
+                outline: none;
+            }
+
+	.static_nogrouping_calltoaction  .innrtbl .innrtblcol1{
+                border-left: none !important;
+                padding-top: 15px    !important;
+                padding-left:20px !important;
+                padding-bottom:15px !important;
+        width: 50%;
+                    }
+
+ .static_nogrouping_calltoaction  .innrtbl  .innrtblcol3,  .static_nogrouping_calltoaction  .innrtbl .innrtblcol2{
+	border-right: none !important;
+     padding-right: 20px !important;
+}
+
+ 	.static_nogrouping_calltoaction .innrtbl tr:first-child + tr td{
+	border-bottom: none !important;
+	outline: none !important;
+}
+
+             /*Namespace:static_grouping -- Styles Ends here for all screens(RWD) */
+					
+		    /* For Reference: media Queries are present here to support of the screen in RWD for this project---*/
+				/* Smartphones (portrait and landscape) ----------- 
+				@media only screen and (max-width : 640px){}
+				/* iPads (portrait and landscape) ----------- 
+				@media only screen and (min-width : 641px) and (max-width : 830px){}
+				@media only screen and (min-width : 831px){}
+		   /*---------------------------------------------------------------------------------------------------*/
+
+    
+/*Table_comparison styling starts*/
+
+.Table_comparison .header {
+	font-family: "mysecondFont";
+	font-size: 14px;
+	color: #fff;
+	background-color: #0095D3 !important;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border: 0px;
+}					
+.Table_comparison .table-striped th:first-child
+{
+background-color: #f1f1f1 !important;
+color:#666666;
+
+}
+.Table_comparison .table-striped tbody tr.group-header td{
+	font-family: "myfirstFont";
+	font-size: 18px;
+	color: #fff;
+	background-color: #ccc !important;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	border: 0px;
+}
+.Table_comparison tr td
+{
+	font-family: "myfirstFont";
+	font-size: 16px;
+	color:#666666;
+
+}
+
+.Table_comparison tr td:first-child{
+	font-family: "myfirstFont";
+	font-size: 14px;
+	color: #006990;
+	padding:10px 9px 9px 9px !important;
+	cursor: pointer;
+	border: 1px solid #ccc;
+}
+.Table_comparison tr td:first-child +td,.Table_comparison tr td:first-child +td +td, .Table_comparison tr td:first-child +td +td +td{
+	text-align: center;
+}
+.Table_comparison tr td:first-child:hover{
+	color: #0095D3;
+}
+.green_dot_icon {
+background: url('../images/green_dot.png') no-repeat;
+width: 10px;
+display: inline-block;
+height: 12px;
+background-size: 5px 5px;
+width: 5px;
+height: 5px;
+}
+
+table.innrtbl td.innrtblcol1{
+	padding: 20px 0 0 20px;
+}
+table.innrtbl td.innrtblcol2{
+	padding: 20px 0 9px 30px;
+}
+table.innrtbl td.innrtblcol3{
+	padding: 20px 0 9px 30px;
+	padding-bottom: 35px;
+}
+.license{
+	padding: 30px 0 0px 20px;
+}
+
+.absolute{
+	position: absolute;
+}
+.advancedEdit{
+	background: #ccc;
+	padding: 10px;
+	width: 250px;
+	z-index: 9;
+}
+.editable-cue{
+	background: #CCC !important;
+	border: 1px solid #000 !important;
+}
+
+.pdf_icon{
+background:url('../images/pdf.png') no-repeat;
+width: 16px;
+display: inline-block;
+height:16px;
+background-size: 16px 16px;
+   
+}
+.add_icon{
+background:url('../images/add.png') no-repeat;
+width: 16px;
+display: inline-block;
+height:16px;
+background-size: 16px 16px;
+}
+
+/************** styles for manage tble starts here *************/
+ .Print, .Export
+            {
+                padding:10px 15px !important;
+               
+            }
+            .Manage
+            {
+                  padding:10px 15px !important;
+            }
+.Print:hover a, .Export:hover a, .Manage:hover a{color: #fff; text-decoration: none;}
+.Print a, .Export a, .Manage a{text-decoration: none !important;}
+.footer_section
+{
+    clear:both;
+    height: 40px;
+    padding:0px;
+}
+.footer_section span{
+    margin:0px;
+    padding:10px 20px 10px 15px;
+    float: right !important;
+    
+}
+.footer_section span +span{
+    margin:0px;
+    padding:10px 10px 10px 20px;
+    float: left !important;
+}
+
+.footer_section span a:hover,.footer_section span a{color:#006990 !important; font-family: "myfirstfont";font-weight: bold;}
+ul.drop_down li {padding: 15px 10px 0px 10px;}
+.drop_down li span label
+{
+    color:#006990;
+    font-family: "myfirstfont";
+}
+ul.drop_down li input[type="checkbox"] {width: 18px; height: 18px; maring-right: 10px;}
+/*********** styles for manage-tbl ends here *************/
+
+
+/********** styles for basic_Table html starts here *************/
+
+			.basic_nogrouping_table table
+			{
+			outline: 1px solid #e6e6e6 ;
+			color:#333333;	
+			}
+            .basic_nogrouping_table  h4
+            {
+                font-family:myfirstFont !important;
+                font-size: 20px;
+                color:#333333;
+                margin-bottom: 0px !important;
+                padding-bottom: 0px !important;
+                display: inline;
+            }
+            .basic_nogrouping_table .col-md-4{display: inline;margin-top:-8px;}
+
+			.basic_nogrouping_table th
+        {
+            font-family:myfirstFont !important;
+            font-weight: bold;
+            
+        }
+            .basic_nogrouping_table td
+			 {
+			 font-family:myfirstFont !important;
+			 border:none;
+			 }
+
+			 .basic_nogrouping_table table th
+			 {
+				background: #eeeeee;
+				background: -webkit-linear-gradient(#eeeeee, #dadada); /* For Safari 5.1 to 6.0 */
+				background: -o-linear-gradient(#eeeeee, #dadada); /* For Opera 11.1 to 12.0 */
+				background: -moz-linear-gradient(#eeeeee, #dadada); /* For Firefox 3.6 to 15 */
+				background: linear-gradient(#eeeeee, #dadada); /* Standard syntax */
+				
+				
+				border-right:1px solid #ffffff;
+				color:#333333;
+				font-size:14px;
+				padding:10px 15px !important;
+			 }
+			  .basic_nogrouping_table th.sort-asc, .basic_nogrouping_table th.sort-desc
+			 {
+				background: #dedede;
+				background: -webkit-linear-gradient(#dedede, #c3c3c3); /* For Safari 5.1 to 6.0 */
+				background: -o-linear-gradient(#dedede, #c3c3c3); /* For Opera 11.1 to 12.0 */
+				background: -moz-linear-gradient(#dedede, #c3c3c3); /* For Firefox 3.6 to 15 */
+				background: linear-gradient(#dedede, #c3c3c3); /* Standard syntax */
+			}
+			.basic_nogrouping_table th:last-child 
+			 {
+			 border:none;
+			 }
+			 .basic_nogrouping_table tr td
+			 { 
+				 padding:10px 15px !important; 
+				 border-right:1px solid #f1f1f1 ;
+				 border-bottom:1px solid #f1f1f1 ; 
+				 font-size:16px;
+			 }
+			  
+			 .basic_nogrouping_table tr td:first-child + td, .basic_nogrouping_table tr td:first-child , .basic_nogrouping_table tr td:last-child 
+			 {     
+				color:#006990;	
+			}
+            .basic_nogrouping_table:first-child tr td:first-child:hover
+            {
+                color: #0095d3;
+            }
+
+			.basic_nogrouping_table  tr.row-even td
+			 { 
+				background-color:#ffffff  !important;
+			}
+			.basic_nogrouping_table  tbody  tr.row-odd td
+			 { 
+				background-color:#f6f6f6  !important;
+			}
+            .basic_nogrouping_table tr td:first-child + td
+			 {     
+				color:#006990;	
+			}
+            .basic_nogrouping_table  input[type="checkbox"]
+            {
+                width: 18px;
+                height: 18px;
+            }
+
+          
+
+/********** styles for subscription_tbl html ends here *************/
+
+         .subscription_tbl tr td:last-child:hover
+        {
+            color:#009d53;
+        }
+
+        .basic_nogrouping_table .ss-active
+            {
+                color:#387c2c;
+
+            }
+            .basic_nogrouping_table .ss-active .icon-file
+            {
+                height: 18px;
+                width: 18px;
+              background-position: -286px 0px;
+            }
+            .basic_nogrouping_table  .ss-underprovision
+            {
+                color: #006990;
+            }
+            .basic_nogrouping_table .icon-file
+            {
+                height: 18px;
+                width: 18px;
+            }
+            .basic_nogrouping_table .ss-underprovision .icon-file
+            {
+            background-position: -360px 0px;
+            }
+            .basic_nogrouping_table  .ss-expired
+            {
+                color: #e00000;
+            }
+            .basic_nogrouping_table .ss-expired .icon-file
+            {
+            background-position: -143px -120px;
+            }
+            .basic_nogrouping_table .ss-expired .icon-file
+            {
+            background-position: -143px -120px;
+            }
+            .basic_nogrouping_table  .ss-inactive
+            {
+                color: #666666;
+            }
+
+            .basic_nogrouping_table .ss-inactive .icon-file
+            {
+            background-position: -143px -120px;
+            }
+
+/* Namespace: subscription_tbl --- Styles ends here for all screens(RWD) */
+
+
+
+/* Namespace: drag_table --- Styles starts here for all screens(RWD) */
+
+ .drag_tbl  table
+{
+    margin-top: 10px !important;
+}
+
+ .drag_tbl  .icon-file
+            {
+            background-position: -244px 0px;
+                margin-left: 5px;
+                margin-right: 5px;
+                width: 5px;
+            }
+ .drag_tbl tr td:first-child
+            {
+                padding-left:0px !important ;
+                padding-right: 0px !important ;
+            }
+ .drag_tbl  tr td:last-child
+        {
+            color:#333333;
+        }
+ .drag_tbl  .col-md-4
+            {
+                
+                margin-top: 0px !important;
+
+            }
+/* Namespace: drag_table --- Styles ends here for all screens(RWD) */
+
+
+/* Namespace: bulk_action Styles starts here for all screens(RWD) */
+
+
+ .bulk_tbl table
+{
+    margin-top: 10px;
+}
+
+
+ .bulk_tbl tr td:first-child
+            {
+                padding-left:10px !important ;
+                padding-right: 0px !important ;
+            }
+
+.bulk_tbl  tr td:first-child +td
+			 { 
+				 text-align: right;
+                 color: #006990;
+			 }
+.bulk_tbl  input[type="text"]
+            {
+                width: 253px;
+                float: right;
+                height: 28px;
+                margin-top: -5px;
+                margin-bottom: -5px;
+                padding: 0px;
+            }
+.bulk_tbl input[type="checkbox"]
+            {
+                margin-left:-5px;
+                margin-right: 10px;
+                margin-top: -1px;
+                width: 18px;
+                height: 18px;
+            }
+                 
+/* Namespace: bulk_action --- Styles ends here for all screens(RWD) */
+							
+/* Namespace: quick_table Styles starts here for all screens(RWD) */
+
+ .quick_tbl table
+{
+    margin-top: 10px;
+}
+.quick_tbl  tr td:first-child +td,th
+			 { 
+				 text-align: left;
+             }
+
+
+.quick_tbl tr td:first-child +td
+{
+    color:#333333;
+}
+.quick_tbl tr td:first-child +td +td
+{
+    color:#006990;
+}
+  
+.quick_tbl .icon-file
+            {
+            background-position: -244px 0px;
+                margin-left: 5px;
+                margin-right: 5px;
+                width: 5px;
+                height: 12px;
+                width: 19px;
+            }
+.quick_tbl .icon-close
+            {
+            background-position: -311px 0px;
+                margin-left: 5px;
+                margin-right: 5px;
+                height: 12px;
+                width: 19px;
+            }
+.widgets
+        {
+            display: block;
+        }
+.panel div.widgets .title
+        {
+            color: #333333;
+            font-size: 18px;
+        }
+.green_box table th
+        {
+            background: #f0f2c8 !important;
+        }
+                /* Namespace: quick_table --- Styles starts here for all screens(RWD) */
+				
+				
+/* For tooltip issue */
+.basic_nogrouping_table table tr td div.content{
+	float:left;
+}
+
+/* For Enable Sorting*/
+.basic_nogrouping_table table th.sort-desc span.icon-sort {
+  background-position: -312px -120px;
+}
+
+.basic_nogrouping_table table th.sort-asc span.icon-sort {
+  background-position: -288px -120px;
+}
+
+.basic_nogrouping_table table tr.vmf-checkbox-row-selected td{
+background-color: #0095d3 !important;
+}
+
+
+
+.hover_tbl  table tbody tr:hover td
+{
+   background-color: #F1F6F8 !important;
+}
+
+
+/*
+ * jQuery UI Datepicker 1.8.7
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; background: #ccc }
+.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; }
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 1px; }
+.ui-datepicker .ui-datepicker-prev { left:2px; }
+.ui-datepicker .ui-datepicker-next { right:2px; }
+.ui-datepicker .ui-datepicker-prev-hover { left:1px; }
+.ui-datepicker .ui-datepicker-next-hover { right:1px; }
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+.ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year { width: 49%;}
+.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+.ui-datepicker td { border: 0; padding: 1px; }
+.ui-datepicker td span, .ui-datepicker td a { display: block; padding: .2em; text-align: right; text-decoration: none; }
+.ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+.ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi { width:auto; }
+.ui-datepicker-multi .ui-datepicker-group { float:left; }
+.ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+.ui-datepicker-row-break { clear:both; width:100%; }
+
+/* RTL support */
+.ui-datepicker-rtl { direction: rtl; }
+.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}

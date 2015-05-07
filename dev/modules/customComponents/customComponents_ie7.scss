@@ -1,0 +1,158 @@
+  .vmf-formTemplate{
+        color: #333;
+      .form-group{
+          width:100%;
+           &.clearfix{
+            clear: both;
+            }
+          line-height: normal;
+          margin-bottom: 30px;
+          .vmf_drop-down_text{
+              height: 30px;
+              margin-bottom: 30px;
+              width:62%;
+              .formLabel.col-md-2 {
+                width:40.5%;
+              }
+              .vmf-dropdown.col-md-4 {
+                width:50%;
+              }
+        }
+        .vmf-dropdown-content ul{
+          border:1px solid #D0D0D0;
+        }
+  
+       }
+       .formTemplateSection {
+            .formSection  {
+                .labelHeader  {
+                    margin-top: -2px;  
+                }
+        }
+        
+        }
+        .formTemplateSelect { 
+            .col-md-2 {
+                width:25%;   
+            }
+        }
+      vmf-text-input{
+          input{
+            color: #333;
+            font-size: 16px;
+            font-family: $font-stackLight ;
+            width: 97%;
+          }
+          input.searchBtn { 
+              width: 16px;
+              right: 0px;
+          }
+      }
+        .formTemplate-buttonDeviders{
+            display: block;
+            overflow: hidden;
+            margin: 60px 0px 30px 0px;
+            border-bottom: 3px solid $nav-tabs-border-color;
+            border-top: 3px solid $nav-tabs-border-color;
+                .custom-checkbox {    
+                font-family: $font-stackSemiBold;
+                padding: 17px 0;
+                margin-bottom: 0px;
+                display: table-cell;
+                .customCheckBox{ 
+                    margin-top: 4px;
+                }
+                a{
+                    color: #006990;
+                    padding-bottom:0;
+                }
+                
+            }
+            .formSection{
+                padding-top: 0px;
+            }
+            .col-md-12 {
+              padding-left: 0px;
+          }
+        }
+        .formLabel{
+            padding: 4px 0px 0px 10px;
+            color: #333;
+            
+        }
+        .vmf-secondary{
+            margin-left: 4px;
+           
+        }
+      
+      .form_zip_code{
+            input{ 
+                width: 153px;
+            }
+        }
+        .business_phone  {
+            vmf-text-input{
+                display: inline-block;
+            }
+            .help-text {
+                position: absolute;
+                display: block;
+                width: 100%;
+                top: 35px;
+                left: 16px;
+                white-space: nowrap;
+                font-size: 14px;
+                font-family: $font-stackLight ;
+            }     
+            label {
+                font-family: $font-stackSemiBold;
+                padding-left:0;   
+            }
+            .businessText {
+                width:20%;
+                padding-right: 19px;
+                input{
+                    width: 153px;
+                  }
+             }
+            .businessExt {
+                 float:left; 
+             }
+            .businessExtTxt {
+                 padding-right:0;
+                 width:2%;
+                input{
+                    width:100%;
+                }
+            }
+            .col-md-1{
+                width: 6.6%;
+                padding: 0px 10px 0px 9px;
+            }
+        }
+      
+        .vmf-checkbox-group {
+            .formSection{
+                .labelHeader{
+                    padding-right: 0px;
+                } 
+                
+            }
+            
+        }
+        .radio-controls {
+            .formSection{
+                .labelHeader{
+                    padding-right: 0px;
+                    }        
+                }  
+            }
+      .positionTip {
+        float: left;
+        width:100%;
+      }
+      .vmf-formFooterButons{
+        text-align: right;
+      }
+    }
+

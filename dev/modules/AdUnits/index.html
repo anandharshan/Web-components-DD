@@ -1,0 +1,11 @@
+<!-- AdUnits block starts -->
+<div ng-controller="adUnitController" class="adUnitContainer">
+	<vmf-ad-unit adtype="primary" datasource="primary"> </vmf-ad-unit>
+	<vmf-ad-unit adtype="expiry" datasource="expiry"> </vmf-ad-unit>
+	<vmf-ad-unit adtype="secondary" datasource="secondaryList"> </vmf-ad-unit>
+	<vmf-ad-unit adtype="tertiary" datasource="tertiary"> </vmf-ad-unit>
+	<vmf-ad-unit adtype="buyUpgrade" datasource="buyUpgrade"> </vmf-ad-unit>
+	<vmf-ad-unit adtype="sidPromotion" datasource="sidPromotion"> </vmf-ad-unit>
+	<vmf-ad-unit adtype="modal" datasource="modalWindow" ng-if="isAdUnitModalDisplayed" cancel="cancelAdUnitModal()"></vmf-ad-unit>
+	<button ng-click="showAdUnitModal()" class="adunit_btn_promo_modal" style="width:300px">Demo Button Show modal Popup</button>
+</div>

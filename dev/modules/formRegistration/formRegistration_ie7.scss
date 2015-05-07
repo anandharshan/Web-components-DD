@@ -1,0 +1,52 @@
+.registrationForm {
+    .passwordFormField {
+        .strengthContainer {
+            width: 35%;
+        }
+    }
+    .formRegistrationSection {
+        margin-left: 100px;
+    }
+    .vmf-breadcrumb-container {
+        display: block;
+        overflow: hidden;
+    }
+    &.vmf-formTemplate {
+        .requiredFeild {
+            padding-left: 24.1%;
+        }
+    }
+    .selectInfo {
+        margin-bottom: 30px;
+        .vmf_drop-down_text {
+            width: 500px;
+            .labelHeader {
+                width: 175px;
+            }
+        }
+    }
+    .pull-right {
+        text-align: right;
+    }
+    .passwordFormField {
+        .strengthContainer {
+            top: 0;
+            margin-top: -3px;
+        }
+    }
+}
+.registrationFormBox {
+    .modal-dialog {
+        max-width: 1120px;
+        margin: 10px auto;
+        .okBtn {
+            float: right;
+        }
+    }
+}
+.formResetSection {
+    max-width: 500px;
+    .col-md-4 {
+        width: 65%;
+    }
+}

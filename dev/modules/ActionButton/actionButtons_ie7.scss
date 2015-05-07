@@ -1,0 +1,98 @@
+.vmf-btn { font-size:14px;
+            &.vmf-primary {
+                border-width :0px;
+            }
+            &.vmfdisabled {
+                border-width :0px;
+            }
+            *margin:10px;
+           // margin: 9px\9;
+
+           &.vmf-btn-large {
+           font-size:16px;
+           }
+         }
+.actionButtons br, .btn-group, .btn-group .caret {
+        *float:none; 
+        float:none\9;		
+    }
+.vmf-btn-group {
+    *float: left;
+    *position: relative;
+}
+.vmfGroupActive {
+    *z-index: 1000;
+}
+ .vmf-split-btn .vmf-btn.vmf-primary+.vmf-btn.vmf-primary {
+     margin-left: 0px ;
+}
+.rowSection {
+    *margin-top: 10px;
+    width:100%;
+    clear:both;
+    .vmf-btn {
+        *float:left;   
+    }
+}
+
+.vmf-dropdown-btn-menu hr{
+    height: 1px;  
+    margin-bottom: -15px;
+}
+.vmf-btn-group .vmf-dropdown-btn-menu .vmf-divider{
+    height: 1px; 
+    margin-top:-13px; 
+}
+.vmf-split-btn a.vmf-btn-large+a.vmf_split_arrow {
+    padding:11px 10px 10px 10px;
+}
+.vmf-split-btn a.vmf-btn-large+a.vmf_split_arrow.vmf-secondary {
+    padding:9px 10px 10px 10px;
+}
+
+.vmf-split-btn .vmf-btn.vmf-secondary+.vmf-btn.vmf_split_arrow {
+    padding:8px 10px 4px 10px;
+}
+.vmf-split-btn .vmf-btn-large.vmf-secondary+.vmf-btn.vmf-secondary.vmf_split_arrow {
+    padding:11px 10px 9px 10px;
+}
+
+.vmf-split-btn .vmf-btn.vmf-primary+.vmf-btn.vmf-primary { 
+    height:16px;
+    padding:7px 10px;
+   
+}
+.vmf-split-btn .vmf-btn.vmf-primary.vmf-btn-large+.vmf-btn.vmf-primary { 
+    padding:11px 10px;
+    height:18px;
+}
+
+.vmf-split-btn.vmfdisabled_true .vmf-btn.vmf-secondary.vmfdisabled+.vmf-btn.vmf-secondary { 
+    padding:7px 10px 5px 10px;
+}
+.vmf-split-btn.vmfdisabled_true .vmf-btn.vmf-btn-large.vmf-secondary+.vmf-btn.vmf-secondary.vmf_split_arrow { 
+    padding:11px 10px;
+}
+.vmf-btn.icon-btn{
+    font-size: 16px; 
+    padding:11px 20px;
+}
+   
+.vmf-split-btn .vmf-dropdown-btn-menu, .vmf_action_comp .vmf-dropdown-btn-menu{
+    top:38px; 
+    left:10px;
+}
+.vmf-split-btn .vmf-btn.vmf-btn-large+div .vmf-dropdown-btn-menu ,.vmf_action_comp .vmf-btn.vmf-btn-large+div .vmf-dropdown-btn-menu{
+    top:47px; 
+    left:10px;
+}
+
+.vmf_action_comp .vmf-btn.vmf-primary.dropdown{ padding: 7px 20px;}
+.vmf_action_comp .vmf-btn.vmf-secondary.dropdown{ padding: 6px 20px;}
+.vmf_action_comp.vmfdisabled_true .vmf-btn.dropdown.vmfdisabled{padding: 6px 20px;}
+
+.vmf_action_comp .vmf-btn.vmf-primary.dropdown.vmf-btn-large{ padding: 11px 20px ;}
+.vmf_action_comp .vmf-btn.vmf-secondary.dropdown.vmf-btn-large{ padding: 10px 20px;}
+.vmf_action_comp.vmfdisabled_true .vmf-btn.dropdown.vmfdisabled.vmf-btn-large{padding:11px 20px;}
+.actionButtons .vmf-btn.vmfdisabled.vmf-primary, .actionButtons .vmf-btn.vmfdisabled.vmf-secondary{ font-size: 16px; }
+

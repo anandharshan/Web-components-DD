@@ -1,0 +1,64 @@
+.vmf-formTemplate {
+    .selectWidth {
+        .vmf-dropdown, > div {
+            width: 150px;
+        }
+    }
+    #vmf-formTextarea {
+        height: 70px;
+        margin-bottom: 15px;
+    }
+    .calendercontainer {
+        margin-left: 15px;
+    }
+}
+.paddingRightNone {
+     padding-right: 0;   
+}
+.vmf-formTextarea-lg {
+    height: 200px;
+    margin-top: 10px;
+    color: $vmf-bigFtr-anchrTitle;
+}
+.vmf-primary {
+    &.browse-btn {
+        margin: 0 0 0 15px;
+        cursor: pointer;
+    }
+}
+.fileUploadCustom {
+    height: 0;
+    width: 100%;
+    float: left;
+    position: absolute;
+    left: -9999px;
+}
+.vmf-confirmation {
+    padding: 0px;
+    .col-md-12 {
+        padding-left: 0px;
+    }
+}
+.formCheckBoxGroup {
+    margin-bottom: 30px;
+}
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-tablet) {}
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-desktop) {
+    .vmf-formTemplate {
+        .selectWidth {
+            .vmf-dropdown {
+                width: 180px;
+            }
+            > div {
+                width: auto;
+            }
+        }
+    }
+}
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: $screen-lg-desktop) {}

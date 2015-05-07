@@ -1,0 +1,171 @@
+.vmf-formTemplate{
+    .formTemplateSection {
+        .formSection  {
+            .labelHeader  {
+                padding-top:6px;   
+            }
+        }
+        .custom-checkbox   {
+            margin-bottom: 3px;   
+        }
+    }
+    .form-group {
+       margin-bottom:30px; 
+        label,.formLabel {
+          padding:5px 0 0;  
+          margin-bottom:0;
+        }
+    }
+    .inline-checkBox {
+         .custom-checkbox {
+            position: relative;
+            span {
+                float:left;
+            }
+         }
+     }
+    .vmf-checkbox-group {
+        .formSection{
+            padding-top: 5px;
+            margin-bottom: 0px;
+            .labelHeader{
+                padding-left: 0px;
+                margin-bottom: 3px;
+               
+            }       
+         
+        }
+    }
+    .radio-controls {
+        .formSection{
+            padding-top: 5px;
+            margin-bottom: 0px;
+            .labelHeader{
+                padding-left: 0px;
+            }        
+        }
+    }
+    vmf-text-input{
+        input{
+            color: #333;
+            font-size: 16px;
+            font-family: $font-stackLight ;
+        }
+    }
+    .vmf-phone-number {
+        width:43.5%;
+    }
+    .formInputClass {
+        display:block;
+    }
+    #vmf-formTextarea{
+        margin-left: 15px;
+        height: 70px;
+        font-family: $font-stackLight ;
+    }
+    .vmf-formTextareaLabel{
+        font-family:  $font-stackSemiBold;
+    }
+    .requiredFeild {
+        padding-left: 26.5%;
+        padding-bottom: 10px;
+        display: block;
+    }
+
+}
+
+
+
+
+@media (min-width: $screen-tablet) { 
+    
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-desktop) { 
+    .vmf-formTemplate{
+        
+        .form-group {
+           margin-bottom:30px; 
+            label,.formLabel {
+              //padding:4px 0 0 0;      
+            }
+           
+        }
+        .form_zip_code{
+            input{ 
+                width: 175px;
+            }
+        }
+        .formTemplateSelect {
+            .col-md-2 {
+                width:25%; 
+            }
+            
+            }
+        .formTemplate-buttonDeviders{
+            margin: 60px 0px 32px 0px;
+            border-bottom: 3px solid $nav-tabs-border-color;
+            border-top: 3px solid $nav-tabs-border-color;
+            
+            .custom-checkbox {
+                font-family: $font-stackSemiBold;
+                padding: 15px 0;
+                display: table-cell;
+                a{
+                    color: #006990;
+                }
+            }
+            .formSection{
+                padding-top: 0px;
+            }
+
+            .col-md-12{
+                padding-left: 0px;
+            }
+        }
+        .vmf-secondary{
+            margin-left: 2px;
+        }
+        .business_phone  {
+           
+            vmf-text-input{
+                display: inline-block;
+            }
+            .col-md-1{
+                width: 10%;
+                padding: 0px 10px 0px 10px;
+            }
+             label {
+                  font-family: $font-stackSemiBold;
+                  padding-left:0;   
+             }
+            .help-text {
+                
+                position: absolute;
+                display: block;
+                width: 100%;
+                top: 35px;
+                left: 16px;
+                white-space: nowrap;
+                font-size: 14px;
+                font-family: $font-stackLight ;
+            }
+             .businessText {
+                  width:21%; 
+                  padding-right:13px;
+                  input{
+                    width: 175px;
+                  }
+             }
+            .businessExt {
+                 float:left;   
+            }
+        }
+        
+    } 
+    
+    
+}
+

@@ -1,0 +1,30 @@
+  .vmf-backlink {
+      font-family: $font-stackSemiBold;
+      margin-bottom: 30px;
+      line-height: $blockquote-font-size;
+      a {
+          color: $primary-teal;
+          font-size: $blockquote-font-size;
+          line-height: $blockquote-font-size;
+          padding: 0;
+          cursor: pointer;
+          
+          span {
+              float: left;
+              width: 15px;
+              height: 14px;
+              margin-right: 10px;
+              background: url("../images/back-link-icons.png") no-repeat  -16px -1px;
+              position: relative;
+              top: 1px;
+          }
+          &:hover {
+              span {
+                  background-position: -1px -1px;
+              }
+              a {
+                  color: $primary-blue;
+              }
+          }
+      }
+  }

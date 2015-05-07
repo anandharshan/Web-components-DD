@@ -1,0 +1,14 @@
+.step_by_step_progress_bar {
+    &.num_steps_4{
+        ol {
+            .vmf-progress-section {
+                width: 24.5%;
+                float:left;
+                span.vmf-progress-title {
+                        padding-top: 4px;
+                    }
+            }
+        }
+    }
+}
+    

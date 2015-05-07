@@ -1,0 +1,549 @@
+input::-ms-clear { display: none; }
+a{
+    outline: none;
+}
+
+.vmf-search-bar{ 
+    *{ outline: none; }
+    width: 510px;
+    margin: 0px 0px 0px 20px;
+    position: relative;
+    box-sizing: border-box;
+    clear: both;
+    .vmf-search-input, .vmf-search-select{
+        width: 380px; 
+        height: 40px;
+        padding: 12px 15px 10px 15px;  
+        font: normal 16px/16px $font-stack;
+        color: $vmf-gray-darker; 
+        @include border-radius-custom(5px,0px,0px,5px);
+        border: 1px solid $vmf-SecondaryborderColor; 
+        outline: none; float: left; text-align: left;
+    } 
+    .vmf-search-select{
+        width: 85px;
+        font-size: 0.875rem;
+        color: $vmf-gray-vdarker;   
+        border-left: 0px;
+        border-right: 0px;
+        cursor: pointer;
+        @include border-radius(0px);
+        position: relative;
+        padding: 12px 10px 10px 10px;
+            .vmf-search_arrow{
+                float: right; 
+                width: 14px;
+                position: absolute;
+                margin: 5px 10px 10px 10px;
+                height: 8px;
+                background: url(/images/arrow_hover.png) -1px -1px no-repeat; 
+            }
+            &:hover{
+                background: $vmf-listBgColor;
+                color: $vmf-gray-darker;
+                .vmf-search_arrow{
+                    background: url(/images/bg_alert_spite.png) -1px -236px no-repeat; 
+                }
+            }
+
+    } 
+    
+    .vmf-search-button{
+        border:none;
+        width: 45px;
+        height: 40px;
+        padding: 10px 15px 10px 13px;
+        background: $vmf-primary-blue;
+        @include border-radius-custom(0px,5px,5px,0px);
+        
+    }
+    .sourceSelect{
+        float: left;
+        margin-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    } 
+    .vmf-search-select_box {
+        display: none;
+        border:1px solid $vmf-SecondaryborderColor;
+        position: absolute;
+        margin: 10px 0px 0px 0px;
+        background: $vmf-bgColor;
+        right: -1px; 
+        z-index: 100; 
+        width: auto;
+        height: auto;
+        max-width: 195px;
+        max-height: 230px;
+        cursor: default;
+        box-shadow: 0px 3px 5px 0px $vmf-gray-vdarker;
+        .chk_all, .chk_grp {
+            font-family: $font-stack; 
+            padding: 0px 0px 0px 0px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            ._chk{
+                margin: 0px 0px 0px 0px; 
+                width: 20px;
+                height: 20px; 
+                background: url(/images/search_chk.png) no-repeat 0px 0px;
+                display: inline-block;
+                input[type=checkbox]{
+                    opacity: 0;
+                    filter: alpha(opacity=0); 
+                    outline: none;
+                    cursor: pointer;
+                    width: 0px; height: 0px;
+                    margin: 0px 0px 0px 0px; 
+                 /* visibility:hidden; */
+                }
+                &.act_{
+                    background: url(/images/search_chk.png) no-repeat 0px -20px;
+                }
+            }
+            ._opt{
+                font-size: 14px;
+                line-height: 20px;
+                margin: 0px 0px 0px 25px;
+                display: block; 
+                vertical-align: top; 
+                padding: 0px 0px 0px 0px;
+                white-space: nowrap;
+            }
+            .sel_Opt{ 
+                cursor: pointer;
+                margin: 0px 5px 5px 20px;
+                ._chk {
+                    position: absolute; 
+                }
+            }
+        }
+        .chk_all{
+            border-bottom: 1px dotted $vmf-SecondaryborderColor;
+            padding: 0px 20px 0px 0px;
+            margin-bottom: 0px;
+
+            .sel_Opt{
+                    margin: 0px 0px 10px 20px;
+                    ._chk {
+                        position: absolute;  
+                        input[type=checkbox]{
+                            margin: 0px;
+                        }
+                    }
+                    ._opt{
+                        font-size: 14px;
+                        line-height: 20px;
+                        margin: 0px 0px 0px 0px;
+                        display: block; 
+                        vertical-align: top; 
+                        padding: 0 0 0 25px;
+                        white-space: nowrap;
+                    }
+            }
+        }
+    }
+    .vmf-search-suggest{
+        width: 100%; display: none;
+        border: 1px solid $vmf-SecondaryborderColor;
+        background: $vmf-bgColor;
+        @include border-radius(3px);
+        box-shadow: 0px 3px 5px 0px $vmf-gray-vdarker;
+        padding: 10px 0; position: absolute;
+        margin-top: -1px; z-index: 99; 
+            .vmf-search-opts{
+                padding: 0px;
+                /*.vmf-search-opt-val{*/
+                    a{
+                    background: $vmf-bgColor;
+                    color: $vmf-gray-darker;
+                    width:100%;
+                    font-size: 0.875rem;
+                    line-height: 30px;
+                    padding: 0 20px;
+                    height:30px;
+                        &:hover{
+                            background: $vmf-listBgColor;
+                        }
+                        /*.opt-match{*/
+                        span{
+                            font-family: $font-stackSemiBold;
+                            font-size: 0.875rem;                        
+                        }
+                }
+                
+            }
+            .vmf-search-opt-hover{
+                a{
+                    background: $vmf-listBgColor;
+                }
+            }
+    }
+}
+
+.vmf-search-adv-filter{
+    width: 830px;
+    .row{
+        margin: 0px 0px 0px 20px;  
+    }
+    .col-md-6,.col-xs-6,.col-xs-12{
+        position: static;
+    } 
+    .vmf-search-adv-res{
+        font: normal 16px/11px $font-stack;
+        color: $vmfTextInputColor; padding: 0px 10px 30px 0px;
+        border-bottom: 1px solid $vmf-pagination-res;        
+        .txt_bld{
+            font-family: $font-stackSemiBold;
+        }
+        .link_txt{
+            color: $primary-teal;
+        }
+        .link_txt_act{
+            color: $vmf-gray-darker;
+            cursor: default;
+        }
+    }
+
+    .vmf-search-hide-block{
+        display: block;
+        padding: 0px 20px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        background: $vmf-listBgColor;
+        font: normal 14px/12px $font-stack;
+        color: $vmf-primary-blue;
+        width: 100%; height: auto;
+            .row{
+                margin: 0px;
+            }
+            .col-md-6,.col-xs-6,.col-xs-12{
+                position: static;
+            } 
+            .vmf-search-hide-hdr{
+                font: normal 14px/10px $font-stack;
+                line-height: 12px;
+                margin: 10px 0px;
+                padding: 0px 0px 0px 0px;
+                cursor: pointer;
+                color: $vmf-primary-blue;
+                outline:none;
+            } 
+            .vmf-search-hide-field{
+                width:160px;
+                margin: 0px 30px 30px 0px;
+                padding: 0px 0px 0px 0px;
+                position: relative;
+                display: inline-block;    
+                input[type=text]{
+                    width:150px;
+                    height: auto;
+                    color: $vmfTextInputColor;
+                    border: 1px solid $vmf-gray-light;
+                }
+                
+            }  
+    } 
+    .vmf-dropdown{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+}
+    .search_close_suggest{
+    margin: 10px 0px 10px 0px;
+    padding: 0px;
+        &.vmf-search_opt-rem{ 
+            margin-top: 40px;
+        }
+        
+        .close_sug_icon {
+            width: 16px;
+            height: 15px;
+            margin: 0px;
+            display: block;
+            float: left;
+            cursor: pointer;
+            background: url(/images/bg_alert_spite.png) no-repeat 0px -173px;
+        }
+        .close_sug_txt {
+            display: block; color: $vmf-gray-vdarker;
+            margin: 0px 0px 0px 20px;
+            font: normal 14px/12px $font-stack;
+        }
+     }
+
+    .vmf-search-adv-txt {
+        font-family: $font-stack; 
+        margin: 13px 0px 28px 20px;
+        color: $vmf-primary-blue;
+        line-height: 13px;
+        padding: 0;
+        span{
+             cursor: pointer;
+            font-size: 0.875rem;
+            line-height: 14px;
+        }
+    } 
+
+    .vmf-search-adv_suggest{ 
+        border:1px solid $vmf-SecondaryborderColor;
+        position: absolute; margin: -1px 0px 0px 0px;
+        background: $vmf-bgColor;
+        left:0; z-index: 100;
+        width:325px;
+        box-shadow: 0px 3px 5px 0px $vmf-gray-vdarker;
+        font-family: $font-stack; 
+        padding: 20px 20px 15px 20px;
+        ._chk{
+            margin: 0px 5px 5px 0px; 
+            width: 20px;
+            height: 20px; 
+            background: url(/images/search_chk.png) no-repeat 0px 0px;
+            display: inline-block;
+            input[type=checkbox]{
+                border: 1px solid red;
+                opacity: 0;
+                filter: alpha(opacity=0); 
+                cursor: pointer;
+                outline: none; margin: 0px;
+                width: 0px; height: 0px;
+            }
+            &.act_{
+                background: url(/images/search_chk.png) no-repeat 0px -20px;
+            }
+        }
+        ._opt{
+            font-size: 14px; 
+            margin: 0px; 
+            display: block; 
+            vertical-align: top; 
+            padding: 5px 0px 3px 25px; 
+            white-space: nowrap;
+            font-family: $font-stackLight;            
+            span{
+                font-family: $font-stack;
+                font-size: 14px;                    
+            }
+        }
+        .sel_Opt_sug{
+            margin:0 0 5px 0; 
+            height: 20px;
+            cursor: pointer;
+            ._chk {
+                position: absolute;  
+                width: 20px;
+                height: 20px;
+                margin: 0px;
+                cursor: pointer;
+            }
+            
+        }
+    }
+
+
+.vmf-search-left-filter{
+    background: $vmf-listBgColor;
+    color: $vmf-gray-darker;
+    display: inline-block;
+    font: normal 14px/12px $font-stack;
+    margin: 30px 10px 0px 0px;
+    padding: 0px 30px 5px 30px;
+    width: 295px; height: auto;
+        .row{
+            margin: 0px;
+        }
+        .col-xs-12{
+            padding: 0px;
+        }
+        .vmf-search-filter-hdr{
+            font: normal 12px/8px $font-stack;
+            padding: 0px 0px 10px 0px;
+            color: $gray-dark;
+        } 
+        .vmf-search-hide-hdr{
+            font: normal 14px/12px $font-stack;
+            margin: 10px 0px 25px 0px;
+            padding: 0px; cursor: pointer;
+            color: $vmf-primary-blue;
+            outline:none;
+            &.col-md-6{
+                
+            }
+        } 
+
+    .vmf-search-adv_suggest{
+        margin:-1px 0px 0px 45px; 
+    }
+}
+.vmf-search-hide-field{
+    width:100%;
+    margin: 0px 0px 25px 0px;
+    position: static;
+    display: inline-block;    
+        input, select{
+            width:100%;
+            height: auto;
+            color: $vmf-gray-darker;    
+            border: 1px solid $vmf-gray-light; 
+            padding: 6px 5px 6px 5px;
+            
+        } 
+        input{
+            -webkit-box-shadow: rgb(51, 51, 51) 1px 4px 6px -6px inset;
+            box-shadow: rgb(51, 51, 51) 1px 4px 6px -6px inset;
+            background: $vmf-bgColor; 
+            font-size: 0.875rem;
+        }
+        input::-webkit-input-placeholder {
+            font: italic 14px/14px $font-stack;
+            color: $vmf-gray-vdarker;  
+        } 
+        input::-moz-placeholder {  /* Firefox 19+ */
+            font: italic 14px/14px $font-stack;
+            color: $vmf-gray-vdarker;  
+        }
+        input:-moz-placeholder {   /* Older versions of Firefox */
+            font: italic 14px/14px $font-stack;
+            color: $vmf-gray-vdarker;  
+        }
+        input:-ms-input-placeholder {   
+            font: italic 14px/14px $font-stack;
+            color: $vmf-gray-vdarker;  
+        }
+    .vmf-dropdown.col-md-4.col-xs-12{
+            width: 100%;
+            .vmf-dropdown-content{
+                padding-left: 10px;
+            }
+    }
+}
+
+.vmf-search-right-content{
+    background: $vmf-bgColor; 
+    display: inline-block;
+    font: normal 14px/12px $font-stack;
+    margin: 30px 30px 0px 20px;
+    vertical-align: top;
+    padding: 0px 0px 5px 0px;
+    max-width:810px; height: auto; 
+        .txt_bld{
+            font-family: $font-stackSemiBold;
+        }
+        .link_txt{
+            color: $primary-teal;
+        }
+        .link_txt_act{
+            color: $vmf-gray-darker;
+            cursor: default;
+        }
+        .row{
+            margin: 0px;
+        }
+        .col-xs-12{
+            padding: 0px;
+        }
+    .vmf-search-adv-res{
+        border-bottom: 1px solid $vmf-pagination-res;
+        padding: 0px 0px 30px 0px;
+        margin-bottom:0px;
+    }
+}
+
+.vmf-search-adv-filter+.vmf-pagination2{
+    padding-bottom: 30px;
+    width: 810px;
+    margin: 0px 10px 0px 20px;
+    .pagination_container{
+        padding:  0px 0px 10px 0px;
+    }
+}
+
+@media (max-width: $screen-md) {
+    .ng-isolate-scope{
+        a{
+            margin: 0px 0px 0px 0px;
+        }
+        .vmf-search-bar{
+            width: 100%; 
+            margin: 0px 0px 0px 0px;
+            .vmf-search-input{
+                width: 55%; 
+            }
+            .vmf-search-select{
+                width: 30%; 
+                .vmf-search_arrow{
+                    position: absolute;
+                    right: 0px;
+                }
+            }
+            
+            .vmf-search-button{
+                width: 15%; 
+            }
+             
+        }
+        .vmf-pagination2{
+            margin-left: 0px;
+        }
+        .vmf-search-adv-filter{
+            width: 100%;
+            .vmf-search-adv-txt{
+                margin: 10px 0px 30px 0px;
+            } 
+            .vmf-search-hide-block{
+                .vmf-search-hide-field input[type=text]{
+                    width: 100%;
+                }
+            }
+        }
+        .vmf-vertical-search{
+            .vmf-search-adv-txt{
+                margin-left: 0px; 
+            }
+            .vmf-search-left-filter{
+                width: 100%;
+            }
+        }
+    }
+    .vmf-search-adv-filter{
+        width: 95%;
+        .vmf-search-hide-block{
+            width: 100%;
+            .vmf-search-hide-field{
+                width: 100%;
+                margin: 0px;
+                padding: 10px 0px;
+                clear: right;
+                input{
+                    width: 100%;
+                    clear: right;
+                }
+                .vmf-search-adv_suggest{
+                    width: 100%;
+                    margin: 0px 0px 0px 0px;
+                }
+            }
+        }
+        .vmf-search-adv-res{
+            padding: 10px 10px 10px 10px;
+            line-height: 20px;
+            &.text-right{
+                text-align: left;
+            }
+        }
+        .vmf-search_desc_md{
+            margin-left: 0px;
+        }
+    }
+.vmf-search-adv-filter + .vmf-pagination2{
+    width: 95%;
+    .paginationContent{
+        .result{
+            width: 100%;
+        }
+    }
+}
+
+} 

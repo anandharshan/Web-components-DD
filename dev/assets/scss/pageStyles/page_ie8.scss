@@ -1,0 +1,95 @@
+/* for IE7 & 8 */
+
+/* eg: *width: 16.66666667%; (for IE7) width: 16.66666667%\9; (for IE8) */
+     body {
+    font-size:16px;
+    }
+    .col-md-2 {
+       width: 16.66666667%;
+        float:left;
+    }
+    .col-md-3 {
+       width: 25%;
+       float:left;
+    }
+    .col-md-4 {
+       width: 33.33333%;
+       float:left;
+    }
+
+     .col-md-5 {
+    width: 41.66667%;
+    float:left;
+  }
+
+  .col-md-6 {
+    width: 50%;
+    float:left;
+  }
+
+    .col-md-7 {
+		width: 58.33333%;
+		float:left;
+	}
+	.col-md-8{
+	   width:66.66667%;
+        float:left;
+ 	}
+	.col-md-9{
+	   width: 75%;
+        float:left;
+	}	
+	
+
+	.col-md-10 {
+		width: 83.33333%;
+		float:left;
+	}
+
+.row {
+	
+	.leftNav {
+
+		padding:0;
+		width:17%;
+		padding-left:1%;
+		padding-right:1%;
+	}
+	.rightNav {
+		padding:0;
+		width:83%;
+	}
+
+}
+#wrapper {
+	margin: 10px auto;
+	width:96%;
+}
+.main-container {
+     h1{
+    font-size:32px;
+   
+    }
+}
+a {
+	font-size: 16px;
+	padding: 4px 5px;
+}
+label {
+    font-size:16px;   
+}
+.logo {
+     span {
+        font-size: 20px;
+        line-height: 16px;   
+     }
+    
+}
+.formSection {
+     margin-bottom:80px;   
+}
+
+
+.formLabel {    
+    padding:3px 0 19px 0;
+}

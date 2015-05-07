@@ -1,0 +1,60 @@
+System Alerts
+Syntax:
+Type 1 :
+<div vmf-sys-one sysalert="string alert type" show='flag.modalShown' sys-Message=”string message">
+[Any Extra Html With Links]
+  </div>
+
+
+Type 2 :
+<div information-message info-message="{{infomessage}}" is-info-message='isInfoMessage' info-type='{{warningtype}}'>
+</div>
+
+Configuration
+
+Type 1 :
+sysalert  Variable [String]
+Mandatory: Yes
+Options: “first”,”second”,”third”
+
+Usage: startdate = "first"
+
+
+show Service Related use as it is 
+Mandatory: Yes
+
+Usage: show='flag.modalShown'
+Determines the show hide state of modal
+
+sys-Message  Variable [String]
+Mandatory: Yes
+
+
+Usage: sys-Message = “You have successfully completed a request to fund this service with <Fund name>. A confirmation email will be sent to you. This switch will take effect on the next invoice..your current balance for this fund is $0.00. Please add more credit to this fund by XXXXXXX.”
+
+
+
+
+Type 2 :
+
+info-message  Variable [String]
+Mandatory: Yes
+
+Usage: info-message = "Pricing changes will be reflected when this Add-on Request is approved."
+Provide the message to be passed to component in string format.
+
+info-type  Variable [String]
+Mandatory: Yes
+Options: ‘neutral’, ‘positive’, ‘warning’, ‘critical’
+Usage: info-type ="neutral"
+Determine the type of info message
+
+is-info-message  Variable[Boolean]
+Mandatory: Yes, to show or hide
+
+
+
+
+
+
+

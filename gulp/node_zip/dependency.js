@@ -1,0 +1,23 @@
+exports.depend = {
+	"FormValidations":["radioButtons","ComboBox","checkbox","textinputbox","dropdown","Calendar"],
+	"FormElements":["radioButtons","ComboBox","checkbox","textinputbox","dropdown","Calendar"],
+	"FormTemplates":["radioButtons","ComboBox","checkbox","textinputbox","dropdown","Calendar"],
+	"formRegistration":["radioButtons","ComboBox","checkbox","textinputbox","dropdown","Calendar"],
+	"CoachMarks":["UiShell"],
+	"FolderTree":["radioButtons","checkbox","dropdown","textinputbox","modal"],
+	"emptyState":["tabNavigation"],
+	"WizardProgressBar":["radioButtons","checkbox"],
+	"HeaderInlineEditing":["Tooltip"],
+	"SliderControl":["Tooltip"],
+	"SplitContainer":["FolderTree","TableBasic"],
+	"TableBasic":["checkbox","pagination2"],
+	"TableDragDrop":["checkbox"],
+	"TableFilter":["checkbox","Calendar"],
+	"TableInlineEdit":["dropdown","Calendar"],
+	"TableStatic":["dropdown","textinputbox"],
+	"TableQuickView":["dropdown","Calendar"],
+	"TableBulkActions":["checkbox"],
+	"pagination2":["dropdown"],
+	"Search":["pagination2","dropdown"],
+	"Calendar":["dropdown"]
+}

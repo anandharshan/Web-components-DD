@@ -1,0 +1,70 @@
+Syntax:
+<div vmf-text-input type="StringText" class="vmf-text-input" name="StringText" model="user.firstName" [title="StringText"] [mandatory="StringText"] [custom-class="customclass"] [short-description="StringText"] [hint=”StringText”] [search-model=”variable”] [search-callback=”function()”] [psearch-callback=”function”] [option-id=”StringText”] ></div>
+
+Configuration
+
+type String Literal       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: type = “normal” 
+Only values “normal” (normal input box), “password” (password input), “search” (search input) and “psearch”(predictive search input) are allowed. 
+
+name String Literal       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: name=”UserForm”
+The name attribute for input box.
+
+model Variable[String]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: model=”user.firstName”
+The model for input box.
+
+title String Literal       
+Mandatory:  No
+Default Value: <empty>
+Usage: title=”First Name”
+The title for text box. Applicable for only “normal” and “password” type.
+
+mandatory String Literal       
+Mandatory:  No
+Default Value: “false”
+Usage: mandatory=”true”
+Will append an asterisk to the textbox if value is “true”. By default, it is “false”. The supported values “true” and “false”.
+
+short-description String Literal       
+Mandatory:  No
+Default Value: <empty>
+Usage: short-description=”Description”
+The text below title for text box. Applicable for only “normal” type.
+
+hint String Literal       
+Mandatory:  No
+Default Value: <empty>
+Usage: hint=”Search all downloads”
+The placeholder value for text box.
+
+search-model Variable[Array]
+Mandatory:  No
+Default Value: <empty>
+Usage: search-model=”list”
+The list of suggestions for predictive search. Applicable for only “psearch” type.
+
+search-callback Function call
+Mandatory:  No
+Default Value: <empty>
+Usage: search-callback=”searhCallback()”
+The callback function for search. Applicable for only “search” type.
+
+psearch-callback Function reference
+Mandatory:  No
+Default Value: <empty>
+Usage: psearch-callback=”psearhCallback”
+The callback function for predictive search. Applicable for only “psearch” type.
+
+option-id String Literal
+Mandatory:  No
+Default Value: <empty>
+Usage: option-id=”companyLogo”
+The id attribute for text box.

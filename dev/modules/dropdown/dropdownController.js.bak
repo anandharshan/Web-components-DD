@@ -1,0 +1,178 @@
+/*Drop Down List controller code*/
+
+app.controller("dropDownCtrl", ['$scope',
+    function($scope) {
+        $scope.revenue;
+        $scope.revenue2;
+        $scope.month;
+        $scope.customclass = [{
+            "selector": ".current-selection",
+            "cusclass": "check1"
+
+        }, {
+            "selector": ".current-selection",
+            "cusclass": "check2"
+        }];
+
+        $scope.hello = "this is the hello message fromthe controller";
+        $scope.revenues = [350000000, 150000000, 200000000, 300000000, 400000000, 250000000];
+
+        $scope.revenuesObj = [{
+            'value': 350000000,
+            'text': '&#36;350,000,000'
+        }, {
+            'value': 150000000,
+            'text': '&#36;150,000,000'
+        }, {
+            'value': 200000000,
+            'text': '&#36;200,000,000'
+        }, {
+            'value': 850000000,
+            'text': '&#36;850,000,000'
+        }, {
+            'value': 900000000,
+            'text': '&#36;900,000,000'
+        }, {
+            'value': 300000000,
+            'text': '&#36;300,000,000'
+        }, {
+            'value': 400000000,
+            'text': '&#36;400,000,000'
+        }, {
+            'value': 250000000,
+            'text': '&#36;250,000,000'
+        }, {
+            'value': 450000000,
+            'text': '&#36;450,000,000'
+        }, {
+            'value': 700000000,
+            'text': '&#36;700,000,000'
+        }, {
+            'value': 550000000,
+            'text': '&#36;550,000,000'
+        }, {
+            'value': 650000000,
+            'text': '&#36;650,000,000'
+        }, {
+            'value': 600000000,
+            'text': '&#36;600,000,000'
+        }, {
+            'value': 750000000,
+            'text': '&#36;750,000,000'
+        }, {
+            'value': 800000000,
+            'text': '&#36;800,000,000'
+        }, {
+            'value': 500000000,
+            'text': '&#36;500,000,000'
+        }];
+
+        $scope.monthsObj = [{
+                'value': 1,
+                'text': 'Jan'
+            }, {
+                'value': 2,
+                'text': 'Feb'
+            }, {
+                'value': 12,
+                'text': 'Dec'
+            }, {
+                'value': 10,
+                'text': 'Oct'
+            }, {
+                'value': 11,
+                'text': 'Nov'
+            }, {
+                'value': 3,
+                'text': 'Mar'
+            }, {
+                'value': 6,
+                'text': 'June'
+            }, {
+                'value': 8,
+                'text': 'Aug'
+            }, {
+                'value': 4,
+                'text': 'Apr'
+            }, {
+                'value': 7,
+                'text': 'Jul'
+            }, {
+                'value': 9,
+                'text': 'Sep'
+            }, {
+                'value': 5,
+                'text': 'May'
+            }
+
+        ];
+
+    }
+]);
+app.controller('HelloCtrl', function ($scope) {
+  $scope.hello = "Hello hows r u";
+  $scope.clear = "Clear";
+  $scope.continue = "Continue";
+  $scope.email = "Email";
+  $scope.lname = "Last Name";
+  $scope.fname = "First Name";
+  $scope.help = "Help";
+  $scope.addNewUser = "Add User";
+  $scope.cancelName = "Cancel";
+  $scope.confirm = "Confirm";
+  $scope.lastName ="";
+  $scope.firstname="";
+  $scope.emailid="";
+  $scope.emailAddress = "E-mail";
+
+
+  $scope.submit = function(){
+    alert("Submitted");
+  }
+
+ $scope.cancel = function(){
+    alert("Cancelled");
+  }
+
+  $scope.monthsObj = [{
+                'value': 1,
+                'text': 'Jan'
+            }, {
+                'value': 2,
+                'text': 'Feb'
+            }, {
+                'value': 12,
+                'text': 'Dec'
+            }, {
+                'value': 10,
+                'text': 'Oct'
+            }, {
+                'value': 11,
+                'text': 'Nov'
+            }, {
+                'value': 3,
+                'text': 'Mar'
+            }, {
+                'value': 6,
+                'text': 'June'
+            }, {
+                'value': 8,
+                'text': 'Aug'
+            }, {
+                'value': 4,
+                'text': 'Apr'
+            }, {
+                'value': 7,
+                'text': 'Jul'
+            }, {
+                'value': 9,
+                'text': 'Sep'
+            }, {
+                'value': 5,
+                'text': 'May'
+            }
+
+        ];
+        
+});
+

@@ -1,0 +1,44 @@
+<div class="modal fade login" ng-controller="LoginBoxController">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <form>
+
+            <div class="modal-header">
+                <a href="javascript:void(0)" class="closeIcon" data-dismiss="modal" aria-hidden="true" ng-click="close('Cancel')" ng-click="modalShown=false">
+                        Close
+                    </a>
+                <h4 class="modal-title" id="myModalLabel">
+                 Login to My Vmware
+               </h4>
+            </div>
+            <div class="modal-body">
+                <div class="vmf-text-input">
+                    <input type="text" id="userName" ng-model="userName" hint="joe.smith@corp.com" placeholder="Username" title="Email Address" mandatory="true" custom-class="customclass" class="formInputClass" validation='[{"name":"required"},{"name":"email"}]'/>
+
+                    <!-- <vmf-text-input type="normal" name="email" model="user.email" hint="joe.smith@corp.com" title="Email Address" mandatory="true" custom-class="customclass" class="formInputClass" validation='[{"name":"email"},{"name":"required"}]'></vmf-text-input> -->
+
+                    <!-- <div class="requiredLabel" >Incorrect email address</div> -->
+                </div>
+
+                 <div class="vmf-text-input" >
+                    <input type="password" id="password" placeholder="Password" ng-model="password" validation='[{"name":"required"},{"name" : "minLength" , "value" : "6"}, {"name" : "maxLength", "value" : "20"}, {"name" : "validationonealphabet"}, {"name" : "validationonenumber"}, {"name" : "validationoneuppercaseletter"}]' />
+                    <!-- <div class="requiredLabel">Incorrect password</div> -->
+                </div>
+               
+
+                <ul class="loginLinks"><li><a href="#" class="forgotpwd">Forgot password?</a></li><li><a href="#formRegistration" class="register">Register</a></li></ul>
+            </div>
+            <div class="modal-footer">
+
+               <label class="custom-checkbox selected" ng-class="{disabledColor:false}"><span class="customCheckBox" ng-class="{disabled:false}" ng-disabled="false"><input type="checkbox" ng-model="rememberMe" ng-checked="true" ng-disabled="false" name="options" value="1" class="ng-pristine ng-valid" checked="checked"></span>Stay Signed in</label>
+
+               <input type="submit" class="vmf-btn vmf-primary vmfloginChange" href="javascript:void(0);" value="Log in" ng-click="authenticate($event)" />
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+
+

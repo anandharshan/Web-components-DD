@@ -1,0 +1,728 @@
+// Use Bootstrap scafolding - row
+// SCSS not sematic - does not use semantic class names - adunit_addunit
+// SCSS not modular - No nesting of styles or use of inheritance - .adunit_subHeading_1
+.adunit_row {
+  &:before {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
+
+.adunit_wrapper a {
+  color: #006990; // Use variables
+  text-decoration: none;
+}
+
+.adunit_addUnit {
+  background-image: url('/images/adunit/AddUnit.png');
+  background-repeat: no-repeat;
+  width: 360px;
+}
+
+.adunit_add_promo {
+  height: 245px; 
+  padding-left: 29px; 
+  border: 1px solid #CDCDCD;
+  /*margin-bottom: 30px;*/
+}
+
+.adunit_addUnit_1 {
+  border-top: 5px solid #006990;
+  /*background-image: url('/images/adunit/AddUnit2.png');*/
+  background: url('/images/adunit/addunit4.png') right bottom;
+  background-repeat: no-repeat;
+  padding: 0 33px 0 34px;
+  background-color: #ffffff;
+}
+
+.adunit_buy_upgrade_btn {
+  padding-bottom: 25px;
+}
+
+.adunit_add_title_1 {
+  font-family: $font-stack;
+  font-size: 30px;
+  line-height: 30px;
+  color: #006990;
+  width: auto;
+  padding-top: 22px;
+}
+
+.adunit_addUnit_Container {
+  padding: 30px 10px;
+  background-color: rgb(237, 237, 237);
+  margin: 10px 0px;
+}
+
+.adunit_heading_promo {
+  padding-top: 28px;
+  font-family: $font-stack;
+  font-size: 16px;
+  line-height: 16px;
+  color: #006990;
+   padding-bottom: 1px; 
+   
+}
+
+.adunit_heading_promo_1 {
+  padding-top: 28px;
+  font-family: $font-stack;
+  font-size: 16px;
+  color: #006990;
+   padding-bottom: 1px; 
+   
+}
+
+.adunit_add_title {
+  font-family: $font-stack;
+  font-size: 60px;
+  line-height: 60px;
+  color: #006990;
+  width: auto;
+}
+
+:root .adunit_heading_promo{
+  padding-bottom: 0px \ ;
+}
+
+.adunit_title_promo {
+  float: left;
+  font-family: $font-stack;
+  color: #006990;
+  width: 219px; 
+}
+
+.adunit_title_1 {
+  float: left;
+  font-family: $font-stack;
+  color: #006990;
+}
+
+.adunit_add_subtitle {
+  float: right;
+  font-family: $font-stack;
+  font-size: 30px;
+  line-height: 30px;
+  color: #006990;
+  padding-right: 10px;
+  margin-top: -2px; 
+}
+
+:root .adunit_add_subtitle{
+  margin-top: -1px \ ;
+}
+
+.adunit_num {
+  font-family: $font-stack;
+  font-size: 140px;
+  line-height: 140px;
+  margin-top: -25px;
+  color: #006990;
+}
+
+.adunit_num_1 {
+  width: 124px;
+  float: left;
+  font-family: proximanovaReg, Arial, sans-serif;
+  margin-left: 6px;
+  font-size: 140px;
+  line-height: 140px;
+  margin-top: -50px;
+  color: #5595b0;
+}
+
+.adunit_subtitle_promo {
+  clear: both;
+  width: 310px;
+  margin-top: -16px;
+  font-family: $font-stack;
+  font-size: 14px;
+  line-height: 14px;
+  float: left;
+}
+
+:root .adunit_subtitle_promo{
+  margin-top: -15px \;
+}
+
+.adunit_subtitle_promo_1 {
+  clear: both;
+  width: 310px;
+  margin-top: -16px;
+  font-family: $font-stack;
+  font-size: 14px;
+  float: left;
+}
+
+.adunit_buy_promo {
+  font-size: 30px;
+  line-height: 30px;
+  color: #1e92d8;
+  font-family: $font-stackSemiBold;
+}
+
+.adunit_cost_promo {
+  font-size: 18px;
+  line-height: 18px;
+  color: #006990;
+  font-family: $font-stack;
+}
+
+.adunit_message_promo {
+  float: left;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
+  color: #6db33f;
+  font-family: $font-stack;
+  width: 190px;
+}
+
+.adunit_promotion {
+  float: left;
+  width: 120px;
+}
+
+
+.adunit_getWorkstation {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 14px;
+  color: #6db33f;
+  font-family: $font-stack;
+  margin-top: 3px;
+  display: inline-block;
+}
+
+.adunit_btn_addUnit {
+   margin-top: 31px !important;
+  /*width: 130px;*/
+  height: 30px;
+  /* margin-bottom: 25px; */
+}
+.adunit_btn_addUnit_buy {
+  padding-left: 52px !important;
+  padding-right: 52px !important;
+  padding-right: 53px\9 !important;
+  margin-left: 0px !important;
+   margin-right: 25px !important;
+}
+.adunit_btn_addUnit_upgrade {
+  padding-left: 37px !important;
+  padding-right: 36px !important;
+   padding-right: 37px\9 !important;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.adunit_divider {
+  margin: 30px;
+  clear: both;
+  padding-bottom: 30px;
+}
+
+.adunit_addUnit_Container_1 {
+  background-color: rgb(237, 237, 237);
+  padding-top: 25px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $font-stack;
+  min-width: 360px;
+  margin: 10px 0px;
+}
+
+.adunit_addUnit_2 {
+  border-top: 5px solid #6db33f;
+  padding-top: 23px;
+  padding-left: 30px;
+  padding-bottom: 45px;
+}
+
+.adunit_subHeading_1 {
+  margin-top: 22px;
+}
+
+.adunit_heading_1 {
+  font-family: $font-stackSemiBold;
+}
+
+.adunit_list {
+  color: #006990;
+}
+
+.adunit_content {
+  margin-top: 1px;
+  padding-left: 30px;
+  padding-top: 2px;
+  &.adunit_bullet_blue {
+    background: url('/images/adunit/list_blue.png') no-repeat;
+  }
+  &.adunit_bullet_green {
+    background: url('/images/adunit/list_green.png') no-repeat;
+  }
+}
+
+
+.adunit_navigation {
+  margin-bottom: 20px;
+  font-family: $font-stack;
+  color: #666666;
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 10px;
+  padding-left: 45px;
+}
+
+.adunit_promotionCaption {
+  font-family: $font-stackLight;
+  color: #1e92d8;
+  font-size: 42px;
+  line-height: 42px;
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+  padding-left: 45px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.adunit_promo_container {
+  padding-bottom: 10px;
+}
+
+.adunit_promo_content {
+  height: 175px;
+  margin: 10px 0px;
+  padding-left: 30px;
+  border-top: 5px solid #6AB537;
+  /*width: 295px;*/
+  /*  margin-right: 40px;*/
+  /*background: url('/images/adunit/AddUnit1.png') no-repeat;*/
+  background: url('/images/adunit/addunit4.png') no-repeat bottom right;
+  background-color: #eeeeee !important 
+}
+
+.adunit_contents {
+  border-top: 5px solid #6ab537;
+}
+
+.adunit_promo_heading {
+  padding-top: 17px;
+  font-family: $font-stack;
+  font-size: 32px;
+  line-height: 32px;
+  color: #333333;
+  padding-bottom: 15px;
+}
+
+.adunit_promo_subheading {
+  padding-bottom: 23px; 
+}
+
+.adunit_content_promo {
+  font-family: $font-stack;
+  margin-top: 2px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #1f8c00;
+}
+
+.adunit_promoApplied {
+  background: url('/images/adunit/confirm.png') no-repeat left center;
+  padding-left: 25px;
+  padding-top: 4px;
+}
+
+.adunit_promo_message {
+  font-family: $font-stackSemiBold;
+  font-size: 16px;
+  line-height: 16px;
+  color: #0085b2;
+ padding-bottom: 8px; 
+}
+
+.adunit_promo_expiry {
+  font-family: $font-stack;
+  font-size: 14px;
+  line-height: 14px;
+  color: #666666;
+}
+
+.adunit_promo_heading_1 {
+  padding-top: 17px;
+  padding-bottom: 6px;
+  font-family: $font-stackLight;
+  color: #387a2c;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.adunit_promo_heading_6 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: $font-stackLight;
+  color: #38792c;
+  font-size: 32px;
+  line-height: 32px;
+  /* width: 290px; */
+  height: 40px;
+}
+
+.adunit_promo_message_1 {
+  font-family: $font-stack;
+  font-size: 18px;
+  line-height: 18px;
+  color: #333333;
+  padding-bottom: 8px;
+}
+
+.adunit_promo_message_6 {
+  font-family: $font-stack;
+  font-size: 24px;
+  line-height: 24px;
+  color: #333333;
+  padding-bottom: 5px;
+  padding-top: 15px;
+  margin-left: 5px;
+  clear: both;
+}
+
+.adunit_btn_promo {
+  margin-top: 25px !important;
+  margin-right: 10px !important;
+  /*width: 70px;*/
+  padding-left: 17px !important;
+  padding-right: 17px !important;
+  height: 30px;
+  margin-left:0px !important;
+}
+
+.adunit_btn_promo_1 {
+  border-radius: 4px;
+  float: left;
+  margin-top: 20px !important;
+  margin-right: 10px !important;
+  width: 75px;
+  height: 30px;
+  margin-bottom: 25px !important;
+  font-size: 14px; 
+  color: #ffffff;
+  border: 0px;
+  background-image: url('/images/adunit/btn_gradient.png');
+  font-family: $font-stackSemiBold;
+}
+
+.adunit_btn_promo_6 {
+  margin-top: 45px !important;
+  margin-right: 17px !important;
+  height: 30px;
+  padding:0px 15px 0px 15px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  position: absolute;
+}
+
+.adunit_btn_promo_modal {
+  border-radius: 4px;
+  margin-top: 45px !important;
+  margin-right: 17px !important;
+  height: 30px;
+  font-size: 14px;
+  width: 100px;
+  color: #ffffff;
+  border: 0px;
+  background-image: url('/images/adunit/btn_gradient.png');
+  font-family: $font-stackSemiBold;
+}
+
+.adunit_detailInput {
+  float: left;
+}
+
+.adunit_viewDetails {
+  margin-top: 25px;
+  font-family: $font-stack;
+  font-size: 16px;
+  color: #444444;
+}
+
+.adunit_modalOverlay {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  filter: alpha(opacity = 50);
+  width: 100%;
+  height: 100%;
+}
+
+.adunit_modalWindow {
+  position: fixed;
+  z-index: 100;
+  top: 17%;
+  border: 1px solid #666666;
+  background: #FFF;
+  min-width: 370px;
+  width: auto;
+}
+
+.adunit_promotionCaption_1 {
+   margin-bottom: 60px; 
+  margin-left: 20px; 
+  margin-top: 32px; 
+  font-family: $font-stack;
+  font-size: 24px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.adunit_promo_container_1 {
+  padding-left: 35px;
+  /* width: 1110px; */
+  .adunit_wrapper {
+    float: left;
+    min-width: 325px;
+  }
+}
+
+.adunit_promo_content_1 {
+  float: left;
+  height: 170px;
+  padding-left: 30px;
+  border-top: 5px solid #6ab537;
+  width: 295px;
+  margin-right: 40px;
+  background-image: url('/images/adunit/addunit1.png');
+  background-repeat: no-repeat;
+  margin: 10px 0px;
+}
+
+.adunit_promo_content_6 {
+  height: 245px;
+  padding-left: 30px;
+  border-top: 5px solid #1e92d8;
+  width: 330px;
+  margin-right: 40px;
+  background-image: url('/images/adunit/addunit3.png');
+  background-repeat: no-repeat;
+  margin: 10px 0px;
+}
+
+.adunit_promo_heading_4 {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-family: $font-stack;
+  color: #38792c;
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.adunit_promo_page {
+  display: inline-block;
+  margin-top: 59px !important;
+  margin-bottom: 52px !important;
+  margin-left: 35px !important;
+  font-family: $font-stack;
+  color: #006990;
+  font-size: 14px;
+  line-height: 14px;
+  float: left;
+}
+
+.adunit_btn_close {
+  float: right;
+  margin-top: 55px !important;
+  margin-right: 50px !important;
+  /*width: 75px;*/
+  padding-left: 18px !important;
+  padding-right: 19px !important;
+  padding-top: 7px !important;
+  height: 25px;
+}
+
+.adunit_promo_close {
+  float: right;
+  margin-top: -97px;
+  margin-right: 20px;
+}
+
+.adunit_promo_Details {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: -8px;
+  float: right;
+  margin-right: -3px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #006990;
+  font-family: $font-stack;
+}
+
+.adunit_promo__view_Detail {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: -45px;
+  float: right;
+  margin-right: -3px;
+  font-size: 14px;
+   line-height: 14px;
+  color: #006990;
+  font-family: $font-stack;
+}
+
+.adunit_promo_Detail {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: -55px;
+  float: right;
+  margin-right: -3px;
+  font-size: 14px;
+  line-height: 14px;
+  color: #006990;
+  font-family: $font-stack;
+}
+
+.adunit_addUnit_5 {
+  border-top: 5px solid #006990;
+  padding: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.adunit_heading_2 {
+  margin: 0px 10px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #333333;
+  font-family: $font-stack;
+}
+
+.adunit_subHeading_2 {
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #006990;
+  font-family: $font-stack;
+}
+
+.adunit_content_1 {
+  margin: 20px 10px 0px 10px;
+  font-size: 16px;
+    line-height: 16px;
+  color: #333333;
+  font-family: $font-stack;
+}
+
+.adunit_btn_wrapper {
+  border-top: solid 1px #999;
+  margin-top: 20px;
+}
+
+.adunit_promo_btn_view {
+  margin: 20px 10px 20px 10px !important;;
+  /*width: 75px;*/
+  padding:0px 23px 0px 23px;
+ 
+}
+
+.adunit_promo_subheading_1 {
+  float: left;
+  font-family: $font-stack;
+  font-size: 50px;
+    line-height: 50px;
+  color: #1e92d8;
+  margin-right: 10px;
+}
+
+.adunit_promo_subheading_2 {
+  font-size: 24px;
+    line-height: 24px;
+  color: #333333;
+  font-family: $font-stack;
+  margin-top: 17px;
+  float: left;
+  width: 50px;
+}
+
+.adunit_promo_expiry_6 {
+  float: right;
+  font-family: $font-stack;
+  margin-top: 75px;
+  margin-right: 15px;
+  font-size: 14px;
+    line-height: 14px;
+  color: #ffffff;
+}
+
+.adunit_addUnit_Container_3 {
+  padding: 5px 10px;
+  background-color: rgb(237, 237, 237);
+}
+
+.adunit_modalCloseIcon {
+  background: url('/images/adunit/close.png') no-repeat;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+.adunit_modalWindow {
+  /*display: none;*/
+}
+
+.adUnitContainer {
+  h1 {
+    font-family: $font-stack;
+    color: #006990;
+    font-size: 24px;
+      line-height: 24px;
+  }
+  h2 {
+    font-family: $font-stack;
+    color: #006990;
+    font-size: 18px;
+      line-height: 18px;
+    margin-top: 40px;
+  }
+  width: 380px;
+  line-height: normal !important; 
+}
+
+.adUnitBlue {
+  border-top: 5px solid #006990 !important;
+}
+
+.adunitBgchange {
+  background-image: url('/images/adunit/addunit4_grey.png') !important;
+  background-color: #eeeeee !important;
+}
+
+.adunit_modalWindow .adunit_wrapper {
+  margin-right: 40px;
+}
+
+.adunit_button_rightmargin {
+  margin-right: 25px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .adunit_modalWindow {
+    width: 805px;
+  }
+}

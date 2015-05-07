@@ -1,0 +1,29 @@
+Component - Homepage Hero Carousel
+
+CREATION
+<vmf-hero-carousel  options="config" ></vmf-hero-carousel>
+STEP 1: integrate  “vmf-hero-carousel” directive to create Hero Carousel  for the target element.
+STEP 2: provide  “options”  to configure the images in the carousel.
+Options :
+Options can be provided as an object by using “options” attribute. 
+Options:
+Provide image information object here
+Sample object :
+$scope.config = [{
+                    "image": "vmw-hro-openstack.jpg",
+                    "mobileImage": "vmw-hro-mobile-light-green.jpg",
+                    "title1": "Build Your OpenStack Cloud in Minutes",
+                    "title2": "VMware Integrated OpenStack makes it easy - and it’s free for vSphere Enterprise.",
+     "title3": "Get Started",						    "href":"http://www.vmware.com/in/products/openstack/?src=WWW_OpenStack"
+  }]
+
+METHODS:
+scope.prevSlide()
+This function will be invoked when user clicks on previous button, and it scroll the current image to left and brings up the next image on the screen.
+scope.nextSlide()
+This function will be invoked when user clicks on next button, and it scroll the current image to right and brings up the prev image on the screen.
+$scope.init()
+This function will set up the carousel image dimensions on initial load.  
+$scope.resize()
+This function will be triggered on resizing the window, and the carousel images will be resized according to window available width.
+

@@ -1,0 +1,58 @@
+.vmf-contentRating {
+    margin-bottom: 14px;
+    display: inline;
+    .RateHeader {
+        width: 34%;
+        line-height: 23px;
+        margin-top: 24px;
+        text-align: right;
+        margin-right: 5px;
+    }
+    .ratingContainer {
+        padding: 5px 10px 10px;
+        margin-left: 25px;
+        margin-right: 1px;
+        margin-top: 6px;
+        display: inline;
+        .ratingContent {
+            div {
+                margin-right: 4px;
+            }
+            .RatingRadio {
+                display: block;
+            }
+        }
+    }
+}
+.improve_label {
+    display: inline-block;
+    line-height: 21px;
+    margin-top: 25px;
+    margin-left: 0;
+    float: left;
+}
+.improvementSubmit {
+    background-color: $vmf-primary-blue;
+    margin-left: 30px;
+    float: left;
+    margin-top: 20px;
+}
+.contentRatingWidget {
+    padding: 10px 0 17px;
+}
+.rating_Container {
+    width: 57%;
+    float: right;
+    &.container_width {
+        width: 42%;
+        float: left;
+    }
+    .improvement_comment {
+        padding: 0 8px;
+        margin-left: 10px;
+        width: 46%;
+        float: left;
+        margin-top: 20px;
+        line-height: 30px;
+    }
+}

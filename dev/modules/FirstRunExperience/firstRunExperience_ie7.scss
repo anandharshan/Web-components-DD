@@ -1,0 +1,82 @@
+.fre-dialog{
+        font-size: 16px;
+        width: 770px; 
+        margin:7.5% auto;
+	.modal-content {
+	     margin:0px;
+	}
+	.modal-body {
+         padding: 20px 40px;
+         min-height: 278px;
+         overflow:auto;
+         padding:0;
+         height: 513px;
+         .fre-content{
+            padding:0;
+            width:auto;
+         }
+         .contentText{
+                width:262px;
+                padding-left:0;
+                margin-left:20px;
+                float:left;
+            }
+	}
+	.modal-header {
+		.modal-title {
+		     float:left; 
+		}
+	}
+    .ie7col_md_7{
+        width:54%;
+        float:left;
+    }
+     .modal-footer{
+        display: block;
+        overflow: hidden;
+        text-align:left;
+        padding: 25px 0px 30px 35px;
+        .rightButtonSet{
+            display:inline-block;
+            }
+            .vmf-marginTop20{
+            margin-top:0px;
+        }
+		.vmf-btn.vmf-primary.vmfdisabled{
+                width:96px;
+                margin-left: 90px;
+            }
+        .vmf-btn{
+            margin: 0px;
+            padding-left:25px;
+            display:inline-block;
+            float:none;
+            padding-top:8px;
+            width:96px;
+            height:30px;
+            margin-left:90px;
+        }
+        .vmf-btn.vmf-primary{
+            margin-left:20px;
+            width:80px;
+        }
+        .vmf-btn.vmfdisabled.vmf-secondary{
+            padding-left:25px;
+            width:96px;
+        }
+         .vmf-btn.vmf-primary.vmf-primary-close{
+                clear:right;
+                margin-left:208px;
+            }
+        .vmf-btn.vmf-secondary{
+            width:96px;
+            border:1px solid transparent;
+        } 
+    }
+
+.modal-backdrop{
+    display: none;
+}
+}
+   
+

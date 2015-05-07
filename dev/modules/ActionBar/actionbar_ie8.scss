@@ -1,0 +1,38 @@
+.vmf-action {
+    border:1px solid $vmf-borderColor;
+    ul {
+        display:block;
+        overflow:hidden; 
+        li {
+            float:left;           
+            width:20%;
+            border-top:none;
+            a {
+                padding: 20px 0;                
+                .labelText { 
+                    padding-top: 15px;
+                 }
+                img {
+                        margin-top:10px;
+                }
+            }
+            &:first-child {                
+             .bordRt {
+                        border-left:0 none;  
+                }             
+            }
+        }
+    }
+}
+
+.bordRt {
+    border-left: 1px solid $vmf-borderColor;
+    height:100px;
+    padding: 0 30px;
+}
+
+.vmf-notification {    
+    span {
+        font-size:14px;   
+    }
+}

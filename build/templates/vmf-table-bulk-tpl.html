@@ -1,0 +1,96 @@
+<div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right" ng-if="showSearch">
+                <div class="form-group">
+                    <input type="text" name="search" ng-model="search" class="form-control" placeholder="Search">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row vmf-table-wrapper-container">
+        <div class="col-md-12 table-wrapper">
+            <div class="col-md-4">
+                <h4>{{options.tableTitle}}</h4>
+            </div>
+            <div class="col-md-4" ng-if="options.showManageColumn" vmf-manage-columns> </div>
+            <div vmf-bulk-action-items input-data="actionItems" callback-on-select="bulkActionOnSelectActionItem" class="vmf-bulk-action-add-wrapper"></div>
+            <div class="vmf-table-wrapper vmf-table-bulk-actual-wrap clearfix" >
+                <table vmf-col-resizable-and-dragtable columns="columns" id="vmf-table-bulk-actual" class="vmf-table vmf-table-basic resizable">
+                    <thead class="bulk-action-header-wrapper">
+                        <tr class="colHeaders bulk-action-header">
+                            <th vmf-table-header-renderer
+                                style="width:{{column.width}}px"                            
+                                ng-repeat="column in columns"    
+                                column="column" 
+                                field="{{column.field}}"  
+                                columns="columns"                  
+                                class="header {{column.thClass}} unselectable ui-resizable"
+                                vmf-table-sort-class="column.sorted"
+                                sort-enabled="column.sort"            
+                                ng-click="sortBy(column, $event);"
+                                ng-if="column.visible === undefined || column.visible"                            
+                                ng-class="{'drag-accept':column.draggable === undefined || column.draggable,
+                                    'dragtable-handle':column.draggable === undefined || column.draggable,
+                                    'no-col-resize': column.notResizable,
+                                    'col-resize': column.colResize === undefined || column.colResize
+                                }"
+                                unselectable="on">                           
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="vmf-table-wrapper vmf-table-bulk-wrapper clearfix" vmf-bulk-action-scroll>
+                <table vmf-col-resizable-and-dragtable columns="columns" class="vmf-table vmf-table-basic resizable">
+                    <thead class="vmf-table-bulk-header-virtual">
+                        <tr>
+                            <th ng-repeat="column in columns" vmf-table-bulk-virtual-col
+                            ng-class="{'drag-accept':column.draggable === undefined || column.draggable,
+                                'dragtable-handle':column.draggable === undefined || column.draggable,
+                                'no-col-resize': column.notResizable,
+                                'col-resize': column.colResize === undefined || column.colResize
+                            }"
+                            ></th>
+                        </tr>
+                    </thead>
+                    <tbody vmf-sortable>                              
+                        <tr ng-repeat="row in currentPageData | filter: searchByColumnObj"
+                            data-id="{{row.id}}"
+                            data-uid="{{row.$$hashKey}}"
+                            data-index="{{$index}}"
+                            vmf-select-row="row" 
+                            vmf-select-mode="multiple" 
+                            ng-class="{'row-even': $even, 'row-odd': $odd, 'first-row':$first}"
+                            class="vmf-rows">
+                            <td vmf-table-cell vmf-inline-editor vmf-table-bulk-virtual-col  
+                                ng-attr-data-editable="{{ column.editable ? 'yes' : 'no' }}"
+                                cell-renderers="cellRenderers"
+                                selected-rows="selectedRows"
+                                item="row"
+                                tr-index="$parent.$index"
+                                field="{{column.field}}"   
+                                column="column"       
+                                class="vmf-table-td {{column.tdClass}}"                  
+                                ng-if="column.visible === undefined || column.visible"                            
+                                ng-repeat="column in columns">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+              <div ng-if="totalRecords">
+              Total Records : {{totalRecords}}
+              </div>
+              <div ng-if="pagination">
+                <div vmf-table-pagination dataset="dataset(currentPage,itemsPerPage)" current-page="currentPage" items-per-page="itemsPerPage" data="data" pagination-pattern="paginationPattern"></div> 
+              </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

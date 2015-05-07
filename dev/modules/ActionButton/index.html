@@ -1,0 +1,228 @@
+<!--Action/Command Button component code -->
+<div ng-controller="actionBtnCtrl" class="action-btns">
+    <div class="vmf-labelHeader vmf-col vmf-maxWidth240">Small Action Buttons</div>
+    <div class="actionButtons">
+        <div vmf-button btn-text='Primary' btn-type='vmf-primary' click-callback='clickCallback()'></div>
+        <div vmf-button btn-text='Secondary' btn-type='vmf-secondary' click-callback='clickCallback()'></div>
+        <div vmf-button btn-text='Disabled' btn-type='vmf-primary' btn-disabled='true'></div>
+
+        <div class="rowSection">
+            <div class="vmf-labelHeader vmf-col vmf-maxWidth240">Large Buttons</div>
+            <div vmf-button btn-text='Primary' btn-size='large' btn-type='vmf-primary'>
+                <ul>
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div vmf-button btn-text='Secondary' btn-size='vmf-large' btn-type='vmf-secondary'>
+                <ul>
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+            <div vmf-button btn-text='Disabled' btn-disabled='true' btn-size='vmf-large' btn-type='vmf-secondary'></div>
+        </div>
+        
+        <div class="rowSection">
+            <div class="vmf-labelHeader vmf-col vmf-maxWidth240">Split dropdown Button</div>
+            <div vmf-button btn-text='Primary' btn-context='splitdropdown' btn-type='vmf-primary'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div vmf-button btn-text='Secondary' btn-context='splitdropdown' btn-type='vmf-secondary'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+            <div vmf-button btn-text='Disabled' btn-context='splitdropdown' btn-type='vmf-secondary' btn-disabled='true'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="rowSection">
+            <div vmf-button btn-text='Primary' btn-size='vmf-large' btn-context='splitdropdown' btn-type='vmf-primary'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div vmf-button btn-text='Secondary' btn-size='vmf-large' btn-context='splitdropdown' btn-type='vmf-secondary'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+            <div vmf-button btn-text='Disabled' btn-size='vmf-large' btn-context='splitdropdown' btn-type='vmf-secondary' btn-disabled='true'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="rowSection">
+
+            <div class="vmf-labelHeader vmf-col vmf-maxWidth240">Action Comp</div>
+            <div class="vmf_action_comp" vmf-button btn-text='Primary' btn-context='dropdown' btn-type='vmf-primary'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="vmf_action_comp vmf-col" vmf-button btn-text='Secondary' btn-context='dropdown' btn-type='vmf-secondary'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="vmf_action_comp vmf-col" vmf-button btn-text='Disabled' btn-context='dropdown' btn-type='vmf-secondary' btn-disabled='true'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rowSection">
+            <div class="vmf-labelHeader vmf-col vmf-maxWidth240">Action Large Comp</div>
+            <div class="vmf_action_comp" btn-size='vmf-large' vmf-button btn-text='Primary' btn-context='dropdown' btn-type='vmf-primary'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="vmf_action_comp vmf-col" btn-size='vmf-large' vmf-button btn-text='Secondary' btn-context='dropdown' btn-type='vmf-secondary'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="vmf_action_comp vmf-col" btn-text='Disabled' btn-size='vmf-large' vmf-button btn-text='Secondary' btn-context='dropdown' btn-type='vmf-secondary' btn-disabled='true'>
+                <ul class="vmf-dropdown-btn-menu ng-hide ">
+                    <li ng-click='actionClicked()'><a href="javascript: void(0);">Action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Another action</a>
+                    </li>
+                    <li><a href="javascript: void(0);">Something else here</a>
+                    </li>
+                    <li class="vmf-divider"></li>
+                    <li><a href="javascript: void(0);">Separated link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rowSection">
+            <div class="vmf-labelHeader vmf-col vmf-maxWidth240">Action Button with Icon</div>
+            <div vmf-button btn-text='Purchase Add-On' btn-type='vmf-primary vmf-btn-large' icon='true'></div>
+            <div vmf-button btn-text='Purchase Add-On' btn-type='vmf-primary vmf-btn-large' icon='true' btn-disabled='true'></div>
+
+            <br>
+        </div>
+    </div>
+    <!--btncontroller end-->
+</div>

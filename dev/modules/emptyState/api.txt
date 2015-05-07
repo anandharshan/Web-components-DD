@@ -1,0 +1,21 @@
+Empty State
+Syntax:
+Type 1 :
+<vmf-empty-state>
+            <div class="vmf-marginwrapper">
+                <div class="vmf-imgwrapper">
+                    <img src="/images/chart-pie-128.png" width="70" height="70" />
+                </div>
+                <p>
+                    There are no renewals to display this quarter.
+                </p>
+                <p class="vmf-secondwrapper">
+                    Please select another quarter to view opportunities, review the <a href="javascript:void(0)">Renewals Portal Reference Guide</a> or contact <a href="javascript:void(0)">Partner Success Center</a> for assistance.
+                </p>
+            </div>
+</vmf-empty-state>
+Configuration
+
+Type - Template
+ 
+

@@ -1,0 +1,33 @@
+<!--Checkbox component code -->
+
+<div ng-controller="checkBoxCtrl">
+    
+    <h5> 
+        Type 1
+    </h5>
+    <div class=" formSection clearfix"> 
+         
+        <div class="labelHeader col-md-3" vmf-tooltip tooltip-options="{'text':'Initiatives <br/> Lorem ipsum dolor sit amet ullam elit, sed diam'}" target-ele="partOfString">Virtualization <span class="partOfString">Initiatives</span>
+            <label class="vmf-title-label">Check all that apply</label>
+        </div>
+        <div class="col-md-8">
+            <fieldset>
+                <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[0].checked" name="checkBoxName2" c-label="checkBoxOptions[0].text" c-disabled="checkBoxOptions[0].disabled">
+                </div>
+                <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[1].checked" name="checkBoxName2" c-label="checkBoxOptions[1].text" c-disabled="checkBoxOptions[1].disabled">
+                </div>
+                <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[2].checked" name="checkBoxName2" c-label="checkBoxOptions[2].text" c-disabled="checkBoxOptions[2].disabled">
+            	</div>
+            	<div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[3].checked" name="checkBoxName2" c-label="checkBoxOptions[3].text" c-disabled="checkBoxOptions[3].disabled">   
+                </div>
+            </fieldset>
+        </div> 
+        
+    </div>
+
+    <h5> 
+        Type 2
+    </h5>
+    <div vmf-checkbox-group class="vmf-checkbox-group" type="2" ctitle="checkBoxTitle" options="checkBoxOptions2" name="checkBoxName" custom-class="customclass">
+    </div>
+</div>

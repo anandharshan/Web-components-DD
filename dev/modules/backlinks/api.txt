@@ -1,0 +1,29 @@
+Backlink API Documentation 
+
+Syntax:
+
+<div vmf-backlink link="{{toLink}}" title="{{toTitle}}"></div>
+
+Configuration
+
+link String
+
+Mandatory: No
+
+Default Value: history.back()
+
+Usage: link=”www.vmware.com”
+
+The link to navigate to, upon clicking the backlink.
+
+title String
+
+Mandatory: Yes
+
+Default Value: <empty>
+
+Usage: title = “vmware”
+
+A string representing the text to be shown after ‘Back to’ in the directive, indicating the title of the link to 
+
+navigate to.

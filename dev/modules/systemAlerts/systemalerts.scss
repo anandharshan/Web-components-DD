@@ -1,0 +1,267 @@
+/* for Feedback */
+      .feedback{
+        font-family:$font-stackSemiBold;
+        font-size:14px;
+        color:#333; 
+        display:block;
+        width: auto;
+        border-radius:6px;
+        padding:0px;
+        margin:20px 0px;
+        line-height: normal;
+        height: auto;
+        background:#fff;
+        text-align: left;
+          p {
+          text-align: left;
+          }
+      }
+      a.feedback_close{
+        width:18px;
+        height:18px;
+        float:right;
+        margin:20px 20px 20px 0px;
+        *margin:20px 14px 20px 0px;
+        background:url(/images/system-alerts.png) no-repeat 0px -192px;
+        padding:0px;
+        cursor: pointer;
+        display: block;
+        line-height: normal;
+        text-decoration: none;
+      }
+      .feedback_icon{
+        width:27px;
+        height:27px;
+        margin:15px 15px 15px 20px;
+        display: block;
+        float: left;
+        line-height: normal;
+      }
+      .feedback_txt{
+  margin:20px 0px;
+  font-size:14px;
+        line-height:16px;
+        vertical-align:top;
+        width:auto;
+        height: auto;
+        padding: 0px 15px;
+      }
+      .neutral{
+        border:1px solid #0095D3;
+        background-color:#E1F2F7;
+      }
+      .neutral .feedback_icon{
+        background:url(/images/system-alerts.png) no-repeat 0px -55px;
+      }
+      .positive{
+         border:1px solid #6DB33F;
+         background-color:#E2F0D9;
+      }
+      .positive .feedback_icon{
+        background:url(/images/system-alerts.png) no-repeat 0px -87px;
+      }
+      .warning{
+        border:1px solid #FF8400;
+        background-color:#FFF5EB;
+      }
+      .warning .feedback_icon{
+        background:url(/images/system-alerts.png) no-repeat 0px -120px;
+      }
+      .critical{
+        border:1px solid #E00000;
+        background-color:#F7E4E4;
+      }
+      .critical .feedback_icon{
+        background:url(/images/system-alerts.png) no-repeat 0px -23px;
+      }
+
+/* for Modal Dialog */
+
+      .sys-modal-msg-desc{
+        margin:0px;
+        width:auto; height: auto;
+        padding: 60px 0px 55px 73px;
+        color: #333; display: block;
+        font-family:$font-stackSemiBold;
+        font-size: 18px; color: #333;
+        line-height: 18px;
+        *line-height:22px;
+      }
+
+      .vmw-modal-actions, .sys-modal-actions{
+        background:#E6E6E6;
+        border-top:1px solid #E6E6E6;
+        padding: 20px 40px 25px 40px;
+        width: auto; *width: 578px; 
+        height:auto;
+        }
+        .sys-modal-actions{
+           width: 100%; *width: 328px;
+           padding: 25px 40px 25px 40px;
+     height:80px;
+     *height:34px;
+        }
+        .vmw-modal-actions{
+     height:80px;
+     *height:34px;
+        }
+      .vmw-modal-actions .modal-btn, .sys-modal-actions .modal-btn{
+        padding:10px 16px; border-radius:5px;
+        margin:0px; line-height:10px; *line-height:6px;
+        text-align:center; height:30px;
+  font-family:$font-stackSemiBold; 
+        font-size:14px; color:#fff;
+        border:1px solid #ccc;
+        box-shadow:0px 0px 5px #ccc;
+        cursor:pointer; background:#fff;
+        color: #666; white-space: nowrap; 
+        display:inline-block; *overflow: visible;
+        }
+
+       .vmw-modal-actions .btn-secondary, .sys-modal-actions .btn-secondary{
+        color:#ffffff;
+        background: #0095D3; /* Old browsers */
+        background: -moz-linear-gradient(top, #0095D3 0%, #007FB4 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0095D3), color-stop(100%,#007FB4)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #0095D3 0%,#007FB4 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #0095D3 0%,#007FB4 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #0095D3 0%,#007FB4 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #0095D3 0%,#007FB4 100%); /* W3C */
+      }
+      .vmw-modal-actions .btn-primary, .sys-modal-actions .btn-primary{
+        *float:left; color:#666;
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(top, #ffffff 0%, #e6e6e6 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, #ffffff 0%,#e6e6e6 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, #ffffff 0%,#e6e6e6 100%); /* IE10+ */
+        background: linear-gradient(to bottom, #ffffff 0%,#e6e6e6 100%); /* W3C */
+      }
+
+      .btn_left{
+        float: left;
+      }
+      .btn_right{
+        float: right;
+      }
+
+      .vmw-modal-overlay, .sys-modal-overlay{
+        position:fixed;
+        top:0; left:0;
+        width:100%; height:100%;
+        background:#000;
+        z-index:1001; opacity:.75;
+        filter:alpha(opacity=75);
+      }
+
+      .vmw-modal-dialog, .sys-modal-dialog{
+        position:fixed;
+        width:660px; *width:658px; height:auto;
+        background:#fff; margin:0px;
+        border-radius:6px;
+        border:1px solid #E6E6E6;
+        box-shadow:0px 0px 5px #404040;
+        padding:0px; z-index:1002; 
+        display: block; 
+	top:21%; left:25%; 
+        p {
+             text-align: left;   
+        }
+      }
+
+      .sys-modal-dialog{
+        width:410px; 
+        *width:408px; 
+        top:35%; left:35%; 
+
+      }
+      .vmw-modal-dialog .vmw-modal-dialog-content,
+      .sys-modal-dialog .sys-modal-dialog-content{
+        width:auto;
+        height:auto;
+        margin:0px;
+        padding:0px;
+      }
+      .vmw-modal-close, .sys-modal-close{
+        width:18px;
+        height:18px;
+        float:right;
+        margin:15px 15px 0px 0px;
+        background:url(/images/system-alerts.png) no-repeat 0px -192px;
+        padding:0px;
+        cursor: pointer;
+        display: block;
+        line-height: normal;
+        text-decoration: none;
+        }
+      .vmw-modal-message{
+        margin:0px;
+        padding:0px 40px 40px 40px;
+        height:280px;
+        p {
+             text-align: left;   
+        }
+      }
+      .sys-modal-message{
+        margin:0px;
+        padding:0px 40px 0px 40px;
+      }
+
+
+      .vmw-modal-msg-desc{
+        margin:0px;
+        width:auto; height: auto;
+        padding: 30px 15px 0px 73px;
+        color: #333; display: block;
+        font-family:$font-stack;
+        font-size: 16px; color: #333;
+        line-height: 20px;
+      }
+
+      .vmw-modal-icon, .sys-modal-icon{
+        display: block;
+        float: left;
+        line-height: normal;
+        width:53px; height:53px;
+        margin:45px 20px 0px 0px;
+        background:url(/images/success.png) no-repeat 0px 0px;
+        border: none;
+      }
+      .caution.sys-modal-icon{
+         width:59px;
+      }
+      .sys-modal-icon{
+        margin:55px 20px 0px 0px;
+      }
+      .sys-modal-icon.caution{
+        background:url(/images/system-alerts_big.png) no-repeat -6px -63px;
+      }
+      .sys-modal-icon.warning{
+        background:url(/images/system-alerts_big.png) no-repeat -9px -3px;
+      }
+      
+      .vmw-modal-hdr{
+        margin:0px;
+        width:auto; height: auto;
+        padding: 65px 15px 0px 20px;
+        color: #387C2C; display: block;
+        font-family:$font-stack;
+        font-size: 32px;
+        line-height: 20px; 
+      }
+      .vmw_modal_txt_link{
+        padding-top:30px;
+        display:block;
+        font-family:$font-stack;
+        font-size:16px; 
+        line-height:16px;
+        *line-height:18px;        
+        color:#333;
+      }
+      .vmw_modal_txt_link a{
+        font:$font-stack;
+	    color:#006990;
+	    font-size:16px;
+	    *padding:0;
+      }

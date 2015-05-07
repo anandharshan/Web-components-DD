@@ -1,0 +1,35 @@
+Syntax:
+	Type 1
+<div vmf-pagination2 type="1" page-data="inputHTML"  [articles-per-page="2"]></div>
+	Type 2
+<div vmf-pagination2 type="2" page-data="inputHTML"></div>
+
+Configuration
+Common
+type String Literal       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: type = “1” or type=”2”                                                                                                              
+Type “1” and “2” correspond to patterns in VMware Pattern Library site. Only values “1” and “2” are allowed.
+
+page-data Variable[Object]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage:  {
+	    "articles": [
+	        {
+	            "article": "htmlString or simple text"
+	        },
+	        {
+	            "article": "htmlString or simple text"
+	        },
+	]}
+
+The data to be loaded by pagination component.
+
+	Type 2
+articles-per-page String Literal
+Mandatory:  No
+Default Value: “10”
+Usage: articles-per-page=”2”
+The number of items per page to be shown by pagination component.

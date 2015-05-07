@@ -1,0 +1,199 @@
+.vmf-hero-carouselWrapper {
+   width:100%;
+   position:relative;
+	overflow: hidden;
+	.vmf-hero-carousel {
+	    width:100%;
+		overflow: hidden;
+		height:auto;
+		.vmf-hero-carousel-strip{
+			width:10000px;
+			overflow: hidden;
+			.vmf-hero-carousel-img-caption{
+				position:relative;
+				overflow: hidden;
+				display: block;
+				float: left;
+				
+				img {
+					width:100%;
+					float: right;
+					display: none;
+					&.mobile{
+					display:inline;
+					}
+					&.desktop{
+						display:none;
+					}
+				}
+				.vmf-hero-carousel-blue-hero {
+					color: white;
+					float: left;
+					width: 100%;
+					left: 0;
+						position: absolute;
+						top: 0;
+					background-color: transparent;
+					
+					display: block;
+					margin-top: -4px;
+					div {
+						padding: 15px 40px 0 40px;
+						h2{
+							font-size: 20px !important;
+							margin-bottom: 10px;
+							width: 100%;
+							color: #FFFFFF;
+							font-family:$font-stackLight;
+							margin-top:0px;
+						}
+						p {
+							font-size: 14px ;
+							padding-bottom: 7px;
+							width: 100%;
+							margin-bottom: 0px;
+							line-height: 16px;
+							color: #FFFFFF;
+							font-family:$font-stack;
+						}
+						a{
+							font-size: 14px ;
+							background: url("../images/homepageHeroCarousel/arrow-white.png") center right no-repeat;
+							line-height:16px;
+							display: inline-block ;
+							padding-right: 12px ;
+							color: #FFFFFF;
+							padding-left:0px;
+							font-family:$font-stackSemiBold;
+						}
+					}
+				}
+			}
+		}
+	}
+	.vmf-carouselButton{
+		background: url("../images/homepageHeroCarousel/carousel-arrows-white.png") no-repeat;
+		background-color: #000;
+		opacity:0.7;
+		position: absolute;
+		width: 35px;
+		height: 45px;
+		top: 50%;
+		margin: -22.5px 0 0 0;
+		display: block;
+		text-indent: -999999em;
+		cursor:pointer;
+		&.back {
+			left: 0;
+			background-position: 0 0;
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+			float: none;
+			margin-left: 0;
+		}
+		&.next{
+			right: 0;
+			background-position: -33px 0;
+			-webkit-border-top-left-radius: 3px;
+			-webkit-border-bottom-left-radius: 3px;
+			-moz-border-left-topright: 3px;
+			-moz-border-left-bottomright: 3px;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+			float: none;
+			margin-right: 0;
+		}
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-tablet) { 
+.vmf-hero-carouselWrapper {
+		width:100%;
+		.vmf-hero-carousel {
+			background:none;
+			height:auto;
+			.vmf-hero-carousel-strip {
+				.vmf-hero-carousel-img-caption {
+					img {
+						&.mobile{
+						display:none;
+						}
+						&.desktop{
+							display:inline;
+						}
+					}
+					.vmf-hero-carousel-blue-hero {
+						left: 0;
+						position: absolute;
+						top: 0;
+						div {
+							padding: 40px 0 0 50px;
+							h2{
+							font-size: 36px !important;
+							margin-bottom: 10px;
+							width: 65%;
+							color: #FFFFFF;
+							font-family:$font-stackLight;	
+							}
+							p {
+								font-size:16px;
+							}
+							a{
+								font-size:16px;
+							}
+						}
+					}
+				}
+			}
+		}    
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-desktop) { 
+	.vmf-hero-carouselWrapper {
+		width:69.1%;
+		.vmf-hero-carousel {
+			background:none;
+			height:auto;
+			.vmf-hero-carousel-strip {
+				.vmf-hero-carousel-img-caption {
+					img {
+						&.mobile{
+						display:none;
+						}
+						&.desktop{
+							display:inline;
+						}
+					}
+					.vmf-hero-carousel-blue-hero {
+						left: 0;
+						position: absolute;
+						top: 0;
+						div {
+							h2{
+							font-size: 36px !important;
+							margin-bottom: 10px;
+							width: 65%;
+							color: #FFFFFF;
+							font-family:$font-stackLight;	
+							}
+							p {
+								
+							}
+							a{
+								
+							}
+						}
+					}
+				}
+			}
+		}    
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-desktop) { 
+
+}

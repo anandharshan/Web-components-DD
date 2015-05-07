@@ -1,0 +1,164 @@
+Syntax:
+<div class="vmf-table-quick-view-wrapper"><vmf-table ng-controller="QuickViewTableCtrl" [class="basic_nogrouping_table basic_nogrouping draggableContainerCls quick_tbl hover_tbl vmf_table_cls inline-edit"] data="data" columns="columns" options="options" [cell-renderers="cellRenderers"]></vmf-table></div>
+Configuration
+
+vmf-table Object
+It is a custom directive which renders the table, given below are the attributes used by the directive.
+
+class String
+Mandatory: No
+Default Value: <empty>
+Usage: class=" basic_nogrouping_table basic_nogrouping draggableContainerCls quick_tbl hover_tbl vmf_table_cls inline-edit"
+A string variable which consists of the class names [separated by space] to be applied for the table container DOM element.
+ng-controller Object
+Mandatory: Yes
+Default Value: <empty>
+Usage:  JS: app.controller (QuickViewTableCtrl, ['$scope', function ($scope) {...}])
+              HTML: ng-controller="QuickViewTableCtrl"
+
+A function which consists of the scope data, logical methods applicable for the quick view table
+
+data Array
+Mandatory: Yes
+Default Value: <empty>
+Usage:  Controller: 
+$scope.dataVariable =  [{
+dataField1 :"... ",
+dataField2 :"... ",
+enableQuickView:  {
+	dataField1: Boolean,
+	dataField2: Boolean
+}
+},{
+dataField1 :"... ",
+dataField2 :"... ",
+}]
+	HTML: data="dataVariable"
+
+An array of objects which represent the data of the table. The data fields given should match the columns field for data mapping to columns. The enableQuickView field is an object which has collection of Boolean data fields, quick view will be enable for the data fields which has the value as true.
+
+columns Array
+Mandatory: Yes
+Default Value: <empty>
+Usage:  Controller: 
+$scope.columnsVariable = [          {
+                title: titleVariable,
+                field: fieldVariable,
+                indexColumn: indexColumnVariable,
+  sort: sortVariable,  
+                sorted:sortedVariable,
+                thClass: thClassVariable,
+                draggable: draggableVariable,
+                colResize: colResizeVariable,             
+                width: widthVariable,
+	 editable: editableVariable
+            }]
+	HTML: columns="columnsVariable"
+
+An array of objects which represent the headers and other options like indexColumn, sort, drag and column resize to be applied for the table. The elaborate definitions are given below
+
+title String
+Mandatory: Yes
+	Default Value: <empty>
+	Usage:  title: 'ColumnTitle',
+A string variable which will be set as the title of the table column ('th').
+
+
+
+
+field String
+Mandatory: Yes
+	Default Value: <empty>
+	Usage: field: "dataField"
+A string variable representing a key which maps columns and data.
+
+indexColumn Boolean
+Mandatory: No
+	Default Value: "false"
+	Usage: indexColumn: true
+A Boolean variable when set to true will add sequential numbers for indexing the rows.
+
+sort Boolean
+Mandatory: No
+	Default Value: "false"
+	Usage: sort: "true"
+A Boolean variable when set to true will sort the table with respect to the column applied.
+
+sorted String
+Mandatory: No
+	Default Value: <empty>	
+	Usage:  sorted:'sort-desc'
+A string variable which specifies the type of the sort (ascending or descending) to be applied.
+
+thClass String
+	Mandatory: No
+	Default Value: <empty>
+	Usage:  thClass ="className"
+A string variable which consists of the class names [separated by space] to be applied for table 	headers ('th'). 
+
+draggable Boolean
+Mandatory: No
+	Default Value: "false"
+	Usage: indexColumn: true
+A boolean variable when set to true will enable table column drag and drop.
+
+colResize Boolean
+Mandatory: No
+	Default Value: "false"
+	Usage: sort: "true"
+A Boolean variable when set to true will sort the table will enable column resize.
+
+width Number
+Mandatory: No
+	Default Value: <empty>
+	Usage: width:40
+A numeric variable which sets the width of the column.
+editable Boolean
+Mandatory: No
+	Default Value: <empty>
+	Usage: editable:true
+ A Boolean variable when set to true will enable the table cell editable on click.
+
+
+options Object
+Mandatory: No
+Default Value: <empty>
+Usage: options = {
+          	            rowStrips: rowStripsVariable,
+            showManageColumn: showManageColumnVariable,
+            tableTitle: tableTitleVariable,
+            tableClass: tableClassVariable
+}
+An object literal which consists of options like rowStrips, showManageColumn, tableTitle, tableClass to be applied for the table. The elaborate definitions for the options are given below
+rowStrips Boolean
+Mandatory: No
+	Default Value: "true"
+	Usage: rowStrips: "true"
+A Boolean variable when set to true will apply different colors for alternate rows.
+
+showManageColumn Boolean
+Mandatory: No
+	Default Value: "false"
+	Usage: showManageColumn: "true"
+A Boolean variable when set to true will enable column show/hide.
+
+tableTitle String
+Mandatory: No
+	Default Value: <empty>	
+	Usage: tableTitle: "Table Title"
+A string variable which will be set as the title of the table.
+
+
+
+tableClass String
+	Mandatory: No
+	Default Value: <empty>
+	Usage:  tableClass="className"
+A string variable which consists of the class names [separated by space] to be applied for the table. 
+cell-renderers Object
+Mandatory: No
+Default Value: <empty>
+Usage: cellRenderersVariable = {
+		"dataField": "directiveToBeRendered"
+}
+An object literal which consists of methods for specified column fields to customize the appropriate rendered table cell ('td').

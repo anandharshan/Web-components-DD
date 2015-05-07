@@ -1,0 +1,25 @@
+Syntax:
+<vmf-content-rating title="ChooseRating" data-selected-option="3" maxoption="7" options="ratingOptions" name="radioName" model="radioModel"></vmf-content-rating>
+Configuration
+options  Variable [Array]       
+Mandatory: yes
+DefaultValue:<empty>
+The nav-menu array contains all the relevant information regarding the titles,  items in main menu  and its,sub menus.
+Configuration
+data-selected-option  variable [String]
+Mandatory: yes
+DefaultValue: 3
+Usage:  data-selected-option="3"
+This is data-selected-option is used to display a default selected(rating) value.
+Configuration
+Maxoption variable [String]
+Mandatory: No
+DefaultValue: 7
+Usage:  maxoption="7" 
+This maxoption variable is used to provide option for maximum number of radio buttons to be allowed in the component.
+Configuration
+model  variable [String]
+Mandatory: Yes
+DefaultValue: 3
+Usage:  model="radioModel 
+This model  variable is used to get the value of selected radio button.

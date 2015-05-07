@@ -1,0 +1,38 @@
+.vmf-bigfooter{
+	
+    .common-section{
+      .horizontal-menu{
+         li{
+            display: inline;
+            zoom: 1;
+      }
+      }
+    }
+	.wide-3{
+        width:28%;
+      }
+      .wide-4{
+        width:20%;
+      }
+      .wide-5{
+        width:16%;
+      }
+      .wide-6{
+        width:12%;
+      }
+	  .nav-section{
+		*min-width: 90%;
+		width: 90%;
+		padding-left:40px;
+		ul{
+			margin-top:24px;
+		}
+	  }
+	  .footer-bg{
+		margin-right:0px;
+	  }
+	  .nav-section-content{
+		display: inline-block;
+		width: 100%;
+	  }
+}

@@ -1,0 +1,243 @@
+.vmf-btn {	
+	padding:10px 20px;
+	margin:8px;
+	text-align: center;
+	display:inline-block;
+	font-family:$font-stackSemiBold;
+	font-size:$btn-default-font-size;
+	font-weight:$btn-font-weight;
+	border:1px solid #cecece;
+	@include border-radius($btn-default-border-radius);
+    line-height: 10px;
+    span{font-size:0.875rem;}
+    &.vmf-secondary{
+	@include linearGradient(top,$btn-default-bg-gradient-end,$btn-default-bg-gradient-start) ;
+	   color:$secondaryAnchorColor;
+        padding: 9px 19px;
+	}
+
+	&.vmf-secondary:hover{
+	@include linearGradient(top,$btn-default-bg-gradient-end,$btn-default-bg-gradient-end-hover) ;
+	}
+
+	&.vmf-secondary{
+        
+        &.vmfdisabled {	
+            background:$btn-default-bg-disabled;
+            color:$btn-default-color-disabled;
+            cursor: no-drop;
+            font-size:$btn-large-font-size;
+            padding: 10px 20px;
+    
+        }
+	}
+
+	&.vmf-primary{
+	@include linearGradient(top,$btn-primary-bg-gradient-end,$btn-primary-bg-gradient-start) ;
+	color:$btn-primary-color;
+	border:none;
+    }
+
+	&.vmf-primary:hover {	
+	background:$btn-primary-bg-gradient-end-hover;
+	filter:none;
+	}
+	&.vmf-primary.vmfdisabled {	
+	background:$btn-primary-bg-disabled;
+	cursor: no-drop;
+    font-size:$btn-large-font-size;
+    filter:none;
+	}
+	 
+	&.vmf-btn-large {
+	padding:$btn-large-padding;
+	font-size:$btn-large-font-size;
+        &.vmf-secondary{
+        padding: 14px 19px;
+            &.vmfdisabled {	
+           font-size: $btn-large-font-size;
+            padding: 15px 20px;
+        }
+        
+    
+        }
+	}
+	span.vmf-caret {
+	 	display: inline-block;
+		width: 0;
+		height: 0;
+		vertical-align: middle;
+		border-top: 6px solid;
+		border-right: 6px solid transparent;
+		border-left: 6px solid transparent;
+		margin-left:7px;
+	}
+
+}
+.vmf-btn-group {
+	position:relative;
+	display:inline-block;
+	.vmf-dropdown-btn-menu {
+        width:175px;
+		padding:10px 0;
+        border: 1px solid #CCCCCC;
+		position: absolute;
+		top: 80%;
+		left: 7px;
+		z-index: 1000;
+		float: left;
+		margin: 2px 0 0;
+		font-size: 14px;
+		text-align: left;
+		list-style: none;
+		background-color: #fff;
+		color:#000;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		//border: 1px solid rgba(0,0,0,.15);
+		@include border-radius(3px);
+		@include boxShadowValues(0 , 6px ,12px, 0,rgba(0,0,0,.175));
+		a {
+			display:block;
+		    font-size: 14px;
+		    padding: 0px 20px;
+            color: #333333;
+            line-height: 30px;
+		}
+		a:hover {background:$btn-group-dropdown-hover-color;}
+	}
+	.vmf-btn.vmf-active .vmf-dropdown-btn-menu {dispaly:block;}
+}
+
+.vmf-split-btn  .vmf-btn:first-child {
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+margin-right:0px;
+float:left;
+}
+.vmf-split-btn  .vmf-btn.vmf-primary:first-child {
+border-right:1px solid #fff;
+}
+.vmf-split-btn .vmf-btn:last-child:not(:first-child), .vmf-split-btn .vmf-dropdown-toggle:not(:first-child) span.vmf-caret ,  .vmf-btn-group .vmf-btn+.vmf-btn{
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+margin-left:0px;
+
+}
+
+//.vmf-btn-group .vmf-btn+.vmf-btn, .vmf-btn-group .vmf-btn+.vmf-btn-group, .vmf-btn-group .vmf-btn-group+.vmf-btn, .vmf-split-btn .vmf-btn+.vmf-//btn {
+//margin-left: -1px;
+//}
+.vmf-split-btn .vmf-btn.vmf-secondary+.vmf-btn.vmf-secondary {
+margin-left: 1px ;
+padding: 9px 8px;
+}
+
+.vmf-split-btn .vmf-btn.vmf-secondary.vmfdisabled+.vmf-btn.vmf-secondary.vmf_split_arrow {
+margin-left: 1px ;
+padding: 10px 8px;
+}
+.vmf-split-btn .vmf-btn.vmf-secondary.vmfdisabled.vmf-btn-large+.vmf-btn.vmf-secondary.vmf_split_arrow {
+margin-left: 1px ;
+padding: 15px 8px;
+}
+
+.vmf-split-btn .vmf-btn.vmf-primary+.vmf-btn.vmf-primary {
+padding: 10px 8px;
+
+}
+
+.vmf-split-btn .vmf-btn+.vmf-btn {
+padding: 10px 8px;
+//border-left: 1px solid #FFF;
+}
+//.vmf-split-btn .vmf-btn.vmf-secondary+.vmf-btn {
+//border-left: 1px solid #d0d0d0;
+//}
+
+
+.vmf-split-btn .vmf-btn.vmf-btn-large.vmf-primary+.vmf-btn {
+	padding: 15px 8px;
+	//border-left: 1px solid #FFF;
+
+}
+.vmf-split-btn .vmf-btn.vmf-btn-large.vmf-secondary+.vmf-btn {
+	border-left: 1px solid #d0d0d0;
+    padding: 14px 8px;
+}
+.vmf-split-btn .vmf-btn.vmf-btn-large.vmf-secondary+.vmf-btn {
+		border-left: 1px solid #d0d0d0;
+}
+.vmf-split-btn .vmf-btn+.vmf-btn span.vmf-caret {margin-left:0px;}
+.vmf-action-btns .vmf-labelHeader {
+    margin-top:15px;
+}
+.vmf-btn.vmf-icon-btn{font-size: 1.0rem;line-height: 1.3rem;}
+.vmf-btn .vmf-shopping{
+	background:url("/images/shopping-cart_1.png") no-repeat top left;
+    width:15px;
+	height: 10px;
+	display: inline-block;
+	margin-left: -5px;
+    margin-top:-2px;
+	margin-right: 5px;
+    vertical-align: middle;
+}
+.vmf-dropdown-btn-menu hr{border-top: 1px dotted #666; margin: 0px;}
+
+
+
+.vmf-split-btn .vmf-dropdown-btn-menu{
+    top:78%; left:8px;
+}
+
+.vmf-split-btn .vmf-btn.vmf-btn-large+div .vmf-dropdown-btn-menu {
+    top:82%; left:8px;
+}
+    
+.vmf_action_comp .vmf-dropdown-btn-menu{
+    top:78%; left:8px;
+}
+.vmf_action_comp .vmf-btn.vmf-btn-large+div .vmf-dropdown-btn-menu{
+    top:82%; left:8px;
+
+}
+.vmfdisabled_true a{
+        background:#DBDBDB; color:#fff;
+        font-family: $font-stackSemiBold;
+        font-size: 16px; border: none; line-height:10px;
+        padding:10px 10px 10px 20px; border:none; margin-right: 0px;
+        cursor:no-drop; float:none; display: inline-block;
+    }
+    .vmf-split-btn a{
+        padding:10px 20px; border:none; line-height: 10px;
+    }
+    .vmf-split-btn a.vmf-btn-large{
+
+        line-height: 10px;
+
+    }
+    .vmfdisabled_true .vmf-btn, .vmf-split-btn .vmf-btn{
+       // margin:10px; 
+    }
+
+    .vmf-split-btn .vmf-secondary {
+        border:1px solid #D0D0D0; 
+
+    }
+    .vmf-btn-group .vmf-btn-large{
+    padding:15px 20px;
+    }
+
+.vmf-btn-group {
+    .vmf-btn:first-child {
+          padding-left: 10px;
+    }
+}
+
+.vmf-btn.vmf-primary span, .vmf-btn.vmf-secondary span{ font-family: proximanovaSemiBold; }
+.vmf-btn-group .vmf-dropdown-btn-menu .vmf-divider{border-top: 1px dotted #666; }
+.vmf_action_comp.vmfdisabled_true .vmf-btn.dropdown.vmfdisabled{padding: 10px 20px;}
+.vmf_action_comp.vmfdisabled_true .vmf-btn.dropdown.vmfdisabled.vmf-btn-large {padding: 15px 20px;}
+.vmf-btn.icon-btn{font-size: $btn-large-font-size;}
+.vmf-btn.vmfdisabled.vmf-secondary.vmf-btn-large, .vmf-btn.vmfdisabled.vmf-secondary {border: none;filter:none;}

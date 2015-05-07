@@ -1,0 +1,48 @@
+.vmf-marginwrapper {
+	margin:20px;
+	text-align:center;
+    p {
+        margin:0;
+        padding-top:30px;
+        font-family:$font-stack;
+        color:$vmf-gray-darker;
+        text-align:center;
+        a {
+            color:$link-color;
+            text-decoration:none;
+          }
+        &.vmf-secondwrapper {
+            padding-bottom:55px; 
+            padding-top:19px;
+        }
+    }
+}
+.vmf-imgwrapper {
+	padding-top:39px;
+	text-align:center;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-tablet) { 
+    .vmf-marginwrapper {
+        
+        margin: 0 auto;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-desktop) { 
+     .vmf-marginwrapper {
+       
+        padding:0 180px;
+     }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-desktop) { 
+
+}
+
+
+
+

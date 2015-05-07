@@ -1,0 +1,168 @@
+<!--Form Template-->
+
+<div ng-controller="formRegistrationController" class="vmf-formValidator registrationForm vmf-formTemplate">
+
+    <form name='vmfCustomFormTemplate' class="registrationPageForm" submit-callback="registrationFormSubmit()" novalidate ng-show="showRegistration">
+
+        <div class="formRegistrationTemplate">
+            <div class="vmf-breadcrumb-container">
+                <div vmf-bread-crumb options="breadcrumbPath">
+                </div>
+            </div>
+            <h1 class="registrationHead">Update My VMware Profile</h1>
+
+            <p class="subhead">To complete your request, check and update your profile, enter any missing information and agree the End-user Licence Agreement at the bottom of the form.</p>
+
+            <div information-message info-message="{{infomessage}}" is-info-message='isInfoMessage' info-type='{{warningtype}}'></div>
+
+
+            <div class="formRegistrationSection">
+                <span class="mandatory requiredFeild">* Required Fields</span>
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" name="fname" model="user.firstName" hint="Enter First Name" title="First Name" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"alphabets"},{"name" : "minLength" , "value" : "6"}, {"name" : "maxLength", "value" : "20"}]'></vmf-text-input>
+                </div>
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" name="lname" model="user.lastName" hint="Enter Last Name" title="Last Name" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"alphabets"},{"name" : "minLength" , "value" : "6"}, {"name" : "maxLength", "value" : "20"}]'></vmf-text-input>
+                </div>
+                <div class="form-group selectInfo clearfix">
+                    <div vmf-select-list name="revenueVal" dtitle="Total Revenue" model="user.revenue" select-col-mod="col-md-3" title-col-mod="col-md-3" list="revenuesObj" title="Selection" mandatory="true" custom-class="customclass" validation='[{"name":"selectOne"},{"name":"required"}]'>
+                    </div>
+                    <span class="toolTip-icon vmf-tooltip" vmf-tooltip tooltip-options="{'position':'right','text':'<h5>Total Revenue</h5> Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed'}"></span>
+                </div>
+
+                <div class="form-group clearfix formRadioGroup">
+                    <vmf-radio-group type="1" rtitle="radioTitle" options="radioOptions" name="radioName" title-col-mod="col-md-3" model="user.radioModel" custom-class="customclass" mandatory="true" validation='[{"name":"radio"},{"name":"required"}]'>
+                    </vmf-radio-group>
+                </div>
+
+
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" name="email" model="user.email" hint="joe.smith@corp.com" title="Email Address" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"email"}]' target-ele="col-md-4" vmf-tooltip tooltip-options="{'position':'right','text':'<h5>Total Revenue</h5> Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed'}"></vmf-text-input>
+                </div>
+
+
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" name="companyName" model="user.company" hint="Enter Company Name" title="Company Name" custom-class="customclass" mandatory="true" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"alphabets"},{"name":"maxLength","value":"50","message":"Maximum 50 characters only allowed"}]'></vmf-text-input>
+                </div>
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" name="phone" model="user.phone" hint="Phone Number" title="Phone Number" custom-class="customclass" mandatory="true" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name" : "maxLength", "value" : "15"},{"name":"phonenumber"}]'></vmf-text-input>
+                </div>
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" name="dunsNumber" model="user.duns" hint="DUNS Number" title="DUNS Number" custom-class="customclass" mandatory="true" class="formInputClass vmf-text-input" validation='[{"name":"digits","message":"Only digits allowed"},{"name":"required"},{"name":"maxLength","value":"10","message":"Maximum 10 digits only allowed"}]'></vmf-text-input>
+                </div>
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" hint="Enter Zip Code" name="zipCode" model="user.postalCode" title="Zip/Postal Code" mandatory="true" custom-class="customclass" class="formInputClass form_zip_code vmf-text-input" validation='[{"name":"digits","message":"Only digits allowed"},{"name":"required"},{"name":"maxLength","value":"6","message":"Maximum 6 digits only allowed"},{"name":"zipcode"}]'></vmf-text-input>
+
+                </div>
+
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" hint="xxx.xxx.xxx.xxx" name="ipAddress" model="user.ipAddress" title="IP Address" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"ipaddress"}]'></vmf-text-input>
+
+                </div>
+
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" hint="Reference URL" name="referenceURL" model="user.url" title="Hyperlink" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"url"}]'></vmf-text-input>
+                </div>
+
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" hint="Number (6 - 20)" name="numberLimit" model="user.limits" title="Number Limits" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"digits"},{"name":"minvalue","value":"6","message":"Minimum Value is 6"},{"name":"maxvalue","value":"20","message":"Maximum value is 20"}]'></vmf-text-input>
+                </div>
+
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" hint="Credit Card" name="creditCard" model="user.creditCard" title="Credit Card" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"digits"},{"name":"creditcard"},{"name":"maxLength","value":"16","message":"Maximum 16 digits only allowed"}]'></vmf-text-input>
+                </div>
+
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" hint="10 to 40 only" name="rangeLength" model="user.rangeLength" title="Range Length" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"numbers"},{"name":"rangelength","value":[10,40]}]'></vmf-text-input>
+                </div>
+
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" hint="Type Validation" name="typeValidation" model="user.equalTo" title="Type the same" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"equalTo","value":"Validation","message":"Please type Validation in the field"}]'></vmf-text-input>
+                </div>
+
+                <div class="form-group clearfix">
+                    <vmf-text-input type="normal" hint="Alphanumeric Value" name="alphaNumeric" model="user.alphanumeric" title="Alpha Numeric" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" validation='[{"name":"required"},{"name":"alphanumeric"},{"name":"validationonenumber"},{"name":"validationonealphabet"},{"name":"validationnospecialchars"}, {"name" : "maxLength", "value" : "20"}]'></vmf-text-input>
+                </div>
+
+                <div class="vmf-pwd-wrapper">
+                    <div class="passwordFormField" novalidate>
+
+
+                        <div class="form-group clearfix passwordRow">
+                            <vmf-text-input type="password" option-id="password" name="password" class="formInputClass vmf-text-input" hint="Enter Password" title="New password" model="pw" mandatory="true" custom-class="customclass" validation='[{"name":"required"},{"name" : "minLength" , "value" : "6"}, {"name" : "maxLength", "value" : "20"}, {"name" : "validationonealphabet"}, {"name" : "validationonenumber"}, {"name" : "validationoneuppercaseletter"},{"name":"pswd"}]' id="pw"></vmf-text-input>
+                        </div>
+                        <div class="strengthContainer col-sm-5">
+                            <span class="strSubHead" id="strSubHead">Password strength</span>
+                            <ul id="strength" check-strength="pw" class="strengthDis"></ul>
+                            <p class="strengthDesc">Make sure your password contains 6-20 character. Combine numbers, symbols and upper cases to increase strength</p>
+                        </div>
+
+                        <div class="form-group clearfix passwordRow">
+                            <vmf-text-input type="password" option-id="conformPassword" name="conformPassword" class="formInputClass vmf-text-input" hint="Confirm Password" title="Verify new password" model="user.confirm_password" mandatory="true" custom-class="customclass" validation='[{"name":"required"},{"name" : "confirmpassword","confirm_with" : "password" , "message" : "Password doesnt match"}]'></vmf-text-input>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="form-group vmf-confirmation formTemplate-buttonDeviders ">
+                <h2>Terms of Use Licence Agreements</h2>
+                <!-- <div vmf-checkbox-group class="vmf-checkbox-group vmf-termsCheck vmf-footerMandatory" options="checkBoxOptions2" type="2" name="checkBoxName2" model="user.checkBoxModel2" custom-class="customclass"></div> -->
+                <div vmf-checkbox-group class="vmf-checkbox-group vmf-footerMandatory" validation='[{"name":"required"}]' append="true" type="1" model="user.checkBoxModel" name="checkBoxName1" c-label="checkBoxOptions2[0].text" c-disabled="checkBoxOptions2[0].disabled"></div>
+                <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="user.checkBoxModel2" name="checkBoxName2" c-label="checkBoxOptions2[1].text" c-disabled="checkBoxOptions2[1].disabled"></div>
+            </div>
+
+
+            <div class="form-group pull-right">
+                <input type="submit" value="Continue" id="formSubmit" class="vmf-btn vmf-primary">
+                <input type="reset" value="Cancel" id="formReset" class="vmf-btn vmf-secondary">
+            </div>
+
+        </div>
+    </form>
+    <form name='vmfCustomFormTemplate' class="checkEmail clearfix" submit-callback="checkEmailFormSubmit()" novalidate>
+
+        <div class="formRegistrationTemplate">
+            <h1 class="registrationHead">Check Your Email</h1>
+            <p class="subhead">Thanks for registering to my Vmware. You're almost done.</p>
+            <p>We sent you an email with instructions for completing your registration for tom@company.com. The messgae should arrive within 10 minutes. If you provided the wrong email address, please go back and register with the correct address.</p>
+            <p>If you do not receive the email:</p>
+            <ul>
+                <li>Check your junk or spam mail folder.</li>
+                <li>Add <strong>"donotreply@vmware.com"</strong> to your email contacts list or whitelist.</li>
+                <li>Ask your IT department to add <strong>"donotreply@vmware.com"</strong> to your email whitelist.</li>
+            </ul>
+            <p>To send the email instruction again, click below or <a href="">Contact Support</a>
+            </p>
+            <a class="vmf-btn vmf-primary contVMWare" href="http://vmware.com"> Resend Email</a>
+            <input type="submit" value="Continue" id="formSubmit" class="vmf-btn vmf-primary" ng-click="checkEmailFormSubmit()" />
+
+        </div>
+    </form>
+    <form name='vmfCustomFormTemplate' class="passwordForm" submit-callback="pswdConformationFormSubmit()" novalidate ng-show="showPswdReEneter">
+
+        <div class="formRegistrationTemplate formResetSection">
+            <h1 class="registrationHead">Re-enter your Password</h1>
+            <p class="subhead subheadDivider">Enter your password to complete activation for abc@gmail.com.</p>
+            <div class="form-group clearfix">
+                <vmf-text-input type="password" option-id="rpassword" name="rpassword" class="formInputClass vmf-text-input" hint="Enter Password" validation='[{"name" : "minLength" , "value" : "6"}, {"name" : "maxLength", "value" : "20"}, {"name" : "validationonealphabet"}, {"name" : "validationonenumber"}, {"name" : "validationoneuppercaseletter"}]' title="Enter Password" model="user.reEnterPassword" custom-class="col-md-9"></vmf-text-input>
+                <input type="submit" value="Continue" class="vmf-btn vmf-primary pull-right" />
+            </div>
+
+        </div>
+    </form>
+
+    <div class="formRegistrationTemplate activationForm" ng-show="showAccActivated">
+        <div class="vmfWpbTask">
+            <span class="completeSubHead col-md-12 ">Account Activated!</span>
+            <p class="statusText subheadDivider">You have succesfully activated My VMware account. If you are not automatically redirected within 15 seconds, click "Continue to My VMware" to proceed.</p>
+            <a class="vmf-btn vmf-primary contVMWare" href="http://vmware.com"> Continue to My VMware</a> 
+        </div>
+    </div>
+
+</div>

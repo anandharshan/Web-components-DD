@@ -1,0 +1,26 @@
+Syntax:
+<vmf-modaless-popup vmf-draggable="true" drag-element="modal-content" htitle="Heading" buttonTitle="Modal Large" back="back" data-id="vmf-modal1"  btitle="Next" class="vmfModalChange modalessOverlay">
+Configuration
+vmf-draggable  variable [Boolean]
+Mandatory: Yes
+DefaultValue:true 
+Usage:  vmf-draggable="true" 
+This vmf-draggable variable is set to to make the modaless dragable. If it is false then modaless cannot be dragable.
+Configuration
+htitle  variable [String]
+Mandatory: Yes
+DefaultValue:<empty> 
+Usage:  htitle="Heading"
+The htitle  variable is a title for the button which opens the  modaless overlay when clicked on it.
+Configuration
+btitle variable [string]
+Mandatory: Yes
+DefaultValue: :<empty>   
+Usage:  btitle="Next" 
+This btitle  variable is a title for the button  inside the  modaless overlay.
+Configuration
+drag-element  variable [string]
+Mandatory: Yes
+DefaultValue: :<empty>  
+Usage:  drag-element="modal-content" 
+This drag-element  variable represents a div which is dragable.

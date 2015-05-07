@@ -1,0 +1,15 @@
+{
+
+    "Radio": {
+        "url": "/Radio",
+        "templateUrl": "../template.html",
+        "activelink": "Radio Buttons",
+        "url": "radioButtons/index.html",
+        "ctrl": "radioButtons/radioController.js",
+        "direc": "radioButtons/radioDirectives.js",
+        "plink": "http://ui-patterns.vmware.com/2014/web-app/radio-buttons"
+
+    }
+
+
+}

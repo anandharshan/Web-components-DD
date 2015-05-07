@@ -1,0 +1,138 @@
+.pageContainer {
+    max-width: 100%;
+    margin: 8px 10px 0;   
+}
+body {
+&.vmf-customTemplate{
+    background-position: 0 -10px;
+    .vmf-UtilityNavContainer{
+        background: transparent;
+        .utilityContainer {
+            .page-eyebrow {
+              background: transparent;
+            }   
+        }   
+    }
+}
+}
+.vmf-GridMainContainer {
+    margin-bottom: 30px;
+    color: $vmf-gray-darker;
+    .vmf-heroContent {
+        margin: 10px 0;
+        background: $utility-MainBckgrnd;
+        padding: 30px 45px;
+        min-height: 100px;
+    }
+    .vmf-quickLinks {
+        margin: 10px 0;
+        background: $utility-MainBckgrnd;
+        padding: 30px 45px;
+        min-height: 100px;
+    }
+}
+.vmf-gridGlobalNavContainer {
+    min-height: 100px;
+}
+.vmf-GridSectionContainer {
+    color: $vmf-gray-darker;
+    .vmf-GridIntrdctn, .vmf-GridProducts, .vmf-GridOverview {
+        min-height: 70px;
+        margin: 15px 0;
+        padding: 30px 45px;
+        background: $utility-MainBckgrnd;
+    }
+}
+.vmf-MainContainer {
+    min-height: 350px;
+    background-color: $utility-MainBckgrnd;
+    margin-top: 10px 0;
+    color: $vmf-gray-darker;
+    background: $vmf-bgColor;
+    padding: 30px 45px;
+   
+}
+.vmf-UtilityNavContainer {
+    height: 40px;
+    background: $utility-navBckgrnd;
+    color: $utility-FontColor;
+}
+
+.vmf-GlobalNavContainer {
+    min-height: 70px;
+}
+.vmf-FooterContainer {
+    min-height: 150px;
+    background: $utility-FooterBckgrnd;
+}
+.vmf-GridFooterContainer {
+    min-height: 150px;
+    background: $utility-FooterBckgrnd;
+    margin-top: 25px;
+}
+.vmf-utilityLogo {
+    width: 172px;
+    height: 27px;
+    background: url(/images/logo-b.png) no-repeat;
+    vertical-align: middle;
+}
+.noPadding {
+    padding: 0;
+}
+
+.nav-color {
+    background: $utility-GlobalBckgrnd;
+}
+
+@media (min-width: $screen-tablet) {}
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-desktop) {
+   .pageContainer {
+        margin: 8px 50px 0;
+    }
+    .vmf-bigfooter {
+        padding: 0px 50px;
+    }
+    .vmf-GridMainContainer {
+        .vmf-heroContent {
+            margin: 0 10px 0 0;
+            min-height: 400px;
+        }
+        .vmf-quickLinks {
+            min-height: 400px;
+            margin: 0 0 0 20px;
+        }
+    }
+    .vmf-GridSectionContainer {
+        .vmf-GridIntrdctn, .vmf-GridProducts, .vmf-GridOverview {
+            height: 470px;
+        }
+        .vmf-GridIntrdctn {
+            margin: 0px 20px 0px 0px;
+        }
+        .vmf-GridProducts {
+            margin: 0px 10px;
+        }
+        .vmf-GridOverview {
+            margin: 0px 0px 0px 20px;
+        }
+    }
+  
+}
+
+
+@media (min-width: $screen-vlg) { 
+    
+   
+    .pageContainer,.vmf-footerWrap {
+        max-width: 1510px;
+        margin:0px auto;
+    }
+    .utilityContainer .max-width {
+        max-width: 1520px;
+        margin:0px auto;
+    }
+    
+       
+}

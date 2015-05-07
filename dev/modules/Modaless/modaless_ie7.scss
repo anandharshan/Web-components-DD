@@ -1,0 +1,133 @@
+.modaless-dialog {
+    width: 770px;   
+    /*height: auto;*/   
+    position: fixed; 
+    z-index: 1050; 
+    bottom: 1%; 
+    right: 1.5%;
+    left: auto;
+    top: auto;
+        .modal-content{
+            max-height: 583px; 
+        } 
+        .modaless-head {
+            height: 65px;
+            .modaless-title{
+                float:left;
+                font-size: 24px;
+                height: 20px;
+            }
+            .modaless_icons {
+                padding:0px;
+                height: auto;
+                    a{
+                        padding:0px;
+                    }
+            }
+            .up_icon-grp{
+                a{
+                    padding:0px;
+                }
+            }
+        }
+    &.modaless_mini{
+    	left: auto;
+    	right: 0; 
+	width: 516px;
+	height: 70px;
+	.modal-content{ 
+		height:68px;
+	}
+
+    }
+
+    &.modaless_upload{
+        width:517px;
+        height:119px; 
+        padding: 0px;
+        .modaless_up_head{ 
+            .modal_up-title{
+                display: inline-block;
+                line-height: 18px;
+                margin-top: 25px;
+            }
+            .modal_up-try{
+                position: absolute;
+                margin-top: 24px;
+                line-height: 20px;
+            }
+        }
+        .modal-content{
+            height: 117px;
+        }
+        .modaless_up_body{
+             .up_pro_bar{
+                height: 45px;
+            }
+            .up_pro_txt{
+                position: absolute;
+                left: 40px;
+            }
+        }
+    }
+      .modaless-footer{
+	  .rightButton .vmf-btn.vmf-secondary{
+		  margin-left: 20px;
+	  }
+	  }
+} 
+    .modaless-footer{
+         display: block;
+         overflow: hidden;
+         .vmf-btn{
+              margin: 0px;
+              display:inline-block;
+              float:none;
+              width:auto;  
+         } 
+         .rightButton{
+              float:right;
+              button{
+                   margin: 0px 0px 0px 20px;
+              }
+         }
+         .vmf-back-btn {
+              margin-left:0;
+         }
+         button{
+         	line-height: 6px;
+         	padding-top: 7px;
+         	padding-button: 7px;
+         	height:30px;
+         }
+    } 
+
+
+vmf-modaless-popup{
+.modalLoad.modal-open{
+    .modaless-body{ 
+        width: auto;
+        max-height: 402px; /*height:402px*/
+    }  		 
+.modaless-footer{
+    .rightButton {
+        button {
+
+            margin-left:20px;
+        }
+        .vmf-btn.vmf-secondary{
+      margin-left: 16px;
+         }
+           }
+    }
+
+}
+}
+ /*.modalessOverlay {
+      .modalLoad.modal-open{
+          .modaless-body{ 
+              height:445px;
+          }      
+      }
+    }*/
+    

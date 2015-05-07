@@ -1,0 +1,20 @@
+<!--Auto Complete Button component code -->
+
+<div ng-controller="autocompleteCtrl">
+    <div class="row">
+        <div class="col-md-12 ol-md-12">
+            <h4>Auto Complete Search</h4> 
+            <div class="vmf-autocomplete-input vmf-autocomplete-search" vmf-autocomplete-input type="psearch" name="userForm" model="user.psearch" search-model="data.list" hint="Search All Downloads" clear-text-length="3" psearch-callback="user.psearchCallback"></div>
+        </div>
+    </div>
+    <h4 class="clearfix">Auto Complete on a form field</h4>
+    <div class="row">
+        <label class="col-md-3 formLabel formLabelLineHeight">Normal Search box</label>
+        <div class="col-md-4">
+            <div class="vmf-autocomplete-input" vmf-autocomplete-input type="psearch" theme="normal" name="userForm" model="user.psearch1" search-model="data.list" hint="Search All Downloads" clear-text-length="3" psearch-callback="user.psearchCallback"></div>
+        </div>
+
+    </div>
+
+
+</div>

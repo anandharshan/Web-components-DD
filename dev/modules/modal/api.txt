@@ -1,0 +1,20 @@
+<modal-popup title="Modal Title 1" buttonTitle="Modal Small" data-id="vmf-modal1" onback="backFun(2)" class="vmfModalChange">
+        <div ng-include="'dev/modules/modal/template/1.html'"></div>
+    </modal-popup>      
+or
+
+    <modal-popup size="lg" title="Modal Title 2" buttonTitle="Modal Large" back="back" onback="backFun(1)" data-id="vmf-modal2" class="vmfModalChange">
+        <p>Content</p>
+    </modal-popup>
+Configuration
+title  variable  [string] 
+Mandatory: Yes
+DefaultValue: "Modal Title 1"
+Usage:   title="Modal Title 1" 
+This title variable is a title for the button which is used to display either of small modal over lay overlay or large over lay depending upon the title value.
+ Configuration 
+buttonTitle  variable  [string] 
+Mandatory: Yes
+DefaultValue: "Modal Small "
+Usage:   buttonTitle="Modal Small" 
+This buttonTitle  variable is used to display either small modal overlay or large over lay depending upon the buttonTitle value.

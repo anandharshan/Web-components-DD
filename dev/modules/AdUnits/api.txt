@@ -1,0 +1,78 @@
+Syntax:
+<vmf-ad-unit adtype="primary" datasource="primary"> </vmf-ad-unit>
+Configuration
+
+adtype Variable [Primitive]
+Mandatory: Yes
+Default Value: <empty>
+Usage: adtype = "primary"
+The variable will inform type of ad unit to be displayed, The possible value are "primary", "secondary", "expiry", "tertiary", " buyUpgrade",  "sidPromotion",  "modal".
+datasource  Array | Object
+Mandatory: Yes
+Default Value: <empty>
+Usage:  datasource =" primary"
+A simple array or an array of objects which will contains source of data for the specific ad units. The object type will vary based on the "ad type" attribute. The object key and value types are as follow.
+adtype : "primary"
+datasource  : {
+        company:  String ,
+        productName:  String,
+        productSplName: String,
+        versionNumber: String | Number,
+        cost: String | Number,
+        labelBuy: String,
+        buyThisInfo:  String,
+        upgradeInfo:  String,
+    }
+adtype : "secondary"
+datasource  : [{
+            heading: String,
+            subHeading: String,
+            bulletList: [{
+                type:  String,
+                info: String,
+            }]
+} ]
+
+adtype  : "expiry"
+datasource : {
+        offAmount: String,
+        offLabel: String,
+        productName: String,
+        btnApply: String,
+        applyByDate: String,
+}
+
+adtype  : "tertiary"
+datasouce : {
+heading: String,
+        listItems: [{
+            type: String,
+            info: String,
+       }]
+        btnViewAll: String,
+}
+adtype  : "buyUpgrade"
+datasouce : {
+       company: String,
+        productName: String,
+        versionNumber: Number,
+        buyThisInfo: String,
+        upgradeInfo: String,
+        btnBuy: String,
+        btnUpgrade: String
+}
+
+adtype  : "sidPromotion"
+datasouce : {
+       costOff: String | Number,
+        productName: String,
+        expiryDate: String,
+        btnApply: String,
+}
+
+adtype  : "sidPromotion"
+datasouce : {
+        modalTitle: String,
+        viewPromotionPage: String,
+        btnClose: String
+}

@@ -1,0 +1,72 @@
+.vmf-autoComplete {
+    margin: 10px 0px;   
+    input {
+        &.vmf-autocomplete-text-area {
+            padding: 13px 15px 10px;
+            font-size:16px;
+            line-height:16px;
+        }
+        &.vmf-autoComplete-searchBtn {
+            padding: 0px 15px;
+        }
+        &.placeholdersjs {
+            color:#999;
+        }        
+    }
+    input[type="text"] {
+        height:18px;      
+    }    
+}
+h4 {
+     clear:both;   
+}
+.vmf-autocomplete-input {
+    input[type='text'] {
+        width: 94%;        
+        &.placeholdersjs {
+            color:$vmf-placeholderColor;
+        }
+    }
+}
+
+.vmf-autocomplete-input .searchArea.active .searchWrap {
+    top:35px;
+    width:100%;
+}
+.vmf-autocomplete-input .searchArea .vmf-autoComplete ul.searchWrap{
+    padding:8px 0 13px 0;
+    z-index: 9999;
+    width:100%;
+    li {
+        a {
+            font-size:14px;
+        }
+    }
+}
+.searchArea {    
+     &.active {
+         z-index: 10000;         
+         .vmf-autoComplete {
+             z-index: 10000;
+             float: left;
+         }
+     }
+}
+.vmf-autoComplete {
+        width: 415px;
+        input[type="text"]{
+            width: 348px;
+            height: 18px;
+        }
+        &.vmf-autoComplete-searchBtn {
+                width: 15px;
+        }
+}  
+.vmf-autocomplete-input .searchArea  input[type="text"] {
+        line-height:16px;        
+}
+
+.vmf-autoComplete.vmf-autocomplete-search input[type="text"] { 
+    height: 18px;
+    line-height:16px;
+}

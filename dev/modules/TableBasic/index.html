@@ -1,0 +1,24 @@
+﻿     <!-- Table Basic-->
+
+    <vmf-table  class="basic_nogrouping_table basic_nogrouping draggableContainerCls responsive_table"
+        ng-controller="BasicTableCtrl"
+        table-pagination = "true"
+        table-pagination-pattern = "patternone"
+        data="data"       
+        columns="columns"
+        options="options"
+        cell-renderers="cellRenderers">
+    </vmf-table>
+    
+<br />
+<br />
+
+    <vmf-table
+        ng-controller="SubscriptionServiceTableCtrl" class="basic_nogrouping_table basic_nogrouping subscription_tbl responsive_table"
+        data="data"
+        table-pagination = "true"
+        table-pagination-pattern = "patterntwo"
+        columns="columns"
+        options="options"
+        cell-renderers="cellRenderers">
+    </vmf-table>

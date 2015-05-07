@@ -1,0 +1,43 @@
+Calendar
+Syntax:
+Type 1 :
+<div vmf-calendar-single sdate="startdate" edate="enddate" class="vmf-calendar-drop" >
+
+Type 2 :
+
+<div vmf-calendar  class="vmf-calendar-drop"  historic="historic" startyear=”startyear” endyear=”endyear”>
+</div>
+
+Configuration
+
+Type 1 :
+sdate  Variable [String in date format] “dd/mm/yyyy”
+Mandatory: Yes
+
+Usage: sdate = "01/01/1990"
+Determines the starting range of calendar
+
+edate  Variable [String in date format] “dd/mm/yyyy”
+Mandatory: Yes
+
+Usage: edate ="31/12/2090"
+Determines the end range of calendar
+
+
+
+Type 2 :
+
+startyear  Variable [String in date format] “yyyy”
+Mandatory: Yes
+
+Usage: startdate = "1990"
+Determines the starting year range of calendar
+
+endyear  Variable [String in date format] “yyyy”
+Mandatory: Yes
+
+Usage: enddate ="2090"
+Determines the end range year range of calendar
+
+
+

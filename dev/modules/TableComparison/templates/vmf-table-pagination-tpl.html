@@ -1,0 +1,40 @@
+<div class="vmfpaging"  ng-if="patternone">
+  <ul>
+    <li ng-class="prevPageDisabled()">
+      <a href ng-click="prevPage($event)">
+        PREV
+      </a>
+    </li>
+    <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+      <a href="#">
+        {{n+1}}
+      </a>
+    </li>
+    <li ng-class="nextPageDisabled()">
+      <a href ng-click="nextPage($event)">
+        NEXT
+      </a>
+    </li>
+  </ul>
+</div>
+<div  ng-if="patterntwo" class="pagination_container">
+  <div  class="pagination_pagination">
+    <div class="symbol_pagination_prev">
+    <span class="pagination_previous_1" ng-class="prevPageDisabled()" ng-click="prevPage($event)"> &lt;
+    </span>
+  </div>
+    <span class="pagination_pattern_two">
+      Page 
+      <input type="text" class="pagination_page_box" ng-model="currentPageBox" ng-keydown="setTextbox($event)">
+      of {{pageCount()+1}}
+    </span>
+  <div class="symbol_pagination_next">
+    <span class="pagination_next_1" ng-class="nextPageDisabled()" ng-click="nextPage($event)"> &gt; 
+      </span>
+    </div>
+    <select select-items-per-page-option  ng-model="selectedCount">
+    </select>
+ 
+  </div>
+  
+</div>

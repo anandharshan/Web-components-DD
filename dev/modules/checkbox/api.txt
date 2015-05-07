@@ -1,0 +1,77 @@
+Syntax:
+<div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[0].checked" name="checkBoxName2" [c-label="checkBoxOptions[0].text"] [c-disabled="checkBoxOptions[0].disabled"] [append=”StringText”]>
+</div>
+		Or
+<div vmf-checkbox-group class="vmf-checkbox-group" type="2" options="checkBoxOptions2" name="checkBoxName" [ctitle="checkBoxTitle"] [mandatory="StringText"] [custom-class="customclass"]> </div>
+
+Configuration
+
+type String Literal       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: type = “1” or type=”2”                                                                                                              
+Type “2” corresponds to a group of radio inputs and type “2” corresponds to an individual radio input. The values allowed are only “1” and “2”.
+
+model Variable [Boolean]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: model = “country”                                                                                                              
+The variable which contains information whether a checkbox is selected or not.
+
+options Variable [Array]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: [{           
+            'value': '1',
+            'text': 'Primary Business Contact',
+            'disabled': false,
+            'checked': false
+        	}, 
+{
+           	            'value': '2',
+            'text': 'Primary Technical Contact',
+            'disabled': false,
+            'checked': false}]                                                                                                             
+The options variable contains all the relevant information for the group of checkboxes. Applicable for only type “2”.
+
+name Variable [String]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: name = “countries”                                                                                                              
+Contains name for the group of checkboxes.
+
+c-label Variable [Primitive]       
+Mandatory:  No
+Default Value: <empty>
+Usage: r-label = “checkboxLabelVariable”
+Contains associated label for a checkbox. Applicable for only type “1”.
+
+c-disabled Variable [Boolean]       
+Mandatory:  No
+Default Value: false
+Usage: c-disabled = “checkboxDisabledVariable”
+Contains information whether a checkbox should be disabled or not programmatically. Applicable for only type “1”.
+
+click-callback function call       
+Mandatory:  No
+Default Value: <empty>
+Usage: click-callback = “functionName($event)”
+Function to be invoked when a checkbox is clicked. Applicable for only type “1”.
+
+c-label Variable [Primitive]       
+Mandatory:  No
+Default Value: <empty>
+Usage: r-label = “checkboxLabelVariable”
+Contains associated label for a checkbox. Applicable for only type “1”.
+
+mandatory String Literal       
+Mandatory:  No
+Default Value: “false”
+Usage: mandatory = “true”
+Will append an asterisk to the group of checkboxes if value is “true”. By default, it is “false”. The supported values “true” and “false”. Applicable for only type “2”.
+
+append String Literal       
+Mandatory:  No
+Default Value: “false”
+Usage: append = “true”
+Will append template to the custom element tag instead of replacing it if value is “true”. By default, it is “false”. The supported values “true” and “false”. Applicable for only type “1”.

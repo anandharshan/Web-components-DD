@@ -1,0 +1,100 @@
+Syntax:
+<vmf-table is-compare="yes" [class="Table_comparison"] ng-controller="ComparisonTableCtrl" data="data" grouping-attr="type" columns="columns" [cell-renderers="cellRenderers"]></vmf-table> 
+Configuration
+
+vmf-table Object
+It is a custom directive which renders the table, given below are the attributes used by the directive.
+
+Is-compare  Boolean
+Mandatory: Yes
+Default Value: Yes
+Usage: is-compare=”yes”
+A boolean variable when set to true will include the table comparison template.
+ class  String
+Mandatory: No
+Default Value: <empty>
+Usage: class=”Table_comparison”
+A string variable which consists of the class names  [seperated by space] to be applied for the table comparison DOM element.
+ng-controller  Object
+Mandatory: Yes
+Default Value: <empty>
+Usage: app.controller(' ComparisonTableCtrl ',  ['$scope',function($scope) {  ... }])
+An object which consists of the columns, data, cell renderer methods and options  applicable for the comparison  table.
+
+data  Array
+Mandatory: Yes
+Default Value: <empty>
+Usage: data =  [{
+dataField1 :”... ”,
+dataField2 :”... ”,
+},{
+dataField1 :”... ”,
+dataField2 :”... ”,
+}]
+An array of objects which represent the data of the table. The data fields given should match the columns field  for data mapping to columns.
+grouping-attr String
+Mandatory: Yes
+Default Value: <empty>
+Usage: grouping-attr=”Type”
+A string value which consists of the grouping attribute, based on this, the values inside the tables are grouped.
+columns Array
+Mandatory: Yes
+Default Value: <empty>
+Usage: columnsVariable = [{
+	title: titleVariable,
+	field: fieldVariable,    
+	showToolTip: tooltipVariable,
+	draggable: draggableVariable,
+	notResizable: resizableVariable,
+	thClass: thClassVariable,
+	tdClass: tdClassVariable
+}]
+An array of objects which represent the headers and other options like title, field, tooltip, drag, column resize to be applied for the table. The elaborate definitions are given below.
+title String
+Mandatory: Yes
+	Default Value: <empty>
+	Usage:  title: 'ColumnTitle',
+A string variable which will be set as the title of the table column (‘th’).
+field String
+Mandatory: Yes
+	Default Value: <empty>
+	Usage: field: "dataField"
+A string variable representing a key which maps columns and data .
+showtooltip Boolean
+Mandatory: No
+	Default Value: “true”
+	Usage: showToolTip: true
+A boolean variable when set to true will enable tooltip for the values in table.
+draggable Boolean
+Mandatory: No
+	Default Value: “false”
+	Usage: draggable: true
+A boolean variable when set to true will enable table column drag and drop .
+notResizable Boolean
+Mandatory: No
+	Default Value: “true”
+	Usage: notResizable: "true"
+A boolean variable when set to false will enable the table column resizable.
+thClass String
+	Mandatory: No
+	Default Value: <empty>
+	Usage:  thClass =”className”
+A string variable which consists of the class names  [seperated by space] to be applied for table 	headers (‘th’). 
+tdClass String
+	Mandatory: No
+	Default Value: <empty>
+	Usage:  tdClass =”className”
+A string variable which consists of the class names  [seperated by space] to be applied for table 	body cells (‘td’). 
+
+
+colResize Boolean
+Mandatory: No
+	Default Value: “false”
+	Usage: sort: "true"
+A boolean variable when set to true will sort the table will enable column resize.
+
+cell-renderers Object
+Mandatory: No
+Default Value: <empty>
+Usage: cellRenderersVariable =”{...}”
+An object literal which consists of  methods for specified column fields to customize the appropriate rendered table cell (‘td’) .

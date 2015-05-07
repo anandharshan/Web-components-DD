@@ -1,0 +1,48 @@
+.pageContainer {
+    max-width: 1140px;
+    margin:8px auto 0;
+    min-width: 1024px;
+}
+.vmf-footerWrap {
+    max-width: 1140px;  
+    margin:0 auto;
+}
+.vmf-GridMainContainer {
+    max-width: 1140px;
+    .vmf-heroContent {
+        margin: 0px 10px 0 0;
+        height: 340px;
+    }
+    .vmf-quickLinks {
+        height: 340px;
+        margin: 0 0 0 20px;
+    }
+}
+.vmf-GridSectionContainer {
+    .vmf-GridIntrdctn, .vmf-GridProducts, .vmf-GridOverview {
+        height: 410px;
+    }
+    .vmf-GridIntrdctn {
+        margin: 0px 20px 0px 0px;
+    }
+    .vmf-GridProducts {
+        margin: 0px 10px;
+    }
+    .vmf-GridOverview {
+        margin: 0px 0px 0px 20px;
+    }
+    .col-md-4 {
+         width:33.3%;   
+    }
+}
+.globalZindex {
+    position: relative;
+    z-index: 1000;
+}
+
+
+.vmf-customTemplate {
+    .vmsmedia_position {
+        left:59px;       
+    }
+}

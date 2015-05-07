@@ -1,0 +1,144 @@
+.registrationForm {
+    .passwordFormField {
+        position: relative;
+        .strengthContainer {
+            top: 7px;
+            margin-top: 0px;
+        }
+    }
+    .completeSubHead {
+        display: block;
+        padding: 20px 20px 10px 50px;
+        font-size: 2.5rem;
+        line-height: 2.8125rem;
+        color: $vmf-pwdSuccessHead;
+        font-family: $font-stackLight;
+        clear: both;
+        background: url("/images/completeStatus.png") no-repeat scroll left center transparent;
+        margin: 3px 0 0px;
+    }
+    .form-group {
+        .vmf-primary {
+            text-align: center;
+        }
+    }
+    .checkEmail {
+        ul {
+            margin: 20px;
+            li {
+                list-style: disc;
+            }
+        }
+    }
+    .registrationHead {
+        font-family: proximanovaLight;
+        font-size: 40px;
+        color: $vmf-formRegstrationHead;
+        border: 0 none;
+        padding: 0;
+        margin-top: 23px;
+        margin-bottom: 10px;
+    }
+    .subheadDivider {
+        border-top: 1px solid $vmf-borderColor;
+        padding-top: 20px;
+        clear: both;
+        display: block;
+    }
+    .subhead,
+    p {
+        color: $vmf-bigFtr-anchrTitle;
+        font-family: proximanovaLight;
+    }
+    .formTemplate-buttonDeviders {
+        .custom-checkbox {
+            padding-top: 0;
+            font-family: proximanovaReg;
+        }
+    }
+    .vmf-confirmation {
+        padding: 23px 0 32px;
+        h2 {
+            font-family: $font-stackSemiBold;
+        }
+        .vmf-checkbox-group {
+            .custom-checkbox{
+                margin-bottom: 45px;
+            }
+        }
+    }
+}
+.form-group {
+    .formSection {
+        margin-bottom: 10px;
+    }
+}
+.registrationFormBox {
+    .modal-dialog {
+        width: auto;
+        margin: 10px;
+        .modal-header {
+            .modal-title {
+                padding: 23px 20px 16px 30px;
+                line-height: 20px;
+                font-size: 28px;
+            }
+            .closeIcon {
+                margin: 20px;
+            }
+        }
+        .modal-body {
+            padding: 28px 30px 2px;
+            height: 400px;
+            overflow: auto;
+        }
+        .modal-footer {
+            padding: 20px 70px 30px 30px;
+            .printBtn {
+                margin-left: 0;
+            }
+        }
+        p {
+            margin-bottom: 20px;
+            line-height: 16px;
+            color: $vmf-modalText;
+        }
+    }
+}
+.formRegistrationTemplate {
+    margin-bottom: 20px;
+}
+/* Small devices (tablets, 768px and up) */
+
+@media (min-width: $screen-tablet) {
+    .registrationFormBox {
+        .modal-dialog {
+            max-width: 1120px;
+            margin: 10px auto;
+        }
+    }
+    .formResetSection {
+        max-width: 500px;
+        .col-md-4 {
+            width: 75%;
+        }
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: $screen-desktop) {
+    .registrationForm {
+        .formRegistrationSection {
+            margin-left: 225px;
+        }
+        .passwordFormField {
+            .strengthContainer {
+                top: 0;
+                margin-top: -3px;
+            }
+        }
+    }
+}
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: $screen-lg-desktop) {}

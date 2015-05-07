@@ -1,0 +1,47 @@
+Syntax:
+	Pattern 1
+<vmf-accordion-container type="1" headers="tableHeaders" acc-data="accordionData"> </vmf-accordion-container>
+
+	Pattern 2
+<vmf-accordion-container type="2" headers="tableHeaders2" acc-data="accordionData2" sel-acc="selectedAccordion"> </vmf-accordion-container>
+
+Configuration
+
+type String Literal       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: type = “1” or type=”2”                                                                                                              
+Type “1” and “2” correspond to patterns in VMware Pattern Library site. Only values “1” and “2” are allowed.
+
+headers Variable [Array]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: ['Product', 'Release Date', '']                                                                                                              
+The variable which contains titles for table headers.
+
+acc-data Variable [Array]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: [{
+            headers: ['M767468761', 'US - Santa Clara', '2015-05-25', '11 Months &#x26; 2 Days', '<button class="vmf-accordion-btn vmf-btn vmf-primary pull-right" ng-click="buttonClick($event, 1)">Select</button>'],
+            contents: [
+                ['SKU', 'Component', 'Order Type', 'Payment Type', 'Remaining Term', 'Qty'],
+                ['HSV-A1AIP-12MT0-C1S', '<p><span>VMware vCloud Hybrid Service </span>- Virtual Private Cloud A1A - Public IP Addresses Subscription - 12 Monthly</p><p><span>Payments</span></p><p>US - Nevada Data Center - 1 Public IP Address', 'Add-on', 'Monthly', '9 Months &#x26; 15 Days', '1'],
+                ['HSV-A1AIP-12MT0-C1S', '<p><span>VMware vCloud Hybrid Service</span> - Virtual Private Cloud A1A - Core Subscription - SSD Accelerated - 12 Monthly</p><p><span>Payments</span></p><p>US - Nevada Data Center - 5GHz vCPU 20GB vRAM 2TB SSD-Accelerated Storage 10 Mbps Internet Bandwidth 2 Public IPs and Production Support', 'Add-on', 'Monthly', '9 Months &#x26; 15 Days', '1']
+            ]
+        }, 
+{
+            headers: ['M38349494', 'US - Santa Clara', '2015-05-25', '5 Months &#x26; 5 Days', '<button class="vmf-accordion-btn vmf-btn vmf-primary pull-right" ng-click="buttonClick($event, 2)">Select</button>'],
+            contents: [
+                ['SKU', 'Component', 'Order Type', 'Payment Type', 'Remaining Term', 'Qty'],
+                ['HSV-A1AIP-12MT0-C1S', '<p><span>VMware vCloud Hybrid Service </span>- Virtual Private Cloud A1A - Public IP Addresses Subscription - 12 Monthly</p><p><span>Payments</span></p><p>US - Nevada Data Center - 1 Public IP Address', 'Add-on', 'Monthly', '9 Months &#x26; 15 Days', '1'],
+                ['HSV-A1AIP-12MT0-C1S', '<p><span>VMware vCloud Hybrid Service </span>- Virtual Private Cloud A1A - Core Subscription - SSD Accelerated - 12 Monthly</p><p><span>Payments</span></p><p>US - Nevada Data Center - 5GHz vCPU 20GB vRAM 2TB SSD-Accelerated Storage 10 Mbps Internet Bandwidth 2 Public IPs and Production Support', 'Add-on', 'Monthly', '9 Months &#x26; 15 Days', '1']
+            ]
+        }]                                                                                                           
+This contains data for the accordion containers.
+
+sel-acc Variable [Number]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: sel-acc = “selectedAccordionVariable”                                                                                                              
+Contains index of the selected accordion.

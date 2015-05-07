@@ -1,0 +1,46 @@
+Usage
+<div [class="utilityContainer"] ng-controller="utilityCtrl" >
+<div vmf-utility list="listVariable" 
+country="CountryVariable" 
+[countryhint="countryhintVariable"] 
+[searchhint="search"]></div>
+</div>
+Configuration
+
+class String
+Mandatory: No
+Default Value: <empty>
+Usage: class="draggableContainerCls"
+A string variable which consists of the class names  [seperated by space] to be applied for the utility navigation container DOM element.
+
+ng-controller Object
+Mandatory: Yes
+Default Value: <empty>
+Usage: app.controller('ControllerVariable',  ['$scope',function($scope) {  ... }])
+An object which consists of the  data applicable for the utility navigation.
+
+vmf-utility Object
+It is a custom directive which renders the utility navigation, given below are the attributes used by the directive
+list Array
+Mandatory: Yes
+Default Value: <empty>
+Usage: list = ["menu1", "menu2", ...] 
+An array of string which represents the menus in the navigation.
+
+country String
+Mandatory: Yes
+Default Value: <empty>
+Usage: country="United States"
+A string variable representing the  host country  .
+
+countryhint String
+Mandatory: No
+Default Value: <empty>
+Usage: countryhint="Select a Country Region"
+A string variable representing the  tooltip [title attribute] value for region search .
+
+searchhint String
+Mandatory: No
+Default Value: <empty>
+Usage: searchhint="search"
+A string variable representing the  placeholder text for the search input  .

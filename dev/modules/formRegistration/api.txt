@@ -1,0 +1,80 @@
+Component - Form Registration
+
+CREATION
+<form  name='vmfCustomFormTemplate'   submit-callback="formSubmitFunction()"  novalidate>
+</form>
+All form group div elements will be wrapped inside form tag with optional submit callback function.
+<div class="form-group clearfix clearAll">
+</div>
+All form input elements will be placed inside form-group div element
+Example input element integration
+<form name='vmfCustomFormTemplate' submit-callback="formSubmitFunction()" novalidate>
+<div class="form-group clearfix clearAll">
+<vmf-text-input  type="normal" name="fname" model="user.firstName" hint="Enter First Name" title="First Name" mandatory="true" custom-class="customclass" 
+class="formInputClass vmf-text-input" ></vmf-text-input>
+<div class="form-group clearfix">
+            <input type="submit" value="Register" id="formRegister" class="vmf-btn vmf-primary">
+            <input type="reset"  value="cancel"  id="formCancel" class="vmf-btn vmf-primary">
+</div>
+ </div>
+</form>
+NOTE:  submit-callback="formSubmitFunction()" is optional, which will be invoked upon successful submission of form.
+Integrating text area : 
+<div class="form-group clearfix ">
+            <label for="vmf-formTextarea" class="col-md-3 formLabel">Additional Information
+                <span class="shortDesc">500 characters max.</span>
+            </label>
+            <div class="col-md-4">
+                <textarea id="vmf-formTextarea"></textarea>
+            </div>
+</div>
+Integrating Email : 
+<div class="form-group clearfix">
+            <vmf-text-input type="normal" name="userForm" model="user.email" hint="joe.smith@corp.com" title="Email Address" mandatory="true" custom-class="customclass" target-ele="col-md-4" class="formInputClass vmf-text-input" vmf-tooltip tooltip-options="{'text':'Activation email will be sent to the address provided. To activate your account, follow the steps in the activation mail.'}"></vmf-text-input>
+</div>
+Integrating Drop Down : 
+<div class="form-group selectInfo clearfix selectWidth">
+            <div vmf-select-list name="revenueVal" dtitle="Year Established" model="user.revenue" select-col-mod="col-md-3" title-col-mod="col-md-3" list="yearsEstabished" title="Selection" custom-class="customclass"></div>
+ </div> 
+Integrating Radio Group : 
+<div class="form-group clearfix formRadioGroup">
+            <vmf-radio-group type="1" rtitle="radioTitle" options="radioOptions" name="radioName" title-col-mod="col-md-3" model="user.radioModel" custom-class="customclass" mandatory="true”></vmf-radio-group>
+</div>
+Integrating Check Box : 
+<div class="col-md-8">
+ <fieldset>
+                    <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[0].checked" name="checkBoxName2" c-label="checkBoxOptions[0].text" c-disabled="checkBoxOptions[0].disabled">
+                    </div>
+                    <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[1].checked" name="checkBoxName2" c-label="checkBoxOptions[1].text" c-disabled="checkBoxOptions[1].disabled">
+                    </div>
+                    <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[2].checked" name="checkBoxName2" c-label="checkBoxOptions[2].text" c-disabled="checkBoxOptions[2].disabled">
+                    </div>
+                    <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[3].checked" name="checkBoxName2" c-label="checkBoxOptions[3].text" c-disabled="checkBoxOptions[3].disabled">
+                    </div>
+</fieldset>
+</div>
+Integrating Password & Conform Password :
+<div class="vmf-pwd-wrapper">
+<div class="passwordFormField" novalidate>
+<div class="form-group clearfix passwordRow">
+                            <vmf-text-input type="password" option-id="password" name="password" class="formInputClass vmf-text-input" hint="Enter Password" title="New password" model="pw" mandatory="true" custom-class="customclass" validation='[{"name":"required"},{"name" : "minLength" , "value" : "6"}, {"name" : "maxLength", "value" : "20"}, {"name" : "validationonealphabet"}, {"name" : "validationonenumber"}, {"name" : "validationoneuppercaseletter"},{"name":"pswd"}]' id="pw"></vmf-text-input>
+</div>
+<div class="strengthContainer col-sm-5">
+<span class="strSubHead" id="strSubHead">Password strength</span>
+             <ul id="strength" check-strength="pw" class="strengthDis"></ul>
+             <p class="strengthDesc">Make sure your password contains 6-20 character. Combine numbers, symbols and upper cases to increase strength</p>
+</div>
+<div class="form-group clearfix passwordRow">
+                            <vmf-text-input type="password" option-id="conformPassword" name="conformPassword" class="formInputClass vmf-text-input" hint="Confirm Password" title="Verify new password" model="user.confirm_password" mandatory="true" custom-class="customclass" validation='[{"name":"required"},{"name" : "confirmpassword","confirm_with" : "password" , "message" : "Password doesnt match"}]'></vmf-text-input>
+</div>
+</div>
+</div>
+
+Integrating Agreement Check Boxes :
+<div class="form-group clearfix">
+            <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="user.checkBoxModel1" name="checkBoxName1" c-label="checkBoxOptions2[0].text" c-disabled="checkBoxOptions2[0].disabled"></div>
+        <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="user.checkBoxModel2" name="checkBoxName2" c-label="checkBoxOptions2[1].text" c-disabled="checkBoxOptions2[1].disabled"></div>
+</div>
+
+
+

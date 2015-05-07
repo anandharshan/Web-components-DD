@@ -1,0 +1,109 @@
+<!--Form Elements-->
+
+
+<div ng-controller="FormElementsController" class="registrationForm vmf-formTemplate vmf-formElements">
+    <form name='vmfCustomFormTemplate'>
+        <span class="mandatory requiredFeild">* Required Fields</span>
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="userForm" model="user.firstName" hint="Joe" title="First Name" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" target-ele="col-md-4" vmf-tooltip tooltip-options="{'text':'Enter Your First Name.'}"></vmf-text-input>
+        </div>
+
+
+        <div class="form-group clearfix ">
+            <label for="vmf-formTextarea" class="col-md-3 formLabel">Additional Information
+                <span class="shortDesc">500 characters max.</span>
+            </label>
+            <div class="col-md-4">
+                <textarea id="vmf-formTextarea"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group clearfix">
+            <label class="col-md-3 formLabel vmf_clear_left">Normal Search box</label>
+            <div class="col-md-4">
+                <vmf-text-input type="search" class="vmf-text-input" name="userForm" model="user.search" hint="Search All Downloads" clear-text-length="0" search-callback="user.searchCallback()">
+                </vmf-text-input>
+            </div>
+        </div>
+
+        <div class="form-group clearfix formLabelIndex">
+            <label class="col-md-3 formLabel vmf_clear_left ">Predictive Search box</label>
+            <div class="col-md-4">
+                <vmf-text-input type="psearch" class="vmf-text-input" name="userForm" model="user.psearch" search-model="data.list" hint="Search All Downloads" clear-text-length="3" psearch-callback="user.psearchCallback">
+                </vmf-text-input>
+            </div>
+        </div>
+
+        <div class="form-group selectInfo clearfix selectWidth">
+            <div vmf-select-list name="revenueVal" dtitle="Year Established" model="user.revenue" select-col-mod="col-md-3" title-col-mod="col-md-3" list="yearsEstabished" title="Selection" custom-class="customclass" validation='[{"name":"selectOne"},{"name":"required"}]'>
+            </div>
+            <span class="toolTip-icon vmf-tooltip" vmf-tooltip tooltip-options="{'position':'right','text':'<h5>Year Established</h5> Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed'}"></span>
+        </div>
+
+
+
+        <div class="form-group clearfix">
+            <div class="formInputClass vmf-text-input">
+                <div class="formRow">
+                    <label class="col-md-3 formLabel" for="companyLogo">Company Logo</label>
+                    <vmf-file-browse option-id="companyLogo"  ></vmf-file-browse>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group clearfix formRadioGroup">
+            <vmf-radio-group type="1" rtitle="radioTitle" options="radioOptions" name="radioName" title-col-mod="col-md-3" model="user.radioModel" custom-class="customclass" mandatory="true" validation='[{"name":"radio"},{"name":"required"}]'>
+            </vmf-radio-group>
+        </div>
+
+
+        <div class="form-group clearfix formCheckBoxGroup">
+
+            <div class="formLabel col-md-3" vmf-tooltip tooltip-options="{'text':'Initiatives <br/> Lorem ipsum dolor sit amet ullam elit, sed diam'}" target-ele="partOfString">Virtualization <span class="partOfString">Initiatives</span>
+                <span class="shortDesc">Check all that apply</span>
+            </div>
+            <div class="col-md-8">
+                <fieldset>
+                    <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[0].checked" name="checkBoxName2" c-label="checkBoxOptions[0].text" c-disabled="checkBoxOptions[0].disabled">
+                    </div>
+                    <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[1].checked" name="checkBoxName2" c-label="checkBoxOptions[1].text" c-disabled="checkBoxOptions[1].disabled">
+                    </div>
+                    <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[2].checked" name="checkBoxName2" c-label="checkBoxOptions[2].text" c-disabled="checkBoxOptions[2].disabled">
+                    </div>
+                    <!--<span class="toolTip-icon vmf-tooltip" vmf-tooltip tooltip-options="{'position':'right','text':'<h5>Total Revenue</h5> Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed'}"> -->
+                    <!--</span>   	-->
+                    <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="checkBoxOptions[3].checked" name="checkBoxName2" c-label="checkBoxOptions[3].text" c-disabled="checkBoxOptions[3].disabled">
+                    </div>
+                </fieldset>
+
+
+            </div>
+
+        </div>
+
+        <div class="form-group clearfix vmf-formClendar">
+            <label class="formLabel col-md-3" for="coverageDates"><span class="mandatory">*</span>Contract Coverage</label>
+            <div vmf-calendar startyear = "startyear" endyear="endyear" class="vmf-calendar-drop col-md-4" historic="historic">
+            </div>
+
+        </div>
+
+
+        <div class="form-group clearfix ">
+            <label class="col-md-7 labelHeader" for="vmf-formTextarea-lg">Accept the VMware End-User License Agreement</label>
+            <div class="col-md-6 noPadding">
+                <textarea class="vmf-formTextarea-lg">1. Definitions 1.1 Designated Administrative Access 1.2 GPL Software
+
+                </textarea>
+            </div>
+        </div>
+
+
+
+        <div class="form-group clearfix">
+            <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="user.checkBoxModel1" name="checkBoxName1" c-label="checkBoxOptions2[0].text" c-disabled="checkBoxOptions2[0].disabled"></div>
+        <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="user.checkBoxModel2" name="checkBoxName2" c-label="checkBoxOptions2[1].text" c-disabled="checkBoxOptions2[1].disabled"></div>
+        </div>
+
+    </form>
+</div>

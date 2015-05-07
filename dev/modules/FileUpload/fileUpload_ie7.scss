@@ -1,0 +1,65 @@
+.vmf-file-upload{
+  .col-xs-4{
+    width:27%;
+  }
+  .upload-min{
+    display:none !important;
+  }
+  .ie-file-upload{
+      display:block;
+    }
+  .progress-wrapper-row{
+    width:100%;
+  }
+   .label-file-dropper{
+     height:95px;
+   }
+   
+   #file-dropper{
+    display:none;
+   }
+   
+  .stat-report{
+    .progress-msg{
+      .float-right{
+        margin-top:-20px;
+      }
+      .success-msg{
+        margin-left:-82px;
+        margin-top:-20px;
+      }
+    .cross{
+      margin-top:-17px;
+      position:relative;
+      left:-20px;
+      clear:both;
+    }
+    }
+      .file-name{
+    max-width:320px !important;
+    top:0px;
+  }
+  }
+  .file-uploader{
+		position:absolute;
+		width:100%;
+		filter: alpha(opacity=0);
+		height: 47px;
+    cursor: pointer;
+    display: none;
+	}
+	.FormFileUploader{
+      position:absolute;
+      filter: alpha(opacity=0);
+      bottom:29px;
+      right:40px;
+      width:89px;
+      .file-uploader-sec{
+        width:89px;
+        cursor:pointer;
+        float:right;
+        height:30px;
+      }
+  }
+
+}

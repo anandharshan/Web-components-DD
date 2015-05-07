@@ -1,0 +1,125 @@
+.vmware-carosuel-wrapper-container {
+  display: inline-block;
+  overflow: hidden;
+  width:100%;
+}
+
+.vmware-carosuel-title {
+  margin: 23px 0 20px 45px;
+   margin:22px 0 21px 45px\9;
+  color: #333333;
+  font: 22px $font-stackSemiBold;
+}
+
+.vmware-carosuel-wrapper-container {
+  .vmware-carosuel-inner-wrapper-container{
+    display:inline-block;
+    border: solid 1px #cccccc;
+    background: url("../images/carousel/carousel_gradient_vmware.png") repeat-x;
+    padding-bottom: 38px; 
+    padding-bottom: 36px\9; 
+  }
+  .carosuel-container {
+    display: inline-block;
+    overflow: hidden;
+    > div {
+      float: left;
+    }
+  }
+  .carosuel-outer-container {
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-right: 10px;
+  }
+  .carosuel-inner-container {
+    display: inline-block;
+  }
+  .carosuel-button {
+    width: 30px;
+    button {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  .carosuel-img {
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    cursor: pointer;
+    img {
+      float: left;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        opacity: 0.2;
+        filter: alpha(opacity = 20);
+      }
+    }
+  }
+  .carosuel-img-caption {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    background-color: black;
+    opacity: 0.6;
+    filter: alpha(opacity = 60);
+    p {
+      padding-left: 20px;
+      color: #ffffff;
+      margin-top: 8px; 
+      font: 16px $font-stackSemiBold; 
+    }
+  }
+}
+
+.vmware-carosuel-leftNavigation {
+  display: block;
+  width: 30px;
+  height: 45px;
+  background: url("../images/carousel/left_arrow_grey.png");
+  border: 0;
+  outline: none;
+  margin-top: 70px;
+}
+
+.vmware-carosuel-rightNavigation {
+  display: block;
+  width: 30px;
+  height: 45px;
+  background: url("../images/carousel/left_arrow_grey.png");
+  border: 0;
+  outline: none;
+  margin-top: 70px;
+  background: url("../images/carousel/right_arrow_grey.png");
+}
+
+.vmware-carosuel-leftNavigation:hover {
+  background: url("../images/carousel/left_arrow_black.png");
+}
+
+.vmware-carosuel-rightNavigation:hover {
+  background: url("../images/carousel/right_arrow_black.png");
+}
+.vmware-carosuel-rightNavigation[disabled]{
+  background: url("../images/carousel/right_arrow_disabled.png");
+  cursor:default !important;
+}
+
+.vmware-carosuel-leftNavigation.buttonvisibility{
+  visibility: hidden;
+}
+
+@-moz-document url-prefix() { 
+  .vmware-carosuel-title {
+      margin: 20px 0 19px 45px;
+  }
+
+   .carosuel-img-caption {
+    p {
+      margin-top: 6px !important; 
+    }
+  }
+}

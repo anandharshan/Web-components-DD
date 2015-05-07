@@ -1,0 +1,46 @@
+.vmf-hero-carouselWrapper {
+	width:71.1%;
+	.vmf-hero-carousel {
+		background:none;
+		height:auto;
+		.vmf-hero-carousel-strip {
+			.vmf-hero-carousel-img-caption {
+				img {
+					&.mobile{
+					display:none;
+					}
+					&.desktop{
+						display:inline;
+					}
+				}
+				.vmf-hero-carousel-blue-hero {
+					left: 0;
+					position: absolute;
+					top: 0;
+					div {
+						padding: 40px 0 0 50px;
+						h2 {
+							font-size: 36px !important;
+							margin-bottom: 10px;
+							width: 70%;
+							color: #FFFFFF;
+							font-family:$font-stackLight;	
+						}
+						p {
+							font-size:16px;
+						}
+						a {
+							font-size:16px;
+						}
+					}
+				}
+			}
+		}
+	}    
+}
+ .vmf-hero-carouselWrapper .vmf-carouselButton{
+	 width: 25px;
+	 height: 37px;
+	 filter: alpha(opacity=70);
+	 
+}

@@ -1,0 +1,191 @@
+.vmware-product-carosuel-wrapper-container {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  .vmware-product-carosuel-inner-wrapper-container {
+    display: inline-block;
+    border: solid 7px #696a6e;
+   /* background: url("../images/productCarousel/gradient_carousel.jpg") repeat-x; */
+   background-color: #ffffff;
+  }
+}
+
+.vmware-product-carosuel-title {
+  margin: 33px 0 0 43px;
+  margin: 33px 0 0 44px \9 !important;
+  font: 22px  $font-stackSemiBold;
+  color: #333333;
+}
+
+@-moz-document url-prefix() { 
+  .product-carosuel-img-caption {
+    p {
+      margin-bottom: -1px !important;
+    }
+  } 
+  .vmware-product-carosuel-title {
+    margin: 32px 0 0 43px !important;
+    font: 22px  $font-stackSemiBold;
+    color: #333333;
+  }
+
+  .product-carosuel-outer-container{
+  
+    padding-bottom: 16px !important;
+     padding-top: 20px !important;
+   
+  }
+  .product-carosuel-pagination {
+    margin: 25px 7px 19px 8px !important;
+  }
+
+  .product-carosuel-productname {
+    margin-top: 12px !important;
+    }
+}
+
+
+.vmware-product-carosuel-wrapper-container {
+  .product-carosuel-container {
+    display: block;
+    overflow: hidden;
+    > div {
+      float: left;
+    }
+  }
+  .product-carosuel-outer-container {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 35px;
+    margin-right: -35px !important;
+    padding-bottom: 19px;
+    padding-bottom: 17px \9;
+    padding-top: 20px;
+  }
+  .product-carosuel-inner-container {
+    display: inline-block;
+  }
+  .carosuel-button {
+    width: 30px;
+    button {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+  .product-carosuel-img {
+    font: 16px   $font-stack;
+    float: left;
+    .product-carosuel-imgContainer{
+    margin : 0 auto;
+      padding: 4px;
+      width: 110px;
+      height: 110px;
+      border: solid 1px transparent;
+      &:hover,&.imageHover {
+        border: solid 1px #0095D3;
+      }
+    }
+    img {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      
+    }
+  }
+  .product-carosuel-img-caption {
+    text-align: left;
+
+    line-height: 1.18 !important;
+    line-height: 1.14 \9 !important;
+    p {
+      margin: 0;
+      &.product-carosuel-productname {
+        margin-top: 12px;
+        color: #006990;
+        cursor: pointer;
+
+        &:hover {
+        color: #0095d3;
+        }  
+      }
+      &.product-carosuel-productdescription {
+        color: #333333;
+      }
+      &.product-carosuel-productoffer {
+        color: #D9541E;
+      }
+    }
+    span {
+      color: #006990;
+      float:left;
+      
+      &:hover {
+        color: #0095d3;
+        cursor: pointer;
+     }
+      &.product-carosuel-seperator {
+      margin: 5px 7px 0px 7px;
+      height: 10px;
+      border-right: 2px solid #e6e6e6;
+      }
+    }
+  }
+}
+
+.vmware-product-carosuel-leftNavigation, .vmware-product-carosuel-rightNavigation {
+  display: block;
+  width: 35px;
+  height: 45px;
+  background: url("../images/productCarousel/left_arrow_grey.png");
+  border: 0;
+  outline: none;
+  margin-top: 100px;
+}
+
+.vmware-product-carosuel-leftNavigation.buttonvisibility {
+  visibility: hidden;
+}
+
+.vmware-product-carosuel-rightNavigation {
+  background: url("../images/productCarousel/right_arrow_grey.png");
+}
+
+.vmware-product-carosuel-leftNavigation:hover {
+  background: url("../images/productCarousel/left_arrow_black.png");
+}
+
+.vmware-product-carosuel-rightNavigation {
+  &:hover {
+    background: url("../images/productCarousel/right_arrow_black.png");
+  }
+  &[disabled] {
+    background: url("../images/productCarousel/right_arrow_disabled.png");
+    cursor: default !important;
+  }
+}
+.product-carousel-pagination-divider{
+  margin:0 70px;
+  border-top: solid 1px #E6E6E6;
+}
+.product-carosuel-pagination-container {
+  text-align: center;
+
+  .product-carosuel-pagination {
+    margin: 25px 7px 19px 8px;
+    background: url("../images/productCarousel/carousel-pagination.png") no-repeat;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    cursor: pointer;
+    &.active {
+      background: url("../images/productCarousel/carousel-pagination_active.png") no-repeat;
+    }
+  }
+}
+
+.product-carousel-spaceSeperator {
+  float:left;
+  width:70px;
+  height:2px;
+}

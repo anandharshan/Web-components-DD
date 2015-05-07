@@ -1,0 +1,31 @@
+<div class="cell-editor ">
+                                
+                        <div class="basicEdit editField hide" ng-if = '(column.editable) && (!column.advancedEditOption)' >
+                                <input ng-model-onenter class="editInputs" type="text" ng-model=row[column.field]>
+                        </div>
+
+                                <div ng-if = '(column.editable) && (column.advancedEditOption)' class="advancedEdit editInputs editField hide absolute">
+                <div class="editable-inputs">
+                                <p class="clearfix">
+                                <label>Currency </label>
+                                <span class="pull-left inline-edit-currency-unit" vmf-select-list pre-select-ind="0"  model="revenue" list="currencyTypes"></span> 
+                                </p>
+                                <p class="clearfix">
+                                <label>Customer Cost</label>
+                                <input class="editInputs editInputsText" ng-model-oncustom-event type="text" ng-model=row[column.field] />
+                                </p>
+                                <p class="clearfix">
+                                <label>Start Date</label>
+                                  <span vmf-calendar-single sdate="01/01/1990" edate="31/12/2090"  class="vmf-calendar-drop" ></span>
+                                </p>
+                                <p class="clearfix">
+                                <label>End Date</label>
+                                  <span vmf-calendar-single  sdate="01/01/1990" edate="31/12/2090"  class="vmf-calendar-drop" ></span>
+                                </p>
+                </div>
+                                    <div class="button-section clearfix">
+                                        <input type="button" ng-click="advanceEditCancel($event);" class="advance-edit-cancel editInputs pull-left" value="Cancel" />
+                                        <input type="button" ng-click="advanceEditSave($event);" class="advance-edit-save editInputs pull-right" value="Save" />
+                                    </div>
+                                </div>
+                            </div>

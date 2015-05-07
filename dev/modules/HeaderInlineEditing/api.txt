@@ -1,0 +1,22 @@
+Syntax:
+<vmf-header-inline-editing model="headerText" placeholder="{{placeholderText}}" ghost-text="{{ghostText}}" vmf-tooltip tooltip-options="{'position':'top','text':'Edit','hideDelay':100}" class="vmf-header-inline-editing"> </vmf-header-inline-editing>
+
+Configuration
+
+model Variable[String]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: model=”headerText”
+The variable contains pre-defined value or edited value from user.
+
+placeholder String Literal
+Mandatory:  Yes
+Default Value: <empty>
+Usage: placeholder=”Fund Name”
+Replacement text when a user saves an empty string.
+
+ghost-text String Literal       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: ghost-text=”Add a fund name”
+Placeholder text for input box in header inline editing.

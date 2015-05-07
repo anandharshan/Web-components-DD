@@ -1,0 +1,57 @@
+.vmf-header-inline-text {
+	width:auto;
+	max-width:630px;
+	padding: 0.313rem 0.625rem;
+	font-family:$font-stackSemiBold;
+	font-size:1.5rem;
+	color:$vmf-inlineEditingColor;
+	cursor: pointer;
+	position:relative;
+	&:hover {
+		background:$vmf-inlineEditingBgColor;
+	}
+	&.vmf-header-inline-active {
+		line-height:10px;
+		&:hover {
+			background:$vmf-bgColor;
+		}
+	}
+	&.vmf-header-inline-empty{
+		color:$vmf-gray-vdarker;
+		&:hover {
+			background:$vmf-bgColor;
+		}
+	}
+	.vmf-header-saving {
+		display:inline-block;
+		background: url(/images/ajax-loader.GIF) no-repeat ;
+		width:16px;
+		height:16px;
+		margin-left:10px;
+		margin-left:10px;
+		position: absolute;
+		top: 11px;
+		top: 11px\0;
+		right:17px;
+	}
+	.vmf-header-tick {
+		display:inline-block;
+		background: url(/images/bg_alert_spite.png) no-repeat 0px -370px;
+		width:15px;
+		height:11px;
+		margin-left:10px;
+		position: relative;
+		top: -3px;
+	}
+	input {
+		@include box-sizing(border-box);
+    	@include boxShadow(inset 1px 4px 7px -6px $grayColor);
+    	border:1px solid $vmf-borderColor;
+        padding:5px 30px 5px 5px;
+        margin:0px 5px;
+        width:100%;
+        font-family:$font-stack;
+        font-size:1rem;
+        color:$vmf-gray-darker;
+    }
+}

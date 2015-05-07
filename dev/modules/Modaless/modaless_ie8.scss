@@ -1,0 +1,84 @@
+.modaless-dialog{
+	width: 770px;  
+	max-height: 585px;
+	position: fixed; 
+	z-index: 1050; 
+	bottom: 1%; 
+	right: 1.5%; 
+	left: auto; 
+	top: auto; 
+    .modaless-head {
+    	height: 65px;
+        .modaless-title{
+            float:left;
+            font-size: 24px;
+        }
+        .modaless_icons.max_icon-grp a{
+            margin-bottom:9px;
+        }         
+    }
+    .modaless-body{
+        width: auto;
+        max-height: 445px;
+    }
+    &.modaless_mini{
+    	left: auto;
+    	right: 0; 
+	width: 516px;
+	height: 70px;
+    }
+      .modaless-footer{
+	  .rightButton {
+        button {
+
+            margin-left:15px;
+        }
+        .vmf-btn.vmf-secondary{
+		  margin-left: 16px;
+	       }
+           }
+	  }
+}
+
+.modaless-dialog.modaless_upload{
+	width:517px;
+	height:119px; 
+	padding: 0px;
+}
+.modaless-footer{
+	.vmf-btn{ 
+		display:inline-block;
+		width:auto;
+		margin:0px 0px 0px 16px;        
+	}
+	.vmf-back-btn {
+		margin:0;
+		padding-left: 24px;
+		padding-right: 24px;
+	} 
+ }
+
+
+vmf-modaless-popup{
+.modalLoad.modal-open{
+    .modaless-body{ 
+        width: 100%;
+        max-height: 445px; /*height:445px*/
+        }
+    .modaless-footer{
+      button{
+    	  margin-top:0px;
+    	  margin-bottom:0px;
+      }
+    } 
+
+}
+}
+ /*.modalessOverlay {
+        .modalLoad.modal-open{
+            .modaless-body{ 
+                height:445px;
+            }        
+        }
+    }*/
+    

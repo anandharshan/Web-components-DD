@@ -1,0 +1,57 @@
+<div ng-include src="'../dev/modules/' + url" ></div>
+<div class="codealign">
+<vmf-tabsone  ng-init='dumphtml(url,direc,ctrl)'  >
+    <vmf-paneone tabno='Markup' listlabel='Markup' link="javascrip:void(0);" >
+        
+        
+        <div >
+            <pre class="prettyprint">
+              <div class='innercode'>
+              {{html}}
+              </div>
+            </pre>
+
+        </div>
+    </vmf-paneone>
+    
+    
+    <vmf-paneone tabno='JavaScript' listlabel='JavaScript' link="javascrip:void(0);" >
+        <pre class="prettyprint">
+          <div class = 'innercode'>
+          {{ctrl}}
+          </div>
+        </pre>
+    </vmf-paneone>
+    
+     <vmf-paneone tabno='sample' listlabel='Sample' link="javascrip:void(0);" >
+        
+          <pre class="prettyprint">
+            <div class='innercode'>
+           {{header}}
+            {{html}}
+            {{footer}}
+            </div>
+
+          </pre>
+        
+    </vmf-paneone>
+    <vmf-paneone tabno='API' listlabel='API' link="javascrip:void(0);" >
+        
+          <pre class="prettyprint">
+            <div class='innercode'>
+            {{api}}
+            </div>
+
+          </pre>
+        
+    </vmf-paneone>
+
+    <vmf-paneone tabno='Pattern' listlabel='Pattern' link="{{plink}}" >
+        
+          <p><a href="{{plink}}" target="_blank" >View Component on the Pattern site</a></p>
+        
+    </vmf-paneone>
+    
+
+</vmf-tabsone>
+</div>

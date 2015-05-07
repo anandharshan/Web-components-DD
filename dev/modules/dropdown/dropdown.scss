@@ -1,0 +1,188 @@
+
+.vmf-dropdown {outline:none;}
+
+
+.vmf-dropdown-truncate {
+  position:relative;
+  span{
+    white-space: nowrap;
+    overflow: hidden;
+    display:block;
+    line-height:15px;
+    margin-top:-2px;
+    margin-bottom:-2px;
+    width:90%;
+    text-overflow: ellipsis;
+  }
+  ul{
+    li{
+      white-space: nowrap;
+      overflow: hidden;
+      position:relative;
+      text-overflow: ellipsis;
+    }
+  }
+}
+.dropDownListItems{
+  .bootstrap-select-searchbox{
+    padding: 5px 20px;
+    input.search-icon{
+      background: url("/vmf/c/4.0/images/searchIconSupport.png") no-repeat;
+      background-position: 98%;
+      padding-right: 30px;
+    }
+  } 
+}
+.vmf-dropdown-content {
+
+  @include linearGradient(top,$dropdown-bg-gradient-start-color,$dropdown-bg-gradient-end-color) ;
+  &:hover {
+     @include linearGradient(top,$dropdown-bg-gradient-start-color,$dropdown-hover-bg-gradient-end-color) ;
+  }
+ 	&.vmf-dropdown-align-right{
+    ul{
+      right:0px;
+      left:auto;
+    }
+  }
+  @include border-radius(3px);
+  border: 1px solid $vmf-dropdown-border;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 9px 15px;
+  line-height: 10px;
+ // @include boxShadowValues(0 , 3px ,3px, 0, $dropdown-shadow-color);
+  span {font-size:0.875rem; color:$gray-dark; font-family:$font-stack;}
+  span.current-selection{color:#666;}
+  span.current-selection._active-drop{color:#333;}
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: $dropdown-caret-color transparent; 
+  }
+  ul {
+    position: absolute;
+    top: 29px; 
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: inherit;
+    border: 1px solid $vmf-dropdown-border;
+    //@include boxShadowValues(0 , 5px ,5px, 0,$dropdown-shadow-color);
+    -moz-box-shadow: 0 1px 4px 0px #888;
+    -webkit-box-shadow: 0 1px 4px 0px #888;
+    box-shadow: 0 1px 4px 0px #888;
+    font-weight: normal;
+    list-style: none;
+    pointer-events: none;
+    margin: 0;
+    max-height: 350px;
+    overflow: auto;
+    padding-bottom:10px;
+    padding-top:10px;
+    li {
+      padding:0px 20px; 
+      line-height:30px;
+      font-size:.875rem;
+      position : relative;
+      &:hover {
+        background: $vmf-dropdown-link-hover-bg; 
+      };
+      &:focus {
+        background: $vmf-dropdown-link-hover-bg; 
+      }
+      li._first{
+      padding: 15px 15px; 
+      }
+      &.seperator_bar{
+        border-top : dotted 1px #333333;
+      }
+      &:first-child.seperator_bar{
+        border-top : none;
+      }
+      &.sub-item{
+        padding:0px 40px; 
+      }
+      &.main-menu{
+        &:after {
+          content: "";
+          width: 0;
+          height: 0;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          margin-top: -3px;
+          border-width: 5px 0px 5px 10px;
+          border-style: solid;
+          border-color: transparent #000;
+        }
+        ul{
+          position: absolute;
+          left: 100%;
+          width: 100%;
+          top: 0px;
+        }
+      }
+    }
+    &.active {
+      opacity: 1;
+      pointer-events: auto; 
+      z-index: 999;
+    }
+  }
+}
+
+.dd-opt-selected {
+  background: #e1f2f7;  
+}
+.label {
+  padding: 0.6rem 0; 
+}
+.jspArrow.jspArrowUp {border-left:1px solid #D0D0D0;}
+.jspArrow.jspArrowDown{border-left:1px solid #D0D0D0;border-bottom:1px solid #D0D0D0;}
+
+.jspArrow.jspArrowUp, .jspArrow.jspArrowUp.jspDisabled {background: #f5f5f5 url("/images/upArrow.png") no-repeat 3px ;}
+.jspArrow.jspArrowDown, .jspArrow.jspArrowDown.jspDisabled{background: #f5f5f5 url("/images/downArrow.png") no-repeat 3px ;}
+.jspVerticalBar .jspArrow{height: 14px;}
+.jspVerticalBar {
+    height: 100%;
+    margin-bottom: 0;
+    width:17px;
+    .jspDrag {
+        width: 12px;   
+    }
+}
+
+.labelHeader .mandatory{
+  color:#D9541E!important;
+  padding-right:5px;
+}
+.labelHeader.formLabel {
+  font-family:$font-stackSemiBold;
+}
+
+@media (min-width: 0) and (max-width: $screen-desktop) { 
+  .vmf-dropdown-content {
+    &.vmf-dropdown-align-right{
+      ul{
+        right:0;
+        left:0;
+        width:100%;
+      }
+    }
+  }
+}
+.flexWidth{
+  display:table;
+}

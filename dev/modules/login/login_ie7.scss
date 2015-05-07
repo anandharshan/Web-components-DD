@@ -1,0 +1,46 @@
+.login {
+    .modal-dialog {
+        max-width: 330px;
+    }
+    .modal-header {
+        .modal-title {
+            padding-left: 30px;
+        }
+    }
+    .modal-body {
+        height: auto;
+        min-height: 100px;
+    }
+    .custom-checkbox {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .vmfloginChange {
+        padding: 15px 0;
+        float: right;
+        height: auto;
+        width: 140px;
+    }
+    .vmf-text-input {
+        padding-right: 20px
+    }
+    .forgotpwd {
+        float: left;
+        line-height: 17px;
+    }
+    .register {
+        line-height: 17px;
+    }
+    .register {
+        margin-right: 15px;
+        margin-left: 23px;
+    }
+    .forgotpwd {
+        margin-left: 15px;
+    }
+    .loginLinks {
+        li:first-child {
+            padding-right: 26px;
+        }
+    }
+}

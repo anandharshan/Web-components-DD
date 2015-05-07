@@ -1,0 +1,18 @@
+Syntax
+<div vmf-bread-crumb  options="breadcrumbPath">
+Configuration
+options Variable [Array]       
+Mandatory: yes
+DefaultValue:<empty>
+Usage: [{           
+            'text': ' home'
+        	}, 
+ {
+            'text': ' Support',
+            'url': '/home/support'
+            }
+{
+ 'text': ' support Contacts',
+ 'url': '/home/support/supportcontacts'
+            }]
+The options array contains all the relevant information for the group of navigation links present in the breadcrumb array.

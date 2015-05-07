@@ -1,0 +1,58 @@
+
+Tab Navigation
+Syntax:
+Type 1 :
+<vmf-tabs>
+    <vmf-pane tabno='unique serial number' listlabel="MenuString" link='javascript: void(0);'>
+       [Any Html Content or any angular template]
+    </vmf-pane>
+    <vmf-pane tabno='unique serial number' listlabel="MenuString" link='javascript: void(0);'>
+       [Any Html Content or any angular template]
+    </vmf-pane>
+<vmf-tabs>
+Type 2 :
+<vmf-tabsone>
+    <vmf-paneone tabno='unique serial number' listlabel="MenuString" link='javascript: void(0);'>
+       [Any Html Content or any angular template]
+       
+    </vmf-paneone>
+    <vmf-paneone tabno='unique serial number' listlabel="MenuString" link='javascript: void(0);'>
+       [Any Html Content or any angular template]
+       
+    </vmf-paneone>
+</vmf-tabsone>
+Type 3 :
+
+<vmf-tabstwo labelmessage="String">
+    <vmf-panetwo tabno='unique serial number' listlabel="MenuString" link='javascript: void(0);'>
+ [Any Html Content or any angular template]
+       
+    </vmf-panetwo>
+    <vmf-panetwo tabno='unique serial number' listlabel="MenuString" link='javascript: void(0);'>
+        [Any Html Content or any angular template]
+    </vmf-panetwo>
+</vmf-tabstwo>
+
+Configuration
+
+tabno  Variable [Number Unique]
+Mandatory: Yes
+
+Usage: tabno=”0”
+The variable to uniquely identify tab and map it to panes.
+
+
+
+listlabel  Variable [String]
+Mandatory: Yes
+
+Usage: listlabel=”FirstTab”
+The variable to name the tabs present
+
+Type 3 - 
+labelmessage  Variable [String]
+Mandatory: Yes
+
+Usage: labelmessage=”Find Products”
+The variable to display label for 3rd type of navigation
+

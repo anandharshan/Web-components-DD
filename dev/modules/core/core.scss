@@ -1,0 +1,221 @@
+@font-face {
+	font-family: 'icon';
+	src:url('../fonts/icon.eot?u0k1qm');
+	src:url('../fonts/icon.eot?#iefixu0k1qm') format('embedded-opentype'),
+		url('../fonts/icon.woff?u0k1qm') format('woff'),
+		url('../fonts/icon.ttf?u0k1qm') format('truetype'),
+		url('../fonts/icon.svg?u0k1qm#icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icn {
+	font-family: 'icon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icn-AccordionArrow:before {
+	content: "\e100";
+}
+
+.icn-arrow_l:before {
+	content: "\e101";
+}
+
+.icn-arrow_r:before {
+	content: "\e102";
+}
+
+.icn-calendar:before {
+	content: "\e103";
+}
+
+.icn-calendar_paths:before {
+	content: "\e104";
+}
+
+.icn-cart_icon:before {
+	content: "\e105";
+}
+
+.icn-Checkbox_Checked:before {
+	content: "\e106";
+}
+
+.icn-Checkbox_unchecked:before {
+	content: "\e107";
+}
+
+.icn-checkmark:before {
+	content: "\e108";
+}
+
+.icn-Close_Clear_ccc:before {
+	content: "\e109";
+}
+
+.icn-contract_paths:before {
+	content: "\e10a";
+}
+
+.icn-customer_paths:before {
+	content: "\e10b";
+}
+
+.icn-date_arrow_l:before {
+	content: "\e10c";
+}
+
+.icn-date_arrow_r:before {
+	content: "\e10d";
+}
+
+.icn-download:before {
+	content: "\e10e";
+}
+
+.icn-dropdown_menu_arrow_down:before {
+	content: "\e10f";
+}
+
+.icn-expiring_soon_paths:before {
+	content: "\e110";
+}
+
+.icn-ExternalLink:before {
+	content: "\e111";
+}
+
+.icn-formError_16_e00000:before {
+	content: "\e112";
+}
+
+.icn-gestSupprt_icon:before {
+	content: "\e113";
+}
+
+.icn-icn_carousal_arrow_left .path1:before {
+	content: "\e114";
+	color: rgba(0, 0, 0, 0.600000023841858);
+}
+.icn-icn_carousal_arrow_left .path2:before {
+	content: "\e115";
+	margin-left: -0.7333984375em;
+	color: rgb(255, 255, 255);
+}
+
+.icn-icn_carousal_arrow_right .path1:before {
+	content: "\e116";
+	color: rgba(0, 0, 0, 0.600000023841858);
+}
+.icn-icn_carousal_arrow_right .path2:before {
+	content: "\e117";
+	margin-left: -0.7333984375em;
+	color: rgb(255, 255, 255);
+}
+
+.icn-InfoTip:before {
+	content: "\e118";
+}
+
+.icn-InlineArrow:before {
+	content: "\e119";
+}
+
+.icn-Loading:before {
+	content: "\e11a";
+}
+
+.icn-manageKeys_icon:before {
+	content: "\e11b";
+}
+
+.icn-manageUsers_icon:before {
+	content: "\e11c";
+}
+
+.icn-maximize_ccc:before {
+	content: "\e11d";
+}
+
+.icn-Minimize_ccc:before {
+	content: "\e11e";
+}
+
+.icn-Pagination_arrow6X9_CCC_006690:before {
+	content: "\e11f";
+}
+
+.icn-Pagination_square_24_ccc_0095D3_:before {
+	content: "\e120";
+}
+
+.icn-progressbar1_icon:before {
+	content: "\e121";
+}
+
+.icn-progressbar2_icon:before {
+	content: "\e122";
+}
+
+.icn-progressbar3_icon:before {
+	content: "\e123";
+}
+
+.icn-progressbar4_icon:before {
+	content: "\e124";
+}
+
+.icn-progressbar5_icon:before {
+	content: "\e125";
+}
+
+.icn-quarter_paths:before {
+	content: "\e126";
+}
+
+.icn-Radiobutton_selected:before {
+	content: "\e127";
+}
+
+.icn-Radiobutton_unselected:before {
+	content: "\e128";
+}
+
+.icn-RegularArrow:before {
+	content: "\e129";
+}
+
+.icn-Report:before {
+	content: "\e12a";
+}
+
+.icn-search_icon:before {
+	content: "\e12b";
+}
+
+.icn-SubmenuArrow:before {
+	content: "\e12c";
+}
+
+.icn-Subscription:before {
+	content: "\e12d";
+}
+
+.icn-trending_paths:before {
+	content: "\e12e";
+}
+
+.icn-viewAlerts_icon:before {
+	content: "\e12f";
+}
+

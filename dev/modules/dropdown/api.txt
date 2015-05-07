@@ -1,0 +1,71 @@
+Syntax:
+<div vmf-select-list model="modelVariable" list="listVariable" [dtitle="StringText"] [htitle="StringText"] [sub="subVariable"] [mandatory="StringText" ][pre-select-ind="preSelectIndVariable"][title-col-mod="StringText"][select-col-mod="StringText"][show-arrows="StringText"] [sort-by=”StringText”] [custom-class="customClassVariable"]>  </div>
+
+Configuration
+
+model Variable [Primitive]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: model = “country”                                                                                                              
+The variable which will be updated with the selected value from dropdown.
+
+list Array of primitives|Array of objects
+Mandatory: Yes
+Default Value: <empty>
+Usage: [“India”, “Sri Lanka”, “Bangladesh”] | [{‘value’:1500, ‘text’: ‘&#36;1500’}, {‘value’: 3500, ‘text’: ‘&#36;3500’}]
+
+A simple array or an array of objects which will contain the dropdown options. An element in simple array represents both the value and display text for an option. An object in an array of objects contains key-value pairs. Key ‘text’ represents the display text and key ‘value’ represents the value for an option.
+
+dtitle String Literal
+Mandatory: No
+Default Value: <empty>
+Usage: dtitle=”Revenue”
+Title for the dropdown.
+
+htitle String Literal
+Mandatory: No
+Default Value: <empty>
+Usage: htitle=”Timeframe”
+An alternate title for dropdown button text in place of the default ‘Select’.
+
+sub Boolean
+Mandatory: No
+Default Value: true
+Usage: sub=”subTitle” (subTitle – a Boolean variable)
+If false, a selected option will not substitute the dropdown button text (useful for cases when a selected option needs to be displayed elsewhere instead of the dropdown button text). By default, it is true in which case the selected option will be shown in the dropdown button.
+
+mandatory String Literal
+Mandatory: No
+Default Value: “false”
+Usage: mandatory=”true”
+Will append an asterisk to the dropdown if value is “true”. By default, it is “false”. The supported values “true” and “false”.
+
+pre-select-ind Variable[Number]
+Mandatory: No
+Default Value: <empty>
+Usage: pre-select-ind=”indexVariable” | pre-select-ind=”2”
+If given a value, it will pre-select an option referencing the given value as an index in the array after sorting the list. The selected option will be displayed in the dropdown button.  Parameters sub = false and htitle cannot be used in combination with this option.  If this parameter is not given, it will not select any option.
+
+title-col-mod String Literal
+Mandatory: No
+Default Value: “col-md-2”
+Usage: title-col-mod=”col-md-4” 
+Responsive bootstrap classes. By default, it is "col-md-2".
+
+select-col-mod String Literal
+Mandatory: No
+Default Value: “col-md-4”
+Usage: select-col-mod=”col-md-6” 
+Responsive bootstrap classes. By default, it is "col-md-4".
+
+show-arrows String Literal
+Mandatory: No
+Default Value: “true”
+Usage: show-arrows=”false” 
+Will not show up and down arrows for the dropdown scrollbar if value is “false”. By default, it is “true”. (Scrollbar kicks in if the dropdown has more than 15 items).The supported values are “true” and “false”.
+
+sort-by String Literal
+Mandatory: No
+Default Value: “text”
+Usage: sort-by=”value” 
+The sorting order for items in the dropdown. Allowed values are “text”, “value”.

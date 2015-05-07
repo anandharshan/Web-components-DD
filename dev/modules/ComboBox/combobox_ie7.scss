@@ -1,0 +1,31 @@
+.comboxOption {
+    .vmf-combobox {
+        .vmf-comboInput {
+            width:96%;
+            height:16px;
+            padding-left: 2%;
+            padding-right: 2%;
+             &.placeholdersjs {
+                color:#999;    
+            }
+        }
+        .vmf-comboButton { 
+            right:-.2%;
+
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6',GradientType=0 ); /* IE6-8 */
+             &:hover{
+                background: #ffffff; 
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d7d7d7',GradientType=0 ); /* IE6-8 */
+             }
+        }
+    }
+    .jspPane{
+        margin-left: 0 !important; /*IE7 fix*/
+    }
+}
+
+.vmf-combobox-active {
+        position: relative;
+        z-index: 100000;
+        
+}

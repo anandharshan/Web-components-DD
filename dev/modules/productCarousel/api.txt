@@ -1,0 +1,72 @@
+Syntax:
+<vmf-productcarousel carouselspacing="70" carouselwidth="100" carouselHeight="100" config="config"  autoplay="false" animation delay="700" circularrotate="true" oncarouselclick="carouselClick" oncarouselover="carouselHover"> </vmf-productcarousel>
+Configuration
+config Object
+Mandatory: Yes
+Default Value: <empty>
+Usage: config = {
+        "productCarouselTitle" :  "vSphere Topics ",
+productCarousel : [{
+     	productImageSource : "../images/productCarousel/product_carousel_1.png",
+	ProductName : "VMware Fusion 6 Professional",
+	productDescription : "Virtural Machines on Mac or Pc",
+	productOffer : "30% off Decemeber only"
+},{
+productImageSource : "../images/productCarousel/product_carousel_2.png",
+	ProductName : "vSphere Essential Plus kit",
+	productDescription : "Taking Virtual Machine to the Next Level",
+	productOffer : ""
+}]
+}                
+An object contains two properties title and data for the carousels. In which the key 'productCarouselTitle' contains the text for the product carousel title to be displayed and key 'data' is an object in an array of objects contains key-value pairs. Where Key 'productImageSource' represents source of the carousel image and key 'ProductName', 'productDescription', 'productOffe', represents corresponding Name, description and offer available for the products.
+
+carouselwidth  Number 
+Mandatory: Yes
+Default Value: <empty>
+Usage: carouselWidth =200
+The variable holds the value for width of the each product carousel container. 
+
+carouselheight  Number 
+Mandatory: Yes
+Default Value: <empty>
+Usage: carouselheight =100
+The variable holds the value for Height of the each product carousel container. 
+
+carouselspacing  Number 
+Mandatory: Yes
+Default Value: <empty>
+Usage: carouselspacing = 10
+The variable holds the value for spacing between two independent product carousel containers.
+
+animationdelay  Number 
+Mandatory: No
+Default Value: 700
+Usage: animationdelay = 700
+The variable holds the value for spacing between two independent carousel containers.
+
+autoplay : Boolean
+Mandatory: No
+Default Value: false
+Usage: "autoplay"=false 
+
+The Boolean value will determine whether the product carousel should animation automatically without user intervention. 
+circularrotate: Boolean
+Mandatory: No
+Default Value: true
+Usage: "circularrotate"=false 
+
+The Boolean value will enable or disabled the circular rotation of product carousel.
+
+oncarouselclick  function  
+Mandatory: No
+Default Value: <empty>
+Usage: oncarouselclick= "carouselClickfunction"
+
+The function name which is passed will be triggered when user interact by click on the product carousel container.
+
+oncarouselover  function  
+Mandatory: No
+Default Value: <empty>
+Usage: oncarouselover= "carouselHoverfunction"
+
+The function name which is passed will be invoked when user mouse over any of the product carousel container.

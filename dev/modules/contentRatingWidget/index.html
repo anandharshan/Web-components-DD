@@ -1,0 +1,22 @@
+<!-- Content Rating Widget component-->
+
+<div ng-controller="contentRatingWidgetCtrl" class="contentRatingWidget">
+    <div class="rating_Container container_width">
+        <div class="vmf-contentRating">
+            <label class="RateHeader midAlign" for="radioName1">Rate This Page</label>
+            <div class="ratingContainer">
+                <vmf-content-rating title="ChooseRating" data-selected-option="3" maxoption="7" options="ratingOptions" name="radioName" model="radioModel"></vmf-content-rating>
+            </div>
+        </div>
+    </div>
+
+    <div class="rating_Container">
+        <label class="improve_label midAlign" for="improvement_comment">How can we improve?</label>
+        <input type="text" name="ratingContent" id="improvement_comment" ng-model="ratingText" class="improvement_comment midAlign" />
+        
+        <a ng-click="recordRating()" title="Submit" class="vmf-btn vmf-primary improvementSubmit">Submit</a>
+       
+    </div>
+</div>
+
+

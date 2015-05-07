@@ -1,0 +1,104 @@
+<!--Form Template-->
+<div ng-controller="formTemplateController" class="vmf-formTemplate vmf-formValidator">
+    <form name='vmfCustomFormTemplate'>
+        <span class="mandatory requiredFeild">* Required Fields</span>
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="userForm" model="user.firstName" hint="Enter First Name" title="First Name" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input" target-ele="col-md-4" vmf-tooltip tooltip-options="{'text':'Enter Your First Name.'}"></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="userForm" model="user.lastName" hint="Enter Last Name" title="Last Name" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input"></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix ">
+            <label class="col-md-3 formLabel vmf_clear_left">Predictive Search box</label>
+            <div class="col-md-4">
+                <vmf-text-input type="psearch" name="userForm" model="user.psearch" class="vmf-text-input" search-model="data.list" hint="Search All Downloads" clear-text-length="3" psearch-callback="user.psearchCallback"></vmf-text-input>
+            </div>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="userForm" model="user.email" hint="joe.smith@corp.com" title="Email Address" mandatory="true" custom-class="customclass" target-ele="col-md-4" class="formInputClass vmf-text-input" vmf-tooltip tooltip-options="{'text':'Activation email will be sent to the address provided. To activate your account, follow the steps in the activation mail.'}"></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="userForm" model="user.company" hint="Enter Company Name" title="Company Name" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input"></vmf-text-input>
+
+        </div>
+
+        <div class="form-group clearfix formTemplateSelect">
+            <div vmf-select-list dtitle="Country" model="user.country" list="globalObj" sortby="value" mandatory="true"></div>
+        </div>
+
+        <div class="form-group clearfix formTemplateSelect positionTip">
+            <div vmf-select-list dtitle="State/Provience" model="user.state" list="statesObj" sortby="value" mandatory="true"></div>
+            <span class="toolTip-icon vmf-tooltip" vmf-tooltip tooltip-options="{'position':'right','text':'<h5>State/Provience</h5> Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed'}"></span>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" hint="Enter Zip Code" name="userForm" model="user.postalCode" title="Zip/Postal Code" mandatory="true" custom-class="customclass" class="formInputClass form_zip_code vmf-text-input"></vmf-text-input>
+
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="userForm" model="user.city" hint="San Jose" title="City" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input"></vmf-text-input>
+        </div>
+
+        <div class="form-group clearfix">
+            <vmf-text-input type="normal" name="userForm" model="user.jobTitle" hint="Sr.Engineer" title="Job Title" mandatory="true" custom-class="customclass" class="formInputClass vmf-text-input"></vmf-text-input>
+        </div>
+
+        <!--<div class="form-group business_phone">
+			<vmf-text-input type="normal" name="userForm" model="user.businessPhone" title="Business Phone" mandatory="true" custom-class="customclass" class="formInputClass form_zip_code"></vmf-text-input>
+			<vmf-text-input type="normal" name="userForm" model="user.extention" title="Ext." custom-class="customclass" class="formInputClass"></vmf-text-input>
+		</div>-->
+
+        <div class="form-group business_phone clearfix">
+            <label class="col-md-3 col-xs-6 col-sm-3  formLabel" for="businessPhone"> <span class="mandatory">*</span> Business Phone</label>
+            <vmf-text-input class="col-md-3 col-xs-6 col-sm-3 businessText vmf-text-input" model="user.businessPhone" hint="408-998-4453">
+                <input type="text" id="businessPhone" name="businessPhone" model="user.businessPhone" />
+                <span class="help-text" style="
+   
+">Include your country or area code</span>
+            </vmf-text-input>
+
+            <label class="businessExt formLabel col-xs-6" for="ext">Ext</label>
+            <vmf-text-input class="col-md-1 col-xs-6 businessExtTxt vmf-text-input" model="user.extention">
+                <input type="text" id="ext" name="ext" model="user.extention" />
+            </vmf-text-input>
+        </div>
+
+
+        <div class="form-group clearfix formTemplateSelect positionTip ">
+            <div vmf-select-list dtitle="Global Employees" model="user.globalvalue" list="globalObj" sortby="value" mandatory="true"></div>
+            <span class="toolTip-icon vmf-tooltip" vmf-tooltip tooltip-options="{'position':'right','text':'Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed Lorem ipsum dolor sit amet aconsecteututur ullem elit, sed'}"></span>
+        </div>
+
+
+        <div class="form-group clearfix formRadioGroup">
+            <vmf-radio-group type="1" rtitle="radioTitle" options="radioOptions" name="radioName" title-col-mod="col-md-3" model="user.radioModel" custom-class="customclass" mandatory="true" validation='[{"name":"radio"},{"name":"required"}]'>
+            </vmf-radio-group>
+        </div>
+
+        <div class="form-group clearfix formCheckBoxGroup">
+            <div vmf-checkbox-group class="vmf-checkbox-group" ctitle="checkBoxTitle" type="2" model="user.checkBoxModel" options="checkBoxOptions2" name="checkBoxName2" custom-class="customclass">
+            </div>
+        <div class="form-group clearfix ">
+            <label for="vmf-formTextarea" class="col-md-3 labelHeader">Additional Information</label>
+            <div class="col-md-4">
+                <textarea id="vmf-formTextarea" model="user.textarea"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group inline-checkBox formTemplate-buttonDeviders clearfix">
+            <!-- <div vmf-checkbox-group class="vmf-checkbox-group" options="checkBoxOptions" type="2" name="checkBoxName" model="checkBoxModel" custom-class="customclass"></div> -->
+            <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="user.checkBoxModel2" name="checkBoxName2" c-label="checkBoxOptions[0].text" c-disabled="checkBoxOptions[0].disabled"></div>
+        </div>
+
+
+        <div class="form-group pull-right vmf-formFooterButons clearfix">
+            <div vmf-button btn-text='Register' btn-type='vmf-primary'></div>
+            <div vmf-button btn-text='Cancel' btn-type='vmf-secondary'></div>
+        </div>
+    </form>
+</div>

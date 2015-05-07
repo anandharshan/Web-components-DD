@@ -1,0 +1,1038 @@
+app.directive('vmTemplateInsert', ['$compile', '$document', '$window', '$timeout',
+    function($compile, $document, $window, $timeout) {
+        return {
+            restrict: 'A',
+            scope: {
+                template : '@',
+            },
+            controller : '@',
+            name:"controllerName",
+            //hack to get controller name to be set.
+            template : '<div ng-include = "getTemplate()" style = "display:table;"></div>',
+            link : function(scope,element,attrs){
+                    //hack to get template from the scope that is passed.
+                    scope.getTemplate = function(){
+                        return scope.template;
+                    }
+                }
+        }
+    }
+]);
+app.directive('vmfSelectList', ['$compile', '$document', '$window', '$timeout',
+    function($compile, $document, $window, $timeout) {
+        return {
+            restrict: 'EA',
+            scope: {
+                dtitle: '@',        // dropdown title on left side
+                model: '=',
+                list: '=',
+                sortby: '@',
+                mandatory: '@',
+                customClass:'=',
+                htitle:'@',         // dropdown header/button title
+                sub:'=',            // false if selected value should not substitute header title but shown somewhere else otherwise true by default 
+                preSelectInd: '=',  // pre selected value in dropdown
+                titleColMod:'@',
+                selectColMod:'@',
+                showArrows : '@',
+                dropdownType : '@',
+                templateUrl : '@',
+                controllerName : '@'
+            },
+            link: function(scope, elem, attrs) { 
+                if(scope.list && scope.list[0]){
+                    if(typeof scope.list[0] === 'string') {
+                        scope.list.sort();
+
+                    }
+                    else if(typeof scope.list[0] === 'number') {
+                        scope.list.sort(function (a, b) {return a - b;});
+                    }
+                    else if(typeof scope.list[0] === 'object') {
+                    
+                        if(scope.sortby === 'value') {
+                    
+                            if(typeof scope.list[0].value === 'number') {
+                                scope.list.sort(function (a, b) {return a.value - b.value;});
+                            }
+                            else if(typeof scope.list[0].value === 'string') {
+
+                                scope.list.sort(function (a, b) {
+                                    if(a.value < b.value) {
+                                        return -1;
+                                    }
+                                    else if(a.value > b.value) {
+                                        return 1;
+                                    }
+                                    else {
+                                        return 0;
+                                    }
+                                });
+                            }
+
+                        }
+                        else {
+                            scope.list.sort(function (a, b) {
+                                if(a.text < b.text) {
+                                    return -1;
+                                }
+                                else if(a.text > b.text) {
+                                    return 1;
+                                }
+                                else {
+                                    return 0;
+                                }
+                            });
+                        }
+                    }
+                }
+                scope.initializeScroll = false;
+
+                var template;
+                var titleColMod = typeof scope.titleColMod !== "undefined" ? scope.titleColMod : 'col-md-2';
+                var selectColMod = typeof scope.selectColMod !== "undefined" ? scope.selectColMod : 'col-md-4';
+                var showDDArrows = typeof scope.showArrows !== "undefined" ? scope.showArrows : true;
+                var sub = typeof scope.sub !== "undefined" ? scope.sub : true;
+
+                if(scope.mandatory === 'true') {
+                    if(scope.dtitle) {
+                        if(attrs.htitle ==='' || attrs.htitle) {
+                            template = '<div class="vmf_drop-down_text"><label class="labelHeader formLabel '+titleColMod+' col-xs-12"><span class="mandatory">*</span>{{dtitle}}</label><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">{{htitle}}</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';
+                           
+                        }
+                        else if(typeof scope.preSelectInd !== 'undefined') {
+                            if(scope.list && scope.list[0] && typeof scope.list[0] === 'object') {
+                                template = '<div class="vmf_drop-down_text"><label class="labelHeader formLabel '+titleColMod+' col-xs-12"><span class="mandatory">*</span>{{dtitle}}</label><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">' + scope.list[scope.preSelectInd].text + '</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';                       
+                            }
+                            else {
+                                template = '<div class="vmf_drop-down_text"><label class="labelHeader formLabel '+titleColMod+' col-xs-12"><span class="mandatory">*</span>{{dtitle}}</label><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">' + scope.list[scope.preSelectInd] + '</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';   
+                            }    
+                        }
+                        else {
+                            template = '<div class="vmf_drop-down_text"><label class="labelHeader formLabel '+titleColMod+' col-xs-12"><span class="mandatory">*</span>{{dtitle}}</label><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">Select</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';
+                        }
+
+                    }
+                    else {
+                        if(attrs.htitle ==='' || attrs.htitle) {
+                            template = '<div class="vmf_drop-down_text"><span class="mandatory">*</span><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">{{htitle}}</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';
+                           
+                        }
+                        else if(typeof scope.preSelectInd !== 'undefined') {
+                            if(scope.list && scope.list[0] && typeof scope.list[0] === 'object') {
+                                template = '<div class="vmf_drop-down_text"><span class="mandatory">*</span><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">' + scope.list[scope.preSelectInd].text + '</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';                      
+                            }
+                            else {
+                                template = '<div class="vmf_drop-down_text"><span class="mandatory">*</span><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">' + scope.list[scope.preSelectInd] + '</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';   
+                            }    
+                        }
+
+                        else {
+
+                            template = '<div class="vmf_drop-down_text"><span class="mandatory">*</span><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">Select</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';  
+                        }
+                    }
+                }
+
+                else {
+                    if(scope.dtitle) {
+                        if(attrs.htitle ==='' || attrs.htitle) {
+                            template = '<div class="vmf_drop-down_text"><label class="labelHeader formLabel '+titleColMod+' col-xs-12">{{dtitle}}</label><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">{{htitle}}</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';
+                        }
+                        else if(typeof scope.preSelectInd !== 'undefined') {
+                            if(scope.list && scope.list[0] && typeof scope.list[0] === 'object') {
+                                template = '<div class="vmf_drop-down_text"><label class="labelHeader formLabel '+titleColMod+' col-xs-12">{{dtitle}}</label><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">' + scope.list[scope.preSelectInd].text + '</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';                       
+                            }
+                            else {
+                                template = '<div class="vmf_drop-down_text"><label class="labelHeader formLabel '+titleColMod+' col-xs-12">{{dtitle}}</label><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">' + scope.list[scope.preSelectInd] + '</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';   
+                            }    
+                        }
+                        else {
+                            template = '<div class="vmf_drop-down_text"><label class="labelHeader formLabel '+titleColMod+' col-xs-12">{{dtitle}}</label><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">Select</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';
+                        }
+                        
+                    } 
+                    else {
+                        if(attrs.htitle ==='' || attrs.htitle) {
+                            template = '<div class="vmf_drop-down_text"><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">{{htitle}}</span><ul id="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';
+                        }
+                        
+                        else if(typeof scope.preSelectInd !== 'undefined') {
+                            if(scope.list && scope.list[0] && typeof scope.list[0] === 'object') {
+                                template = '<div class="vmf_drop-down_text"><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">'+ scope.list[scope.preSelectInd].text +'</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';   
+                            }
+                            else {                              
+                                template = '<div class="vmf_drop-down_text"><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">'+ scope.list[scope.preSelectInd] +'</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';   
+                            }
+                                
+                        }    
+                        else {
+
+                            template = '<div class="vmf_drop-down_text"><div tabindex="0" class="vmf-dropdown '+selectColMod+' col-xs-12" ng-keyDown="keyPressTitle($event);" ng-click="changeClass($event);"><div class="vmf-dropdown-content"><span class="current-selection">Select</span><ul class="dropDownListItems' + (attrs.dropdownType=="mega-dropdown" ? " flexWidth" : "") +'">';  
+                        }    
+                    }
+                }
+
+                if (scope.list && scope.list[0] && typeof scope.list[0] === 'object') {
+
+                    angular.forEach(scope.list, function(item,ind) {
+
+                        template += '<li ng-click="selectObj($event,' + ind + ');">' + item.text + '</li>';
+
+                    });
+                } 
+                else {
+
+                    angular.forEach(scope.list, function(item) {
+                
+                        template += '<li ng-click="select($event);">' + item + '</li>';
+
+                    });
+                }
+                
+                //Inserting the dirctive inside the main directive,
+                //Shouuld pass the template url and controller name
+                if(attrs.templateUrl){
+                    var value = '<div vm-template-insert template='+ attrs.templateUrl +' controller-name=' + attrs.controllerName +'></div>';
+                    template += value;
+                }
+                template += '</div></ul></div></div></div>';
+
+                elem.append(template);
+
+                if(scope.customClass){
+                    angular.forEach(scope.customClass, function(item) {
+                        elem.find(item.selector).addClass(item.cusclass);
+
+
+                    });
+                }
+
+                $compile(elem.contents())(scope);
+
+                if(scope.list && scope.list.length > 15) {
+                    scope.initializeScroll = true;
+                }
+
+                var ul = elem.find('ul');
+                
+                var scrollPane, scrollPaneApi;
+
+                if(scope.initializeScroll) {
+                    
+                        
+                    scrollPane = ul.jScrollPane({
+                        autoReinitialise: true,
+                        showArrows: showDDArrows,
+                        verticalArrowPositions: 'after'
+                    });
+                
+
+                    scrollPaneApi = scrollPane.data('jsp');
+                }
+
+
+                var currentSelection = elem.find('span.current-selection');
+
+                ul.hide();
+
+                var options = elem.find('li');
+
+                /* scroll bar for exceeding browser edge when scrolling for list with less than 15 items */
+                var scrollDestroyed = true;
+                /* for list*/
+                var scrollDestroyed2 = false;
+                var dTop, dBottom, maxHeight, initialHeight = ul.height();
+
+                scope.changeClass = function($event) {
+                   
+                    if(!angular.element($event.target).hasClass('jspDrag') && !angular.element($event.target).hasClass('jspTrack') && !(angular.element($event.target).parents('div[vm-template-insert]').length > 0)) {
+                        var dds = $('.vmf-dropdown').find("ul");
+                      
+                        var i;
+                        
+                        var ul = elem.find('ul');
+
+                        for(i = 0; i < dds.length; i++) {
+                      
+                            if(dds[i] !== ul.get(0)) {
+                      
+                                $(dds[i]).removeClass('active');
+                                $(dds[i]).parents(".vmf-dropdown-content").removeClass('_active');
+                                
+                                if ($(dds[i]).is(":visible"))
+                                    $(dds[i]).hide();
+                            }
+                        }
+                    
+                        if(elem.find('.vmf-dropdown-content').hasClass('_active')) {
+                            elem.find('.vmf-dropdown-content').removeClass('_active');
+                        }
+                        else {
+                            elem.find('.vmf-dropdown-content').addClass('_active');
+                        }
+                            
+    					angular.element('.vmf-dropdown .vmf-dropdown-content').removeClass('has-error');
+                        angular.element('.vmf-dropdown').find(".error-msg").remove();
+    				
+    					elem.find('span.current-selection').toggleClass('_active-drop');
+                    
+                        elem.find("ul").toggleClass('active');
+
+                        $(elem[0]).closest('.form-group').toggleClass('active');
+
+                        if (ul.is(":visible")) {
+                            ul.hide();
+                        }    
+                        else {
+                            ul.show();
+                            
+
+                            $('.vmf-text-input > form.searchArea').removeClass('active');
+                        }
+
+                        /* scroll bar for exceeding browser edge when clicked on dropdown */
+
+                        if(!scope.initializeScroll && elem.find("ul").hasClass('active')) {
+                            
+
+                            dTop = ul.offset().top - $document.scrollTop();
+                            if($window.innerHeight) {
+                                dBottom = $window.innerHeight - dTop - ul.height();
+                            }
+                            else {
+                                /* falling back to jquery $(window) for IE 7, 8 */
+                                dBottom = $(window).height() - dTop - ul.height();    
+                            }    
+
+                            if(dBottom < 0 && scrollDestroyed) {
+                                maxHeight = ul.height() + dBottom;
+                                ul.css('max-height', maxHeight);
+                                scrollPane = ul.jScrollPane({
+                                    autoReinitialise: true,
+                                    showArrows: showDDArrows,
+                                    verticalArrowPositions: 'after'
+                                });
+                            
+                                scrollPaneApi = scrollPane.data('jsp');
+                                scrollDestroyed = false;
+                            }
+                            else if(dBottom > 0 && !scrollDestroyed) {
+                            
+                                maxHeight = ul.height() + dBottom;
+
+                                scrollPaneApi.destroy();
+
+                                ul = elem.find('ul');
+                                ul.css('max-height', maxHeight);
+                            
+                                if(initialHeight > ul.height()) {
+                                    scrollPane = ul.jScrollPane({
+                                        autoReinitialise: true,
+                                        showArrows: showDDArrows,
+                                        verticalArrowPositions: 'after'
+                                    });
+                                
+                                    scrollPaneApi = scrollPane.data('jsp');
+                                    scrollDestroyed = false;
+                                }
+                                else {
+                                    scrollDestroyed = true;    
+                                }    
+                            }
+                            else if(dBottom < 0 && !scrollDestroyed) {
+                            
+                                maxHeight = ul.height() + dBottom;
+
+                                scrollPaneApi.destroy();
+
+                                ul = elem.find('ul');
+                                ul.css('max-height', maxHeight);
+                            
+                                if(initialHeight > ul.height()) {
+                                    scrollPane = ul.jScrollPane({
+                                        autoReinitialise: true,
+                                        showArrows: showDDArrows,
+                                        verticalArrowPositions: 'after'
+                                    });
+                                
+                                    scrollPaneApi = scrollPane.data('jsp');
+                                    scrollDestroyed = false;
+                                }
+                                else {
+                                    scrollDestroyed = true;    
+                                }    
+                            }
+                            
+                        }
+                        else if(scope.initializeScroll && elem.find("ul").hasClass('active')) {
+                            
+
+                            dTop = ul.offset().top - $document.scrollTop();
+                            if($window.innerHeight) {
+                                dBottom = $window.innerHeight - dTop - ul.height();
+                            }
+                            else {
+                                /* falling back to jquery $(window) for IE 7, 8 */
+                                dBottom = $(window).height() - dTop - ul.height();    
+                            }    
+
+                            if(dBottom < 0 && scrollDestroyed2) {
+                                maxHeight = ul.height() + dBottom;
+                                ul.css('max-height', maxHeight);
+                                scrollPane = ul.jScrollPane({
+                                    autoReinitialise: true,
+                                    showArrows: showDDArrows,
+                                    verticalArrowPositions: 'after'
+                                });
+                            
+                                scrollPaneApi = scrollPane.data('jsp');
+                                scrollDestroyed2 = false;
+                            }
+                            else if(dBottom > 0 && !scrollDestroyed2) {
+                            
+                                maxHeight = ul.height() + dBottom;
+                                
+
+                                    scrollPaneApi.destroy();
+
+                                    ul = elem.find('ul');
+                                    ul.addClass('active');
+                                    if(maxHeight < 350) {
+                                        ul.css('max-height', maxHeight);
+                                    }
+                                    else {
+                                        ul.css('max-height', 350);    
+                                    }    
+                                
+                                    if(initialHeight >= ul.height()) {
+                                        scrollPane = ul.jScrollPane({
+                                            autoReinitialise: true,
+                                            showArrows: showDDArrows,
+                                            verticalArrowPositions: 'after'
+                                        });
+                                    
+                                        scrollPaneApi = scrollPane.data('jsp');
+                                        scrollDestroyed2 = false;
+                                    }
+                                    else {
+                                        scrollDestroyed2 = true;    
+                                    }    
+                                    
+                            }
+                            else if(dBottom < 0 && !scrollDestroyed2) {
+                            
+                                maxHeight = ul.height() + dBottom;
+
+                                scrollPaneApi.destroy();
+
+                                ul = elem.find('ul');
+                                ul.addClass('active');
+                                ul.css('max-height', maxHeight);
+                            
+                                if(initialHeight > ul.height()) {
+                                    scrollPane = ul.jScrollPane({
+                                        autoReinitialise: true,
+                                        showArrows: showDDArrows,
+                                        verticalArrowPositions: 'after'
+                                    });
+                                
+                                    scrollPaneApi = scrollPane.data('jsp');
+                                    scrollDestroyed2 = false;
+                                }
+                                else {
+                                    scrollDestroyed2 = true;    
+                                }    
+                            }
+                            
+                        }
+                        
+                    }   
+
+                    $event.stopPropagation();
+                    
+                };
+
+                $document.on('click', function($event) {
+
+                    if(!angular.element($event.target).hasClass('jspDrag') && !angular.element($event.target).hasClass('jspTrack')) {
+         
+                        elem.find('ul').removeClass('active');
+                        elem.find('.vmf-dropdown .vmf-dropdown-content').removeClass('_active');
+
+                        /* need to reinitialise ul as scroll may have been destroyed */
+                        ul = elem.find('ul');
+                        if (ul.is(':visible')) {
+                            ul.hide();
+                        }
+                        $(elem[0]).closest('.form-group').removeClass('active');
+                    }    
+
+                });
+
+                /*scroll bar for window resize */
+
+                $window.onresize = function() {
+
+                    if(!scope.initializeScroll && elem.find('ul').hasClass('active')) {
+                        dTop = ul.offset().top - $document.scrollTop();
+                        if($window.innerHeight) {
+                            dBottom = $window.innerHeight - dTop - ul.height();
+                        }
+                        else {
+                            /* falling back to jquery $(window) for IE 7, 8 */
+                            dBottom = $(window).height() - dTop - ul.height();    
+                        }    
+
+                        if(dBottom < 0 && scrollDestroyed) {
+                            maxHeight = ul.height() + dBottom;
+                            ul.css('max-height', maxHeight);
+                            scrollPane = ul.jScrollPane({
+                                autoReinitialise: true,
+                                showArrows: showDDArrows,
+                                verticalArrowPositions: 'after'
+                            });
+                        
+                            scrollPaneApi = scrollPane.data('jsp');
+                            scrollDestroyed = false;
+                        }
+                        else if(dBottom > 0 && !scrollDestroyed) {
+                        
+                            maxHeight = ul.height() + dBottom;
+
+                            scrollPaneApi.destroy();
+
+                            ul = elem.find('ul');
+                            ul.css('max-height', maxHeight);
+                        
+                            if(initialHeight > ul.height()) {
+                                scrollPane = ul.jScrollPane({
+                                    autoReinitialise: true,
+                                    showArrows: showDDArrows,
+                                    verticalArrowPositions: 'after'
+                                });
+                            
+                                scrollPaneApi = scrollPane.data('jsp');
+                                scrollDestroyed = false;
+                            }
+                            else {
+                                scrollDestroyed = true;    
+                            }    
+                        }
+                        else if(dBottom < 0 && !scrollDestroyed) {
+                        
+                            maxHeight = ul.height() + dBottom;
+
+                            scrollPaneApi.destroy();
+
+                            ul = elem.find('ul');
+                            ul.css('max-height', maxHeight);
+                        
+                            if(initialHeight > ul.height()) {
+                                scrollPane = ul.jScrollPane({
+                                    autoReinitialise: true,
+                                    showArrows: showDDArrows,
+                                    verticalArrowPositions: 'after'
+                                });
+                            
+                                scrollPaneApi = scrollPane.data('jsp');
+                                scrollDestroyed = false;
+                            }
+                            else {
+                                scrollDestroyed = true;    
+                            }    
+                        }
+
+                    }
+                    else if(scope.initializeScroll && elem.find("ul").hasClass('active')) {
+                        
+
+                        dTop = ul.offset().top - $document.scrollTop();
+                        if($window.innerHeight) {
+                            dBottom = $window.innerHeight - dTop - ul.height();
+                        }
+                        else {
+                            /* falling back to jquery $(window) for IE 7, 8 */
+                            dBottom = $(window).height() - dTop - ul.height();    
+                        }    
+
+                        if(dBottom < 0 && scrollDestroyed2) {
+                            maxHeight = ul.height() + dBottom;
+                            ul.css('max-height', maxHeight);
+                            scrollPane = ul.jScrollPane({
+                                autoReinitialise: true,
+                                showArrows: showDDArrows,
+                                verticalArrowPositions: 'after'
+                            });
+                        
+                            scrollPaneApi = scrollPane.data('jsp');
+                            scrollDestroyed2 = false;
+                        }
+                        else if(dBottom > 0 && !scrollDestroyed2) {
+                        
+                            maxHeight = ul.height() + dBottom;
+                            
+
+                                scrollPaneApi.destroy();
+
+                                ul = elem.find('ul');
+                                if(maxHeight < 350) {
+                                    ul.css('max-height', maxHeight);
+                                }
+                                else {
+                                    ul.css('max-height', 350);    
+                                }    
+                            
+                                if(initialHeight >= ul.height()) {
+                                    scrollPane = ul.jScrollPane({
+                                        autoReinitialise: true,
+                                        showArrows: showDDArrows,
+                                        verticalArrowPositions: 'after'
+                                    });
+                                
+                                    scrollPaneApi = scrollPane.data('jsp');
+                                    scrollDestroyed2 = false;
+                                }
+                                else {
+                                    scrollDestroyed2 = true;    
+                                }    
+                                
+                        }
+                        else if(dBottom < 0 && !scrollDestroyed2) {
+                        
+                            maxHeight = ul.height() + dBottom;
+
+                            scrollPaneApi.destroy();
+
+                            ul = elem.find('ul');
+                            ul.addClass('active');
+                            ul.css('max-height', maxHeight);
+                        
+                            if(initialHeight > ul.height()) {
+                                scrollPane = ul.jScrollPane({
+                                    autoReinitialise: true,
+                                    showArrows: showDDArrows,
+                                    verticalArrowPositions: 'after'
+                                });
+                            
+                                scrollPaneApi = scrollPane.data('jsp');
+                                scrollDestroyed2 = false;
+                            }
+                            else {
+                                scrollDestroyed2 = true;    
+                            }    
+                        }
+                        
+                    }
+                    
+                };
+
+                /* scroll bar for exceeding browser edge when scrolling */
+
+                angular.element($window).on('scroll', function($event) {
+                    
+                    if($event.target.nodeName === '#document') {
+                        
+                        if(!scope.initializeScroll && elem.find('ul').hasClass('active')) {
+                            dTop = ul.offset().top - $document.scrollTop();
+                            if($window.innerHeight) {
+                                dBottom = $window.innerHeight - dTop - ul.height();
+                            }
+                            else {
+                                /* falling back to jquery $(window) for IE 7, 8 */
+                                dBottom = $(window).height() - dTop - ul.height();    
+                            }    
+
+                            if(dBottom < 0 && scrollDestroyed) {
+                                maxHeight = ul.height() + dBottom;
+                                ul.css('max-height', maxHeight);
+                                scrollPane = ul.jScrollPane({
+                                    autoReinitialise: true,
+                                    showArrows: showDDArrows,
+                                    verticalArrowPositions: 'after'
+                                });
+                            
+                                scrollPaneApi = scrollPane.data('jsp');
+                                scrollDestroyed = false;
+                            }
+                            else if(dBottom > 0 && !scrollDestroyed) {
+                            
+                                maxHeight = ul.height() + dBottom;
+
+                                scrollPaneApi.destroy();
+
+                                ul = elem.find('ul');
+                                ul.css('max-height', maxHeight);
+                            
+                                if(initialHeight > ul.height()) {
+                                    scrollPane = ul.jScrollPane({
+                                        autoReinitialise: true,
+                                        showArrows: showDDArrows,
+                                        verticalArrowPositions: 'after'
+                                    });
+                                
+                                    scrollPaneApi = scrollPane.data('jsp');
+                                    scrollDestroyed = false;
+                                }
+                                else {
+                                    scrollDestroyed = true;    
+                                }    
+                            }
+                            else if(dBottom < 0 && !scrollDestroyed) {
+                            
+                                maxHeight = ul.height() + dBottom;
+
+                                scrollPaneApi.destroy();
+
+                                ul = elem.find('ul');
+                                ul.css('max-height', maxHeight);
+                            
+                                if(initialHeight > ul.height()) {
+                                    scrollPane = ul.jScrollPane({
+                                        autoReinitialise: true,
+                                        showArrows: showDDArrows,
+                                        verticalArrowPositions: 'after'
+                                    });
+                                
+                                    scrollPaneApi = scrollPane.data('jsp');
+                                    scrollDestroyed = false;
+                                }
+                                else {
+                                    scrollDestroyed = true;    
+                                }    
+                            }
+
+                        }
+                        else if(scope.initializeScroll && elem.find("ul").hasClass('active')) {
+                            
+
+                            dTop = ul.offset().top - $document.scrollTop();
+                            if($window.innerHeight) {
+                                dBottom = $window.innerHeight - dTop - ul.height();
+                            }
+                            else {
+                                /* falling back to jquery $(window) for IE 7, 8 */
+                                dBottom = $(window).height() - dTop - ul.height();    
+                            }    
+
+                            if(dBottom < 0 && scrollDestroyed2) {
+                                maxHeight = ul.height() + dBottom;
+                                ul.css('max-height', maxHeight);
+                                scrollPane = ul.jScrollPane({
+                                    autoReinitialise: true,
+                                    showArrows: showDDArrows,
+                                    verticalArrowPositions: 'after'
+                                });
+                            
+                                scrollPaneApi = scrollPane.data('jsp');
+                                scrollDestroyed2 = false;
+                            }
+                            else if(dBottom > 0 && !scrollDestroyed2) {
+                            
+                                maxHeight = ul.height() + dBottom;
+                                
+
+                                    scrollPaneApi.destroy();
+
+                                    ul = elem.find('ul');
+                                    if(maxHeight < 350) {
+                                        ul.css('max-height', maxHeight);
+                                    }
+                                    else {
+                                        ul.css('max-height', 350);    
+                                    }    
+                                
+                                    if(initialHeight >= ul.height()) {
+                                        scrollPane = ul.jScrollPane({
+                                            autoReinitialise: true,
+                                            showArrows: showDDArrows,
+                                            verticalArrowPositions: 'after'
+                                        });
+                                    
+                                        scrollPaneApi = scrollPane.data('jsp');
+                                        scrollDestroyed2 = false;
+                                    }
+                                    else {
+                                        scrollDestroyed2 = true;    
+                                    }    
+                                    
+                            }
+                            else if(dBottom < 0 && !scrollDestroyed2) {
+                            
+                                maxHeight = ul.height() + dBottom;
+
+                                scrollPaneApi.destroy();
+
+                                ul = elem.find('ul');
+                                ul.addClass('active');
+                                ul.css('max-height', maxHeight);
+                            
+                                if(initialHeight > ul.height()) {
+                                    scrollPane = ul.jScrollPane({
+                                        autoReinitialise: true,
+                                        showArrows: showDDArrows,
+                                        verticalArrowPositions: 'after'
+                                    });
+                                
+                                    scrollPaneApi = scrollPane.data('jsp');
+                                    scrollDestroyed2 = false;
+                                }
+                                else {
+                                    scrollDestroyed2 = true;    
+                                }    
+                            }
+                            
+                        }
+                    }
+                });            
+
+
+                if(typeof scope.preSelectInd !== 'undefined') {
+                    
+                    if(scope.list && scope.list[0] && typeof scope.list[0] === 'object') {
+                        scope.model = scope.list[scope.preSelectInd].value;
+                    }
+                    else {
+                        scope.model = scope.list[scope.preSelectInd];   
+                    }    
+                    
+                    var list2 = elem.find('li');
+
+                    angular.element(list2[scope.preSelectInd]).addClass('dd-opt-selected');                    
+                }
+
+                scope.select = function($event) {
+                    var opt = $event.currentTarget;
+
+                    if(sub) {
+                        elem.find('span.current-selection').text($(opt).text());
+                    }    
+                    scope.model = $(opt).text(); 
+                    
+                    var list = elem.find('li'); 
+                    angular.forEach(list, function(item) {
+                        
+                        angular.element(item).removeClass('dd-opt-selected');
+                    });
+
+                    angular.element(opt).addClass('dd-opt-selected');
+
+                    scope.$emit('vmfDDOptionClicked', $event);
+                };
+
+                scope.selectObj = function($event, index) {
+                    var opt = $event.currentTarget;
+
+                    if(sub) {
+                        elem.find('span.current-selection').text($(opt).text());
+                    }    
+
+                    scope.model = scope.list[index].value; 
+                    var list = elem.find('li'); 
+
+                    angular.forEach(list, function(item) {
+                        
+                        angular.element(item).removeClass('dd-opt-selected');
+                    });
+
+                    angular.element(opt).addClass('dd-opt-selected');
+
+                    scope.$emit('vmfDDOptionClicked', $event);
+                };
+
+
+                /*
+                * fallback event - ng-click events do not propagate on some occassions when dropdown is integrated 
+                * with other components
+                */
+
+                scope.$on('vmfDDOptionClicked', function(customEvent, $event) {
+                    scope.changeClass($event);
+                    customEvent.stopPropagation();
+                });
+
+                scope.selectByKey = function($event, index) {
+                    if(sub) {
+                        elem.find('span.current-selection').text($(options[index]).text());
+                    }    
+
+                    if(scope.list && scope.list[0] &&  typeof scope.list[0] === 'object') {
+                        scope.model = scope.list[index].value;
+                    }
+                    else {
+                        scope.model = scope.list[index];
+                    }
+                        
+                    var list = elem.find('li');
+                    angular.forEach(list, function(item) {
+                        
+                        angular.element(item).removeClass('dd-opt-selected');
+                    });
+
+                    angular.element(options[index]).addClass('dd-opt-selected');
+                };
+
+
+                scope.currentIndex = -1;
+                var lowestEleIndex = 14;
+
+                scope.keyPressTitle = function($event) {
+                    
+                    var list = elem.find('li');
+
+                    if($event.which === 40) {
+                        $event.preventDefault();
+
+                        if(scope.currentIndex < options.length - 1) {
+
+                            scope.currentIndex += 1;
+                            scope.selectByKey($event, scope.currentIndex);
+                            if(scope.currentIndex >= 15) {
+                                scrollPaneApi.scrollToElement(list[scope.currentIndex]);
+                                lowestEleIndex = scope.currentIndex;
+                            }
+                        }
+                    
+                    }
+
+                    else if($event.which === 38) {
+                        $event.preventDefault();
+
+                        if(scope.currentIndex > 0) {
+                            scope.currentIndex -= 1;
+                            scope.selectByKey($event, scope.currentIndex);
+                            if(lowestEleIndex - scope.currentIndex >= 15) {
+                                scrollPaneApi.scrollToElement(list[scope.currentIndex]);
+                                lowestEleIndex -= 1;
+                            }
+                        }
+                    
+                    }
+
+                    else if($event.which === 13 && ul.hasClass('active')) {
+                        elem.find('.vmf-dropdown-content').removeClass('_active');
+                        elem.find('.current-selection').removeClass('_active-drop');
+                        ul.removeClass('active');
+                        ul.hide();
+                    }
+
+                    else if(($event.which >= 48 && $event.which <= 57) || ($event.which >= 65 && $event.which <= 90) || ($event.which >= 97 && $event.which <= 122)) {
+                        
+                        var i, text, matchingIndex = -1;
+                        if(scope.list && scope.list[0] &&  typeof scope.list[0] === 'object') {
+                            for(i = scope.currentIndex + 1; i < scope.list.length; i++) {
+                                text = scope.list[i].text;
+                                
+                                if(text.charCodeAt(0) === $event.which) {
+                                    matchingIndex = i;
+                                    break;
+                                }
+                                
+                            }
+                            
+                            if(matchingIndex === -1) {
+                                for(i = 0; i < scope.currentIndex; i++) {
+                                    text = scope.list[i].text;
+                                    
+                                    if(text.charCodeAt(0) === $event.which) {
+                                        matchingIndex = i;
+                                        break;
+                                    }
+                                    
+                                }    
+                            }
+
+                            if(matchingIndex !== -1) {
+                                if(sub) {
+                                    elem.find('span.current-selection').text(text);
+                                }    
+
+                                scope.model = scope.list[matchingIndex].value; 
+                                scope.currentIndex = matchingIndex;
+
+                                list = elem.find('li'); 
+
+                                angular.forEach(list, function(item) {
+                                    
+                                    angular.element(item).removeClass('dd-opt-selected');
+                                });
+
+                                angular.element(elem.find('li')[matchingIndex]).addClass('dd-opt-selected');
+
+                                matchingIndex = -1;
+                            }        
+    
+                        }
+
+                        else if(scope.list && scope.list[0]){
+                            for(i = scope.currentIndex + 1; i < scope.list.length; i++) {
+                                if(scope.list && scope.list[0] &&  typeof scope.list[0] !== 'string') {
+                                    text = scope.list[i].toString();
+                                }
+                                else {
+                                    text = scope.list[i];    
+                                }
+                                
+                                if(text.charCodeAt(0) === $event.which) {
+                                    matchingIndex = i;
+                                    break;
+                                }
+                                
+                            }
+
+                            if(matchingIndex === -1) {
+                                for(i = 0; i < scope.currentIndex; i++) {
+                                    text = scope.list[i].text;
+                                    
+                                    if(text.charCodeAt(0) === $event.which) {
+                                        matchingIndex = i;
+                                        break;
+                                    }
+                                    
+                                }    
+                            }
+
+                            if(matchingIndex !== -1) {
+                                if(sub) {
+                                    elem.find('span.current-selection').text(text);
+                                }    
+                                
+                                scope.model = scope.list[i]; 
+                                scope.currentIndex = i;
+                                
+                                list = elem.find('li'); 
+                                angular.forEach(list, function(item) {
+                                    
+                                    angular.element(item).removeClass('dd-opt-selected');
+                                });
+
+                                angular.element(elem.find('li')[i]).addClass('dd-opt-selected');
+                                matchingIndex = -1;
+
+                            }    
+
+                        }                            
+
+                    }
+
+                };
+
+                scope.$watch('model', function(n,o) {
+                    if(n === null && sub) {
+                        $timeout(function() {
+                            if(attrs.htitle ==='' || attrs.htitle) {
+                                elem.find('span.current-selection').text(scope.htitle);
+                            }
+                            else {
+                                elem.find('span.current-selection').text('Select');    
+                            }
+                            elem.find('li').removeClass('dd-opt-selected');                     
+                        });    
+
+                    }
+                });
+
+            }
+        };
+    }
+]);

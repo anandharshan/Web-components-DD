@@ -1,0 +1,35 @@
+.pageContainer {
+    max-width: 1140px;
+    margin:8px auto 0;
+    min-width: 1024px;
+}
+.vmf-GridMainContainer {
+    max-width: 1140px;
+    .vmf-heroContent {
+        margin: 0px 10px 0 0;
+        height: 400px;
+    }
+    .vmf-quickLinks {
+        height: 400px;
+        margin: 0 0 0 20px;
+    }
+}
+.vmf-footerWrap {
+    max-width: 1140px;  
+    margin:0 auto;
+}
+.vmf-GridSectionContainer {
+    .vmf-GridIntrdctn, .vmf-GridProducts, .vmf-GridOverview {
+        height: 470px;
+    }
+    .vmf-GridIntrdctn {
+        margin: 0px 20px 0px 0px;
+    }
+    .vmf-GridProducts {
+        margin: 0px 10px;
+    }
+    .vmf-GridOverview {
+        margin: 0px 0px 0px 20px;
+    }
+}
+

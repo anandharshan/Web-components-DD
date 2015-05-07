@@ -1,0 +1,34 @@
+
+@import "common/_vars.scss";
+@import "common/_mixins.scss";
+@import "common/_type.scss";
+
+
+/* VMware Globals ends */
+
+/*shared CSS*/
+@import "common/shared.scss";
+
+/* Page Styles Begins */
+@import "pageStyles/page.scss";
+/* Page Styles Ends */
+
+
+
+@import "../../modules/Search/search.scss";
+
+@import "../../modules/FileUpload/fileUpload.scss";
+@import "../../modules/SplitContainer/split-pane.scss";
+@import "../../modules/FirstRunExperience/firstRunExperience.scss";
+
+
+
+@import "../../modules/passwordStrength/pwdStrength.scss";
+@import "../../modules/FolderTree/folderTree.scss";
+
+
+@import "../../modules/productCarousel/productCarousel.scss";
+
+
+@import "common/jquery.jscrollpane.scss";
+@import "common/jquery.mCustomScrollbar.min.scss";

@@ -1,0 +1,42 @@
+Syntax:
+<vmf-coach-marks config="config"> </vmf-coach-marks>
+Configuration
+
+config Object
+Mandatory: Yes
+Default Value: <empty>
+Usage: config = {
+    "isCoachMarksDisplay" : true,
+                    "closeOnEscape" : true,
+                    "clickAnyWhereClose" : false,
+                    "coachMarksItems" : [{
+                                        "domReference" : ".mainlistItem",
+                                        "title" : "Main Menu Items",
+                                        "description" : "description text",
+                                        "descPosition" :  "left",
+                                        "seqOrder" : "2"
+                       }]
+}
+An object which will contain configuration parameter for the coach marks. The object properties are as follow.
+   
+isCoachMarksDisplay:[ Boolean]
+The Boolean value will determine whether to display or hide the coach marks. If it's true, coach marks will be displayed, else it's not displayed
+
+
+closeOnEscape:[ Boolean]
+	It accept Boolean value as input, based on the Boolean value, it determine whether to close the coach mark when user press ESC key.
+	clickAnyWhereClose  :  [Boolean]
+		It is also a Boolean value, which will close the coach marks when the user click anywhere in the page only when it's true. 
+	coachMarksItems: [Array of Object]
+		It's an Array of object which will hold key, value pair of information for the individual coach marks element. The properties and its corresponding description are as follow.
+	
+		domReference :  DOM Object | selector string
+			The Input must be a valid selector String ('.classname',  '#id') or DOM element which is the reference to the coach Mark
+		title :[ String]
+			The title for the corresponding coach marks.
+		Description :[ String]
+			It contains description text for the corresponding coach marks.
+		descPosition : [String]
+			It refers to the position of the description content. The supported values are "left", "right", "top" and "bottom". By default it takes bottom position.
+		seqOrder : [Number]
+			This refers to the sequential order in which the coach mark is to be displayed.

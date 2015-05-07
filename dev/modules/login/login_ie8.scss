@@ -1,0 +1,30 @@
+.login {
+    .modal-dialog {
+        max-width: 330px;
+    }
+    .modal-body {
+        height: auto;
+    }
+    .custom-checkbox {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .vmfloginChange {
+        padding: 15px 47px 15px 43px;
+    }
+    .forgotpwd {
+        line-height: 17px;
+    }
+    .register {
+        margin-right: 15px;
+        margin-left: 23px;
+    }
+    .forgotpwd {
+        margin-left: 15px;
+    }
+    .loginLinks {
+        li:first-child {
+            padding-right: 26px;
+        }
+    }
+}

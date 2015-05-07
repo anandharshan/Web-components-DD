@@ -1,0 +1,9 @@
+<!--global Navigation component code -->
+
+<div class="vmf-globalNavigation" ng-controller="globalNavCtrl">
+    <div class="navDiv">
+        <a class="vware-logo" href="javascript:void(0);" title="vmware">Vmware logo</a>
+        <a href="javascript:void(0);" class="menu-link menu-link-primary" ng-click="showDetails = ! showDetails">Menu</a>
+        <menu nav-menu="navMenu" show-details="showDetails" ng-show="showDetails"></menu>
+    </div>
+</div>

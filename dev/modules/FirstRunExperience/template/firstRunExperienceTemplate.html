@@ -1,0 +1,42 @@
+<div>
+    <div class="modalLoad" aria-hidden="true" tabindex="-1" role="dialog"  ng-keyup="escapeFRE($event);" ng-show="freShown" id="id">
+	<div class="modal-backdrop fade in"></div>
+    <div class="modal fade">
+        <div class="fre-dialog size">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="javascript:void(0)" class="closeIcon" data-dismiss="modal" aria-hidden="true" ng-click="freShown=false">
+                        Close
+                    </a>
+                    <h4 class="modal-title" id="myModalLabel">
+                        {{title}}
+                    </h4>
+                </div>
+
+                <div class="modal-body vmf-fre-gradient-blue row">
+                    <div ng-transclude></div>
+                    <div ng-class="{'col-md-7' : pageNo>1}">
+                        <img class="fre-content" ng-src="{{content}}"></img>
+                    </div>
+                    <div class="col-md-5" ng-show="pageNo>1">
+                        <p class="content" ng-bind-html='textVal'></p>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                        <input type='checkbox' class="vmf-back-btn" ng-model="showAgain" id="chkShowAgain" ng-change='toggleShowAgain(showAgain)'><label for="chkShowAgain">Don't show me again</label>
+                        <div class="pageInfo"><span>Viewing {{pageNo}}</span><span> of {{pagesLength}}</span></div>
+                        <div class="rightButton">
+                            <button type="button" ng-disabled='pageNo==1' class="vmf-btn" ng-class="{'vmf-secondary':pageNo>1}" data-dismiss="modal" data-ng-click="onBackward()">Previous
+                            </button>   
+                            <button type="button" ng-disabled='pageNo==pagesLength' class="vmf-btn vmf-primary" data-ng-click="onForward()">Next
+                            </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+

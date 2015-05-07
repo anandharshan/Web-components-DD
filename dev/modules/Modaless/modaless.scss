@@ -1,0 +1,317 @@
+vmf-modaless-popup{
+    .modalLoad.modal-open{
+        position: fixed;
+        top:0px;
+        left:0px;
+        right:0;
+        bottom:0;  
+        .modaless-body{
+            overflow-y: auto; /*height:150px;*/ width: 100%;
+        }
+    }
+} 
+
+.modaless-dialog{ 
+    position: relative;
+    z-index: 1050;
+    width: auto;
+    padding: none; 
+    margin: 10px;  
+    height:auto; 
+    top:0;
+    left:0;
+    right:1.5%;
+    bottom:1%; 
+        .modaless_up_load, .modaless_up_body, .modaless_up-header,.up_icon-grp{
+            display:none;
+        }
+        a{
+             cursor:pointer;
+             text-decoration:none;
+        }
+        .modaless-head{
+            font-family: $font-stackSemiBold;
+            font-size: 24px;
+            .modaless_icons.max_icon-grp{
+            	height: 65px;
+            }
+		.modaless_icons{ 
+		    display: inline-block;
+		    float: right; width: auto; padding:0px;
+		    .max_Close, .mdl_Min{ 
+                width: 18px; height: 18px; margin: 20px 15px 27px 0px; 
+                background: url(/images/buttons_modal_less.png) no-repeat -5px -182px;
+                display: inline-block; float:left;
+		    }
+		    .max_Close{  
+                float:none; margin-right: 25px;
+                background-position: -6px -206px;
+		   } 
+		} 
+		.modaless-title{ 
+			line-height: 19px;
+            height: 65px;
+			padding: 20px 15px 15px 40px;
+            font-family: $font-stackSemiBold;
+			font-size: 1.5rem;
+            color: $vmf-gray-darker;
+ 			margin: 0px;
+		}
+		.modaless_up_head{
+			display:none;
+		}
+        }
+        .modaless-body{
+            box-sizing: border-box;
+            height: auto;
+            border-top:1px solid #D6D6D6;
+            padding: 20px 40px;
+            clear:left;
+        } 
+        .modaless-footer{
+            button{
+                padding-left: 22px;
+                padding-right: 22px;
+                margin: 5px 0px;
+            }
+            .rightButton{
+                button{
+                    padding-left: 24px;
+                    padding-right: 24px;
+                    margin: 5px 0px;
+                } 
+            }
+        }
+        .modaless-footer .vmf-back-btn{
+            float:left;        
+        }
+
+/* Start Minimize View */
+        &.modaless_mini{
+            width:516px;
+            height:70px;
+            position: fixed;
+   	    bottom: 0;
+	    right: 0;
+	    width: 98%;
+	    	margin:1%;
+	    	left:auto;
+	top:auto;
+	    	.modal-content{
+	    		height: 70px; 
+	    	}
+		.modaless-body, .modaless-footer, .modaless_upload_body{
+			display:none;
+		} 
+		.max_icon-grp{		
+			.mdl_Max, .mdl_Close{ 
+				width: 30px; height: 30px;
+				padding: 0px;
+				background: url(/images/buttons_modal_less.png) no-repeat -3px -2px;
+			}
+			.mdl_Close{ 
+				background-position: -3px -65px;
+			} 
+		}
+
+	}
+
+/* Start Upload View */
+	&.modaless_upload{ 
+		width:auto; height:auto; padding: 0px; margin: 10px;
+		font-family: $font-stackSemiBold;
+		.modaless-body, .modaless-footer, .modaless-title,.modaless_icons{
+		    display:none;
+		} 
+		.modaless_up-header, .modaless_up_body, .modaless_up_head{
+		    display:block;
+		} 
+		.modaless_up_body{ 
+		    margin:0px 40px 10px 40px; 
+		    width:auto; height:43px;
+		    margin:0px 35px 14px 40px;
+		    border:1px solid #C1C1C1;
+		    background:#EEEEEE;
+		    border-radius:3px;
+		    .up_pro_bar{
+			background:#7cbf45;
+			height:43px; float:left;
+			margin:-1px; width:75%;
+            padding-left: 1px;
+			border-radius:3px;
+		    }   
+		    .up_pro_txt{
+			position:absolute; margin-left:0px; 
+			padding:0px;
+			span{
+			    display:inline-block;
+			    padding:8px 13px;
+			    font-size:1.125rem;
+			    font-size:18px;
+			    font-family: $font-stackSemiBold;
+			}
+		    }   
+		}	
+		.up_icon-grp{
+			display: inline-block;
+			float: right; line-height: normal;
+			padding: 10px 10px 0px 0px;
+			.up_Close, .up_Max{
+				width: 24px; height: 24px; 
+				background: url(/images/buttons_modal_less.png) no-repeat -4px -97px;
+				display: inline-block; 
+				   
+			}
+			.up_Max{  
+				float:left; margin-right:15px;
+				background-position: -5px -37px;
+			} 
+		}
+
+
+		.modaless_up_head{ 
+		     .modaless_up-err{
+		          display:inline-block;
+		          float:left;
+		          width:23px; height:20px;
+		          margin:24px 10px 0px 40px;
+		          background: url(/images/buttons_modal_less.png) no-repeat -5px -125px;
+		     }
+		     .modal_up-title{
+		          display:inline-block;
+		          margin:30px 10px 20px 0px;
+		          font-size:1.125rem; line-height:0.625rem;
+		          font-size:18px; line-height:10px;
+		          font-family: $font-stackSemiBold;
+		          color:#ff0000;
+		     }
+			.modal_up-try{
+				color:$primary-blue;
+				font-family: $font-stackSemiBold;
+				font-size: 1.125rem;
+				font-size: 18px;
+				padding:0px;
+			}
+		}
+	.modaless-title{
+	    margin: 0;
+	    line-height: 20px;
+	    padding:30px 15px 15px 40px;
+	    font-size:1.5rem;
+	    font-size:24px;
+	}
+    }
+
+}
+
+.modaless-footer{
+        padding: 20px 40px 25px 40px;
+        background: $btn-default-bg-gradient-start;
+        border-top: none;
+        border-radius: 0 0 6px 6px;
+        .rightButton{
+        text-align:right;
+        }
+        .vmf-btn{
+            margin: 0px 0px 0px 0px;
+            clear: both;
+            width:100%;
+        }
+    }
+.modal-content {
+    margin:0;   
+}
+/*@media screen and (min-width: 320px){
+	.modaless-dialog {
+		width: 96%;  
+		height: auto;  
+		position: fixed; 
+		z-index: 1050; 
+		bottom: 0%; 
+		left: 0%; 
+		.modaless-body{
+			height:auto;
+			overflow:auto;
+		}
+	}
+
+}   */
+@media screen and (min-width: 768px) {
+	.modaless-dialog{
+		width: 770px;  
+		max-height: 585px;/*height:585px*/
+		position: fixed; 
+		z-index: 1050; 
+		bottom: 1%; 
+		right: 1.5%;  
+		left:auto;
+		top:auto;
+		&.modaless_mini{
+            width:516px;
+        }
+        .modaless-body{
+            box-sizing: border-box; 
+            border-top:1px solid #D6D6D6;
+            padding: 20px 40px;
+            /*min-height: 238px;*/
+            clear:left;
+        }  
+        
+	}  
+    vmf-modaless-popup{
+         
+    .modalLoad.modal-open{
+        position:static;
+         top:auto;
+        left:auto;
+        right:0;
+        bottom:auto;
+        .modaless-body{ 
+            max-height: 445px;/*height:445px*/ 
+        }  		 
+    }
+    }
+
+    /*.modalessOverlay {
+    	.modalLoad.modal-open{
+	        .modaless-body{ 
+	            height:445px;
+	        }  		 
+    	}
+    }*/
+    
+
+	.modaless-dialog.modaless_upload{
+		width:517px;
+		height:119px; 
+		padding: 0px;
+	}
+	.modaless-footer{
+	.vmf-btn{ 
+	    display:inline-block;
+	     width:auto;
+	    margin-left:16px;
+	}
+	.vmf-back-btn {
+	    margin-left:0;
+	}  
+	} 
+	
+vmf-modaless-popup{
+.modalLoad.modal-open{
+.modaless-footer{
+	button{
+		margin: 0px 0px 0px 0px;
+	}
+}
+
+ .rightButton{ 
+      button{ 
+	   margin: 0px 0px 0px 16px;
+      }
+    }
+ }
+}
+
+} 
+ 

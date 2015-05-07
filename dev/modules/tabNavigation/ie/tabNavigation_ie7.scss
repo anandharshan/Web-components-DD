@@ -1,0 +1,16 @@
+/* for IE7 */
+vmf-tabs .tab-content, vmf-tabsone .tab-content, vmf-tabstwo .tab-content{
+   *padding:16px 0px;
+}
+
+vmf-tabstwo .vmfTab2 span{
+   float: left; vertical-align:top; font-weight:bold;
+}
+
+vmf-tabstwo .nav li{
+  *border:1px solid #ccc;
+} 
+.vmfTab2 .tab_head_txt {
+  font-family:$font-stackSemiBold;
+  font-size: 22px; color: #333; padding:5px 15px 30px 15px;
+}

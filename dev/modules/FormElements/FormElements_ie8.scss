@@ -1,0 +1,10 @@
+.vmf-formTemplate {
+    .selectWidth {
+        .vmf-dropdown {
+            width: 180px
+        }
+        > div {
+            width: auto;
+        }
+    }
+}

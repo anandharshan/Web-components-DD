@@ -1,0 +1,119 @@
+Syntax:
+	Type 1
+<div vmf-search type="1" model="searchModel" sources="sources" source-selection="selection" search-callback="search" suggestion-callback="suggest()" suggestion-list="keywordList" filter-suggestion-list1="filterKeyWords1" filter-model1="filterKeyword1" filter-model1-selection="selectedFilterList1" filter-model1-hint="Enter Symptom Tag" filter-suggestion-list2="filterKeyWords2" filter-model2="filterKeyword2" filter-model2-selection="selectedFilterList2" filter-model2-hint="Enter Symptom Tag" sort-by="sortingOrder" filter-model3="filterKeyword3" filter-model3-list="filterKeyword3List" filter-model3-list-order="value" filter-model3-title="Timeframe" filter-model4="filterKeyword4" filter-model4-List="filterKeyword4List" filter-model4-title="Search Toolkit"> </div>
+	Type 2
+<div vmf-search type="2" model="searchModelV" sources="sourcesV" source-selection="selectionV" search-callback="searchV" suggestion-callback="suggestV()" suggestion-list="keywordListV" filter-suggestion-list1="filterKeyWords1V" filter-model1="filterKeyword1V" filter-model1-selection="selectedFilterList1V" filter-model1-hint="Enter Symptom Tag" filter-suggestion-list2="filterKeyWords2V" filter-model2="filterKeyword2V" filter-model2-selection="selectedFilterList2V" filter-model2-hint="Enter Symptom Tag" sort-by="sortingOrderV" filter-model3="filterKeyword3V" filter-model3-list="filterKeyword3ListV" filter-model3-list-order="value" filter-model3-title="Timeframe" filter-model4="filterKeyword4V" filter-model4-List="filterKeyword4ListV" filter-model4-title="Search Toolkit" filter-suggestion-list5="filterKeyWords5V" filter-model5="filterKeyword5V" filter-model5-selection="selectedFilterList5V" filter-model5-hint="Enter Author" filter-suggestion-list6="filterKeyWords6V" filter-model6="filterKeyword6V" filter-model6-selection="selectedFilterList6V" filter-model6-hint="Enter Article Id" filter-model7="filterKeyword7V" filter-model7-list="filterKeyword7ListV" filter-model7-list-order="value" filter-model7-title="SR Status" filter-model8="filterKeyword8V" filter-model8-list="filterKeyword8ListV" filter-model8-list-order="value" filter-model8-title="SR Sub-Status" filter-model9="filterKeyword9V" filter-model9-list="filterKeyword9ListV" filter-model9-list-order="value" filter-model9-title="Bug Status" filter-suggestion-list10="filterKeyWords10V" filter-model10="filterKeyword10V" filter-model10-selection="selectedFilterList10V" filter-model10-hint="Customer Tag" filter-suggestion-list11="filterKeyWords11V" filter-model11="filterKeyword11V" filter-model11-selection="selectedFilterList11V" filter-model11-hint="Enter Assigned to Tag"> </div>
+
+Configuration
+
+	Common
+
+type String Literal       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: type = “1” or type=”2”                                                                                                              
+Type “1” and “2” correspond to patterns in VMware Pattern Library site. Only values “1” and “2” are allowed.
+
+model Variable[String]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage:  model=”searchModel”
+The search keyword typed in by the user.
+
+sources Variable [Array]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: ['KB articles', 'VMStar SRs', 'Bugzilla', 'Product Documentation']
+All the sources on which to apply search.
+
+source-selection Array
+Mandatory:  Yes
+Default Value: same as sources 
+Usage: source-selection=”sourcesSelection”
+The sources selected by the user on which search will be applied.
+
+search-callback Function reference
+Mandatory:  Yes
+Default Value: <empty>
+Usage: search-callback="search"
+The search callback function when user invokes search.
+
+suggestion-callback Function call
+Mandatory:  Yes
+Default Value: <empty>
+Usage: suggestion-callback="suggest()"
+The suggestion callback function when user types in to the input.
+
+suggestion-list Variable [Array]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: suggestion-list="keywordList"
+The list of keyword suggestions to show to the user.
+
+filter-suggestion-list1 Variable [Array]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: suggestion-list=" filterKeyWords1"
+The list of suggestions to show to the user under advanced filters.
+
+filter-model1 Variable [String]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: filter-model1=" filterKeyword1"
+The text typed in by the user under advanced filters.
+
+sort-by Variable [Number]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: sort-by=”sortingOrder”
+The sorting order used to display search results. 0 for sorting by relevance, 1 for sorting by creation date, 2 for sorting by update date. Supported values are only 0,1,2. Type 2 only supports values 0 and 1.
+
+	Advanced Filters
+
+Filter 1
+filter-model1-selection Variable [Array]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: filter-model1-selection="selectedFilterList1"
+The list of filter keywords selected by the user under advanced filters.
+
+filter-model1-hint String Literal
+Mandatory:  Yes
+Default Value: <empty>
+Usage: filter-model1-hint="Enter Symptom Tag"
+The placeholder text for input box under advanced filters.
+
+* Filter 2 is similar to filter 1.
+Filter 3
+filter-model3 Variable [String]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: filter-model3="filterKeyword3"
+The variable contains value selected from dropdown under advanced filters.
+
+filter-model3-list Variable [Array]
+Mandatory:  Yes
+Default Value: <empty>
+Usage: filter-model3-list="filterKeyword3List"
+The variable contains list of values to be selected from dropdown under advanced filters.
+
+filter-model3-list-order String Literal
+Mandatory:  Yes
+Default Value: <empty>
+Usage: filter-model3-list-order="value"
+The sorting order for values in dropdown under advanced filters Allowed values are “value” and “text”.
+
+filter-model3-title String Literal
+Mandatory:  Yes
+Default Value: <empty>
+Usage: filter-model3-title="Timeframe"
+The title for dropdown under advanced filters.
+
+* Filter 4 is similar to filter 3.
+
+	Type 2
+
+Advanced Filters
+
+* Filters 1, 2, 5, 6, 10, 11 are similar to filter 1 of type 1.
+* Filters 3, 4, 7, 8, 9 are similar to filter 3 of type 1.

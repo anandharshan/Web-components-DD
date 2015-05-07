@@ -1,0 +1,33 @@
+.vmware-carosuel-wrapper-container{display:inline-block; }
+.vmware-carosuel-wrapper-container .carosuel-img { 
+	position:static;
+	display:inline-block;
+	img {
+		float:none;
+	} 
+}
+.vmware-carosuel-wrapper-container .carosuel-img-caption{ margin-top:-40px; position:static;  }
+.vmware-carosuel-wrapper-container {
+  .vmware-carosuel-inner-wrapper-container{
+    display:inline;
+ }
+ }
+
+ .vmware-carosuel-title {
+  margin: 21px 0 19px 45px;
+  color: #333333;
+  font: 22px $font-stackSemiBold;
+}
+.vmware-carosuel-wrapper-container {
+	.vmware-carosuel-inner-wrapper-container{
+	    padding-bottom: 50px;    
+	  }
+
+ }
+.vmware-carosuel-wrapper-container{
+ .carosuel-img-caption {
+    p {
+      margin-top: 7px;
+    }
+  }
+  }

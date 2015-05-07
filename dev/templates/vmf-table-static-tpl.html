@@ -1,0 +1,46 @@
+<div>
+    <div class="row vmf-table-wrapper-container">
+        <div class="col-md-12 table-wrapper" >
+            <table vmf-col-resizable-and-dragtable columns="columns" class="vmf-table vmf-table-basic">
+                    <colgroup>
+                        <col ng-if="column.visible === undefined || column.visible"  field="{{column.field}}" ng-repeat="column in columns" style="width:{{column.width}}px"/>
+                    </colgroup>
+
+                    <thead>
+                        <tr class="colHeaders">
+                            <th vmf-table-header-renderer
+                                style="width:{{column.width}}px"                            
+                                ng-repeat="column in columns"                              
+                                column="column" 
+                                field="{{column.field}}"  
+                                columns="columns"
+                                ng-if="column.visible === undefined || column.visible"                   
+                                class="header {{column.thClass}} unselectable">
+                            </th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>                              
+                        <tr static-table-colspan-row ng-repeat="row in currentPageData"
+                            item="row"
+                            field="discounts"
+                            data-id="{{row.id}}"
+                            data-index="{{$index}}"
+                            ng-class="{'row-even': $even, 'row-odd': $odd}"
+                            class="vmf-rows">
+                            <td vmf-table-cell
+                                cell-renderers="cellRenderers"
+                                item="row"
+                                tr-index="$parent.$index"
+                                field="{{column.field}}"   
+                                column="column"       
+                                class="{{column.tdClass}}"  
+                                ng-if="column.visible === undefined || column.visible"                
+                                ng-repeat="column in columns">
+                            </td>
+                        </tr>
+                    </tbody>              
+                </table>
+        </div>
+    </div>
+</div>

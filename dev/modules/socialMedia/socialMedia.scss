@@ -1,0 +1,70 @@
+
+/* social media csss */
+
+.vmsmedia_container {
+  background: #e6e6e6;
+  position: fixed;
+  width: 44px;
+  height: 176px;
+  top: 10px;
+  left: 10px;
+}
+
+.vmsmedia_share {
+  width: 44px;
+  height: 20px;
+  font-size: 10px;
+  font-family: $font-stack;
+  overflow: hidden;
+  background:url(../images/social/share_background.png);
+  margin-bottom: 15px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.vmsmedia_container {
+  ul {
+    list-style: none;
+    margin: 0px;
+  }
+  a {
+    width: 24px;
+    height: 24px;
+    display: block;
+    text-decoration: none;
+    border: 0px;
+    outline: 0px;
+    padding:0 !important;
+  }
+  ul {
+    padding-left: 10px;
+    list-style: none;
+  }
+}
+
+.vmsmedia_item {
+  padding-bottom: 10px;
+  img {
+    border: 0px;
+  }
+}
+
+.vmsmedia_position {
+    right:auto;
+    left: auto;
+    margin-left:-44px;
+    display: block; 
+    top:210px;
+    display: none;  
+    z-index: 9999;
+}
+
+@media (min-width: $screen-desktop) {
+    .vmsmedia_position {
+         display: block;   
+        
+    }
+    
+}
+

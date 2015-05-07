@@ -1,0 +1,27 @@
+Syntax:
+<vmf-combo-box model="option" options="list" hint="StringText" combo-disabled="false"> </vmf-combo-box>
+
+Configuration
+model Variable[String]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: model=”option”
+The variable contains the selected value from Combo box or input typed by the user.
+
+options Variable [Array]       
+Mandatory:  Yes
+Default Value: <empty>
+Usage: ['vCenter Operations for View', 'vCenter Operations Manager’]                                                                                                              
+The variable which contains options for combo box.
+
+hint String Literal       
+Mandatory:  No
+Default Value: <empty>
+Usage: hint=”Select Product”
+Placeholder text for combo box input.
+
+combo-disabled Variable[Boolean]
+Mandatory:  No
+Default Value: false
+Usage: combo-disabled=”comboDisabledVariable”
+Disables combo-box programmatically if true.

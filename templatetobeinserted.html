@@ -1,0 +1,46 @@
+<section tabindex="-1" role="dialog" aria-labelledby="addUserModal" aria-hidden="true" class="overlay" id="addUserModal" style="width:500px">
+
+    <div class="modal-header">
+        <div class = "row">  
+			<div>
+				<h3 class="modal-title ng-binding">{{addNewUser}}</h3>
+			</div>
+        </div>
+    </div>
+
+        <!-- Content -->
+        <section class="clearfix">
+            <section class="col-md-12 form">
+                <article>
+                    <div class="container-fluid starlight-container-fluid addSection">
+                        <form class="form-horizontal" role="form" id="addUserForm" data-validate="parsley">
+                            <div class="form-group">
+                                <label for="firstName" class="col-sm-5 control-label-left">{{fname}}:</label>
+                                <div class="col-sm-7 padding-left-0 addUserFields">
+                                    <input class="form-control" id="firstName" name="firstname" data-ng-model="firstName" ng-disabled="disableClear==true" ng-keyup="userEmpty()" data-required="true" data-trigger="change" placeholder="{{fname}}" data-parsley-required-message="{{globalVars.fnameRequired}}" data-parsley-required data-parsley-trigger="blur">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="col-sm-5 control-label-left">{{lname}}:</label>
+                                <div class="col-sm-7 padding-left-0 addUserFields">
+                                    <input class="form-control" id="lastName" data-ng-model="lastName" ng-disabled="disableClear==true" ng-keyup="userEmpty()" data-required="true" data-trigger="change" placeholder="{{lname}}" data-parsley-required-message="{{globalVars.lnameRequired}}" data-parsley-required data-parsley-trigger="blur">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail" class="col-sm-5 control-label-left">{{email}}:</label>
+                                <div class="col-sm-7 padding-left-0 addUserFields">
+                                    <input type="email" class="form-control" id="inputEmail" data-ng-model="emailid" ng-disabled="disableClear==true" ng-keyup="userEmpty()" data-required="true" data-trigger="change" placeholder="{{emailAddress}}" data-parsley-type="email" data-parsley-required-message="{{globalVars.emailRequired}}" data-parsley-required data-parsley-type-message="{{globalVars.invalidEmailAddress}}" data-parsley-trigger="blur">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </div>
+    <!-- Content End -->
+    <div class="modal-footer clearfix">
+        <a href="javascript:void(0);" class="btn btn-primary" ng-click="submit()">{{confirm}}</a>
+        <a href="javascript:void(0);" class="btn btn-default margin-right-0" ng-click="cancel()">{{cancelName}}</a>
+    </div>
+</section>

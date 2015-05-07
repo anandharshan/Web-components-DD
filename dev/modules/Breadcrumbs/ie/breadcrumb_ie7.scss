@@ -1,0 +1,19 @@
+.vmf-breadcrumb{
+    margin: 2.5rem 0 30px 44.992px;
+	ul { 
+		list-style: none;
+		li {
+			color:#999999;
+			display:inline-block;
+			a { 
+				font-size:14px;
+				padding:0px 4px;
+				font-family:$font-stack;
+				color:#999999;
+				&:hover {
+				color:#cccccc;
+				}
+			}
+		}
+	}
+}

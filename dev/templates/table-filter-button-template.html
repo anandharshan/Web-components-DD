@@ -1,0 +1,32 @@
+  <!-- First dropdown -->
+  <div class="btn-group dropdown table-filter">
+    <button type="button" class="btn btn-default dropdown-toggle custom" data-toggle="dropdown" ng-click="toggleSelect()" ng-disabled="disabled" ng-class="{'error': !valid()}">
+      <span class="title">{{title}}</span> <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li ng-repeat="item in parsedData">
+        <label class="checkbox" ng-if="!item.isDateField"> <div vmf-checkbox-group class="vmf-checkbox-group"  model="item.selected" type="1" c-label="item.label"></div></label>
+          <label class="checkbox" ng-if="item.isDateField">
+            <!-- <input type="checkbox" ng-model="item.selected">-->
+          <div vmf-checkbox-group class="vmf-checkbox-group"  model="item.selected" type="1" c-label=""></div>
+         <!--  <input class="table-filter-date-container" type="text" ng-model="selectedDate" placeholder="Select Dates" />-->
+          <vmf-calendar-single sdate="01/01/1990" edate="31/12/2090" class="vmf-calendar-drop" ></vmf-calendar-single>
+          </label> 
+      </li>
+     
+      <li  role="presentation" class="dropdown-actions">
+        <button class="btn btn-link btn-xs pull-left" ng-click="clearAll($event)" type="button"> Clear All</button>
+        <button class="btn btn-link btn-xs pull-right" ng-click="applyFilter($event)" type="button">Apply</button>
+      </li>
+
+    </ul>
+  </div>
+  <!-- End of first dropdown -->
+<div>
+  <ul class="dropdown-selected-options the-icons">     
+     <li ng-repeat="item in selectedItems"> 
+        <i class="custom-icon-delete" ng-click="deleteItem(item, $index)">x</i>
+        {{item.label}}
+      </li>
+  </ul>
+<div>

@@ -1,0 +1,25 @@
+<div class="top-links pull-right">
+  <span class="Print pull-left"><a href="#" class="">Print</a></span>
+  <span class="Export pull-left"><a href="#" class="">Export</a></span>
+  <span class="Manage pull-left"><a href="#" class="">Manage columns</a>
+    <div class="drop_down_holder">
+      <ul class="drop_down">
+        <li ng-repeat="column in columns" ng-if="column.title">             
+            <span class="pull-left">
+              <label> 
+                <div vmf-checkbox-group class="vmf-checkbox-group"  model="column.columnVisible" type="1" c-label="column.title" ></div>
+             </label>
+            </span>        
+        </li>
+      </ul>
+      <div class="footer_section">
+          <span class="pull-left span-5">
+            <a ng-click="applyBtn($event)" ng-href="#">Apply</a>
+          </span>
+          <span class="pull-left span-5 ">
+            <a ng-click="cancelBtn($event)" ng-href="#">Cancel</a>
+          </span>
+      </div>
+    </div>
+  </span>
+</div>
